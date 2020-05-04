@@ -23,7 +23,7 @@ var playV3video = ()=>{
 }
 
 var playV2video = ()=>{
-    var URL = 'http://demourl.com'
+    var URL = 'https://teddivideostorage.blob.core.windows.net/videocontainer/V2 Baby Books Animation (1).mp4'
     botReply = 'Pleace click the link';
     botReply += '#&@#{"videoPath" : "'+URL+'"}';
     // await turnContext.sendActivity(botReply);

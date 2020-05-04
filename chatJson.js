@@ -33,7 +33,7 @@ const setName = async(turnContext)=>{
 
 
     botReply = 'It’s nice to meet you '+fullname+'! If I wasn’t a robot and could have kids I’d name them user name! The years between birth and starting school are a time of amazing growth and development. As your robo-support, I will guide you towards information and advice that is evidence based to help give your child the best possible start to life! How does that sound?'
-    botReply += '#&@#{"predictiveText" : ["Yes!", "Hopefully", "No"]}';
+    botReply += '#&@#';
     // console.log(botReply)
     // await turnContext.sendActivity(botReply);
     return {fullname,botReply};
@@ -166,7 +166,7 @@ var obj = {
                 }
             },
             2: {
-                predict: '["Yes!", "Hopefully", "No"]',
+                predict: '',
                 func: setName,
                 nextPath: {
                     master: "intro",
@@ -212,8 +212,8 @@ var obj = {
                 //If user select YES for play V3 video
                 func: PlayV3video,
                 url:{
-                    Bengali: 'https://home.mycloud.com/action/share/ff4a5864-119f-416e-bed4-d7be3cdb735c',
-                    Arabic: 'https://home.mycloud.com/action/share/7754a498-b6cf-44d9-99d2-272cb9d91319'
+                    Bengali: 'https://teddivideostorage.blob.core.windows.net/videocontainer/HumanMilk_Advert_Subtitles_Bengali_V1.mp4',
+                    Arabic: 'https://teddivideostorage.blob.core.windows.net/videocontainer/HumanMilk_Advert_Subtitles_Arabic_V1.mp4'
                 },
                 nextPath: {
                     master: "v3Conversation",
@@ -256,7 +256,7 @@ var obj = {
         v2Conversation: {
             1: {
                 func: PlayV2video,
-                url: 'http://demourl.com',
+                url: 'https://teddivideostorage.blob.core.windows.net/videocontainer/V2 Baby Books Animation (1).mp4',
                 nextPath: {
                     master: "v2Conversation",
                     branch: 2
