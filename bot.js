@@ -6,6 +6,10 @@ const { CosmosDbPartitionedStorage } = require('botbuilder-azure');
 const dbConfig = require('./dbConfig');
 var chatJson = require('./chatJson')
 
+// chapters patha
+var introductionPath = require('./chapters/introduction')
+var breastFeedingPath = require('./chapters/breastFeeding')
+
 // Create access to CosmosDb Storage - this replaces local Memory Storage.
 var storage = new CosmosDbPartitionedStorage({
     cosmosDbEndpoint: dbConfig.DB_SERVICE_ENDPOINT, 
@@ -67,24 +71,60 @@ async function logMessageText(storage, turnContext) {
         var conversationLog = storeItems[userId];
         if (typeof (conversationLog) != 'undefined') {
             if(typeof (turnContext.activity.text) != 'undefined'){
-                if(storeItems[userId].turnNumber == 1){
-                    storeItems[userId].userInfo.firstName = turnContext.activity.text;
-                }
-                
+                var respObj
+                var chapterType = 'introduction';
+                switch(chapterType) {
+                    case "introduction": {
+                        respObj = await introductionPath.chatJson(chapterType,storeItems[userId],turnContext)
+                        break;
+                    }
+                    case "breastFeeding": {
+                        respObj = await breastFeedingPath.chatJson(chapterType,storeItems[userId],turnContext)
+                        break;
+                    }
+                    default: {
+                       //statements;
+                       break;
+                    }
+                 }
+                 
+
+                // await saveChat(respObj.botReply, conversationId)
                 
                 // The log exists so we can write to it.
                 storeItems[userId].turnNumber++;
+                if(respObj.fullname){
+                    // storeItems[userId].userInfo.firstName = respObj.fullname;
+                    var fullname = respObj.fullname;
+                    var arr = fullname.split(' ')
+                    var fname = ''
+                    var lname = arr[arr.length-1]
+                    for(var i=0; i<arr.length-1; i++){
+                        fname += arr[i]+' '
+                    }
+                    fname = fname.trim();
+                    storeItems[userId].userInfo.firstName = fname;
+                    storeItems[userId].userInfo.lastName = lname;
+                }
                 
                 await turnContext.sendActivities([
                     { type: ActivityTypes.Typing },
                     { type: 'delay', value: 3000 },
-                    { type: ActivityTypes.Message, text: `You said '${ turnContext.activity.text }'` }
+                    { type: ActivityTypes.Message, text: respObj.botReply }
                 ]);
-                
+                storeItems[userId].userInfo.convLastMsg = respObj.botReply;
                 var convLastDate = dateNow.getDate() +"-"+ (dateNow.getMonth() + 1) +"-"+ dateNow.getFullYear();
                 storeItems[userId].userInfo.convLastDate = convLastDate;
                 storeItems[userId].userInfo.convLastTime = Date.now();
                 storeItems[userId].userInfo.lastConvType = Date.now();
+                if(respObj.feelMsg){
+                    storeItems[userId][chapterType]['feelMessage'] = respObj.feelMsg;
+                }
+                if(respObj.feedingType){
+                    storeItems[userId][chapterType]['feedingType'] = respObj.feedingType;
+                }
+                storeItems[userId][chapterType]['mainMaster'] = respObj.mainMaster
+                storeItems[userId][chapterType]['mainBranch'] = respObj.mainBranch
                 
                 try {
                     await storage.write(storeItems)
@@ -99,8 +139,8 @@ async function logMessageText(storage, turnContext) {
         }
         else{   
             console.log(`Creating and saving new utterance log`);
-            let botReply = 'Hello Welcome. What is your name?'; 
-            // botReply = chatJson['introduction']['intro'][1]['text']
+            let botReply = ''; 
+            botReply = chatJson['introduction']['intro'][1]['text']
 
             await turnContext.sendActivities([
                 { type: ActivityTypes.Typing },
