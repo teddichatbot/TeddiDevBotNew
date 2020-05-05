@@ -32,7 +32,7 @@ const setName = async(turnContext)=>{
     }
 
 
-    botReply = 'It’s nice to meet you '+fullname+'! If I wasn’t a robot and could have kids I’d name them user name! The years between birth and starting school are a time of amazing growth and development. As your robo-support, I will guide you towards information and advice that is evidence based to help give your child the best possible start to life! How does that sound?'
+    botReply = 'It’s nice to meet you '+fullname+'! If I wasn’t a robot and could have kids I’d name them '+fullname+'! The years between birth and starting school are a time of amazing growth and development. As your robo-support, I will guide you towards information and advice that is evidence based to help give your child the best possible start to life! How does that sound?'
     botReply += '#&@#';
     // console.log(botReply)
     // await turnContext.sendActivity(botReply);
