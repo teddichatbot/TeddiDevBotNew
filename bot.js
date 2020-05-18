@@ -60,7 +60,8 @@ class EchoBot extends ActivityHandler {
 // This function stores new user messages. Creates new utterance log if none exists.
 async function logMessageText(storage, turnContext) {
     let utterance = turnContext.activity.text;
-    
+    let chapterType1 = turnContext.activity.chapterType;
+    console.log(chapterType1)
     var dateNow = new Date();
     // debugger;
     try {
