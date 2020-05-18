@@ -25,7 +25,7 @@ class EchoBot extends ActivityHandler {
         super();
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         this.onMessage(async (context, next) => {
-            await saveChat(context.activity.text, context.activity.conversation.id)
+            await saveChat(context.activity.text, context.activity.conversation.id, context.activity.chapterType)
 
             await logMessageText(storage, context);
         });
@@ -60,8 +60,9 @@ class EchoBot extends ActivityHandler {
 // This function stores new user messages. Creates new utterance log if none exists.
 async function logMessageText(storage, turnContext) {
     let utterance = turnContext.activity.text;
-    let chapterType1 = turnContext.activity.chapterType;
-    console.log(chapterType1)
+    // let chapterType = 'introduction';
+    let chapterType = turnContext.activity.chapterType;
+    
     var dateNow = new Date();
     // debugger;
     try {
@@ -75,7 +76,6 @@ async function logMessageText(storage, turnContext) {
         if (typeof (conversationLog) != 'undefined') {
             if(typeof (turnContext.activity.text) != 'undefined'){
                 var respObj
-                var chapterType = 'introduction';
                 switch(chapterType) {
                     case "introduction": {
                         respObj = await introductionPath.chatJson(chapterType,storeItems[userId],turnContext)
@@ -92,7 +92,7 @@ async function logMessageText(storage, turnContext) {
                  }
                  
 
-                await saveChat(respObj.botReply, conversationId)
+                await saveChat(respObj.botReply, conversationId, chapterType)
                 
                 // The log exists so we can write to it.
                 storeItems[userId].turnNumber++;
@@ -186,7 +186,7 @@ async function logMessageText(storage, turnContext) {
 
             try {
                 await storage.write(storeItems)
-                await saveChat(botReply, conversationId)
+                await saveChat(botReply, conversationId, chapterType)
                 
             } catch (err) {
                 await turnContext.sendActivity(`Write failed: ${err}`);
@@ -198,11 +198,11 @@ async function logMessageText(storage, turnContext) {
     }
 }
 
-async function saveChat(text, conversationId){
+async function saveChat(text, conversationId, chapterType){
     unirest
     .post(API_URL+'chat/saveChat')
     .headers({'Content-Type': 'application/json'})
-    .send({ "text": text, "conversationId" : conversationId })
+    .send({ "text": text, "conversationId" : conversationId, "chapterType":chapterType })
     .then((response) => {
         // console.log(response.body)
     })
