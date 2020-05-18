@@ -3,7 +3,9 @@
 
 const { ActivityHandler, ActivityTypes } = require('botbuilder');
 const { CosmosDbPartitionedStorage } = require('botbuilder-azure');
+var unirest = require('unirest');
 const dbConfig = require('./dbConfig');
+var API_URL = dbConfig.API_URL
 var chatJson = require('./chatJson')
 
 // chapters patha
@@ -23,7 +25,7 @@ class EchoBot extends ActivityHandler {
         super();
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         this.onMessage(async (context, next) => {
-            // await context.sendActivity(`You said '${ context.activity.text }'`);
+            await saveChat(context.activity.text, context.activity.conversation.id)
 
             await logMessageText(storage, context);
         });
@@ -89,7 +91,7 @@ async function logMessageText(storage, turnContext) {
                  }
                  
 
-                // await saveChat(respObj.botReply, conversationId)
+                await saveChat(respObj.botReply, conversationId)
                 
                 // The log exists so we can write to it.
                 storeItems[userId].turnNumber++;
@@ -183,7 +185,7 @@ async function logMessageText(storage, turnContext) {
 
             try {
                 await storage.write(storeItems)
-                // await saveChat(botReply, conversationId)
+                await saveChat(botReply, conversationId)
                 
             } catch (err) {
                 await turnContext.sendActivity(`Write failed: ${err}`);
@@ -193,6 +195,19 @@ async function logMessageText(storage, turnContext) {
     catch (err){
         await turnContext.sendActivity(`Read rejected. ${err}`);
     }
+}
+
+async function saveChat(text, conversationId){
+    unirest
+    .post(API_URL+'chat/saveChat')
+    .headers({'Content-Type': 'application/json'})
+    .send({ "text": text, "conversationId" : conversationId })
+    .then((response) => {
+        // console.log(response.body)
+    })
+    .catch(err => {
+        console.log(err)
+    })
 }
 
 module.exports.EchoBot = EchoBot;

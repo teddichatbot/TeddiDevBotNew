@@ -159,7 +159,7 @@ var obj = {
     introduction: {
         intro:{
             1: {
-                text: 'Hello, I’m Teddi! I am your early years 0-5 robo-support. What is your name? 😉',
+                text: 'Hello, I’m Teddi! I am your early years robo-support. What is your name? 😉',
                 nextPath: {
                     master: "intro",
                     branch: 2
@@ -174,7 +174,7 @@ var obj = {
                 }
             },
             3: {
-                text: 'Raising a child can be really tough and the early years between 0-5 are formative. I have packaged decades worth of research and evidence into 12 chapters that you can access at any time. You can speak to me by pressing and holding the microphone button below and hear me read a message by pressing and holding a message. Press the button below to get started.',
+                text: 'Raising a child can be really tough and the early years between 0-5 are formative. I have packaged decades worth of parenting expertise, research, and evidence into 12 chapters that you can access at any time. You can speak to me by pressing and holding the microphone button below and hear me read a message by pressing and holding a message. Press the button below to get started.',
                 predict: '{"enterBtn" : "LET\'S BEGIN!"}',
                 nextPath: {
                     master: "intro",
