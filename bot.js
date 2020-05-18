@@ -30,16 +30,6 @@ class EchoBot extends ActivityHandler {
             await logMessageText(storage, context);
         });
 
-        // this.onMembersAdded(async (context, next) => {
-        //     const membersAdded = context.activity.membersAdded;
-        //     for (let cnt = 0; cnt < membersAdded.length; ++cnt) {
-        //         if (membersAdded[cnt].id !== context.activity.recipient.id) {
-        //             await context.sendActivity('Hello and welcome1!');
-        //         }
-        //     }
-        //     // By calling next() you ensure that the next BotHandler is run.
-        //     await next();
-        // });
 
         this.onConversationUpdate(async (context, next) => { 
             console.log('this gets called (conversation update)'); 
@@ -49,20 +39,20 @@ class EchoBot extends ActivityHandler {
             // await next();
         });
 
-        // this.onTurn(async (context, next) => { 
-        //     console.log('onTurn'); 
-        //     console.log(context.activity); 
-        //     await next();
-        // });
     }
 }
 
 // This function stores new user messages. Creates new utterance log if none exists.
 async function logMessageText(storage, turnContext) {
     let utterance = turnContext.activity.text;
-    // let chapterType = 'introduction';
-    let chapterType = turnContext.activity.chapterType;
-    
+    let chapterType = '';
+    if(turnContext.activity.chapterType === undefined){
+        chapterType = 'introduction';
+    }else{
+        chapterType = turnContext.activity.chapterType;
+    }
+    console.log(chapterType)
+
     var dateNow = new Date();
     // debugger;
     try {
