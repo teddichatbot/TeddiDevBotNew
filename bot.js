@@ -215,26 +215,30 @@ async function saveBotReply(text, botRespId, channelId, conversationId, userChat
     })
 }
 async function saveUserMsg(activity){
-    unirest
-    .post(API_URL+'chat/saveChat')
-    .headers({'Content-Type': 'application/json'})
-    .send({ 
-        "type": activity.type, 
-        "id" : activity.id, 
-        "timestamp": activity.timestamp,
-        "serviceUrl": activity.serviceUrl,
-        "channelId": activity.channelId,
-        "from": activity.from,
-        "conversation": activity.conversation,
-        "text": activity.text,
-        "chapterType": activity.chapterType,
-    })
-    .then((response) => {
-        // console.log(response.body)
-    })
-    .catch(err => {
-        console.log(err)
-    })
+    if(activity.text != ''){
+        unirest
+        .post(API_URL+'chat/saveChat')
+        .headers({'Content-Type': 'application/json'})
+        .send({ 
+            "type": activity.type, 
+            "id" : activity.id, 
+            "timestamp": activity.timestamp,
+            "serviceUrl": activity.serviceUrl,
+            "channelId": activity.channelId,
+            "from": activity.from,
+            "conversation": activity.conversation,
+            "text": activity.text,
+            "chapterType": activity.chapterType,
+        })
+        .then((response) => {
+            // console.log(response.body)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }else{
+        console.log('This msg not saved')
+    }
 }
 
 module.exports.EchoBot = EchoBot;
