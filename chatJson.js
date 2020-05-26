@@ -69,7 +69,7 @@ const PlayV3video = async(chapterType,mainMaster,mainBranch,turnContext)=>{
     var URL = ''
     if(turnContext.activity.text == 'Bengali'){
         URL = obj[chapterType][mainMaster][mainBranch]['url']['Bengali'];
-        botReply = 'Pleace click the link';
+        botReply = 'Pleace click the link : '+URL;
         botReply += '#&@#{"videoPath" : "'+URL+'"}';
         nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
         nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
@@ -103,7 +103,7 @@ const PlayV2video= async(chapterType,mainMaster,mainBranch,turnContext)=>{
     var arr=['ofcourse','sure','yes','obiesly', 'please right now'];
     if(arr.indexOf(userMsg) != -1){
         URL = obj[chapterType][mainMaster][mainBranch]['url'];
-        botReply = 'Pleace click the link';
+        botReply = 'Pleace click the link : '+URL;
         botReply += '#&@#{"videoPath" : "'+URL+'"}';
         nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
         nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
