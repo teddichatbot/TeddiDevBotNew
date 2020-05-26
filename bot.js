@@ -20,12 +20,13 @@ var storage = new CosmosDbPartitionedStorage({
     containerId: dbConfig.CONTAINER
 })
 
+
 class EchoBot extends ActivityHandler {
     constructor() {
         super();
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         this.onMessage(async (context, next) => {
-            await saveChat(context.activity.text, context.activity.conversation.id, context.activity.chapterType)
+            await saveUserMsg(context.activity)
 
             await logMessageText(storage, context);
         });
@@ -33,10 +34,6 @@ class EchoBot extends ActivityHandler {
 
         this.onConversationUpdate(async (context, next) => { 
             console.log('this gets called (conversation update)'); 
-            
-            // Save updated utterance inputs.
-            // await logMessageText(storage, turnContext);
-            // await next();
         });
 
     }
@@ -51,9 +48,12 @@ async function logMessageText(storage, turnContext) {
     }else{
         chapterType = turnContext.activity.chapterType;
     }
-    console.log(chapterType)
-
+    
     var dateNow = new Date();
+    let userChatId = turnContext.activity.id;
+    let channelId = turnContext.activity.channelId;
+    
+    
     // debugger;
     try {
         // var userId= turnContext.activity.from.id
@@ -82,7 +82,7 @@ async function logMessageText(storage, turnContext) {
                  }
                  
 
-                await saveChat(respObj.botReply, conversationId, chapterType)
+                
                 
                 // The log exists so we can write to it.
                 storeItems[userId].turnNumber++;
@@ -100,11 +100,14 @@ async function logMessageText(storage, turnContext) {
                     storeItems[userId].userInfo.lastName = lname;
                 }
                 
-                await turnContext.sendActivities([
+                let botResp = await turnContext.sendActivities([
                     { type: ActivityTypes.Typing },
                     { type: 'delay', value: 3000 },
                     { type: ActivityTypes.Message, text: respObj.botReply }
                 ]);
+                
+                await saveBotReply(respObj.botReply, botResp[2].id, channelId, conversationId, userChatId, chapterType)
+
                 storeItems[userId].userInfo.convLastMsg = respObj.botReply;
                 var convLastDate = dateNow.getDate() +"-"+ (dateNow.getMonth() + 1) +"-"+ dateNow.getFullYear();
                 storeItems[userId].userInfo.convLastDate = convLastDate;
@@ -135,11 +138,12 @@ async function logMessageText(storage, turnContext) {
             let botReply = ''; 
             botReply = chatJson['introduction']['intro'][1]['text']
 
-            await turnContext.sendActivities([
+            let botResp = await turnContext.sendActivities([
                 { type: ActivityTypes.Typing },
                 { type: 'delay', value: 3000 },
                 { type: ActivityTypes.Message, text: botReply }
             ]);
+
 
             var turnNumber = 1;
             var convStartDate = dateNow.getDate() +"-"+ (dateNow.getMonth() + 1) +"-"+ dateNow.getFullYear();
@@ -176,7 +180,7 @@ async function logMessageText(storage, turnContext) {
 
             try {
                 await storage.write(storeItems)
-                await saveChat(botReply, conversationId, chapterType)
+                await saveBotReply(botReply, botResp[2].id, channelId, conversationId, userChatId, chapterType)
                 
             } catch (err) {
                 await turnContext.sendActivity(`Write failed: ${err}`);
@@ -188,11 +192,43 @@ async function logMessageText(storage, turnContext) {
     }
 }
 
-async function saveChat(text, conversationId, chapterType){
+async function saveBotReply(text, botRespId, channelId, conversationId, userChatId, chapterType){
     unirest
     .post(API_URL+'chat/saveChat')
     .headers({'Content-Type': 'application/json'})
-    .send({ "text": text, "conversationId" : conversationId, "chapterType":chapterType })
+    .send({ 
+        "type": 'message', 
+        "id" : botRespId, 
+        "timestamp": new Date(),
+        "channelId": channelId,
+        "from": { "id": "newTeddiBotDev", "name": "newTeddiBotDev"},
+        "conversation": { "id" : conversationId},
+        "text": text,
+        "chapterType": chapterType, 
+        "replyToId": userChatId
+    })
+    .then((response) => {
+        // console.log(response.body)
+    })
+    .catch(err => {
+        console.log(err)
+    })
+}
+async function saveUserMsg(activity){
+    unirest
+    .post(API_URL+'chat/saveChat')
+    .headers({'Content-Type': 'application/json'})
+    .send({ 
+        "type": activity.type, 
+        "id" : activity.id, 
+        "timestamp": activity.timestamp,
+        "serviceUrl": activity.serviceUrl,
+        "channelId": activity.channelId,
+        "from": activity.from,
+        "conversation": activity.conversation,
+        "text": activity.text,
+        "chapterType": activity.chapterType,
+    })
     .then((response) => {
         // console.log(response.body)
     })
