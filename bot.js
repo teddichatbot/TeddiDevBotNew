@@ -44,7 +44,7 @@ async function logMessageText(storage, turnContext) {
     let utterance = turnContext.activity.text;
     let chapterType = '';
     if(turnContext.activity.chapterType === undefined){
-        chapterType = 'introduction';
+        chapterType = 'breastFeeding';
     }else{
         chapterType = turnContext.activity.chapterType;
     }
@@ -218,7 +218,11 @@ async function saveBotReply(text, botRespId, channelId, conversationId, userChat
     })
 }
 async function saveUserMsg(activity){
-    if(activity.text != '' || activity.text != 'end video'){
+    console.log('*'+activity.text+'*')
+    if( activity.text == '' || activity.text == 'end video'){
+        console.log("This msg not saved")
+        
+    }else{
         unirest
         .post(API_URL+'chat/saveChat')
         .headers({'Content-Type': 'application/json'})
@@ -239,8 +243,6 @@ async function saveUserMsg(activity){
         .catch(err => {
             console.log(err)
         })
-    }else{
-        console.log('This msg not saved')
     }
 }
 

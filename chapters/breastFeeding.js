@@ -35,8 +35,12 @@ var playV2video = ()=>{
 }
 
 var botResponse = (chapterType,mainMaster,mainBranch)=>{
-    botReply = chatJson[chapterType][mainMaster][mainBranch]['text']
-    botReply += '#&@#'+chatJson[chapterType][mainMaster][mainBranch]['predict']
+    botReply = chatJson[chapterType][mainMaster][mainBranch]['text'];
+    botReply += '#&@#';
+    if(chatJson[chapterType][mainMaster][mainBranch]['predict'] != ''){
+        botReply += '{"predictiveText" : ' +chatJson[chapterType][mainMaster][mainBranch]['predict']+ ' }' ;
+    }
+    
     respObj.botReply = botReply;
     respObj.mainMaster = chatJson[chapterType][mainMaster][mainBranch]['nextPath']['master'];
     respObj.mainBranch = chatJson[chapterType][mainMaster][mainBranch]['nextPath']['branch'];
