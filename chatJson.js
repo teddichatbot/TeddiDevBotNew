@@ -212,10 +212,10 @@ var obj = {
                 //If user select YES for play V3 video
                 func: PlayV3video,
                 url:{
-                    // Bengali: 'https://teddivideostorage.blob.core.windows.net/videocontainer/HumanMilk_Advert_Subtitles_Bengali_V1.mp4',
-                    // Arabic: 'https://teddivideostorage.blob.core.windows.net/videocontainer/HumanMilk_Advert_Subtitles_Arabic_V1.mp4'
-                    Bengali: 'https://teddivideostorage.blob.core.windows.net/videocontainer/videodemo.mov',
-                    Arabic: 'https://teddivideostorage.blob.core.windows.net/videocontainer/videodemo.mov'
+                    Bengali: 'https://teddivideostorage.blob.core.windows.net/videocontainer/HumanMilk_Advert_Subtitles_Bengali_V1.mp4',
+                    Arabic: 'https://teddivideostorage.blob.core.windows.net/videocontainer/HumanMilk_Advert_Subtitles_Arabic_V1.mp4'
+                    // Bengali: 'https://teddivideostorage.blob.core.windows.net/videocontainer/videodemo.mov',
+                    // Arabic: 'https://teddivideostorage.blob.core.windows.net/videocontainer/videodemo.mov'
                
                 },
                 nextPath: {
@@ -259,8 +259,8 @@ var obj = {
         v2Conversation: {
             1: {
                 func: PlayV2video,
-                // url: 'https://teddivideostorage.blob.core.windows.net/videocontainer/V2 Baby Books Animation (1).mp4',
-                url: 'https://teddivideostorage.blob.core.windows.net/videocontainer/videodemo.mov',
+                url: 'https://teddivideostorage.blob.core.windows.net/videocontainer/V2 Baby Books Animation (1).mp4',
+                // url: 'https://teddivideostorage.blob.core.windows.net/videocontainer/videodemo.mov',
                 nextPath: {
                     master: "v2Conversation",
                     branch: 2
