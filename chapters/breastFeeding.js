@@ -86,7 +86,7 @@ var obj = {
             
         }else{
             console.log('blank msg');
-            return respObj.botReply = '';
+            // return respObj.botReply = '';
         }
         
     }

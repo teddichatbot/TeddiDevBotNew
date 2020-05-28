@@ -218,7 +218,7 @@ async function saveBotReply(text, botRespId, channelId, conversationId, userChat
     })
 }
 async function saveUserMsg(activity){
-    if(activity.text != ''){
+    if(activity.text != '' || activity.text != 'end video'){
         unirest
         .post(API_URL+'chat/saveChat')
         .headers({'Content-Type': 'application/json'})
