@@ -44,7 +44,7 @@ async function logMessageText(storage, turnContext) {
     let utterance = turnContext.activity.text;
     let chapterType = '';
     if(turnContext.activity.chapterType === undefined){
-        chapterType = 'breastFeeding';
+        chapterType = 'introduction';
     }else{
         chapterType = turnContext.activity.chapterType;
     }
