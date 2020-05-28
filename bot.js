@@ -86,6 +86,7 @@ async function logMessageText(storage, turnContext) {
                 
                 // The log exists so we can write to it.
                 storeItems[userId].turnNumber++;
+
                 if(respObj.fullname){
                     // storeItems[userId].userInfo.firstName = respObj.fullname;
                     var fullname = respObj.fullname;
@@ -107,8 +108,10 @@ async function logMessageText(storage, turnContext) {
                 ]);
                 
                 await saveBotReply(respObj.botReply, botResp[2].id, channelId, conversationId, userChatId, chapterType)
-
-                storeItems[userId].userInfo.convLastMsg = respObj.botReply;
+                
+                if(respObj.botReply != ''){
+                    storeItems[userId].userInfo.convLastMsg = respObj.botReply;
+                }
                 var convLastDate = dateNow.getDate() +"-"+ (dateNow.getMonth() + 1) +"-"+ dateNow.getFullYear();
                 storeItems[userId].userInfo.convLastDate = convLastDate;
                 storeItems[userId].userInfo.convLastTime = Date.now();
