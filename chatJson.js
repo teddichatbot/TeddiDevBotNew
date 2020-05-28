@@ -70,7 +70,7 @@ const PlayV3video = async(chapterType,mainMaster,mainBranch,turnContext)=>{
     if(turnContext.activity.text == 'Bengali'){
         URL = obj[chapterType][mainMaster][mainBranch]['url']['Bengali'];
         botReply = 'Pleace click the link : '+URL;
-        botReply += '#&@#{"videoPath" : "'+URL+'", "trigger" : "end video" }';
+        botReply += '#&@#{"videoPath" : "'+URL+'" }';
         nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
         nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
         // await turnContext.sendActivity(botReply);
@@ -78,7 +78,7 @@ const PlayV3video = async(chapterType,mainMaster,mainBranch,turnContext)=>{
     }else if(turnContext.activity.text == 'Arabic'){
         URL = obj[chapterType][mainMaster][mainBranch]['url']['Arabic'];
         botReply = 'Pleace click the link';
-        botReply += '#&@#{"videoPath" : "'+URL+'", "trigger" : "end video" }';
+        botReply += '#&@#{"videoPath" : "'+URL+'"}';
         nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
         nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
         // await turnContext.sendActivity(botReply);
@@ -104,7 +104,7 @@ const PlayV2video= async(chapterType,mainMaster,mainBranch,turnContext)=>{
     if(arr.indexOf(userMsg) != -1){
         URL = obj[chapterType][mainMaster][mainBranch]['url'];
         botReply = 'Pleace click the link : '+URL;
-        botReply += '#&@#{"videoPath" : "'+URL+'", "trigger" : "end video" }';
+        botReply += '#&@#{"videoPath" : "'+URL+'" }';
         nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
         nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
     }else{
