@@ -16,6 +16,7 @@ var obj = {
             respObj.botReply = resData.botReply;
             respObj.mainMaster = chatJson[chapterType][mainMaster][mainBranch]['nextPath']['master'];
             respObj.mainBranch = chatJson[chapterType][mainMaster][mainBranch]['nextPath']['branch'];
+            respObj.checkTypeing = true;
             return respObj
             
         }else{
@@ -25,6 +26,7 @@ var obj = {
             respObj.botReply = botReply;
             respObj.mainMaster = chatJson[chapterType][mainMaster][mainBranch]['nextPath']['master'];
             respObj.mainBranch = chatJson[chapterType][mainMaster][mainBranch]['nextPath']['branch'];
+            respObj.checkTypeing = true;
             return respObj
         }
         

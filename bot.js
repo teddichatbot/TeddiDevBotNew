@@ -44,7 +44,7 @@ async function logMessageText(storage, turnContext) {
     let utterance = turnContext.activity.text;
     let chapterType = '';
     if(turnContext.activity.chapterType === undefined){
-        chapterType = 'introduction';
+        chapterType = 'breastFeeding';
     }else{
         chapterType = turnContext.activity.chapterType;
     }
@@ -81,14 +81,14 @@ async function logMessageText(storage, turnContext) {
                     }
                  }
                  
-
-                
+                if(Object.keys(respObj).length === 0){ //check blank object
+                    return false;
+                }
                 
                 // The log exists so we can write to it.
                 storeItems[userId].turnNumber++;
 
                 if(respObj.fullname){
-                    // storeItems[userId].userInfo.firstName = respObj.fullname;
                     var fullname = respObj.fullname;
                     var arr = fullname.split(' ')
                     var fname = ''
@@ -101,17 +101,21 @@ async function logMessageText(storage, turnContext) {
                     storeItems[userId].userInfo.lastName = lname;
                 }
                 
-                let botResp = await turnContext.sendActivities([
-                    { type: ActivityTypes.Typing },
-                    { type: 'delay', value: 3000 },
-                    { type: ActivityTypes.Message, text: respObj.botReply }
-                ]);
-                
-                await saveBotReply(respObj.botReply, botResp[2].id, channelId, conversationId, userChatId, chapterType)
-                
-                if(respObj.botReply != ''){
-                    storeItems[userId].userInfo.convLastMsg = respObj.botReply;
+                let botResp = ''
+                if(respObj.checkTypeing){
+                    botResp = await turnContext.sendActivities([
+                        { type: ActivityTypes.Typing },
+                        { type: 'delay', value: 500 },
+                        { type: ActivityTypes.Message, text: respObj.botReply }
+                    ]);
+                    await saveBotReply(respObj.botReply, botResp[2].id, channelId, conversationId, userChatId, chapterType)
+                }else{
+                    botResp = await turnContext.sendActivity(respObj.botReply);
+                    await saveBotReply(respObj.botReply, botResp.id, channelId, conversationId, userChatId, chapterType)
                 }
+                
+                
+                storeItems[userId].userInfo.convLastMsg = respObj.botReply;               
                 var convLastDate = dateNow.getDate() +"-"+ (dateNow.getMonth() + 1) +"-"+ dateNow.getFullYear();
                 storeItems[userId].userInfo.convLastDate = convLastDate;
                 storeItems[userId].userInfo.convLastTime = Date.now();
@@ -218,7 +222,6 @@ async function saveBotReply(text, botRespId, channelId, conversationId, userChat
     })
 }
 async function saveUserMsg(activity){
-    console.log('*'+activity.text+'*')
     if( activity.text == '' || activity.text == 'end video'){
         console.log("This msg not saved")
         

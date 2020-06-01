@@ -9,6 +9,7 @@ var welcomeMsg = (chapterType) =>{
     respObj.botReply = botReply;
     respObj.mainMaster = chatJson[chapterType]['welcome'][1]['nextPath']['master'];
     respObj.mainBranch = chatJson[chapterType]['welcome'][1]['nextPath']['branch'];
+    respObj.checkTypeing = false;
     return respObj
 }
 
@@ -19,6 +20,7 @@ var playV3video = ()=>{
     respObj.botReply = botReply;
     respObj.mainMaster = 'v3Conversation';
     respObj.mainBranch = 2;
+    respObj.checkTypeing = true;
     return respObj
 }
 
@@ -31,6 +33,7 @@ var playV2video = ()=>{
     respObj.botReply = botReply;
     respObj.mainMaster = 'v2Conversation';
     respObj.mainBranch = 2;
+    respObj.checkTypeing = true;
     return respObj
 }
 
@@ -44,6 +47,7 @@ var botResponse = (chapterType,mainMaster,mainBranch)=>{
     respObj.botReply = botReply;
     respObj.mainMaster = chatJson[chapterType][mainMaster][mainBranch]['nextPath']['master'];
     respObj.mainBranch = chatJson[chapterType][mainMaster][mainBranch]['nextPath']['branch'];
+    respObj.checkTypeing = true;
     return respObj
 }
 
@@ -79,6 +83,7 @@ var obj = {
                     respObj.botReply = resData.botReply;
                     respObj.mainMaster = resData.nextMaster;
                     respObj.mainBranch = resData.nextBranch;
+                    respObj.checkTypeing = true;
                     return respObj
                     
                 }else{
@@ -90,7 +95,7 @@ var obj = {
             
         }else{
             console.log('blank msg');
-            // return respObj.botReply = '';
+            return respObj = {} ;
         }
         
     }
