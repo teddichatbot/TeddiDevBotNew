@@ -14,9 +14,10 @@ var welcomeMsg = (chapterType) =>{
 }
 
 var playV3video = ()=>{
-    botReply = 'Okay. Please select language';
-    botReply += '#&@#{"predictiveText" : ["Bengali", "Arabic"]}'
-    // await turnContext.sendActivity(botReply);
+    let url_list = '[{"Bengali":"https://teddivideostorage.blob.core.windows.net/videocontainer/HumanMilk_Advert_Subtitles_Bengali_V1.mp4"}, {"Arabic":"https://teddivideostorage.blob.core.windows.net/videocontainer/HumanMilk_Advert_Subtitles_Arabic_V1.mp4"}]'
+    botReply = ''
+    botReply += '#&@#{"selectVideo" : '+url_list+' }'
+ 
     respObj.botReply = botReply;
     respObj.mainMaster = 'v3Conversation';
     respObj.mainBranch = 2;

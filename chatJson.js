@@ -65,36 +65,36 @@ const saveFeedingType = async(chapterType,mainMaster,mainBranch,turnContext)=>{
     return {feedingType,botReply,nextMaster,nextBranch}
 }
 
-const PlayV3video = async(chapterType,mainMaster,mainBranch,turnContext)=>{
-    var URL = ''
-    if(turnContext.activity.text == 'Bengali'){
-        URL = obj[chapterType][mainMaster][mainBranch]['url']['Bengali'];
-        botReply = 'Pleace click the link : '+URL;
-        botReply += '#&@#{"videoPath" : "'+URL+'" }';
-        nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
-        nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
-        // await turnContext.sendActivity(botReply);
-        return {botReply,nextMaster,nextBranch}
-    }else if(turnContext.activity.text == 'Arabic'){
-        URL = obj[chapterType][mainMaster][mainBranch]['url']['Arabic'];
-        botReply = 'Pleace click the link';
-        botReply += '#&@#{"videoPath" : "'+URL+'"}';
-        nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
-        nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
-        // await turnContext.sendActivity(botReply);
-        return {botReply,nextMaster,nextBranch}
-    }else{
-        botReply = 'Pleace Choose Language on the option list';
-        botReply += '#&@#{"predictiveText" : ["Bengali", "Arabic"]}'
-        // await turnContext.sendActivity(botReply);
-        await turnContext.sendActivities([
-            { type: ActivityTypes.Typing },
-            { type: 'delay', value: 3000 },
-            { type: ActivityTypes.Message, text: botReply }
-        ]);
-    }
+// const PlayV3video = async(chapterType,mainMaster,mainBranch,turnContext)=>{
+//     var URL = ''
+//     if(turnContext.activity.text == 'Bengali'){
+//         URL = obj[chapterType][mainMaster][mainBranch]['url']['Bengali'];
+//         botReply = 'Pleace click the link : '+URL;
+//         botReply += '#&@#{"videoPath" : "'+URL+'" }';
+//         nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+//         nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+//         // await turnContext.sendActivity(botReply);
+//         return {botReply,nextMaster,nextBranch}
+//     }else if(turnContext.activity.text == 'Arabic'){
+//         URL = obj[chapterType][mainMaster][mainBranch]['url']['Arabic'];
+//         botReply = 'Pleace click the link';
+//         botReply += '#&@#{"videoPath" : "'+URL+'"}';
+//         nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+//         nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+//         // await turnContext.sendActivity(botReply);
+//         return {botReply,nextMaster,nextBranch}
+//     }else{
+//         botReply = 'Pleace Choose Language on the option list';
+//         botReply += '#&@#{"predictiveText" : ["Bengali", "Arabic"]}'
+//         // await turnContext.sendActivity(botReply);
+//         await turnContext.sendActivities([
+//             { type: ActivityTypes.Typing },
+//             { type: 'delay', value: 3000 },
+//             { type: ActivityTypes.Message, text: botReply }
+//         ]);
+//     }
     
-}
+// }
 
 const PlayV2video= async(chapterType,mainMaster,mainBranch,turnContext)=>{
     var userMsg = turnContext.activity.text;
@@ -117,15 +117,16 @@ const PlayV2video= async(chapterType,mainMaster,mainBranch,turnContext)=>{
     return {botReply,nextMaster,nextBranch}
 }
 
-const checkResponsePlayV3= async(chapterType,mainMaster,mainBranch,turnContext)=>{
+const checkV3Url= async(chapterType,mainMaster,mainBranch,turnContext)=>{
     var userMsg = turnContext.activity.text;
     userMsg = userMsg.toLowerCase()
     var arr=['ofcourse','sure','yes','obiesly', 'please right now'];
     if(arr.indexOf(userMsg) != -1){
-        botReply = 'Okay. Please select language';
-        botReply += '#&@#{"predictiveText" : ["Bengali", "Arabic"]}'
-        nextMaster = 'v3Conversation'
-        nextBranch = 2
+        let url_list = '[{"Bengali":"'+obj[chapterType][mainMaster][mainBranch]['url']['Bengali']+'"}, {"Arabic":"'+obj[chapterType][mainMaster][mainBranch]['url']['Arabic']+'"}]'
+        botReply = ''
+        botReply += '#&@#{"selectVideo" : '+url_list+' }'
+        nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+        nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
     }else{
         botReply = 'You can watch the video at any time by telling me \'Play the breast feeding video\'. How long do you think babies should be breastfed for?';
         botReply += '#&@#'
@@ -206,11 +207,7 @@ var obj = {
         },
         v3Conversation: {
             1: {
-                func: checkResponsePlayV3,
-            },
-            2: {
-                //If user select YES for play V3 video
-                func: PlayV3video,
+                func: checkV3Url,
                 url:{
                     Bengali: 'https://teddivideostorage.blob.core.windows.net/videocontainer/HumanMilk_Advert_Subtitles_Bengali_V1.mp4',
                     Arabic: 'https://teddivideostorage.blob.core.windows.net/videocontainer/HumanMilk_Advert_Subtitles_Arabic_V1.mp4'
@@ -220,10 +217,10 @@ var obj = {
                 },
                 nextPath: {
                     master: "v3Conversation",
-                    branch: 3
+                    branch: 2
                 }
             },
-            3: {
+            2: {
                 text: 'You can watch the video at any time by telling me ‘Play the breast feeding video’. How long do you think babies should be breastfed for?',
                 predict: '',
                 nextPath: {
