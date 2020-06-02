@@ -102,9 +102,9 @@ const PlayV2video= async(chapterType,mainMaster,mainBranch,turnContext)=>{
     userMsg = userMsg.toLowerCase()
     var arr=['ofcourse','sure','yes','obiesly', 'please right now'];
     if(arr.indexOf(userMsg) != -1){
-        URL = obj[chapterType][mainMaster][mainBranch]['url'];
-        botReply = 'Pleace click the link : '+URL;
-        botReply += '#&@#{"videoPath" : "'+URL+'" }';
+        let url_list = '[{"English":"'+obj[chapterType][mainMaster][mainBranch]['url']+'"}]'
+        botReply = ''
+        botReply += '#&@#{"selectVideo" : '+url_list+' }';
         nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
         nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
     }else{
@@ -209,8 +209,10 @@ var obj = {
             1: {
                 func: checkV3Url,
                 url:{
+                    English: 'https://teddivideostorage.blob.core.windows.net/videocontainer/V3 Human Milk advert with subtitles.mp4',
                     Bengali: 'https://teddivideostorage.blob.core.windows.net/videocontainer/HumanMilk_Advert_Subtitles_Bengali_V1.mp4',
                     Arabic: 'https://teddivideostorage.blob.core.windows.net/videocontainer/HumanMilk_Advert_Subtitles_Arabic_V1.mp4'
+                    // English: 'https://teddivideostorage.blob.core.windows.net/videocontainer/videodemo.mov',
                     // Bengali: 'https://teddivideostorage.blob.core.windows.net/videocontainer/videodemo.mov',
                     // Arabic: 'https://teddivideostorage.blob.core.windows.net/videocontainer/videodemo.mov'
                

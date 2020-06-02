@@ -14,7 +14,7 @@ var welcomeMsg = (chapterType) =>{
 }
 
 var playV3video = ()=>{
-    let url_list = '[{"Bengali":"https://teddivideostorage.blob.core.windows.net/videocontainer/HumanMilk_Advert_Subtitles_Bengali_V1.mp4"}, {"Arabic":"https://teddivideostorage.blob.core.windows.net/videocontainer/HumanMilk_Advert_Subtitles_Arabic_V1.mp4"}]'
+    let url_list = '[{"English": "https://teddivideostorage.blob.core.windows.net/videocontainer/V3 Human Milk advert with subtitles.mp4" }, {"Bengali":"https://teddivideostorage.blob.core.windows.net/videocontainer/HumanMilk_Advert_Subtitles_Bengali_V1.mp4"}, {"Arabic":"https://teddivideostorage.blob.core.windows.net/videocontainer/HumanMilk_Advert_Subtitles_Arabic_V1.mp4"}]'
     botReply = ''
     botReply += '#&@#{"selectVideo" : '+url_list+' }'
  
@@ -28,8 +28,9 @@ var playV3video = ()=>{
 var playV2video = ()=>{
     var URL = 'https://teddivideostorage.blob.core.windows.net/videocontainer/V2 Baby Books Animation (1).mp4';
     // var URL = 'https://teddivideostorage.blob.core.windows.net/videocontainer/videodemo.mov';
-    botReply = 'Pleace click the link : '+URL;
-    botReply += '#&@#{"videoPath" : "'+URL+'"}';
+    let url_list = '[{"English":"'+URL+'"}]'
+    botReply = ''
+    botReply += '#&@#{"selectVideo" : '+url_list+' }'
     // await turnContext.sendActivity(botReply);
     respObj.botReply = botReply;
     respObj.mainMaster = 'v2Conversation';
