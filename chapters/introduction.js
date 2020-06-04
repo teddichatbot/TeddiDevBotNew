@@ -18,7 +18,6 @@ var obj = {
             respObj.mainBranch = chatJson[chapterType][mainMaster][mainBranch]['nextPath']['branch'];
             respObj.checkTypeing = true;
             return respObj
-            
         }else{
             botReply = chatJson[chapterType][mainMaster][mainBranch]['text']
             botReply += '#&@#'+chatJson[chapterType][mainMaster][mainBranch]['predict']
@@ -28,9 +27,7 @@ var obj = {
             respObj.mainBranch = chatJson[chapterType][mainMaster][mainBranch]['nextPath']['branch'];
             respObj.checkTypeing = true;
             return respObj
-        }
-        
-        
+        } 
     }
 }
 

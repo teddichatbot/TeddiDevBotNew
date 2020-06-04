@@ -89,14 +89,20 @@ async function logMessageText(storage, turnContext) {
                 storeItems[userId].turnNumber++;
 
                 if(respObj.fullname){
-                    var fullname = respObj.fullname;
+                    let fullname = respObj.fullname;
+                    let fname = ''
+                    let lname = ''
                     var arr = fullname.split(' ')
-                    var fname = ''
-                    var lname = arr[arr.length-1]
-                    for(var i=0; i<arr.length-1; i++){
-                        fname += arr[i]+' '
+                    if(arr.length >1){
+                        lname = arr[arr.length-1]
+                        for(var i=0; i<arr.length-1; i++){
+                            fname += arr[i]+' '
+                        }
+                        fname = fname.trim();
+                    }else{
+                        fname = arr[0]
                     }
-                    fname = fname.trim();
+                    await saveName(conversationId, fname, lname);
                     storeItems[userId].userInfo.firstName = fname;
                     storeItems[userId].userInfo.lastName = lname;
                 }
@@ -247,6 +253,23 @@ async function saveUserMsg(activity){
             console.log(err)
         })
     }
+}
+
+async function saveName(conversationId, fname, lname){
+    unirest
+    .post(API_URL+'users/setName')
+    .headers({'Content-Type': 'application/json'})
+    .send({ 
+        "conversationId": conversationId, 
+        "fname" : fname, 
+        "lname": lname
+    })
+    .then((response) => {
+        // console.log(response.body)
+    })
+    .catch(err => {
+        console.log(err)
+    })
 }
 
 module.exports.EchoBot = EchoBot;
