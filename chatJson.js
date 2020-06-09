@@ -108,10 +108,10 @@ const PlayV2video= async(chapterType,mainMaster,mainBranch,turnContext)=>{
         nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
         nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
     }else{
-        botReply = 'You can watch the video at any time by telling me \'Play Amy’s video on baby books\'';
+        botReply = 'You can watch the video at any time by telling me \'Play Amy’s video on baby books\'. How confident do you feel about breast feeding successfully?';
         botReply += '#&@#';
-        nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
-        nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+        nextMaster = 'v2Conversation'
+        nextBranch = 3
     }
     // await turnContext.sendActivity(botReply);
     return {botReply,nextMaster,nextBranch}
@@ -122,7 +122,7 @@ const checkV3Url= async(chapterType,mainMaster,mainBranch,turnContext)=>{
     userMsg = userMsg.toLowerCase()
     var arr=['ofcourse','sure','yes','obiesly', 'please right now'];
     if(arr.indexOf(userMsg) != -1){
-        let url_list = '[{"Bengali":"'+obj[chapterType][mainMaster][mainBranch]['url']['Bengali']+'"}, {"Arabic":"'+obj[chapterType][mainMaster][mainBranch]['url']['Arabic']+'"}]'
+        let url_list = '[{"English":"'+obj[chapterType][mainMaster][mainBranch]['url']['English']+'"}, {"Bengali":"'+obj[chapterType][mainMaster][mainBranch]['url']['Bengali']+'"}, {"Arabic":"'+obj[chapterType][mainMaster][mainBranch]['url']['Arabic']+'"}]'
         botReply = ''
         botReply += '#&@#{"selectVideo" : '+url_list+' }'
         nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
@@ -266,11 +266,19 @@ var obj = {
                 }
             },
             2: {
+                text: 'You can watch the video at any time by telling me ‘Play Amy’s video on baby books’. How confident do you feel about breast feeding successfully?',
+                predict: '',
+                nextPath: {
+                    master: "v2Conversation",
+                    branch: 3
+                }
+            },
+            3: {
                 text: 'Thank you',
                 predict: '',
                 nextPath: {
                     master: "v2Conversation",
-                    branch: 2
+                    branch: 3
                 }
             }
         }
