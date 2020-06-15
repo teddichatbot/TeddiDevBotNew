@@ -65,42 +65,12 @@ const saveFeedingType = async(chapterType,mainMaster,mainBranch,turnContext)=>{
     return {feedingType,botReply,nextMaster,nextBranch}
 }
 
-// const PlayV3video = async(chapterType,mainMaster,mainBranch,turnContext)=>{
-//     var URL = ''
-//     if(turnContext.activity.text == 'Bengali'){
-//         URL = obj[chapterType][mainMaster][mainBranch]['url']['Bengali'];
-//         botReply = 'Pleace click the link : '+URL;
-//         botReply += '#&@#{"videoPath" : "'+URL+'" }';
-//         nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
-//         nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
-//         // await turnContext.sendActivity(botReply);
-//         return {botReply,nextMaster,nextBranch}
-//     }else if(turnContext.activity.text == 'Arabic'){
-//         URL = obj[chapterType][mainMaster][mainBranch]['url']['Arabic'];
-//         botReply = 'Pleace click the link';
-//         botReply += '#&@#{"videoPath" : "'+URL+'"}';
-//         nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
-//         nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
-//         // await turnContext.sendActivity(botReply);
-//         return {botReply,nextMaster,nextBranch}
-//     }else{
-//         botReply = 'Pleace Choose Language on the option list';
-//         botReply += '#&@#{"predictiveText" : ["Bengali", "Arabic"]}'
-//         // await turnContext.sendActivity(botReply);
-//         await turnContext.sendActivities([
-//             { type: ActivityTypes.Typing },
-//             { type: 'delay', value: 3000 },
-//             { type: ActivityTypes.Message, text: botReply }
-//         ]);
-//     }
-    
-// }
 
 const PlayV2video= async(chapterType,mainMaster,mainBranch,turnContext)=>{
     var userMsg = turnContext.activity.text;
     var URL = ''
     userMsg = userMsg.toLowerCase()
-    var arr=['ofcourse','sure','yes','obiesly', 'please right now'];
+    var arr=['ofcourse','sure','yes','obviously', 'please right now'];
     if(arr.indexOf(userMsg) != -1){
         let url_list = '[{"English":"'+obj[chapterType][mainMaster][mainBranch]['url']+'"}]'
         botReply = ''
@@ -110,8 +80,8 @@ const PlayV2video= async(chapterType,mainMaster,mainBranch,turnContext)=>{
     }else{
         botReply = 'You can watch the video at any time by telling me \'Play Amy’s video on baby books\'. How confident do you feel about breast feeding successfully?';
         botReply += '#&@#';
-        nextMaster = 'v2Conversation'
-        nextBranch = 3
+        nextMaster = 'tipsConversation'
+        nextBranch = 1
     }
     // await turnContext.sendActivity(botReply);
     return {botReply,nextMaster,nextBranch}
@@ -120,7 +90,7 @@ const PlayV2video= async(chapterType,mainMaster,mainBranch,turnContext)=>{
 const checkV3Url= async(chapterType,mainMaster,mainBranch,turnContext)=>{
     var userMsg = turnContext.activity.text;
     userMsg = userMsg.toLowerCase()
-    var arr=['ofcourse','sure','yes','obiesly', 'please right now'];
+    var arr=['ofcourse','sure','yes','obviously', 'please right now'];
     if(arr.indexOf(userMsg) != -1){
         let url_list = '[{"English":"'+obj[chapterType][mainMaster][mainBranch]['url']['English']+'"}, {"Bengali":"'+obj[chapterType][mainMaster][mainBranch]['url']['Bengali']+'"}, {"Arabic":"'+obj[chapterType][mainMaster][mainBranch]['url']['Arabic']+'"}]'
         botReply = ''
@@ -141,9 +111,28 @@ const checkBreastfedDuration = async(chapterType,mainMaster,mainBranch,turnConte
     var userMsg = turnContext.activity.text;
     userMsg = userMsg.toLowerCase()
     var arr=['6 months','six months','12 months','twelve months', '1 year', 'one year', 'a year'];
-    if(arr.indexOf(userMsg) != -1){
-        botReply = 'Correct  Ideally all babies should be exclusively breastfed for the first six months of life. Breastfeeding should ideally also carry on during the second six months, through weaning and beyond. How does that sound?';
-        botReply += '#&@#'
+    // if(arr.indexOf(userMsg) != -1){
+    //     botReply = 'Correct 😊 Ideally all babies should be exclusively breastfed for the first six months of life. Breastfeeding should ideally also carry on during the second six months, through weaning and beyond. How does that sound?';
+    //     botReply += '#&@#'
+    //     nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+    //     nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    // }else{
+    //     botReply = 'Ideally all babies should be exclusively breastfed for the first six months of life. Breastfeeding should ideally also carry on during the second six months, through weaning and beyond. How does that sound?';
+    //     botReply += '#&@#'
+    //     nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+    //     nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    // }
+    let checkFlag = false;
+    for(var i=0 ; i<arr.length; i++){
+        if(userMsg.search(arr[i]) != -1){
+            checkFlag = true;
+            break;
+        }
+    }
+
+    if(checkFlag){
+        botReply = 'Correct 😊 Ideally all babies should be exclusively breastfed for the first six months of life. Breastfeeding should ideally also carry on during the second six months, through weaning and beyond. How does that sound?';
+        botReply += '#&@#';
         nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
         nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
     }else{
@@ -152,9 +141,65 @@ const checkBreastfedDuration = async(chapterType,mainMaster,mainBranch,turnConte
         nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
         nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
     }
-    // await turnContext.sendActivity(botReply);
+
+    // console.log(checkFlag)
+    // console.log(botReply)
+    
     return {botReply,nextMaster,nextBranch}
 }
+
+const checkTips1 = async(chapterType,mainMaster,mainBranch,turnContext)=>{
+    var userMsg = turnContext.activity.text;
+    userMsg = userMsg.toLowerCase()
+    var arr=['ofcourse','sure','yes','obviously', 'please right now', 'yes, that would be great!'];
+    if(arr.indexOf(userMsg) != -1){
+        botReply = obj[chapterType][mainMaster][mainBranch]['targetMsg']['forYes']
+        botReply += '#&@#';
+        nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+        nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    }else{
+        botReply = obj[chapterType][mainMaster][mainBranch]['targetMsg']['forNo']
+        botReply += '#&@#';
+        nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+        nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    }
+    
+    return {botReply,nextMaster,nextBranch}
+}
+
+const randomResp1 = async(chapterType,mainMaster,mainBranch,turnContext)=>{
+    let resp = obj[chapterType][mainMaster][mainBranch]['targetMsgArr'];
+    botReply = resp[Math.floor(Math.random() * resp.length)].respMsg;
+    botReply += '#&@#';
+    nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+    nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    return {botReply,nextMaster,nextBranch}
+}
+const randomResp2 = async(chapterType,mainMaster,mainBranch,turnContext)=>{
+    let resp = obj[chapterType][mainMaster][mainBranch]['targetMsgArr'];
+    botReply = resp[Math.floor(Math.random() * resp.length)].respMsg;
+    botReply += '#&@#';
+    nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+    nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    return {botReply,nextMaster,nextBranch}
+}
+const randomResp3 = async(chapterType,mainMaster,mainBranch,turnContext)=>{
+    let resp = obj[chapterType][mainMaster][mainBranch]['targetMsgArr'];
+    botReply = resp[Math.floor(Math.random() * resp.length)].respMsg;
+    botReply += '#&@#';
+    nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+    nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    return {botReply,nextMaster,nextBranch}
+}
+const randomResp4 = async(chapterType,mainMaster,mainBranch,turnContext)=>{
+    let resp = obj[chapterType][mainMaster][mainBranch]['targetMsgArr'];
+    botReply = resp[Math.floor(Math.random() * resp.length)].respMsg;
+    botReply += '#&@#';
+    nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+    nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    return {botReply,nextMaster,nextBranch}
+}
+
 
 var obj = {
     introduction: {
@@ -269,20 +314,147 @@ var obj = {
                 text: 'You can watch the video at any time by telling me ‘Play Amy’s video on baby books’. How confident do you feel about breast feeding successfully?',
                 predict: '',
                 nextPath: {
-                    master: "v2Conversation",
+                    master: "tipsConversation",
+                    branch: 1
+                }
+            }
+        },
+        tipsConversation: {
+            1: {
+                text: 'Nearly all women can breast feed successfully, but almost everyone needs support, especially when they are starting out. I’m here to help you, but don’t be shy about asking your midwife or health visitor for help or advice. There is no need to struggle on your own! Would you like to know some simple tips to help yourself breast feed?',
+                predict: '["Yes, that would be great!", "Not right now, tell me something else"]',
+                nextPath: {
+                    master: "tipsConversation",
+                    branch: 2
+                }
+            },
+            2: {
+                func: checkTips1,
+                targetMsg: {
+                    forYes: '•	Make sure you eat well and drink plenty of water.\n\n •	Let people around you help out with chores and other stuff so you can rest. \n\n •	Be kind and look after yourself.\n\n •	Get comfortable! Use pillows or cushions if necessary. Your shoulders and arms should be relaxed.\n\n  How does that sound? ',
+                    forNo: 'How do you feel about how you hold your baby for breastfeeding?'
+                },
+                nextPath: {
+                    master: "tipsConversation",
                     branch: 3
                 }
             },
             3: {
-                text: 'Thank you',
+                func: randomResp1,
+                targetMsgArr: [
+                    {
+                        respMsg: 'Breastfeeding is amazing and natural. It’s a good to hold your baby close to you with their nose, tummy and toes in a line, facing your breast from underneath.'
+                    },
+                    {
+                        respMsg: 'Others have been in your position. It’s a good to hold your baby close to you with their nose, tummy and toes in a line, facing your breast from underneath.'
+                    }
+                ],
+                nextPath: {
+                    master: "tipsConversation",
+                    branch: 4
+                }
+            },
+            4: {
+                func: randomResp2,
+                targetMsgArr: [
+                    {
+                        respMsg: 'Once your baby’s head and neck are close to you and inline, support your baby’s neck rather than their head so that they can tilt their head back as they begin to feed.'
+                    },
+                    {
+                        respMsg: 'Your baby’s head and neck should be close to you and inline. Then, support your baby’s neck rather than their head so that they can tilt their head back as they begin to feed. '
+                    }
+                ],
+                nextPath: {
+                    master: "tipsConversation",
+                    branch: 5
+                }
+            },
+            5: {
+                func: randomResp3,
+                targetMsgArr: [
+                    {
+                        respMsg: 'When you’re supporting your baby’s neck, shoulders and back, this should allow them to tilt their head back and swallow easily.'
+                    },
+                    {
+                        respMsg: 'With you baby close to you, facing your breast, and having their neck, shoulders, and back supported, this should allow them to tilt their head back and swallow easily.'
+                    }
+                ],
+                nextPath: {
+                    master: "tipsConversation",
+                    branch: 6
+                }
+            },
+            6: {
+                text: 'Bring your baby to the breast and let them latch themselves. Avoid leaning your breast forward into your baby\'s mouth, as this can lead to poor attachment.',
                 predict: '',
                 nextPath: {
-                    master: "v2Conversation",
-                    branch: 3
+                    master: "tipsConversation",
+                    branch: 7
+                }
+            },
+            7: {
+                func: randomResp4,
+                targetMsgArr: [
+                    {
+                        respMsg: 'Gently rub your nipple between your baby’s top lip and nose to encourage them to open their mouth wide.'
+                    },
+                    {
+                        respMsg: 'To encourage your baby to open their mouth wide, place your nipple just under your baby’s nose.'
+                    }
+                ],
+                nextPath: {
+                    master: "tipsConversation",
+                    branch: 8
+                }
+            },
+            8: {
+                text: 'Try not to hold the back of your baby\'s head, so that they can tip their head back. This way your nipple goes past the hard roof of their mouth and ends up at the back of their mouth against the soft palate.',
+                predict: '',
+                nextPath: {
+                    master: "tipsConversation",
+                    branch: 9
+                }
+            },
+            9: {
+                text: 'Would you like to know about understanding if your is baby getting enough milk, or about latching your baby on your breast? Or, you can ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.',
+                predict: '["Is my baby getting enough milk?", "Is my baby attaching well?"]',
+                nextPath: {
+                    master: "tipsConversation",
+                    branch: 10
+                }
+            },
+            10: {
+                text: 'It’s worth remembering that ',
+                predict: '',
+                nextPath: {
+                    master: "tipsConversation",
+                    branch: 10
+                }
+            },
+        }
+
+    },
+    givingHealth: {
+        welcome: {
+            1: {
+                text: 'Welcome to Giving the Healthiest Start chapter!',
+                predict: '',
+                nextPath: {
+                    master: "conv1",
+                    branch: 1
+                }
+            }
+        },
+        conv1: {
+            1: {
+                text: 'Thank you.',
+                predict: '',
+                nextPath: {
+                    master: "conv1",
+                    branch: 1
                 }
             }
         }
-
     }
 }
 

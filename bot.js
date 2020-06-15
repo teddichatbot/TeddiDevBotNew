@@ -11,6 +11,7 @@ var chatJson = require('./chatJson')
 // chapters patha
 var introductionPath = require('./chapters/introduction')
 var breastFeedingPath = require('./chapters/breastFeeding')
+var givingHealthPath = require('./chapters/givingHealth')
 
 // Create access to CosmosDb Storage - this replaces local Memory Storage.
 var storage = new CosmosDbPartitionedStorage({
@@ -108,6 +109,10 @@ async function UtteranceLog(storage, turnContext, userId, storeItems, channelId,
         }
         case "breastFeeding": {
             respObj = await breastFeedingPath.chatJson(chapterType,storeItems[userId],turnContext)
+            break;
+        }
+        case "givingHealth": {
+            respObj = await givingHealthPath.chatJson(chapterType,storeItems[userId],turnContext)
             break;
         }
         default: {
@@ -221,6 +226,12 @@ async function creatingUtterance(storage, turnContext, userId, storeItems, chann
             prevMaster: "",
             prevBranch: ""
         },
+        givingHealth:{
+            mainMaster: "",
+            mainBranch: "",
+            prevMaster: "",
+            prevBranch: ""
+        },
         "eTag": "*", 
         turnNumber 
     }
@@ -303,11 +314,13 @@ async function saveName(conversationId, fname, lname){
 }
 
 async function checkFaq(turnContext){
+    let userMsg = turnContext.activity.text.toLowerCase();
+    
     return unirest
     .post(API_URL+'chapterFaq/checkFaq')
     .headers({'Content-Type': 'application/json'})
     .send({ 
-        "faq": turnContext.activity.text,
+        "faq": userMsg,
     })
     .then(async(response) => {
         // console.log(response.body)
