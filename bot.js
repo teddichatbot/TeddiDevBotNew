@@ -48,7 +48,7 @@ async function logMessageText(storage, turnContext) {
     let conversationId= turnContext.activity.conversation.id;
     let chapterType = '';
     if(turnContext.activity.chapterType === undefined){
-        chapterType = 'introduction';
+        chapterType = 'breastFeeding';
     }else{
         chapterType = turnContext.activity.chapterType;
     }
@@ -69,12 +69,28 @@ async function logMessageText(storage, turnContext) {
                 if(faqRes.status == 200){
                     await saveUserMsg(turnContext.activity, faqRes.data.chapterName);
                     let chapterName = {chapterName : faqRes.data.chapterName};
-                    let botResp = await turnContext.sendActivities([
-                        { type: ActivityTypes.Typing },
-                        { type: 'delay', value: 500 },
-                        { type: ActivityTypes.Message, text: faqRes.data.answer, value: JSON.stringify(chapterName) }
-                    ]);
-                    await saveBotReply(faqRes.data.answer, botResp[2].id, channelId, conversationId, userChatId, faqRes.data.chapterName)
+                    if(faqRes.data.playVideo){
+                        let botResp = await turnContext.sendActivities([
+                            { type: ActivityTypes.Typing },
+                            { type: 'delay', value: 500 },
+                            { type: ActivityTypes.Message, text: faqRes.data.answer, value: JSON.stringify(chapterName) }
+                        ]);
+                        await turnContext.sendActivities([
+                            { type: ActivityTypes.Typing },
+                            { type: 'delay', value: 1000 },
+                            { type: ActivityTypes.Message, text: faqRes.data.videoPath, value: JSON.stringify(chapterName) }
+                        ]);
+                        await saveBotReply(faqRes.data.answer, botResp[2].id, channelId, conversationId, userChatId, faqRes.data.chapterName)
+                        
+                    }else{
+                        let botResp = await turnContext.sendActivities([
+                            { type: ActivityTypes.Typing },
+                            { type: 'delay', value: 500 },
+                            { type: ActivityTypes.Message, text: faqRes.data.answer, value: JSON.stringify(chapterName) }
+                        ]);
+                        await saveBotReply(faqRes.data.answer, botResp[2].id, channelId, conversationId, userChatId, faqRes.data.chapterName)
+                        
+                    }
                     
                 }else{
                     
