@@ -318,7 +318,8 @@ async function checkFaq(turnContext){
     let userMsg = turnContext.activity.text.toLowerCase();
     
     return unirest
-    .post(API_URL+'chapterFaq/checkFaq')
+    // .post(API_URL+'chapterFaq/checkFaq')
+    .post(API_URL+'chapterFaq/checkFaqBySelectiveWords')
     .headers({'Content-Type': 'application/json'})
     .send({ 
         "faq": userMsg,
