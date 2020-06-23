@@ -14,7 +14,7 @@ var welcomeMsg = (chapterType) =>{
 }
 
 var playV3video = (currentMaster, currentBranch)=>{
-    let url_list = '[{"English": "https://teddivideostorage.blob.core.windows.net/videocontainer/V3 Human Milk advert with subtitles.mp4" }, {"Bengali":"https://teddivideostorage.blob.core.windows.net/videocontainer/HumanMilk_Advert_Subtitles_Bengali_V1.mp4"}, {"Arabic":"https://teddivideostorage.blob.core.windows.net/videocontainer/HumanMilk_Advert_Subtitles_Arabic_V1.mp4"}]'
+    let url_list = '[{"English": "https://teddibucketdev.blob.core.windows.net/videoscontainer/V3 Human Milk advert with subtitles.mp4" }, {"Bengali":"https://teddibucketdev.blob.core.windows.net/videoscontainer/HumanMilk_Advert_Subtitles_Bengali_V1.mp4"}, {"Arabic":"https://teddibucketdev.blob.core.windows.net/videoscontainer/HumanMilk_Advert_Subtitles_Arabic_V1.mp4"}]'
     botReply = ''
     botReply += '#&@#{"selectVideo" : '+url_list+' }'
  
@@ -26,7 +26,7 @@ var playV3video = (currentMaster, currentBranch)=>{
 }
 
 var playV2video = (currentMaster, currentBranch)=>{
-    var URL = 'https://teddivideostorage.blob.core.windows.net/videocontainer/V2 Baby Books Animation (1).mp4';
+    var URL = 'https://teddibucketdev.blob.core.windows.net/videoscontainer/V2 Baby Books Animation (1).mp4';
     // var URL = 'https://teddivideostorage.blob.core.windows.net/videocontainer/videodemo.mov';
     let url_list = '[{"English":"'+URL+'"}]'
     botReply = ''
