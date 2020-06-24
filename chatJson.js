@@ -232,7 +232,7 @@ var obj = {
     breastFeeding: {
         welcome: {
             1: {
-                text: 'Welcome to Breast & Bottle Feeding chapter! This chapter is all about breast and bottle feeding. How do you feel about breast feeding?',
+                text: 'Welcome to Chapter 1! This chapter is all about breast and bottle feeding. How do you feel about breast feeding?',
                 predict: '',
                 nextPath: {
                     master: "feelMessage",
@@ -346,7 +346,7 @@ var obj = {
                         respMsg: 'Breastfeeding is amazing and natural. It’s a good to hold your baby close to you with their nose, tummy and toes in a line, facing your breast from underneath.'
                     },
                     {
-                        respMsg: 'Others have been in your position. It’s a good to hold your baby close to you with their nose, tummy and toes in a line, facing your breast from underneath.'
+                        respMsg: 'Others have been in your position. It’s good to hold your baby close to you with their nose, tummy and toes in a line, facing your breast from underneath.'
                     }
                 ],
                 nextPath: {
