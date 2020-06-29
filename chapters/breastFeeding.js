@@ -55,6 +55,7 @@ var botResponse = (chapterType,mainMaster,mainBranch)=>{
 
 var obj = {
     chatJson: async(chapterType,userSession,turnContext) => { 
+        // console.log('firstName',userSession.userInfo.firstName)
 
         if(userSession[chapterType].mainMaster == ''){ //check breastFeeding branch
             //welcome message
@@ -84,7 +85,7 @@ var obj = {
                 //check in JSON's node declare any function or not
                 if(chatJson[chapterType][mainMaster][mainBranch]['func']){
                     //call general function
-                    var resData = await chatJson[chapterType][mainMaster][mainBranch]['func'](chapterType,mainMaster,mainBranch,turnContext)
+                    var resData = await chatJson[chapterType][mainMaster][mainBranch]['func'](chapterType,mainMaster,mainBranch,turnContext,userSession)
                     if(resData.feelMsg){
                         respObj.feelMsg = resData.feelMsg;
                     }
