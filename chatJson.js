@@ -287,10 +287,10 @@ var obj = {
                 text: 'Welcome to Chapter 1! This chapter is all about breast and bottle feeding. How do you feel about breast feeding?',
                 predict: '',
                 nextPath: {
-                    // master: "feelMessage",
-                    // branch: 1
-                    master: "tipsConversation",
-                    branch: 10
+                    master: "feelMessage",
+                    branch: 1
+                    // master: "tipsConversation",
+                    // branch: 10
                 }
             }
         },
