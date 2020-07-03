@@ -175,6 +175,14 @@ async function UtteranceLog(storage, turnContext, userId, storeItems, channelId,
     if(respObj.feedingType){
         storeItems[userId][chapterType]['feedingType'] = respObj.feedingType;
     }
+    if(respObj.randomMsgFlag){
+        // console.log('randomMsgFlag',respObj.randomMsgFlag)
+        storeItems[userId][chapterType]['chap1RandomMsgFlag'] = respObj.randomMsgFlag;
+    }
+    if(respObj.randomArrFlag){
+        // console.log('randomArrFlag',respObj.randomArrFlag)
+        storeItems[userId][chapterType]['chap1FlowingFlag'] = respObj.randomArrFlag;
+    }
     storeItems[userId][chapterType]['mainMaster'] = respObj.mainMaster
     storeItems[userId][chapterType]['mainBranch'] = respObj.mainBranch
     
@@ -220,8 +228,10 @@ async function creatingUtterance(storage, turnContext, userId, storeItems, chann
             prevBranch: 1
         },
         breastFeeding:{
-            feelMessage:"",
-            feedingType:"",
+            feelMessage: "",
+            feedingType: "",
+            chap1FlowingFlag: 1,
+            chap1RandomMsgFlag: 0,
             mainMaster: "",
             mainBranch: "",
             prevMaster: "",
