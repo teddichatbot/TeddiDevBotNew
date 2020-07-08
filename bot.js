@@ -177,11 +177,13 @@ async function UtteranceLog(storage, turnContext, userId, storeItems, channelId,
     }
     if(respObj.randomMsgFlag){
         // console.log('randomMsgFlag',respObj.randomMsgFlag)
-        storeItems[userId][chapterType]['chap1RandomMsgFlag'] = respObj.randomMsgFlag;
+        // storeItems[userId][chapterType]['chap1RandomMsgFlag'] = respObj.randomMsgFlag;
+        storeItems[userId][chapterType]['randomMsgFlag'] = respObj.randomMsgFlag;
     }
     if(respObj.randomArrFlag){
         // console.log('randomArrFlag',respObj.randomArrFlag)
-        storeItems[userId][chapterType]['chap1FlowingFlag'] = respObj.randomArrFlag;
+        // storeItems[userId][chapterType]['chap1FlowingFlag'] = respObj.randomArrFlag;
+        storeItems[userId][chapterType]['flowingFlag'] = respObj.randomArrFlag;
     }
     storeItems[userId][chapterType]['mainMaster'] = respObj.mainMaster
     storeItems[userId][chapterType]['mainBranch'] = respObj.mainBranch
@@ -230,14 +232,16 @@ async function creatingUtterance(storage, turnContext, userId, storeItems, chann
         breastFeeding:{
             feelMessage: "",
             feedingType: "",
-            chap1FlowingFlag: 1,
-            chap1RandomMsgFlag: 0,
+            flowingFlag: 1,
+            randomMsgFlag: 0,
             mainMaster: "",
             mainBranch: "",
             prevMaster: "",
             prevBranch: ""
         },
         givingHealth:{
+            flowingFlag: 1,
+            randomMsgFlag: 0,
             mainMaster: "",
             mainBranch: "",
             prevMaster: "",

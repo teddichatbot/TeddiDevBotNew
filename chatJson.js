@@ -2,6 +2,8 @@
 let nextMaster = '';
 let nextBranch = '';
 let botReply = '';
+let tempRandomArr = [];
+let tempRandomArrOfChap2 = [];
 
 const setName = async(turnContext)=>{
     var userMsg = turnContext.activity.text;
@@ -111,17 +113,7 @@ const checkBreastfedDuration = async(chapterType,mainMaster,mainBranch,turnConte
     var userMsg = turnContext.activity.text;
     userMsg = userMsg.toLowerCase()
     var arr=['6 months','six months','12 months','twelve months', '1 year', 'one year', 'a year'];
-    // if(arr.indexOf(userMsg) != -1){
-    //     botReply = 'Correct 😊 Ideally all babies should be exclusively breastfed for the first six months of life. Breastfeeding should ideally also carry on during the second six months, through weaning and beyond. How does that sound?';
-    //     botReply += '#&@#'
-    //     nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
-    //     nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
-    // }else{
-    //     botReply = 'Ideally all babies should be exclusively breastfed for the first six months of life. Breastfeeding should ideally also carry on during the second six months, through weaning and beyond. How does that sound?';
-    //     botReply += '#&@#'
-    //     nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
-    //     nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
-    // }
+    
     let checkFlag = false;
     for(var i=0 ; i<arr.length; i++){
         if(userMsg.search(arr[i]) != -1){
@@ -200,12 +192,11 @@ const randomResp4 = async(chapterType,mainMaster,mainBranch,turnContext)=>{
     return {botReply,nextMaster,nextBranch}
 }
 
-let tempRandomArr = [];
 const randomResp5 = async(chapterType,mainMaster,mainBranch,turnContext, userSession)=>{
     // console.log(userSession.breastFeeding.chap1RandomMsgFlag)
     
-    let randomArrFlag = userSession.breastFeeding.chap1FlowingFlag;
-    let randomMsgFlag = userSession.breastFeeding.chap1RandomMsgFlag;
+    let randomArrFlag = userSession.breastFeeding.flowingFlag;
+    let randomMsgFlag = userSession.breastFeeding.randomMsgFlag;
     let comnMsg = 'You can also ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.';
     let resp = ''
     if(randomArrFlag == 1 ){
@@ -250,6 +241,92 @@ const randomResp5 = async(chapterType,mainMaster,mainBranch,turnContext, userSes
     nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
     nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
     return {botReply,nextMaster,nextBranch, randomArrFlag, randomMsgFlag}
+}
+const randomRespOfChap2 = async(chapterType,mainMaster,mainBranch,turnContext, userSession)=>{
+    
+    let randomArrFlag = userSession.givingHealth.flowingFlag;
+    let randomMsgFlag = userSession.givingHealth.randomMsgFlag;
+    let comnMsg = 'You can also ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.';
+    let resp = ''
+    if(randomArrFlag == 1 ){
+        // console.log('here1')
+        resp = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+    }else{
+        // console.log('here2')
+        resp = [...tempRandomArrOfChap2];
+    }
+    // console.log('resp',resp)
+    let index = Math.floor(Math.random() * resp.length);
+    randomArrFlag = 2;
+    // console.log('randomArrFlag',randomArrFlag)
+    let randomObj = resp[index];
+    resp.splice(index,1)
+    
+    tempRandomArrOfChap2 = [...resp];
+    // console.log('temp2',tempRandomArrOfChap2)
+    let botReply = '';
+    botReply += randomObj.respMsg;
+    botReply += '#&@#';
+
+    if(randomObj.predict != ''){
+        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '#&@#';
+    }
+    if(randomMsgFlag == 1){
+        botReply += comnMsg;
+    }
+
+    if(tempRandomArrOfChap2.length == 0){
+        // console.log('in')
+        randomMsgFlag = 1;
+        randomArrFlag = 1;
+    }
+    // console.log('csdc',randomArrFlag)
+    nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+    nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    return {botReply,nextMaster,nextBranch, randomArrFlag, randomMsgFlag}
+}
+
+const checkFruitConsume = async(chapterType,mainMaster,mainBranch,turnContext, userSession) =>{
+    var userMsg = turnContext.activity.text;
+    userMsg = userMsg.toLowerCase()
+    var arr=['5','five'];
+    
+    let checkFlag = false;
+    for(var i=0 ; i<arr.length; i++){
+        if(userMsg.search(arr[i]) != -1){
+            checkFlag = true;
+            break;
+        }
+    }
+
+    if(checkFlag){
+        botReply = 'That’s correct! You should have 5 portions of fruits and vegetables a day! Fruit and vegetables are an important part of a healthy, balanced diet and help you to stay healthy. They contain dietary fibre and provide a wide range of vitamins and minerals. It\'s important that you eat enough of them, and that you also provide children with a diet containing plenty of these as well. Not only will this help with health today but will also set up great dietary habits for life. You can ask me about why they are good, portion sizes, and what counts towards your 5-a-day!';
+        botReply += '#&@#{"predictiveText" : ["Why are fruits and vegetables good?", "What is a portion of fruits and vegetables?", "What counts towards my 5 a day?"] }';
+        nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+        nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    }else{
+        botReply = 'You should have 5 portions of fruits and vegetables a day! Fruit and vegetables are an important part of a healthy, balanced diet and help you to stay healthy. They contain dietary fibre and provide a wide range of vitamins and minerals. It\'s important that you eat enough of them, and that you also provide children with a diet containing plenty of these as well. Not only will this help with health today but will also set up great dietary habits for life. You can ask me about why they are good, portion sizes, and what counts towards your 5-a-day!';
+        botReply += '#&@#{"predictiveText" : ["Why are fruits and vegetables good?", "What is a portion of fruits and vegetables?", "What counts towards my 5 a day?"] }';
+        nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+        nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    }
+
+    // console.log(checkFlag)
+    // console.log(botReply)
+    
+    return {botReply,nextMaster,nextBranch}
+}
+
+const feelAboutVaccination = async(chapterType,mainMaster,mainBranch,turnContext, userSession) =>{
+    let botReply = '';
+    botReply += 'Thanks for telling me, ';
+    botReply += userSession.userInfo.firstName+'! ';
+    botReply += 'In the UK, we have a free vaccination programme to help protect our babies and children from a range of childhood diseases. This is called the Routine Childhood Immunisation Schedule.  These are all listed in your child’s Red Book and your Health Visitor or GP will advise you when they are due. Having all of the vaccinations recommended is really important to help your child build up their immunity and avoid diseases which can harm children badly.';
+    botReply += '#&@#';
+    nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+    nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    return {botReply,nextMaster,nextBranch}
 }
 
 
@@ -592,23 +669,182 @@ var obj = {
     givingHealth: {
         welcome: {
             1: {
-                text: 'Welcome to Giving the Healthiest Start chapter!',
+                text: 'Welcome to Chapter 2, user name! This chapter is all about giving your child the healthiest start! How do you feel about this?',
                 predict: '',
                 nextPath: {
                     master: "conv1",
                     branch: 1
+                    // master: "conv1",
+                    // branch: 14
                 }
             }
         },
         conv1: {
             1: {
-                text: 'Thank you.',
+                text: 'It’s normal for parents to want to do what’s best for their children and give them the healthiest start in life. Sometimes new parents can feel overwhelmed, and it’s tough and rewarding raising a child. I’m here to help! You can also ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner. What does giving the healthiest start mean for you?',
                 predict: '',
                 nextPath: {
                     master: "conv1",
-                    branch: 1
+                    branch: 2
                 }
-            }
+            },
+            2: {
+                text: 'Thank you for telling me 😊 A good diet in pregnancy and in the first few years of life is essential for prevention of disease and to ensure children reach their full potential for growth and development. I’ll try to give you some practical help with this. Do you know about the Healthy Start Scheme?',
+                predict: '',
+                nextPath: {
+                    master: "conv1",
+                    branch: 3
+                }
+            },
+            3: {
+                text: 'The Healthy Start Scheme is a voucher scheme offered by the UK Government to help pregnant women and families with young children to access fruit, vegetables, cow’s milk or formula and vitamin supplements. How does that sound?',
+                predict: '',
+                nextPath: {
+                    master: "conv1",
+                    branch: 4
+                }
+            },
+            4: {
+                text: 'I see - once registered, families that qualify are sent vouchers in the post which they can then spend in normal shops. They also get coupons to exchange for vitamin supplements. Would you like to know about who gets Healthy Start Food Vouchers, or about applying for Healthy Start?',
+                predict: '["Who gets Healthy Start Food Vouchers?", "How do I apply for Healthy Start?"]',
+                nextPath: {
+                    master: "conv1",
+                    branch: 5
+                }
+            },
+            5: {
+                text: 'Did you know that 1 in 3 people who could have got Healthy Start vouchers didn’t apply last year!? I find that amazing. Would you like to know about what can you spend the vouchers on, or where you can spend the vouchers? You can ask me about anything else and I’ll do my best to answer!',
+                predict: '["What can I spend the vouchers on?", "Where can I spend the vouchers?"]',
+                nextPath: {
+                    master: "conv1",
+                    branch: 6
+                }
+            },
+            6: {
+                text: 'It’s true that the Healthy Start Scheme can be very helpful to some families. Here are some other questions you can ask me about related with the Scheme:\n\n•	Why am I not eligible for Healthy Start Vouchers?\n\n•	My vouchers haven’t come through?\n\n•	Can I have vouchers for each child?\n\n•	Where can I exchange the vouchers?\n\n•	Can I get vouchers from the job centre?\n\n•	Can I complete the form online?\n\n•	Who can sign the Healthy Start form?\n\n•	What can I spend the vouchers on? \n\n•	How long will it take to get my Healthy Start vouchers?\n\n•	How often do I get vouchers?',
+                predict: '',
+                nextPath: {
+                    master: "conv1",
+                    branch: 7
+                }
+            },
+            7: {
+                text: 'Fruits and vegetables, vitamin supplements, and vaccines are all important aspects of giving your child the healthiest start. Remember – you can ask me any question and I’ll do my best to answer. You can also provide feedback on by selecting the top right-hand corner. Do you know how many portions of fruits and vegetables you should eat every day?',
+                predict: '',
+                nextPath: {
+                    master: "conv1",
+                    branch: 8
+                }
+            },
+            8: {
+                func: checkFruitConsume,
+                nextPath: {
+                    master: "conv1",
+                    branch: 9
+                }
+            },
+            9: {
+                text: 'Vitamin supplements are always a hot topic! How do you feel about them?',
+                predict: '',
+                nextPath: {
+                    master: "conv1",
+                    branch: 10
+                }
+            },
+            10: {
+                text: 'I see, thank you! It’s true that both you and your baby/child can benefit from taking vitamin supplements. In fact, pregnant women and young children are recommended to take a supplement of some vitamins. We get most of the vitamins and minerals that we need by eating a healthy, varied diet, but for some vitamins we also need a bit of a helping hand. \n\n All adults, (including pregnant and breastfeeding women) babies, and children are recommended to take a daily vitamin D supplement too – especially in the winter months (October - March) when you don\'t get enough from the sunlight.',
+                predict: '',
+                nextPath: {
+                    master: "conv1",
+                    branch: 11
+                }
+            },
+            11: {
+                text: 'How do you feel about vaccinations?',
+                predict: '',
+                nextPath: {
+                    master: "conv1",
+                    branch: 12
+                }
+            },
+            12: {
+                func: feelAboutVaccination,
+                // text: 'Thanks for telling me, user name! In the UK, we have a free vaccination programme to help protect our babies and children from a range of childhood diseases. This is called the Routine Childhood Immunisation Schedule.  These are all listed in your child’s Red Book and your Health Visitor or GP will advise you when they are due. Having all of the vaccinations recommended is really important to help your child build up their immunity and avoid diseases which can harm children badly. ',
+                // predict: '',
+                nextPath: {
+                    master: "conv1",
+                    branch: 13
+                }
+            },
+            13: {
+                text: 'You can also see the schedule on https://www.gov.uk/government/publications/routine-childhood-immunisation-schedule or https://www.nhs.uk/conditions/vaccinations/nhs-vaccinations-and-when-to-have-them/. Ask me “What is a summary of routine childhood vaccinations?” to see a summary. Here are some other questions about vaccinations you can ask me (you can try asking me something else too): \n\n • How do vaccines work?\n\n• Are vaccines safe? \n\n • What happens if my child misses a vaccination?\n\n • How will I know when my baby’s/child’s vaccinations are due? \n\n • Can I still vaccinate my child if they are feeling unwell?',
+                predict: 'What is a summary of routine childhood vaccinations?',
+                nextPath: {
+                    master: "conv1",
+                    branch: 14
+                }
+            },
+            14: {
+                func: randomRespOfChap2,
+                targetMsgArr: [
+                    {
+                        respMsg: 'It’s normal to experience hard moments. Practical support can help. Ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner. You can also ask your Health Visitor or GP. ',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'You’re amazing! I’m here to help and so is your Health Visitor! Ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'You can also ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Make eating your 5 a day the normal thing to do in the family! If it’s hard, take it each day at a time. Focus on eating your 5 a day today!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Vaccinating your child is so important.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Vaccines are the most effective way to prevent infectious diseases and are both safe and important.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Vaccination is the most important thing we can do to protect both ourselves and our children against ill health. Since vaccines were introduced in the UK, diseases like smallpox, polio and tetanus that used to kill or cause disability to large numbers of people are either gone or seen very rarely. Other diseases like measles and diphtheria had been pretty much eradicated since their vaccines were introduced. However, they are rising again as vaccination levels among children have recently been falling.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: '**Speak to your GP or practice nurse if:** \n\n• you\'re worried about you or your child having a vaccine \n\n• you\'re not sure if you or your child can have a vaccine \n\n You could also ask a health visitor any questions you have about vaccines.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'No one wants their children to be ill. Choosing to not vaccinate means your child is likely to suffer a number of illnesses which could be avoided. ',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Be aware that anti-vaccine stories are spread online through social media. They are not based on scientific evidence and could put your child at risk of a serious illness.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Fruit and vegetables don\'t have to be fresh to count as a portion. They also count if they\'re part of a meal or dish.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'You and your child are amazing! Give your child the healthiest start by ensuring they are vaccinated, eating a good diet, and take the right supplements. ',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Here are some questions you can ask me: \n\n• What is a booster jab? \n\n• Are there any side-effects after immunisation? \n\n• I’m formula feeding. Does my baby need extra vitamins? \n\n• Is too much fruit bad for my child’s teeth? \n\n• Can I start giving banana?\n\n• When can I start giving solids?\n\n• My child never eats anything, can I just feed my child milk?\n\n• When I can fly with my baby?',
+                        predict: ''
+                    }
+                ],
+                nextPath: {
+                    master: "conv1",
+                    branch: 14
+                }
+            },
         }
     }
 }

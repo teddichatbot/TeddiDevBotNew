@@ -10,6 +10,8 @@ var welcomeMsg = (chapterType) =>{
     respObj.mainMaster = chatJson[chapterType]['welcome'][1]['nextPath']['master'];
     respObj.mainBranch = chatJson[chapterType]['welcome'][1]['nextPath']['branch'];
     respObj.checkTypeing = false;
+    respObj.randomMsgFlag = 0;
+    respObj.randomArrFlag = 1;
     return respObj
 }
 
@@ -44,12 +46,19 @@ var obj = {
             
             if(chatJson[chapterType][mainMaster][mainBranch]['func']){
                 //call general function
-                var resData = await chatJson[chapterType][mainMaster][mainBranch]['func'](chapterType,mainMaster,mainBranch,turnContext)
+                var resData = await chatJson[chapterType][mainMaster][mainBranch]['func'](chapterType,mainMaster,mainBranch,turnContext,userSession)
                 if(resData.feelMsg){
                     respObj.feelMsg = resData.feelMsg;
                 }
                 if(resData.feedingType){
                     respObj.feedingType = resData.feedingType;
+                }
+                if(resData.randomMsgFlag){
+                    respObj.randomMsgFlag = resData.randomMsgFlag;
+                }
+                if(resData.randomArrFlag){
+                    // console.log('vnbvn', resData.randomArrFlag)
+                    respObj.randomArrFlag = resData.randomArrFlag;
                 }
                 respObj.botReply = resData.botReply;
                 respObj.mainMaster = resData.nextMaster;
