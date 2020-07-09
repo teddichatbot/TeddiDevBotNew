@@ -48,7 +48,7 @@ async function logMessageText(storage, turnContext) {
     let conversationId= turnContext.activity.conversation.id;
     let chapterType = '';
     if(turnContext.activity.chapterType === undefined){
-        chapterType = 'givingHealth';
+        chapterType = 'introduction';
     }else{
         chapterType = turnContext.activity.chapterType;
     }
