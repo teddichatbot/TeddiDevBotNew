@@ -778,7 +778,7 @@ var obj = {
             },
             13: {
                 text: 'You can also see the schedule on https://www.gov.uk/government/publications/routine-childhood-immunisation-schedule or https://www.nhs.uk/conditions/vaccinations/nhs-vaccinations-and-when-to-have-them/. Ask me “What is a summary of routine childhood vaccinations?” to see a summary. Here are some other questions about vaccinations you can ask me (you can try asking me something else too): \n\n • How do vaccines work?\n\n• Are vaccines safe? \n\n • What happens if my child misses a vaccination?\n\n • How will I know when my baby’s/child’s vaccinations are due? \n\n • Can I still vaccinate my child if they are feeling unwell?',
-                predict: 'What is a summary of routine childhood vaccinations?',
+                predict: '["What is a summary of routine childhood vaccinations?"]',
                 nextPath: {
                     master: "conv1",
                     branch: 14

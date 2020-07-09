@@ -3,8 +3,10 @@ const chatJson = require('../chatJson')
 
 var botReply = '';
 var respObj = {}
-var welcomeMsg = (chapterType) =>{
-    botReply = chatJson[chapterType]['welcome'][1]['text']
+var welcomeMsg = (chapterType, userSession) =>{
+    // botReply = chatJson[chapterType]['welcome'][1]['text']
+    
+    botReply = 'Welcome to Chapter 2, '+userSession.userInfo.firstName+'! This chapter is all about giving your child the healthiest start! How do you feel about this?'
     botReply += '#&@#'+chatJson[chapterType]['welcome'][1]['predict']
     respObj.botReply = botReply;
     respObj.mainMaster = chatJson[chapterType]['welcome'][1]['nextPath']['master'];
@@ -36,7 +38,7 @@ var obj = {
 
         if(userSession[chapterType].mainMaster == ''){ //check givingHealth branch
             //welcome message
-            return welcomeMsg(chapterType)
+            return welcomeMsg(chapterType, userSession)
              
         }else if(turnContext.activity.text != ''){
             var userMsg = turnContext.activity.text;
