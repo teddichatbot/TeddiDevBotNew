@@ -4,6 +4,7 @@ let nextBranch = '';
 let botReply = '';
 let tempRandomArr = [];
 let tempRandomArrOfChap2 = [];
+let tempRandomArrOfChap3 = [];
 
 const setName = async(turnContext)=>{
     var userMsg = turnContext.activity.text;
@@ -217,7 +218,7 @@ const randomResp5 = async(chapterType,mainMaster,mainBranch,turnContext, userSes
     let botReply = '';
     if( randomObj.respMsg == 'How are you feeling, '){
         botReply += randomObj.respMsg ;
-        botReply += userSession.userInfo.firstName+'?' ;
+        botReply += userSession.userInfo.firstName+'? 😊' ;
     }else{
         botReply += randomObj.respMsg;
     }
@@ -329,6 +330,47 @@ const feelAboutVaccination = async(chapterType,mainMaster,mainBranch,turnContext
     return {botReply,nextMaster,nextBranch}
 }
 
+const randomRespOfChap3 = async(chapterType,mainMaster,mainBranch,turnContext, userSession)=>{
+    let randomArrFlag = userSession.chapter3.flowingFlag;
+    let randomMsgFlag = userSession.chapter3.randomMsgFlag;
+    let comnMsg = 'You can also ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.';
+    let resp = ''
+    if(randomArrFlag == 1 ){
+        resp = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+    }else{
+        
+        resp = [...tempRandomArrOfChap3];
+    }
+    
+    let index = Math.floor(Math.random() * resp.length);
+    randomArrFlag = 2;
+
+    let randomObj = resp[index];
+    resp.splice(index,1)
+    
+    tempRandomArrOfChap3 = [...resp];
+
+    let botReply = '';
+    botReply += randomObj.respMsg.replace("user name", userSession.userInfo.firstName);
+    botReply += '#&@#';
+
+    if(randomObj.predict != ''){
+        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '#&@#';
+    }
+    if(randomMsgFlag == 1){
+        botReply += comnMsg;
+    }
+
+    if(tempRandomArrOfChap3.length == 0){
+        randomMsgFlag = 1;
+        randomArrFlag = 1;
+    }
+    // console.log('csdc',randomArrFlag)
+    nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+    nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    return {botReply,nextMaster,nextBranch, randomArrFlag, randomMsgFlag}
+}
 
 var obj = {
     introduction: {
@@ -845,6 +887,45 @@ var obj = {
                     branch: 14
                 }
             },
+        }
+    },
+    chapter3: {
+        welcome: {
+            1: {
+                text: 'Welcome to Chapter 2, user name! This chapter is all about giving your child the healthiest start! How do you feel about this?',
+                predict: '',
+                nextPath: {
+                    master: "randomConvo",
+                    branch: 1
+                }
+            }
+        },
+        randomConvo: {
+            1: {
+                func: randomRespOfChap3,
+                targetMsgArr: [
+                    {
+                        respMsg: 'Sure, I understand! Thank you, user name 😊.  My friend, Professor Amy Brown had a video on baby sleep. If you would like to watch it, tell me \"Play Amy’s video on baby sleep\"',
+                        predict: '["Play Amy’s video on baby sleep"]'
+                    },
+                    {
+                        respMsg: 'Okay, I see! My friends at the Lullaby Trust have a video on sleep position and co sleeping. You can watch the video on sleep position by telling me “Play the Lullaby Trust sleep position video”. You can also watch the video on co sleeping by telling me “Play the co sleeping video”',
+                        predict: '["Play the Lullaby Trust sleep position video", "Play the co sleeping video"]'
+                    },
+                    {
+                        respMsg: 'Okay  We can keep chatting, or here are some questions you can ask me:\n\n Can I sleep with my baby in bed? \n\n What techniques can I use for getting my baby to sleep alone?',
+                        predict: '["Can I sleep with my baby in bed?", "What techniques can I use for getting my baby to sleep alone?"]'
+                    },
+                    {
+                        respMsg: 'I see! I enjoy talking to you, user name 😊. Here are some questions you can ask me:\n\nWhat techniques can I use for getting my baby to settle themselves to sleep? \n\n When should my baby sleep through the night?\n\nWhen can my baby sleep in another room?',
+                        predict: '["What techniques can I use for getting my baby to settle themselves to sleep?", "When should my baby sleep through the night?", "When can my baby sleep in another room?"]'
+                    },
+                ],
+                nextPath: {
+                    master: "randomConvo",
+                    branch: 1
+                }
+            }
         }
     }
 }

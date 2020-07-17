@@ -11,7 +11,8 @@ var chatJson = require('./chatJson')
 // chapters patha
 var introductionPath = require('./chapters/introduction')
 var breastFeedingPath = require('./chapters/breastFeeding')
-var givingHealthPath = require('./chapters/givingHealth')
+var givingHealthPath = require('./chapters/givingHealth') 
+var chapter3 = require('./chapters/chapter3')
 
 // Create access to CosmosDb Storage - this replaces local Memory Storage.
 var storage = new CosmosDbPartitionedStorage({
@@ -49,6 +50,7 @@ async function logMessageText(storage, turnContext) {
     let chapterType = '';
     if(turnContext.activity.chapterType === undefined){
         chapterType = 'introduction';
+        // chapterType = 'chapter3';
     }else{
         chapterType = turnContext.activity.chapterType;
     }
@@ -108,12 +110,16 @@ async function UtteranceLog(storage, turnContext, userId, storeItems, channelId,
             respObj = await introductionPath.chatJson(chapterType,storeItems[userId],turnContext)
             break;
         }
-        case "breastFeeding": {
+        case "breastFeeding": { // Chapter 1
             respObj = await breastFeedingPath.chatJson(chapterType,storeItems[userId],turnContext)
             break;
         }
-        case "givingHealth": {
+        case "givingHealth": { // Chapter 2
             respObj = await givingHealthPath.chatJson(chapterType,storeItems[userId],turnContext)
+            break;
+        }
+        case "chapter3": { // Chapter 3
+            respObj = await chapter3.chatJson(chapterType,storeItems[userId],turnContext)
             break;
         }
         default: {
@@ -240,6 +246,14 @@ async function creatingUtterance(storage, turnContext, userId, storeItems, chann
             prevBranch: ""
         },
         givingHealth:{
+            flowingFlag: 1,
+            randomMsgFlag: 0,
+            mainMaster: "",
+            mainBranch: "",
+            prevMaster: "",
+            prevBranch: ""
+        },
+        chapter3:{
             flowingFlag: 1,
             randomMsgFlag: 0,
             mainMaster: "",
