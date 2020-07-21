@@ -5,6 +5,7 @@ let botReply = '';
 let tempRandomArr = [];
 let tempRandomArrOfChap2 = [];
 let tempRandomArrOfChap3 = [];
+let tempRandomArrOfChap4 = [];
 
 const setName = async(turnContext)=>{
     var userMsg = turnContext.activity.text;
@@ -363,6 +364,47 @@ const randomRespOfChap3 = async(chapterType,mainMaster,mainBranch,turnContext, u
     }
 
     if(tempRandomArrOfChap3.length == 0){
+        randomMsgFlag = 1;
+        randomArrFlag = 1;
+    }
+    // console.log('csdc',randomArrFlag)
+    nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+    nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    return {botReply,nextMaster,nextBranch, randomArrFlag, randomMsgFlag}
+}
+const randomRespOfChap4 = async(chapterType,mainMaster,mainBranch,turnContext, userSession)=>{
+    let randomArrFlag = userSession.chapter4.flowingFlag;
+    let randomMsgFlag = userSession.chapter4.randomMsgFlag;
+    let comnMsg = 'You can also ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.';
+    let resp = ''
+    if(randomArrFlag == 1 ){
+        resp = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+    }else{
+        
+        resp = [...tempRandomArrOfChap4];
+    }
+    
+    let index = Math.floor(Math.random() * resp.length);
+    randomArrFlag = 2;
+
+    let randomObj = resp[index];
+    resp.splice(index,1)
+    
+    tempRandomArrOfChap4 = [...resp];
+
+    let botReply = '';
+    botReply += randomObj.respMsg.replace("user name", userSession.userInfo.firstName);
+    botReply += '#&@#';
+
+    if(randomObj.predict != ''){
+        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '#&@#';
+    }
+    if(randomMsgFlag == 1){
+        botReply += comnMsg;
+    }
+
+    if(tempRandomArrOfChap4.length == 0){
         randomMsgFlag = 1;
         randomArrFlag = 1;
     }
@@ -920,6 +962,63 @@ var obj = {
                         respMsg: 'I see! I enjoy talking to you, user name 😊. Here are some questions you can ask me:\n\nWhat techniques can I use for getting my baby to settle themselves to sleep? \n\n When should my baby sleep through the night?\n\nWhen can my baby sleep in another room?',
                         predict: '["What techniques can I use for getting my baby to settle themselves to sleep?", "When should my baby sleep through the night?", "When can my baby sleep in another room?"]'
                     },
+                ],
+                nextPath: {
+                    master: "randomConvo",
+                    branch: 1
+                }
+            }
+        }
+    },
+    chapter4: {
+        welcome: {
+            1: {
+                text: 'Welcome to Chapter 4 This chapter is all about valuing me. Take a moment to reflect. How have you been feeling, user name?',
+                predict: '',
+                nextPath: {
+                    master: "convoChapter4",
+                    branch: 1
+                }
+            }
+        },
+        convoChapter4: {
+            1: {
+                text: 'Sure, I understand. That seems normal! It can be helpful to get some support on parenting issues that can help you, your baby, and those nearby. One concept that’s useful to consider is ‘positive parenting’. What does this mean to you? Remember, you can also ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.',
+                predict: '',
+                nextPath: {
+                    master: "convoChapter4",
+                    branch: 2
+                }
+            },
+            2: {
+                text: 'I see, thanks. There is no “one-size fits all” when it comes to parenting, we change and adapt as our children grow. Positive parenting is about making positive choices about how to raise your children, setting realistic expectations and boundaries and sticking to them consistently, valuing your child and listening to their feeling and building your children’s skills and abilities to allow them to grow into happy independent children. How does that sound?',
+                predict: '',
+                nextPath: {
+                    master: "randomConvo",
+                    branch: 1
+                }
+            }
+        },
+        randomConvo: {
+            1: {
+                func: randomRespOfChap4,
+                targetMsgArr: [
+                    {
+                        respMsg: 'Okay 😊 Treat every contact with your child as an opportunity to connect with them. Give them eye contact and really listen to them rather than having one eye on doing another job!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Can you tell me more about that?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I think I understand. Would you like to say anything more?',
+                        predict: ''
+                    },
+                    // {
+                    //     respMsg: 'I enjoy talking to you, user name 😊 Take a moment to give some love to your child!',
+                    //     predict: ''
+                    // },
                 ],
                 nextPath: {
                     master: "randomConvo",
