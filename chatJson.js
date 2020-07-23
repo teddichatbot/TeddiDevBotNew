@@ -460,7 +460,7 @@ var obj = {
     introduction: {
         intro:{
             1: {
-                text: 'Hello, I’m Teddi! I am your early years robo-support. What is your name? 😉',
+                text: 'Hello, I’m Teddi! I am your early years robo-support. What is your name? 😊',
                 nextPath: {
                     master: "intro",
                     branch: 2
