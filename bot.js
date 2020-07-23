@@ -14,6 +14,7 @@ var breastFeedingPath = require('./chapters/breastFeeding')
 var givingHealthPath = require('./chapters/givingHealth') 
 var chapter3Path = require('./chapters/chapter3')
 var chapter4Path = require('./chapters/chapter4')
+var chapter5Path = require('./chapters/chapter5')
 
 // Create access to CosmosDb Storage - this replaces local Memory Storage.
 var storage = new CosmosDbPartitionedStorage({
@@ -51,7 +52,7 @@ async function logMessageText(storage, turnContext) {
     let chapterType = '';
     if(turnContext.activity.chapterType === undefined){
         chapterType = 'introduction';
-        // chapterType = 'chapter4';
+        // chapterType = 'chapter5';
     }else{
         chapterType = turnContext.activity.chapterType;
     }
@@ -125,6 +126,10 @@ async function UtteranceLog(storage, turnContext, userId, storeItems, channelId,
         }
         case "chapter4": { // Chapter 4
             respObj = await chapter4Path.chatJson(chapterType,storeItems[userId],turnContext)
+            break;
+        }
+        case "chapter5": { // Chapter 5
+            respObj = await chapter5Path.chatJson(chapterType,storeItems[userId],turnContext)
             break;
         }
         default: {
@@ -267,6 +272,14 @@ async function creatingUtterance(storage, turnContext, userId, storeItems, chann
             prevBranch: ""
         },
         chapter4:{
+            flowingFlag: 1,
+            randomMsgFlag: 0,
+            mainMaster: "",
+            mainBranch: "",
+            prevMaster: "",
+            prevBranch: ""
+        },
+        chapter5:{
             flowingFlag: 1,
             randomMsgFlag: 0,
             mainMaster: "",

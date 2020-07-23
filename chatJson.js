@@ -6,6 +6,7 @@ let tempRandomArr = [];
 let tempRandomArrOfChap2 = [];
 let tempRandomArrOfChap3 = [];
 let tempRandomArrOfChap4 = [];
+let tempRandomArrOfChap5 = [];
 
 const setName = async(turnContext)=>{
     var userMsg = turnContext.activity.text;
@@ -405,6 +406,47 @@ const randomRespOfChap4 = async(chapterType,mainMaster,mainBranch,turnContext, u
     }
 
     if(tempRandomArrOfChap4.length == 0){
+        randomMsgFlag = 1;
+        randomArrFlag = 1;
+    }
+    // console.log('csdc',randomArrFlag)
+    nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+    nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    return {botReply,nextMaster,nextBranch, randomArrFlag, randomMsgFlag}
+}
+const randomRespOfChap5 = async(chapterType,mainMaster,mainBranch,turnContext, userSession)=>{
+    let randomArrFlag = userSession.chapter5.flowingFlag;
+    let randomMsgFlag = userSession.chapter5.randomMsgFlag;
+    let comnMsg = 'You can also ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.';
+    let resp = ''
+    if(randomArrFlag == 1 ){
+        resp = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+    }else{
+        
+        resp = [...tempRandomArrOfChap5];
+    }
+    
+    let index = Math.floor(Math.random() * resp.length);
+    randomArrFlag = 2;
+
+    let randomObj = resp[index];
+    resp.splice(index,1)
+    
+    tempRandomArrOfChap5 = [...resp];
+
+    let botReply = '';
+    botReply += randomObj.respMsg.replace("user name", userSession.userInfo.firstName);
+    botReply += '#&@#';
+
+    if(randomObj.predict != ''){
+        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '#&@#';
+    }
+    if(randomMsgFlag == 1){
+        botReply += comnMsg;
+    }
+
+    if(tempRandomArrOfChap5.length == 0){
         randomMsgFlag = 1;
         randomArrFlag = 1;
     }
@@ -1026,7 +1068,46 @@ var obj = {
                 }
             }
         }
-    }
+    },
+    chapter5: {
+        welcome: {
+            1: {
+                text: 'Welcome to Chapter 2, user name! This chapter is all about giving your child the healthiest start! How do you feel about this?',
+                predict: '',
+                nextPath: {
+                    master: "randomConvo",
+                    branch: 1
+                }
+            }
+        },
+        randomConvo: {
+            1: {
+                func: randomRespOfChap5,
+                targetMsgArr: [
+                    {
+                        respMsg: 'I understand, and that’s common. Introducing solid foods at 6 months falls pretty much at the halfway mark of the first 1000 days and so is a great time for you to continue to develop the foundations you have already laid down. Getting solid foods off to the right start really will help to lay the foundations for healthy eating into the toddler years and beyond.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I see! Thanks, user name 😊 As well as having a chat, you can also ask me these questions: \n\nWhen can I start weaning my baby who was premature?\n\nWhen can I start giving my baby food?\n\nWhat foods can I first start my baby with?',
+                        predict: '["When can I start weaning my baby who was premature?", "When can I start giving my baby food?", "What foods can I first start my baby with?"]'
+                    },
+                    {
+                        respMsg: 'I see! Thanks, user name 😊 As well as having a chat, you can also ask me these questions: \n\nWhen can I start weaning?\n\nWhat foods do I need to avoid when I start weaning?\n\nAre there any Weaning classes?',
+                        predict: '["When can I start weaning?", "What foods do I need to avoid when I start weaning?", "Are there any Weaning classes?"]'
+                    },
+                    {
+                        respMsg: 'Thanks, user name 😊 You can also ask me these questions: \n\nAllergies in the family – do I need to avoid these foods?\n\nWhat portion size shall I offer my baby?\n\nWhat texture should the food I give to my baby be?',
+                        predict: '["Allergies in the family – do I need to avoid these foods?", "What portion size shall I offer my baby?", "What texture should the food I give to my baby be?"]'
+                    },
+                ],
+                nextPath: {
+                    master: "randomConvo",
+                    branch: 1
+                }
+            }
+        }
+    },
 }
 
 module.exports = obj;
