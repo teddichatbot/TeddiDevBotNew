@@ -976,7 +976,7 @@ var obj = {
     chapter3: {
         welcome: {
             1: {
-                text: 'Welcome to Chapter 2, user name! This chapter is all about giving your child the healthiest start! How do you feel about this?',
+                text: 'Welcome to the sleep, play, and socialisation Chapter, user name! How do you feel about this?',
                 predict: '',
                 nextPath: {
                     master: "randomConvo",
@@ -997,13 +997,33 @@ var obj = {
                         predict: '["Play the Lullaby Trust sleep position video", "Play the co sleeping video"]'
                     },
                     {
-                        respMsg: 'Okay  We can keep chatting, or here are some questions you can ask me:\n\n Can I sleep with my baby in bed? \n\n What techniques can I use for getting my baby to sleep alone?',
+                        respMsg: 'Okay  We can keep chatting, or here are some questions you can ask me :\n\n Can I sleep with my baby in bed? \n\n What techniques can I use for getting my baby to sleep alone?',
                         predict: '["Can I sleep with my baby in bed?", "What techniques can I use for getting my baby to sleep alone?"]'
                     },
                     {
-                        respMsg: 'I see! I enjoy talking to you, user name 😊. Here are some questions you can ask me:\n\nWhat techniques can I use for getting my baby to settle themselves to sleep? \n\n When should my baby sleep through the night?\n\nWhen can my baby sleep in another room?',
+                        respMsg: 'I see! I enjoy talking to you, user name 😊. Here are some questions you can ask me :\n\nWhat techniques can I use for getting my baby to settle themselves to sleep? \n\n When should my baby sleep through the night?\n\nWhen can my baby sleep in another room?',
                         predict: '["What techniques can I use for getting my baby to settle themselves to sleep?", "When should my baby sleep through the night?", "When can my baby sleep in another room?"]'
                     },
+                    {
+                        respMsg: 'I enjoy talking to you, user name. Here are some questions you can ask me :\n\nWhat is a bedtime routine?\n\nAre bedtime routines important?\n\nAt what age will my baby be in a bedtime routine?',
+                        predict: '["What is a bedtime routine?", "Are bedtime routines important?", "At what age will my baby be in a bedtime routine?"]'
+                    },
+                    {
+                        respMsg: 'I can sense you’re great! Here are some questions you can ask me :\n\nHow long should my baby sleep for?\n\nHow much sleep does a 1-year old need? \n\nHow long should my toddler sleep for?',
+                        predict: '["How long should my baby sleep for?", "How much sleep does a 1-year old need?", "How long should my toddler sleep for?"]'
+                    },
+                    {
+                        respMsg: 'Can you say more about that? Here are some questions you can ask me too :\n\nMy baby turns on their tummy or side while sleeping. Do I need to move them back onto their back?\n\nCan my baby have a pillow? \n\nHow do I get my baby to sleep in the cot from the Mose’s basket ?',
+                        predict: '["My baby turns on their tummy or side while sleeping. Do I need to move them back onto their back?", "Can my baby have a pillow?", "How do I get my baby to sleep in the cot from the Mose’s basket ?"]'
+                    },
+                    {
+                        respMsg: 'That’s interesting, user name. Here are some questions you can ask me too :\n\nMy baby will not sleep in the cot / Moses basket what can I do? \n\nShould I use a dummy to help soothe my baby? \n\nAt what age should I take my baby’s dummy away?',
+                        predict: '["My baby will not sleep in the cot / Moses basket what can I do?", "Should I use a dummy to help soothe my baby?", "At what age should I take my baby’s dummy away?"]'
+                    },
+                    {
+                        respMsg: 'Thank you, user name. You can also ask me these questions :\n\n When should my baby stop having naps?\n\nMy baby sleeps well in the day but not at night.\n\n My child has started waking up at night',
+                        predict: '["When should my baby stop having naps?", "My baby sleeps well in the day but not at night.", "My child has started waking up at night"]'
+                    }
                 ],
                 nextPath: {
                     master: "randomConvo",
@@ -1057,10 +1077,30 @@ var obj = {
                         respMsg: 'I think I understand. Would you like to say anything more?',
                         predict: ''
                     },
-                    // {
-                    //     respMsg: 'I enjoy talking to you, user name 😊 Take a moment to give some love to your child!',
-                    //     predict: ''
-                    // },
+                    {
+                        respMsg: 'I see…others have said that too! Your facial expressions and the way you smile will encourage a good relationship with you and your child. Listen to what they have to say, ask what they think.',
+                        predict: ''
+                    },{
+                        respMsg: 'Ah okay 😊  Remember to say sorry to your children (and other people) when you get things wrong. It helps model good social behaviour for your child.',
+                        predict: ''
+                    },{
+                        respMsg: 'I see! In today’s busy lifestyle, many families find it can be difficult to find time to eat together but family meals are important and offers the time for you to build a better relationship with your child. You can help your child to have a sense of belonging and better self-esteem.',
+                        predict: ''
+                    },{
+                        respMsg: 'You sound lovely 😊 It doesn’t matter which meal you share - share breakfast, lunch or dinner together – it’s just eating together that is the key. Turn off phones and the TV and just have time with each other – if you don’t have a table it doesn’t matter, sit where you can and share time together.',
+                        predict: ''
+                    },{
+                        respMsg: 'I can sense you’re a great person! Here are some questions you can ask me : \n\n Why do I need to go to Mother and Baby Groups?\n\nIs it ok for my partner to help with the baby?\n\nWhat support is available for parents in the community?',
+                        predict: '["Why do I need to go to Mother and Baby Groups?", "Is it ok for my partner to help with the baby?", "What support is available for parents in the community?"]'
+                    },
+                    {
+                        respMsg: 'I enjoy talking to you, user name 😊 Take a moment to give some love to your child!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'You seem nice, user name. 😊 It’s important to tell your child you love them every day, even on difficult days.',
+                        predict: ''
+                    },
                 ],
                 nextPath: {
                     master: "randomConvo",
@@ -1099,6 +1139,22 @@ var obj = {
                     {
                         respMsg: 'Thanks, user name 😊 You can also ask me these questions: \n\nAllergies in the family – do I need to avoid these foods?\n\nWhat portion size shall I offer my baby?\n\nWhat texture should the food I give to my baby be?',
                         predict: '["Allergies in the family – do I need to avoid these foods?", "What portion size shall I offer my baby?", "What texture should the food I give to my baby be?"]'
+                    },
+                    {
+                        respMsg: 'Sure, I think I understand. Here are some questions you can ask me : \n\nHow much milk does my baby need as they grow up?\n\nWhat is the first 1000 days?\n\nPreparing the senses for solid food',
+                        predict: '["How much milk does my baby need as they grow up?", "What is the first 1000 days?", "Preparing the senses for solid food"]'
+                    },
+                    {
+                        respMsg: 'Okay 😊 Here are some questions you can ask me too: \n\nMy baby is waking up more at night – should I start introducing solid foods? \n\nWhy has the advice on the best age to offer babies solid food changed?\n\nHow much will my baby eat?',
+                        predict: '["My baby is waking up more at night – should I start introducing solid foods?", "Why has the advice on the best age to offer babies solid food changed?", "How much will my baby eat?"]'
+                    },
+                    {
+                        respMsg: 'Sure, I see. User name, you can also ask me questions! Here are some you can ask :\n\nIs there a good time of day for my baby to eat?\n\nShould I offer milk or food first? \n\nCan I introduce rusks as first food?',
+                        predict: '["Is there a good time of day for my baby to eat?", "Should I offer milk or food first?", "Can I introduce rusks as first food?"]'
+                    },
+                    {
+                        respMsg: 'Okay, sure 😊 Here are some questions you can ask me too : \n\nMy baby doesn’t like a food\n\nWill our baby have our likes and dislikes? \n\nWhat equipment do I need to introduce solid foods? ',
+                        predict: '["My baby doesn’t like a food", "Will our baby have our likes and dislikes?", "What equipment do I need to introduce solid foods?"]'
                     },
                 ],
                 nextPath: {

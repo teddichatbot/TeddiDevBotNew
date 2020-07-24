@@ -6,7 +6,7 @@ var respObj = {}
 var welcomeMsg = (chapterType, userSession) =>{
     // botReply = chatJson[chapterType]['welcome'][1]['text']
     
-    botReply = 'Welcome to the sleep, play, and socialisation Chapter, '+userSession.userInfo.firstName+'! This chapter is all about giving your child the healthiest start! How do you feel about this?'
+    botReply = 'Welcome to the sleep, play, and socialisation Chapter, '+userSession.userInfo.firstName+'! How do you feel about this?'
     botReply += '#&@#'+chatJson[chapterType]['welcome'][1]['predict']
     respObj.botReply = botReply;
     respObj.mainMaster = chatJson[chapterType]['welcome'][1]['nextPath']['master'];
