@@ -7,6 +7,7 @@ let tempRandomArrOfChap2 = [];
 let tempRandomArrOfChap3 = [];
 let tempRandomArrOfChap4 = [];
 let tempRandomArrOfChap5 = [];
+let tempRandomArrOfChap6 = [];
 
 const setName = async(turnContext)=>{
     var userMsg = turnContext.activity.text;
@@ -447,6 +448,48 @@ const randomRespOfChap5 = async(chapterType,mainMaster,mainBranch,turnContext, u
     }
 
     if(tempRandomArrOfChap5.length == 0){
+        randomMsgFlag = 1;
+        randomArrFlag = 1;
+    }
+    // console.log('csdc',randomArrFlag)
+    nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+    nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    return {botReply,nextMaster,nextBranch, randomArrFlag, randomMsgFlag}
+}
+
+const randomRespOfChap6 = async(chapterType,mainMaster,mainBranch,turnContext, userSession)=>{
+    let randomArrFlag = userSession.chapter6.flowingFlag;
+    let randomMsgFlag = userSession.chapter6.randomMsgFlag;
+    let comnMsg = 'You can also ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.';
+    let resp = ''
+    if(randomArrFlag == 1 ){
+        resp = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+    }else{
+        
+        resp = [...tempRandomArrOfChap6];
+    }
+    
+    let index = Math.floor(Math.random() * resp.length);
+    randomArrFlag = 2;
+
+    let randomObj = resp[index];
+    resp.splice(index,1)
+    
+    tempRandomArrOfChap6 = [...resp];
+
+    let botReply = '';
+    botReply += randomObj.respMsg.replace("user name", userSession.userInfo.firstName);
+    botReply += '#&@#';
+
+    if(randomObj.predict != ''){
+        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '#&@#';
+    }
+    if(randomMsgFlag == 1){
+        botReply += comnMsg;
+    }
+
+    if(tempRandomArrOfChap6.length == 0){
         randomMsgFlag = 1;
         randomArrFlag = 1;
     }
@@ -997,19 +1040,19 @@ var obj = {
                         predict: '["Play the Lullaby Trust sleep position video", "Play the co sleeping video"]'
                     },
                     {
-                        respMsg: 'Okay  We can keep chatting, or here are some questions you can ask me :\n\n Can I sleep with my baby in bed? \n\n What techniques can I use for getting my baby to sleep alone?',
+                        respMsg: 'Okay  We can keep chatting, or here are some questions you can ask me:\n\n Can I sleep with my baby in bed? \n\n What techniques can I use for getting my baby to sleep alone?',
                         predict: '["Can I sleep with my baby in bed?", "What techniques can I use for getting my baby to sleep alone?"]'
                     },
                     {
-                        respMsg: 'I see! I enjoy talking to you, user name 😊. Here are some questions you can ask me :\n\nWhat techniques can I use for getting my baby to settle themselves to sleep? \n\n When should my baby sleep through the night?\n\nWhen can my baby sleep in another room?',
+                        respMsg: 'I see! I enjoy talking to you, user name 😊. Here are some questions you can ask me:\n\nWhat techniques can I use for getting my baby to settle themselves to sleep? \n\n When should my baby sleep through the night?\n\nWhen can my baby sleep in another room?',
                         predict: '["What techniques can I use for getting my baby to settle themselves to sleep?", "When should my baby sleep through the night?", "When can my baby sleep in another room?"]'
                     },
                     {
-                        respMsg: 'I enjoy talking to you, user name. Here are some questions you can ask me :\n\nWhat is a bedtime routine?\n\nAre bedtime routines important?\n\nAt what age will my baby be in a bedtime routine?',
+                        respMsg: 'I enjoy talking to you, user name. Here are some questions you can ask me:\n\nWhat is a bedtime routine?\n\nAre bedtime routines important?\n\nAt what age will my baby be in a bedtime routine?',
                         predict: '["What is a bedtime routine?", "Are bedtime routines important?", "At what age will my baby be in a bedtime routine?"]'
                     },
                     {
-                        respMsg: 'I can sense you’re great! Here are some questions you can ask me :\n\nHow long should my baby sleep for?\n\nHow much sleep does a 1-year old need? \n\nHow long should my toddler sleep for?',
+                        respMsg: 'I can sense you’re great! Here are some questions you can ask me:\n\nHow long should my baby sleep for?\n\nHow much sleep does a 1-year old need? \n\nHow long should my toddler sleep for?',
                         predict: '["How long should my baby sleep for?", "How much sleep does a 1-year old need?", "How long should my toddler sleep for?"]'
                     },
                     {
@@ -1090,7 +1133,7 @@ var obj = {
                         respMsg: 'You sound lovely 😊 It doesn’t matter which meal you share - share breakfast, lunch or dinner together – it’s just eating together that is the key. Turn off phones and the TV and just have time with each other – if you don’t have a table it doesn’t matter, sit where you can and share time together.',
                         predict: ''
                     },{
-                        respMsg: 'I can sense you’re a great person! Here are some questions you can ask me : \n\n Why do I need to go to Mother and Baby Groups?\n\nIs it ok for my partner to help with the baby?\n\nWhat support is available for parents in the community?',
+                        respMsg: 'I can sense you’re a great person! Here are some questions you can ask me: \n\n Why do I need to go to Mother and Baby Groups?\n\nIs it ok for my partner to help with the baby?\n\nWhat support is available for parents in the community?',
                         predict: '["Why do I need to go to Mother and Baby Groups?", "Is it ok for my partner to help with the baby?", "What support is available for parents in the community?"]'
                     },
                     {
@@ -1141,7 +1184,7 @@ var obj = {
                         predict: '["Allergies in the family – do I need to avoid these foods?", "What portion size shall I offer my baby?", "What texture should the food I give to my baby be?"]'
                     },
                     {
-                        respMsg: 'Sure, I think I understand. Here are some questions you can ask me : \n\nHow much milk does my baby need as they grow up?\n\nWhat is the first 1000 days?\n\nPreparing the senses for solid food',
+                        respMsg: 'Sure, I think I understand. Here are some questions you can ask me: \n\nHow much milk does my baby need as they grow up?\n\nWhat is the first 1000 days?\n\nPreparing the senses for solid food',
                         predict: '["How much milk does my baby need as they grow up?", "What is the first 1000 days?", "Preparing the senses for solid food"]'
                     },
                     {
@@ -1149,12 +1192,127 @@ var obj = {
                         predict: '["My baby is waking up more at night – should I start introducing solid foods?", "Why has the advice on the best age to offer babies solid food changed?", "How much will my baby eat?"]'
                     },
                     {
-                        respMsg: 'Sure, I see. User name, you can also ask me questions! Here are some you can ask :\n\nIs there a good time of day for my baby to eat?\n\nShould I offer milk or food first? \n\nCan I introduce rusks as first food?',
+                        respMsg: 'Sure, I see. user name, you can also ask me questions! Here are some you can ask:\n\nIs there a good time of day for my baby to eat?\n\nShould I offer milk or food first? \n\nCan I introduce rusks as first food?',
                         predict: '["Is there a good time of day for my baby to eat?", "Should I offer milk or food first?", "Can I introduce rusks as first food?"]'
                     },
                     {
                         respMsg: 'Okay, sure 😊 Here are some questions you can ask me too : \n\nMy baby doesn’t like a food\n\nWill our baby have our likes and dislikes? \n\nWhat equipment do I need to introduce solid foods? ',
                         predict: '["My baby doesn’t like a food", "Will our baby have our likes and dislikes?", "What equipment do I need to introduce solid foods?"]'
+                    },
+                ],
+                nextPath: {
+                    master: "randomConvo",
+                    branch: 1
+                }
+            }
+        }
+    },
+    chapter6: {
+        welcome: {
+            1: {
+                text: 'Welcome to Chapter 6! This is all about eating a balanced diet. How has this been going for you, user name?',
+                predict: '',
+                nextPath: {
+                    master: "randomConvo",
+                    branch: 1
+                }
+            }
+        },
+        randomConvo: {
+            1: {
+                func: randomRespOfChap6,
+                targetMsgArr: [
+                    {
+                        respMsg: 'Ah, that’s very common! Food is much more than nutrition. We share meals and drinks with our families, friends and work colleagues. Sharing food forms an important part of our cultural heritage, social time and learning how food plays different roles in our lives. Providing nutrition, shared pleasures and reward are all an important part of children’s learning about food. Underpinning everyone’s food experiences should be a healthy balanced diet.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I understand! Providing babies and children with good nutrition means that they have the building blocks necessary to grow and develop (both physically and mentally), to be healthy and the energy that they need to play, learn and socialise.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Thanks for telling me 😊 Eating a healthy balanced diet establishes lifelong eating patterns, helping to ensure good health today and providing protection against the risk of becoming overweight and development of heart disease, certain cancers and diabetes in the future.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Thanks for telling me 😊 The First Steps Nutrition Trust recommend that for pre-school children a balanced diet will include 3 meals (breakfast, lunch and dinner, plus 3 snacks (think mini meals rather than treats) and dessert at one of the meal occasions.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I see! Pay special attention to dairy foods, whole grain carbohydrates, and vegetables to help build healthy habits that will last a lifetime.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I understand, user name 😊. Offer water instead of sugary drinks like fizzy drinks, fruit juices and squashes. Watch how often the less healthy foods like hot dogs, burgers, pizza, crisps, chips, cookies, cakes, sweets and chocolate are eaten – keep these just for occasional treats. ',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Your child learns a lot by watching you and so eating together as a family is an important part of their learning. Children copy your likes, dislikes, and your interest in trying new foods so try to be a good role model with what you eat and drink.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I see 😊 Little people need little portions, but the same healthy balanced diet overall. Let your child choose how much to eat of foods you provide, and don’t force them to finish their plate when they are not hungry.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I’ve heard that before! Children enjoy food when eating it is their own choice. Some new foods take time. Give a taste at first and wait a bit. Let children serve themselves by taking small amounts. Offer new foods many times (it can take at least 10 occasions for a young child to like a new food).',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'A short summary of the Eatwell Guide is to try to:\n\n  • Eat at least 5 portions of a variety of fruit and vegetables every day.\n\n • Base meals on potatoes, bread, rice, pasta and other starchy carbohydrates; choosing wholegrain versions where possible.\n\n • Have some dairy or dairy alternatives (such as soy drinks); choosing lower fat and lower sugar options.\n\n • Eat some beans, pulses, fish, eggs, meat and other proteins (including 2 portions of fish every week, one of which should be oily).\n\n• Choose unsaturated oils and spreads and eat in small amounts.\n\n• Drink 6 to 8 cups/glasses of fluid a day.\n\n• If consuming foods and drinks high in fat, salt or sugar have these less often and in small amounts.\n\n • From birth children should be provided with a daily supplement of 10 micrograms of vitamin D. Children over the age of 5 and adults are advised to consider taking a supplement, especially during winter months. ',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay! Starchy food should make up just over a third of the food we eat. Starchy foods are a good source of energy and fibre and are also the main source of a range of nutrients in our diet, such as B group vitamins, calcium and iron. Try to include a starchy food such as potatoes, bread, a grain such as rice, barley or quinoa, pasta, yam, plantain, or breakfast cereals.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I think I’m starting to really understand you, user name 😊 In the UK we all consume far less dietary fibre than we need and so choosing wholegrain and wholemeal foods is important. Very young children can fill up quickly on high fibre foods so for them try to use a mixture of higher and lower fibre starchy foods.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I think I understand. Young children should also eat fruit or vegetables on five occasions each day. There are no official guidelines for portion size for young children, but a practical guide is for a portion to be the amount they can fit in the palm of their hand. That way as they grow in size their portions grow. By the end of primary school, they will be eating full size portions.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Ah that’s normal. Here’s a good tip - eat seasonally! Checking what fruits are in season can help save money.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I see. This is something to remember – dried fruit make a great sweet snack, but the natural sugars can hang around the teeth so don’t use these too often. Try a variety of dried fruits like cranberries, mango, apricots, cherries, or raisins.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I keep a tub of chopped fresh fruit ready in the fridge to grab for snacks or quick dessert. I’m just joking, I don’t do that. I’m just a robot. You should try this though, user name!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I enjoy serving a rainbow of choices. I’m just joking, I don’t do that. I’m just a robot. You should try this though, user name! Fruit can be a quick and easy way to make meals and snacks healthier and more colourful.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay! Vary your veggies by adding a new vegetable to a different meal each day.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay! It’s good to serve a variety of colourful choices. Brighten children’s plates with red, orange, and dark-green vegetables.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I see! You can choose from fresh, frozen, or canned vegetables. Prepare and serve vegetables without added salt or solid fat. That’s what I do. I’m just joking, I don’t do that. I’m just a robot. You should try this though, user name!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I understand, thanks user name. Try a dip. Kids love to dip their foods. Hummus or guacamole are great choices or whip up a quick dip for veggies with yogurt and seasonings such as herbs or garlic. Serve with raw vegetables like broccoli, carrots, or cauliflower.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I understand. Pulses, such as beans, peas and lentils, are good alternatives to meat because they cost less and are rich in protein, higher in fibre and a source of minerals such as iron and zinc too. They are also less demanding on the planet resources and more sustainable.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Sure 😊 When eating meat choose small amounts of lean cuts of meat and mince, and eat less red and processed meat like bacon, ham and sausages.',
+                        predict: ''
                     },
                 ],
                 nextPath: {
