@@ -8,6 +8,7 @@ let tempRandomArrOfChap3 = [];
 let tempRandomArrOfChap4 = [];
 let tempRandomArrOfChap5 = [];
 let tempRandomArrOfChap6 = [];
+let tempRandomArrOfChap7 = [];
 
 const setName = async(turnContext)=>{
     var userMsg = turnContext.activity.text;
@@ -490,6 +491,48 @@ const randomRespOfChap6 = async(chapterType,mainMaster,mainBranch,turnContext, u
     }
 
     if(tempRandomArrOfChap6.length == 0){
+        randomMsgFlag = 1;
+        randomArrFlag = 1;
+    }
+    // console.log('csdc',randomArrFlag)
+    nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+    nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    return {botReply,nextMaster,nextBranch, randomArrFlag, randomMsgFlag}
+}
+
+const randomRespOfChap7 = async(chapterType,mainMaster,mainBranch,turnContext, userSession)=>{
+    let randomArrFlag = userSession.chapter7.flowingFlag;
+    let randomMsgFlag = userSession.chapter7.randomMsgFlag;
+    let comnMsg = 'You can also ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.';
+    let resp = ''
+    if(randomArrFlag == 1 ){
+        resp = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+    }else{
+        
+        resp = [...tempRandomArrOfChap7];
+    }
+    
+    let index = Math.floor(Math.random() * resp.length);
+    randomArrFlag = 2;
+
+    let randomObj = resp[index];
+    resp.splice(index,1)
+    
+    tempRandomArrOfChap7 = [...resp];
+
+    let botReply = '';
+    botReply += randomObj.respMsg.replace("user name", userSession.userInfo.firstName);
+    botReply += '#&@#';
+
+    if(randomObj.predict != ''){
+        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '#&@#';
+    }
+    if(randomMsgFlag == 1){
+        botReply += comnMsg;
+    }
+
+    if(tempRandomArrOfChap7.length == 0){
         randomMsgFlag = 1;
         randomArrFlag = 1;
     }
@@ -1312,6 +1355,141 @@ var obj = {
                     },
                     {
                         respMsg: 'Sure 😊 When eating meat choose small amounts of lean cuts of meat and mince, and eat less red and processed meat like bacon, ham and sausages.',
+                        predict: ''
+                    },
+                ],
+                nextPath: {
+                    master: "randomConvo",
+                    branch: 1
+                }
+            }
+        }
+    },
+    chapter7: {
+        welcome: {
+            1: {
+                text: 'Welcome to this Chapter on active families, user name! Do you enjoy being active? How do you feel when you think about this? ',
+                predict: '',
+                nextPath: {
+                    master: "randomConvo",
+                    branch: 1
+                }
+            }
+        },
+        randomConvo: {
+            1: {
+                func: randomRespOfChap7,
+                targetMsgArr: [
+                    {
+                        respMsg: 'How is being active going with your family going?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I understand. Being active regularly is really important to help your children grow and develop healthily. What do you find fun?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay, thanks! Children love to play and be active and parents can play a super role in this. In fact the role that adults play is crucial – some play is more spontaneous such as running after a butterfly they spot in the garden, reaching out to touch a daisy on the lawn or playing with a box of old clothes and jewellery you pulled out of the cupboard to sort out!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I see! Parents can lead by example and you can involve your kids in your daily activities such as always walking to friends rather than taking the car. Whether your child is not yet walking or just toddling, making walking to your destination an everyday normal will encourage your child to walk now, and also keep up this great habit as they grow up. Learning life skills such as care around people or cars, and how to cross a road safely is also vitally important.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Could you tell me more?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'If you help keep your child active in their early years, then they are more likely to be active as adults, keeping them in good health throughout life.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'When your kids keep active every day, they are more likely to achieve and maintain a healthy body weight!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'When your kids keep active every day they build strong muscles and bones and improve their skills such as balance and co-ordination.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay 😊 Keeping kids active during the day can help them interact better with other children and adults!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Children who are active are more likely to stay a healthy weight, will tend to be fitter, healthier, better able to learn, and more self-confident. They\'re also much less likely to have health problems in later life.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Ok, sure! Children whose parents encourage them to be active and eat well are more likely to stay a healthy weight and grow up as a healthy child. When they go to school, they are more likely to be confident and less likely to be bullied. Not only that, as they grow up, healthy habits mean they are more likely to avoid health problems such as diabetes, heart disease or bone and joint problems in adult life.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'That’s interesting, why do you say that?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Kids muscles get stronger the more they use them. The same is true for their bones. Walking, running, jumping, and climbing are great activities for building bone as the force of our muscles and gravity combine to put pressure on our bones. This pressure tells the body to build up stronger bone. This type of exercise is called weight-bearing exercise. ',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I understand! As children grow up their self-confidence and self-esteem (what he or she thinks about the themselves) plays an important role in their life choices. You can start to build this right from the start by encouraging age appropriate choices and decisions. Which t shirt to wear, an apple or an orange, which game to play. Let them take the lead and make choices as often as you can.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I see. A child’s degree of self-esteem can be high or low and may change at different times. Children who have a healthier self-esteem tend to have a positive sense of self and are more confident. On the other hand, when children have a poor or low self-esteem, this can have a negative effect on their life choices.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay! Confidence is important to a child’s future happiness, health, and success. Confident children are better able to deal with peer pressure, responsibility and independence and things that they find challenging. They should also be better able to handle both positive and negative emotions with less outbursts and tantrums.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Giving children simple choices is a great way to help them to feel in control. Which colour socks to wear, an apple or a pear, which cover to put on the bed. What choice of activity could you give your child, Okay, thanks! Children love to play and be active and parents can play a super role in this. In fact the role that adults play is crucial – some play is more spontaneous such as running after a butterfly they spot in the garden, reaching out to touch a daisy on the lawn or playing with a box of old clothes and jewellery you pulled out of the cupboard to sort out!? Give a choice of options that lead to the same outcome and keep them simple – then your child will find it easy to decide.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'We are all too good at focusing on what we can’t do and the things that other people are better at than we are. We forget to focus on the things that we do well. The same goes for children of all ages. Try to ensure that every day you do something that focuses on your child’s strengths and not on their flaws.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Praise what your child is good at, and especially when they stick with a task that they find challenging until they get it done. Focus praise on effort and trying hard rather than the end product or achievement. Help and encourage them to have a go at doing things without feeling embarrassed – and help them to overcome things they are finding.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I see! Building confidence in your child is key! A great way to build confidence and a sense of self-worth is to spend quality time with your children to show that they are valuable and important. Make some time that is just for them with no jobs or distractions.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Sure! A good idea is to take your child on outings, eat a special family dinner together, play games – inside or out, paint a picture or do a craft activity together. Children know when you are distracted or focusing on something else so try to build in times when you truly just focus on your baby/child and nothing else.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'It’s OK not to be the best at everything, or to win at everything. This is where activity can help. Teaching new skills in the world of activity can be very rewarding. From learning to walk and the encouragement given at that stage to learning to climb the stairs, ride a bike, kick a ball and hop on one foot can all be a major step towards helping your child’s self-esteem.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay! As children grow and develop, they can do more and more activities. Physical activity starts from birth. Once your child is born simply floating them carefully around in the bathtub and taking your baby out in the baby buggy starts to get them used to doing things.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Sure! As your baby gets older, begins to crawl and then can walk unaided, ideally you should try and keep them active for at least 180 minutes a day. That’s 3 hours. They don’t have to do it all at once of course as activities can be spread out into blocks throughout the day.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'As much as you can, encourage your child to do active things that fit in with your day – you could encourage them to walk alongside the baby buggy with you when you visit friends or help you with things around the house – it might take a little longer but it can be fun and they can learn; you are leading by example and encouraging them to get more active along with you.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I like talking to you, user name!😊 Have you managed to get some active play today with the family?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Your baby’s favourite plaything is you – so try to spend time playing with your baby every day. Playing actually requires a lot of your baby’s brain and muscle power. It helps develop their social, intellectual, language and problem-solving skills – and is one of the main ways they learn about the world. Play time is fun and educational.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay! Activity can be encouraged from the day your child is born. Physical activity in a safe environment can be started from birth. From birth babies start to grasp and this continues as they grow and develop. Start by letting them grasp your finger, then move onto soft toys and go from there.',
                         predict: ''
                     },
                 ],
