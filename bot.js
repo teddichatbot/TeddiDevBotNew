@@ -17,6 +17,9 @@ var chapter4Path = require('./chapters/chapter4')
 var chapter5Path = require('./chapters/chapter5')
 var chapter6Path = require('./chapters/chapter6')
 var chapter7Path = require('./chapters/chapter7')
+var chapter8Path = require('./chapters/chapter8')
+var chapter9Path = require('./chapters/chapter9')
+var chapter10Path = require('./chapters/chapter10')
 
 // Create access to CosmosDb Storage - this replaces local Memory Storage.
 var storage = new CosmosDbPartitionedStorage({
@@ -54,7 +57,7 @@ async function logMessageText(storage, turnContext) {
     let chapterType = '';
     if(turnContext.activity.chapterType === undefined){
         chapterType = 'introduction';
-        // chapterType = 'chapter7';
+        // chapterType = 'chapter10';
     }else{
         chapterType = turnContext.activity.chapterType;
     }
@@ -140,6 +143,18 @@ async function UtteranceLog(storage, turnContext, userId, storeItems, channelId,
         }
         case "chapter7": { // Chapter 7
             respObj = await chapter7Path.chatJson(chapterType,storeItems[userId],turnContext)
+            break;
+        }
+        case "chapter8": { // Chapter 8
+            respObj = await chapter8Path.chatJson(chapterType,storeItems[userId],turnContext)
+            break;
+        }
+        case "chapter9": { // Chapter 9
+            respObj = await chapter9Path.chatJson(chapterType,storeItems[userId],turnContext)
+            break;
+        }
+        case "chapter10": { // Chapter 10
+            respObj = await chapter10Path.chatJson(chapterType,storeItems[userId],turnContext)
             break;
         }
         default: {
@@ -306,6 +321,30 @@ async function creatingUtterance(storage, turnContext, userId, storeItems, chann
             prevBranch: ""
         },
         chapter7:{
+            flowingFlag: 1,
+            randomMsgFlag: 0,
+            mainMaster: "",
+            mainBranch: "",
+            prevMaster: "",
+            prevBranch: ""
+        },
+        chapter8:{
+            flowingFlag: 1,
+            randomMsgFlag: 0,
+            mainMaster: "",
+            mainBranch: "",
+            prevMaster: "",
+            prevBranch: ""
+        },
+        chapter9:{
+            flowingFlag: 1,
+            randomMsgFlag: 0,
+            mainMaster: "",
+            mainBranch: "",
+            prevMaster: "",
+            prevBranch: ""
+        },
+        chapter10:{
             flowingFlag: 1,
             randomMsgFlag: 0,
             mainMaster: "",

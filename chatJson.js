@@ -9,6 +9,9 @@ let tempRandomArrOfChap4 = [];
 let tempRandomArrOfChap5 = [];
 let tempRandomArrOfChap6 = [];
 let tempRandomArrOfChap7 = [];
+let tempRandomArrOfChap8 = [];
+let tempRandomArrOfChap9 = [];
+let tempRandomArrOfChap10 = [];
 
 const setName = async(turnContext)=>{
     var userMsg = turnContext.activity.text;
@@ -533,6 +536,131 @@ const randomRespOfChap7 = async(chapterType,mainMaster,mainBranch,turnContext, u
     }
 
     if(tempRandomArrOfChap7.length == 0){
+        randomMsgFlag = 1;
+        randomArrFlag = 1;
+    }
+    // console.log('csdc',randomArrFlag)
+    nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+    nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    return {botReply,nextMaster,nextBranch, randomArrFlag, randomMsgFlag}
+}
+
+const randomRespOfChap8 = async(chapterType,mainMaster,mainBranch,turnContext, userSession)=>{
+    let randomArrFlag = userSession.chapter8.flowingFlag;
+    let randomMsgFlag = userSession.chapter8.randomMsgFlag;
+    let comnMsg = 'You can also ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.';
+    let resp = ''
+    if(randomArrFlag == 1 ){
+        resp = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+    }else{
+        
+        resp = [...tempRandomArrOfChap8];
+    }
+    
+    let index = Math.floor(Math.random() * resp.length);
+    randomArrFlag = 2;
+
+    let randomObj = resp[index];
+    resp.splice(index,1)
+    
+    tempRandomArrOfChap8 = [...resp];
+
+    let botReply = '';
+    botReply += randomObj.respMsg.replace("user name", userSession.userInfo.firstName);
+    botReply += '#&@#';
+
+    if(randomObj.predict != ''){
+        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '#&@#';
+    }
+    if(randomMsgFlag == 1){
+        botReply += comnMsg;
+    }
+
+    if(tempRandomArrOfChap8.length == 0){
+        randomMsgFlag = 1;
+        randomArrFlag = 1;
+    }
+    // console.log('csdc',randomArrFlag)
+    nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+    nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    return {botReply,nextMaster,nextBranch, randomArrFlag, randomMsgFlag}
+}
+
+const randomRespOfChap9 = async(chapterType,mainMaster,mainBranch,turnContext, userSession)=>{
+    let randomArrFlag = userSession.chapter9.flowingFlag;
+    let randomMsgFlag = userSession.chapter9.randomMsgFlag;
+    let comnMsg = 'You can also ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.';
+    let resp = ''
+    if(randomArrFlag == 1 ){
+        resp = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+    }else{
+        
+        resp = [...tempRandomArrOfChap9];
+    }
+    
+    let index = Math.floor(Math.random() * resp.length);
+    randomArrFlag = 2;
+
+    let randomObj = resp[index];
+    resp.splice(index,1)
+    
+    tempRandomArrOfChap9 = [...resp];
+
+    let botReply = '';
+    botReply += randomObj.respMsg.replace("user name", userSession.userInfo.firstName);
+    botReply += '#&@#';
+
+    if(randomObj.predict != ''){
+        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '#&@#';
+    }
+    if(randomMsgFlag == 1){
+        botReply += comnMsg;
+    }
+
+    if(tempRandomArrOfChap9.length == 0){
+        randomMsgFlag = 1;
+        randomArrFlag = 1;
+    }
+    // console.log('csdc',randomArrFlag)
+    nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+    nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    return {botReply,nextMaster,nextBranch, randomArrFlag, randomMsgFlag}
+}
+const randomRespOfChap10 = async(chapterType,mainMaster,mainBranch,turnContext, userSession)=>{
+    let randomArrFlag = userSession.chapter10.flowingFlag;
+    let randomMsgFlag = userSession.chapter10.randomMsgFlag;
+    let comnMsg = 'You can also ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.';
+    let resp = ''
+    if(randomArrFlag == 1 ){
+        resp = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+    }else{
+        
+        resp = [...tempRandomArrOfChap10];
+    }
+    
+    let index = Math.floor(Math.random() * resp.length);
+    randomArrFlag = 2;
+
+    let randomObj = resp[index];
+    resp.splice(index,1)
+    
+    tempRandomArrOfChap10 = [...resp];
+
+    let botReply = '';
+    botReply += randomObj.respMsg.replace("user name", userSession.userInfo.firstName);
+    botReply += '#&@#';
+
+    if(randomObj.predict != ''){
+        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '#&@#';
+    }
+    if(randomMsgFlag == 1){
+        botReply += comnMsg;
+    }
+
+    if(tempRandomArrOfChap10.length == 0){
         randomMsgFlag = 1;
         randomArrFlag = 1;
     }
@@ -1107,7 +1235,7 @@ var obj = {
                         predict: '["My baby will not sleep in the cot / Moses basket what can I do?", "Should I use a dummy to help soothe my baby?", "At what age should I take my baby’s dummy away?"]'
                     },
                     {
-                        respMsg: 'Thank you, user name. You can also ask me these questions :\n\n When should my baby stop having naps?\n\nMy baby sleeps well in the day but not at night.\n\n My child has started waking up at night',
+                        respMsg: 'Thank you, user name. You can also ask me these questions:\n\n When should my baby stop having naps?\n\nMy baby sleeps well in the day but not at night.\n\n My child has started waking up at night',
                         predict: '["When should my baby stop having naps?", "My baby sleeps well in the day but not at night.", "My child has started waking up at night"]'
                     }
                 ],
@@ -1500,6 +1628,442 @@ var obj = {
             }
         }
     },
+    chapter8: {
+        welcome: {
+            1: {
+                text: 'Welcome to this Chapter on fussy eating! How are mealtimes going for you, user name? How has it been this week for you?',
+                predict: '',
+                nextPath: {
+                    master: "randomConvo",
+                    branch: 1
+                }
+            }
+        },
+        randomConvo: {
+            1: {
+                func: randomRespOfChap8,
+                targetMsgArr: [
+                    {
+                        respMsg: 'Okay! Fussy eating is very common among toddler and pre-school children. It’s simply another step in the process of growing up and becoming independent. It’s very frustrating but if your child is healthy, growing normally, and has plenty of energy, they are most likely getting the nutrients they need.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Ah right, that’s very normal. Tap into your child’s senses about food as much as you can. When children look at, smell, taste, touch and listen to things in early childhood the habits they learn often stick with them all the way to adolescence and adulthood. If your child is introduced to different vegetables, berries and fruit in hands-on sessions such as baking and cooking, growing their own vegetables and reading about food books and playing games involving food, their willingness to choose vegetables, berries and fruit is increased.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I see. Your child may refuse a food based on a certain colour or texture. For example, they could refuse foods that are red or green, contain seeds, or are squishy. This is normal and they will probably grow out of it.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I understand. For a period of time, your pre-schooler may only eat a certain type of food. Your child may choose 1 or 2 foods he or she likes and refuse to eat anything else.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Ok 😊 Sometimes your child may waste time at the table and seem interested in doing anything but eating.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Your child may be unwilling to try new foods. It is normal for your pre-schooler to prefer familiar foods and be afraid to try new things.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Refusing food is a normal stage that most toddlers go through and can be frustrating and extremely worrying for parents.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I’m sure I’ve heard that before! Keep in your mind that one day your child will hate a food and totally refuse to eat it and then sometime later they’ll love it! It also takes around 10 tastes to learn to like any new food so be patient and keep trying.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Hmm…I see! It may be a good idea to plan your child’s weekly meals and keep offering a variety of foods. It’s important to introduce your child to a range of tastes, textures and flavours.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'It may take a few attempts before your child eats some foods (often 10 tries of a food are needed before it’s accepted and liked) so keep trying while also offering other foods that you know they will eat.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Regularly offering your child a variety of foods will add to their willingness to try other new foods. This will make things easier for your child to accept a wider variety of foods into their diet and for you to serve them a wide variety of foods.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'That’s okay! Try to serve small portions to your child and encourage these to be eaten and have seconds on hand in case they want more.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Children tend to be able to regulate the amount of food they eat far better than we do as adults and some days they will be hungrier than others. During a growth spurt their appetite may soar, and then drop back down again after a few days. Your child has a small tummy so consider serving smaller meals more often such as 3 small meals a day and 2 small snacks.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Hey, user name 😊 – I really like talking to you. Remember, if you give your child a large drink too close to a mealtime, they are likely to feel too full to eat much of the meal you have prepared. Simply give your child water instead, small drinks regularly will keep them better hydrated than larger drinks less often.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Do mealtimes get messy sometimes, user name? Children usually love to try and feed themselves. As frustrating as it may be, let your child try.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Try to avoid the common parent trap of offering a nice dessert in reward for eating their vegetables or dinner. If you use sweet foods and desserts as a reward your child will associate that will good behaviour and make these foods seem much more desirable! Have a healthy dessert, such as fruit and then if you want to add a little something you can – but don’t make it conditional on eating other things.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay, sure! Serve your child foods at meals and snacks that are variations on a theme. For example, your child may love to drink milk with a meal but if they don’t, offer them another food that is milk-based instead.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay It may be a good idea to serve a little cheese sauce with their savoury meal or custard on a fruit dessert.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Add veggies to main meals - your child may refuse sliced boiled carrot but will eat them when you add them to a main meal such as adding grated carrot to Bolognese sauce. For dessert, replace fresh sliced fruit with stewed fruit for a change and use tinned fruit as a handy standby.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I do my best at understanding you, user name! I am only a robot 😊 Often if children have a choice it helps them to eat more – but make sure choices are similar in terms of food type and the nutrition they offer. Would they like broccoli or peas? Apples or a pear? Yoghurt or custard?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Could you tell me more please?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Ah right – how does that make you feel?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I think you’re wonderful 😊 Use drawing books and crayons to draw pictures of different colourful foods. Your child will learn along the way as you tell them the names of the various foods you draw. Stickers can do the same jog and most kids seem to adore sticker books – look for food-based sticker books.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'We don’t just eat food, we see it, touch it, smell it, taste it and hear it (as we touch it and when it’s in our mouths being chewed. Some children can have very sensitive taste to smell or want their foods all at room temperature because they are sensitive to hot or cold. Trying to work out which sense most affect your child’s eating a drinking could be the key to encouraging intake of a wider range of foods.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay! Your child may not want to try new foods. It is normal for children to reject foods they have never tried before. Why not try new foods together as a family and each describe how the food feels, smells and tastes – make sure that those family members who are old enough try to use positive descriptions to encourage food intake and not just negative.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Sure 😊 Rather than worrying about what your child eats at every meal, it’s more helpful to think about what they eat over the week. Your child’s picky eating is temporary. If you don’t make it a big deal, it will usually end before school age. Learning to eat is like any other learning process and it takes time!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'You and other family members will be role models to your child and your child will copy you all. Offer the same foods for the whole family and serve the same meal to adults and kids. Let them see you enjoy healthy foods. Talk about the colours, shapes, and textures on the plate. Watch the salt though – avoid adding salt to meals that you are going to serve to your child.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I see, that’s normal. If your child refuses the food, you have served then stay calm and don’t make a fuss about it. Avoid forcing your child to eat it and quietly take the food away.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Eating together is a habit to stick to as much as you can. Try and sit down to family meals together as often as you can. Many families may not manage every meal, but some will be possible even if it’s just breakfast or dinner. Even if you don’t eat with the children make sure you sit at the table and talk about their food, their day and family life.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay, user name! Your child may eat slowly. Try and serve meals and snacks when there is the time for your child to eat it in a calm and peaceful way. If you try and hurry the pace, then things are likely to get quite fraught! But set a reasonable time limit for a meal e.g. 30 minutes and then take it away.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'It’s worrying for parents when their child reject food and it’s tempting to offer them something you know they will like soon after a meal – just to make sure they’ve eaten something. It’s better to wait until the next meal (or usual snack time) though and stay with a regular meal pattern.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I see 😊 If your child is tired, then it’s likely that they are too tired to eat too! Offer meals and snacks at regular times and when your child has the energy to eat.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'It’s so much better for you and your child to eat in a calm, relaxed environment without distractions such as TV, games and toys. Young children can only concentrate on one thing at a time and distractions make it more difficult to focus on eating.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Your child will often eat things that other children are eating. Invite friends and their children round to tea – opt for the good eaters though! Your child is going to be more willing to taste and accept foods into their diets the foods that they have seen others eating.',
+                        predict: ''
+                    },
+                ],
+                nextPath: {
+                    master: "randomConvo",
+                    branch: 1
+                }
+            }
+        }
+    },
+    chapter9: {
+        welcome: {
+            1: {
+                text: 'Welcome to Chapter 9! This is all about emotional wellbeing. When you reflect on emotional wellbeing, what do you think about user name?',
+                predict: '',
+                nextPath: {
+                    master: "randomConvo",
+                    branch: 1
+                }
+            }
+        },
+        randomConvo: {
+            1: {
+                func: randomRespOfChap9,
+                targetMsgArr: [
+                    {
+                        respMsg: 'I understand, thank you for telling me, user name! Being a parent is wonderful and a joy, but at times can also be challenging and feel chaotic and exhausting.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay, I understand – thank you! We know that looking after physical health is important, but we often overlook our emotional wellbeing which is just as important.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'That’s interesting, thank you for telling me 😊 If you have good emotional wellbeing you will be better able to cope with any ups and downs of being a parent and feeling positive will help to keep your baby or children feeling positive and calm as well. If you are happy and calm, they will tend to be as well.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay, I see. Emotional wellbeing is not something that just happens, it is something that we can practise and develop.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Right, I understand. Emotional health is an important part of overall health. People who are emotionally healthy are in control of their thoughts, feelings, and behaviours.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Thank you 😊 Everyone has days where they feel angry or sad or upset for example, but it’s how you handle it that counts. People who are emotionally resilient can ride the daily challenges well. Taking time to build strong bonds with children and developing secure emotional attachments helps families to communicate and work together to overcome any challenges that come their way.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Thank you for telling me 😊 A young child’s brain is developing rapidly and is affected by life experiences that are positive or negative. Their relationships with others, feeling secure and loved and the understanding that they have of those around them all contribute massively to their overall emotional health.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Sure, I see 😊 Try to do at least 2 things every day that make you feel good.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Ah I understand! Can you make a list of the top 5 things you’re most grateful for? I’m grateful for being able to talk to you! 😊',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay, thank you! Make time in your day to consider your emotions and reactions to the things that you do. Think about what makes you happy, and what makes you sad, and try to include more of the things that make you feel positive or good.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Sure, thank you 😊 Being physically active means sitting down less and moving our bodies more. Many people find that physical activity helps them maintain a positive approach to life.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I see, thank you 😊 Even a simple 20-minute stroll can clear the mind and reduce stress. Think of a walk as more than a means of transport from A to B, but a whole meditation and stress relieving package in one.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay, I understand 😊 You might not think it – particularly today when people appear to post a constant stream of happy life events and successes on social media – but everyone makes mistakes and has bad days. They just don’t post about these and so you don’t realise that they have wobbles as well.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'That’s very common 😊 Praise your child for effort. Achievement is good too, but just trying to do something and working hard is a wonderful thing to acknowledge. Children often take a lot of practice before they learn to do something new and so praising the trying becomes really important to help them get there.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Most people say something similar! Reading is a great way to entertain your child and spark their imagination. Not only that it gets them away from screens, but also helps you and your child to bond. Bedtime stories are a great way to settle them down for a good night’s sleep.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Sure, thanks 😊 Get out into the fresh air together. Go for a walk and play on the playground. Point out the ducks, the dogs and the birds and simply watch the world go by.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Ah, I see 😊 Visit friends who have children so the children can play together while you have a good natter with your friends. Or arrange to meet in the park or at a local activity centre. Outings are always more fun with other company around.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: '😊 Try mindful eating. This involves paying attention to the taste, sight and textures of what you eat. For example, when drinking a cup of tea or coffee you could focus on how hot and liquid it feels on your tongue, how sweet it tastes or watch the steam that it gives off.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Thank you 😊 Notice the feeling of your body moving. You might notice the breeze against your skin, the feeling of your feet or hands against different textures on the ground or nearby surfaces, and the different smells that are around you.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay! Move your attention slowly through different parts of the body, starting from the top of your head moving all the way down to the end of your toes. You could focus on feelings of warmth, tension, tingling or relaxation of different parts of your body.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Sure, okay 😊 Sit and focus on your breath, sensations in your body and the things you can hear around you. Try to bring you focus back to the present if your mind starts to wander. Just notice what you do notice. ',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay! Given the pleasures and benefits of social ties, why not grasp opportunities to expand your social circle and deepen the ties you’ve already made?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I see, sure 😊 When you are looking after young children there never seems to be time to just sit and enjoy a hot drink. Simple as it sounds, taking 5 minutes when you can to just sit, and be and enjoy the moment can make a huge difference to dealing with the continuous hub bub in between.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I like how you think, user name! The way we think (and what we think about) can affect how we feel and act. For example, if you think or worry a lot about past or future events, you might often feel sad or anxious. Mindfulness uses various techniques to bring your attention to the present (usually focusing on your body and your breathing).',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Put on some nursery rhymes, or other music and sing and dance. Any music will do – watch your child join in and have fun.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'If checking social media leaves you feeling down then stop – give yourself short periods to check on important stuff and then put your phone down, for several hours at a time.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Put your phone down and connect with nature. (Yes even though I’m on your phone, you can come back later, I only care about helping you)!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'There are days when everything will go perfectly to plan, but other days won’t. Realising that perfection isn’t possible and accepting limitations can make life a lot less frustrating. You didn’t manage something today? Was it really a problem? Just take a deep breath, smile, prioritise the things that actually have to be done and leave the rest until tomorrow.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'A huge amount of social and emotional development takes place during early childhood. As children experience their own emotions, temper tantrums, mood swings, and an expanding social world, they have to learn about their emotions, as well as those of other people.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Love is usually the answer! Love your child, love yourself, take a moment and wish a stranger well.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Think of someone you know. Picture them. Wish them well, for their dreams to come true, for them to be happy.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I see! Explaining feelings can also help to build a solid foundation. Right from birth explain feelings to your children. Feelings drive behaviour and you can help your child to recognise why they are feeling the way they are. For example, ‘you’re feeling sad because your special cuddly toy can’t be found’. Or I’m is feeling a bit cross today because the washing machine broke, and we can’t get our clothes clean and it’s a problem that I need to get fixed.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Encourage children to recognise their own emotion and also to think about how others might be feeling – this is called empathy. By talking about feelings and asking questions about emotions children will start to learn themselves and how their response to people affects how other people feel.',
+                        predict: ''
+                    },
+
+                ],
+                nextPath: {
+                    master: "randomConvo",
+                    branch: 1
+                }
+            }
+        }
+    },
+    chapter10: {
+        welcome: {
+            1: {
+                text: 'Welcome to Chapter 10! This is all about oral health. How do you feel about this, user name?',
+                predict: '',
+                nextPath: {
+                    master: "randomConvo",
+                    branch: 1
+                }
+            }
+        },
+        randomConvo: {
+            1: {
+                func: randomRespOfChap10,
+                targetMsgArr: [
+                    {
+                        respMsg: 'I see! Tooth decay, also known as dental decay or dental caries, is a major problem for children. Most cases of tooth decay could be prevented by cutting down on sugar, as well as brushing teeth with fluoride toothpaste.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay, I understand. Dental decay hurts, treatment is not pleasant, and you can help to avoid this for your children. Every parent, no matter who, needs to be mindful of taking care of their children’s teeth.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Thanks for telling me! If sugary foods or drinks are consumed frequently during a day, there are more "acid attacks" on the teeth. The hard-outer layers of the teeth dissolve away leading to cavities (holes) in the teeth. These need to be filled otherwise the tooth becomes infected and will need to be removed.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Right, okay 😊 Create a family habit of tooth brushing twice a day for 2 minutes each time. Before bed is the most important time and at one other time of day – this should be a time that works for you and your family.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I understand, thank you for telling me, user name! 😊 Always supervise toothbrushing to help make sure that all teeth are brushed properly and so that toothpaste is used in small amounts and is not consumed.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay, I understand – thank you! Fluoride is a mineral which helps to prevent tooth decay, and so it’s often added to toothpaste. Check that the toothpaste you buy for your family has between 1000 parts per million fluoride (written as ppmf) and 1450 ppmf.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'That’s interesting, thank you for telling me 😊 Children should see their dentist at least once a year. Start taking your child to the dentist as soon as their first milk teeth appear. All children, even if they have no teeth yet, should be taken to see a dentist by the time they reach 12 months when they reach 12 months.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay, I see. Taking children to the dentist from as soon as their teeth emerge, or by the age of 12 months if no teeth have appeared, means any problems can be spotted and prevented or dealt with early.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Right, I understand. Not all children like having their teeth brushed, so you may have to keep trying. Make it into a game or brush your own teeth at the same time and then help your child finish their own.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Thank you 😊 Some babies seem to find cutting teeth much easier than others, or it may vary for tooth to tooth. Either way teething can be quite distressing for all involved. Don’t worry it is entirely normal for babies to have a few more unsettled days as each tooth cuts through. Remember, teething is not an illness and so if baby has a temperature or appears unwell in any other way then please call your doctor or visit NHS 111.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Thank you for telling me  Tooth brushing should just be a regular part of everyday – twice for around 2 minutes each time. If they are small you may find it easier to stand or sit behind your child, cradling their chin in your hand so you can reach their top and bottom teeth more easily.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Sure, I see  If you offer children plain water from the start that is what they will expect to drink and anything else can be a treat. Once you start offering squashes and other drinks, water will become less attractive and so make it easy for yourself and don’t offer these at home. Keep squashes and fizzy drinks for treats or parties.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Ah I understand! During mealtimes, offer water from an open or free-flow cup. Using an open cup, or a free-flow cup without a valve, will helps babies learn to drink and is better for your baby’s teeth. If your baby is younger than 6 months, it’s important to sterilise the water by boiling it first and then letting it cool right down.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay, thank you! Start right from the very beginning and keep sugar intake to a minimum to help set food preferences for less sweet foods and build good dietary habits for life. Limiting sugar is not being strict or mean – it’s being kind and the best parent that you can be.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Sure, thank you  Here’s a top tip…swap high sugar breakfast cereals for a 50:50 mix with a sugar free cereal or wholemeal toast, crumpets, bagels, plain yogurt with fruit or porridge with berries. At weekends, try scrambled or poached eggs on toast for a tasty alternative.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I see, thank you  Instead of cakes, pastries, biscuits or sweets, try a plain scone, bread sticks, fruit and vegetable sticks, oat or rice cakes with a small amount of peanut butter, sliced banana, cheese or humus.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay, I understand  Children tend to copy behaviour - so if they see you choosing to eat less sugary food and drinks they will too.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'That’s very common  I can also answer questions. Maybe you’re interested in some of these… \n\nDo I have to clean my baby’s teeth?\n\nShould I clean my children’s teeth for them?\n\nHow much toothpaste should I use?',
+                        predict: '["Do I have to clean my baby’s teeth?", "Should I clean my children’s teeth for them?", "How much toothpaste should I use?"]'
+                    },
+                    {
+                        respMsg: 'Most people say something similar! I can also answer questions. Here’s some you can ask: \n\nWhen should I first take my child to the dentist?\n\nWhich teething gel can I use?\n\nWhen can I give my baby juice?',
+                        predict: '["When should I first take my child to the dentist?", "Which teething gel can I use?", "When can I give my baby juice?"]'
+                    },
+                    {
+                        respMsg: 'I like how you think, user name! I can also answer questions. Here’s some you can ask: \n\nIs it bad to put juice into bottles?\n\nWhen should I register my baby with a dentist? \n\nCan I prevent tooth decay?',
+                        predict: '["Is it bad to put juice into bottles?", "When should I register my baby with a dentist?", "Can I prevent tooth decay?"]'
+                    },
+                    {
+                        respMsg: 'Can you tell me more?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I love trying to understand you, user name. Could you tell me more?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Babies and children should go to the dentist with you whenever you go for check-ups so that they get used to the noises, smells and surroundings and prepare them for future visits.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I’m only a robot but I do know the answers to some questions! Here’s some you could ask: \n\nIs it bad to put juice into bottles?\n\nWhen should I register my baby with a dentist? \n\nCan I prevent tooth decay?',
+                        predict: '["Is it bad to put juice into bottles?", "When should I register my baby with a dentist?", "Can I prevent tooth decay?"]'
+                    },
+
+                ],
+                nextPath: {
+                    master: "randomConvo",
+                    branch: 1
+                }
+            }
+        }
+    }
+
 }
 
 module.exports = obj;
