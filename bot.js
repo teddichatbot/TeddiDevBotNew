@@ -20,6 +20,8 @@ var chapter7Path = require('./chapters/chapter7')
 var chapter8Path = require('./chapters/chapter8')
 var chapter9Path = require('./chapters/chapter9')
 var chapter10Path = require('./chapters/chapter10')
+var chapter11Path = require('./chapters/chapter11')
+var chapter12Path = require('./chapters/chapter12')
 
 // Create access to CosmosDb Storage - this replaces local Memory Storage.
 var storage = new CosmosDbPartitionedStorage({
@@ -57,7 +59,7 @@ async function logMessageText(storage, turnContext) {
     let chapterType = '';
     if(turnContext.activity.chapterType === undefined){
         chapterType = 'introduction';
-        // chapterType = 'chapter10';
+        // chapterType = 'chapter12';
     }else{
         chapterType = turnContext.activity.chapterType;
     }
@@ -155,6 +157,14 @@ async function UtteranceLog(storage, turnContext, userId, storeItems, channelId,
         }
         case "chapter10": { // Chapter 10
             respObj = await chapter10Path.chatJson(chapterType,storeItems[userId],turnContext)
+            break;
+        }
+        case "chapter11": { // Chapter 11
+            respObj = await chapter11Path.chatJson(chapterType,storeItems[userId],turnContext)
+            break;
+        }
+        case "chapter12": { // Chapter 12
+            respObj = await chapter12Path.chatJson(chapterType,storeItems[userId],turnContext)
             break;
         }
         default: {
@@ -345,6 +355,22 @@ async function creatingUtterance(storage, turnContext, userId, storeItems, chann
             prevBranch: ""
         },
         chapter10:{
+            flowingFlag: 1,
+            randomMsgFlag: 0,
+            mainMaster: "",
+            mainBranch: "",
+            prevMaster: "",
+            prevBranch: ""
+        },
+        chapter11:{
+            flowingFlag: 1,
+            randomMsgFlag: 0,
+            mainMaster: "",
+            mainBranch: "",
+            prevMaster: "",
+            prevBranch: ""
+        },
+        chapter12:{
             flowingFlag: 1,
             randomMsgFlag: 0,
             mainMaster: "",

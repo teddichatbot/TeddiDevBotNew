@@ -12,6 +12,8 @@ let tempRandomArrOfChap7 = [];
 let tempRandomArrOfChap8 = [];
 let tempRandomArrOfChap9 = [];
 let tempRandomArrOfChap10 = [];
+let tempRandomArrOfChap11 = [];
+let tempRandomArrOfChap12 = [];
 
 const setName = async(turnContext)=>{
     var userMsg = turnContext.activity.text;
@@ -661,6 +663,90 @@ const randomRespOfChap10 = async(chapterType,mainMaster,mainBranch,turnContext, 
     }
 
     if(tempRandomArrOfChap10.length == 0){
+        randomMsgFlag = 1;
+        randomArrFlag = 1;
+    }
+    // console.log('csdc',randomArrFlag)
+    nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+    nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    return {botReply,nextMaster,nextBranch, randomArrFlag, randomMsgFlag}
+}
+
+const randomRespOfChap11 = async(chapterType,mainMaster,mainBranch,turnContext, userSession)=>{
+    let randomArrFlag = userSession.chapter11.flowingFlag;
+    let randomMsgFlag = userSession.chapter11.randomMsgFlag;
+    let comnMsg = 'You can also ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.';
+    let resp = ''
+    if(randomArrFlag == 1 ){
+        resp = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+    }else{
+        
+        resp = [...tempRandomArrOfChap11];
+    }
+    
+    let index = Math.floor(Math.random() * resp.length);
+    randomArrFlag = 2;
+
+    let randomObj = resp[index];
+    resp.splice(index,1)
+    
+    tempRandomArrOfChap11 = [...resp];
+
+    let botReply = '';
+    botReply += randomObj.respMsg.replace("user name", userSession.userInfo.firstName);
+    botReply += '#&@#';
+
+    if(randomObj.predict != ''){
+        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '#&@#';
+    }
+    if(randomMsgFlag == 1){
+        botReply += comnMsg;
+    }
+
+    if(tempRandomArrOfChap11.length == 0){
+        randomMsgFlag = 1;
+        randomArrFlag = 1;
+    }
+    // console.log('csdc',randomArrFlag)
+    nextMaster = obj[chapterType][mainMaster][mainBranch]['nextPath']['master']
+    nextBranch = obj[chapterType][mainMaster][mainBranch]['nextPath']['branch']
+    return {botReply,nextMaster,nextBranch, randomArrFlag, randomMsgFlag}
+}
+
+const randomRespOfChap12 = async(chapterType,mainMaster,mainBranch,turnContext, userSession)=>{
+    let randomArrFlag = userSession.chapter12.flowingFlag;
+    let randomMsgFlag = userSession.chapter12.randomMsgFlag;
+    let comnMsg = 'You can also ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.';
+    let resp = ''
+    if(randomArrFlag == 1 ){
+        resp = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+    }else{
+        
+        resp = [...tempRandomArrOfChap12];
+    }
+    
+    let index = Math.floor(Math.random() * resp.length);
+    randomArrFlag = 2;
+
+    let randomObj = resp[index];
+    resp.splice(index,1)
+    
+    tempRandomArrOfChap12 = [...resp];
+
+    let botReply = '';
+    botReply += randomObj.respMsg.replace("user name", userSession.userInfo.firstName);
+    botReply += '#&@#';
+
+    if(randomObj.predict != ''){
+        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '#&@#';
+    }
+    if(randomMsgFlag == 1){
+        botReply += comnMsg;
+    }
+
+    if(tempRandomArrOfChap12.length == 0){
         randomMsgFlag = 1;
         randomArrFlag = 1;
     }
@@ -1999,11 +2085,11 @@ var obj = {
                         predict: ''
                     },
                     {
-                        respMsg: 'Thank you for telling me  Tooth brushing should just be a regular part of everyday – twice for around 2 minutes each time. If they are small you may find it easier to stand or sit behind your child, cradling their chin in your hand so you can reach their top and bottom teeth more easily.',
+                        respMsg: 'Thank you for telling me 😊 Tooth brushing should just be a regular part of everyday – twice for around 2 minutes each time. If they are small you may find it easier to stand or sit behind your child, cradling their chin in your hand so you can reach their top and bottom teeth more easily.',
                         predict: ''
                     },
                     {
-                        respMsg: 'Sure, I see  If you offer children plain water from the start that is what they will expect to drink and anything else can be a treat. Once you start offering squashes and other drinks, water will become less attractive and so make it easy for yourself and don’t offer these at home. Keep squashes and fizzy drinks for treats or parties.',
+                        respMsg: 'Sure, I see 😊 If you offer children plain water from the start that is what they will expect to drink and anything else can be a treat. Once you start offering squashes and other drinks, water will become less attractive and so make it easy for yourself and don’t offer these at home. Keep squashes and fizzy drinks for treats or parties.',
                         predict: ''
                     },
                     {
@@ -2015,19 +2101,19 @@ var obj = {
                         predict: ''
                     },
                     {
-                        respMsg: 'Sure, thank you  Here’s a top tip…swap high sugar breakfast cereals for a 50:50 mix with a sugar free cereal or wholemeal toast, crumpets, bagels, plain yogurt with fruit or porridge with berries. At weekends, try scrambled or poached eggs on toast for a tasty alternative.',
+                        respMsg: 'Sure, thank you 😊 Here’s a top tip…swap high sugar breakfast cereals for a 50:50 mix with a sugar free cereal or wholemeal toast, crumpets, bagels, plain yogurt with fruit or porridge with berries. At weekends, try scrambled or poached eggs on toast for a tasty alternative.',
                         predict: ''
                     },
                     {
-                        respMsg: 'I see, thank you  Instead of cakes, pastries, biscuits or sweets, try a plain scone, bread sticks, fruit and vegetable sticks, oat or rice cakes with a small amount of peanut butter, sliced banana, cheese or humus.',
+                        respMsg: 'I see, thank you 😊 Instead of cakes, pastries, biscuits or sweets, try a plain scone, bread sticks, fruit and vegetable sticks, oat or rice cakes with a small amount of peanut butter, sliced banana, cheese or humus.',
                         predict: ''
                     },
                     {
-                        respMsg: 'Okay, I understand  Children tend to copy behaviour - so if they see you choosing to eat less sugary food and drinks they will too.',
+                        respMsg: 'Okay, I understand 😊 Children tend to copy behaviour - so if they see you choosing to eat less sugary food and drinks they will too.',
                         predict: ''
                     },
                     {
-                        respMsg: 'That’s very common  I can also answer questions. Maybe you’re interested in some of these… \n\nDo I have to clean my baby’s teeth?\n\nShould I clean my children’s teeth for them?\n\nHow much toothpaste should I use?',
+                        respMsg: 'That’s very common 😊 I can also answer questions. Maybe you’re interested in some of these… \n\nDo I have to clean my baby’s teeth?\n\nShould I clean my children’s teeth for them?\n\nHow much toothpaste should I use?',
                         predict: '["Do I have to clean my baby’s teeth?", "Should I clean my children’s teeth for them?", "How much toothpaste should I use?"]'
                     },
                     {
@@ -2062,8 +2148,265 @@ var obj = {
                 }
             }
         }
-    }
+    },
+    chapter11: {
+        welcome: {
+            1: {
+                text: 'Welcome to Chapter 11, user name! How do you feel about sustainable eating?',
+                predict: '',
+                nextPath: {
+                    master: "randomConvo",
+                    branch: 1
+                }
+            }
+        },
+        randomConvo: {
+            1: {
+                func: randomRespOfChap11,
+                targetMsgArr: [
+                    {
+                        respMsg: 'I see! Sustainable eating means choosing a healthy balanced diet that meet the needs of you and your family members, while limiting impact on the environment around us. What do you think about that?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay, I understand. We all have our own food routines and grow, buy, store, cook and waste food differently but everyone can probably make a few changes here and there to help the planet. What can you think of?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Thanks for telling me! Providing more sustainable food in your child’s early years can play an important part towards helping meet their needs today without compromising their future needs.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Right, okay 😊 To help avoid potentially irreversible damage to the plant and ensure that everyone can eat healthily by 2050, the world wide consumption of foods such as red meat and sugar needs to fall by about 50% and at the same time, the amount of fruit, vegetables, nuts, beans and pulses eaten will need to double. What do you think?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I understand, thank you for telling me, user name! Reports are that half of adults in the UK want to consider dietary changes to reduce impact on global warming, however many of us still eat meat every day. It’s hard to change a lot of thing quickly and so an approach you are more likely to succeed at is to choose a couple of small changes and stick to those.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay 😊 Planning meals and avoiding over buying of food would mean less waste and that would help the planet too!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'That’s interesting, thank you for telling me 😊 The food that children eat in their early years not only has an impact on the health of the child eating it but also on the health of the planet. Sustainable food is about food culture and how decisions made about growing, buying, storing, cooking and wasting food today will impact future generations.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay, I see. Locally grown food in season tend to be less expensive than food that is flown in from another country. It’s more sustainable too. Another tip is to go to a food market towards the end of the day – you may not always get the food you had decided to buy but you are more likely to get a good deal on the price. Store holders don’t want to be left with unsold food at the end of the day as it is simply going to perish and go to waste.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Right, I understand. One of the best things you can do when feeding you and your child is to try and waste less food and drink.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Thank you 😊 Wasted food and drink, regardless of its source, is harmful to the environment because of all the land, water and energy used in its production as well as the release of potent greenhouse gases (methane) by decomposing organic matter in landfill.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'That’s very common 😊 Embrace car-free living! Walking can easily be done from your home rather than driving to a venue. You and your child can walk around the local area without the need for transportation.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I like how you think, user name! 😊',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Can you tell me more?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I love trying to understand you, user name. Could you tell me more?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'That’s very common 😊 I can also answer questions. Maybe you’re interested in some of these… \n\nAm I supposed to buy organic food for my child? \n\nIs it better not to consume meat? \n\nWhat is sustainable eating?',
+                        predict: '["Am I supposed to buy organic food for my child?", "Is it better not to consume meat?", "What is sustainable eating?"]'
+                    },
 
+                    {
+                        respMsg: 'Most people say something similar! I can also answer questions. Here’s some you can ask: \n\nWhy do we need sustainable diets?\n\nIs a sustainable diet a healthy diet?\n\nI sometimes throw away food - does that really matter?',
+                        predict: '["Why do we need sustainable diets", "Is a sustainable diet a healthy diet?", "I sometimes throw away food - does that really matter?"]'
+                    },
+                    {
+                        respMsg: 'I like how you think, user name! I can also answer questions. Here’s some you can ask: \n\nWhy is it important to achieve a balance between energy intake and energy needs?\n\nDo sausages and bacon count as red meat?\n\nAre eggs ok to eat?',
+                        predict: '["Why is it important to achieve a balance between energy intake and energy needs?", "Do sausages and bacon count as red meat?", "Are eggs ok to eat?"]'
+                    },
+                    {
+                        respMsg: 'I’m only a robot but I do know the answers to some questions! Here’s some you could ask: \n\nWhat we need to eat more of to work towards eating a sustainable diet?\n\nIf I switch to a more sustainable diet, will my child get enough protein to grow and develop?\n\nWhat foods contain iron?',
+                        predict: '["What we need to eat more of to work towards eating a sustainable diet?", "If I switch to a more sustainable diet, will my child get enough protein to grow and develop?", "What foods contain iron?"]'
+                    },
+                    {
+                        respMsg: 'You can also ask me questions. Here’s some: \n\nI’ve heard young children shouldn’t have too much dietary fibre? \n\nWhat is a plant-based food?\n\nI thought that milk was a great food to give to my child?',
+                        predict: '["I’ve heard young children shouldn’t have too much dietary fibre?", "What is a plant-based food?", "I thought that milk was a great food to give to my child?"]'
+                    },
+                    {
+                        respMsg: 'As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nCheese is a dairy product. Where does cheese fit in with a sustainable diet?\n\nIs it OK to feed plant based ‘milks’ to my child?\n\nWhat fish can I buy to feed to my child eat when following a sustainable diet?',
+                        predict: '["Cheese is a dairy product. Where does cheese fit in with a sustainable diet?", "Is it OK to feed plant based ‘milks’ to my child?", "What fish can I buy to feed to my child eat when following a sustainable diet?"]'
+                    },
+                    {
+                        respMsg: 'I’m only a robot but I do know the answers to some questions! Here’s some you could ask: \n\nYou can also ask me questions. Here’s some: \n\nHow much fish should I give to my toddler?\n\nDo I need to cut sugar for a sustainable diet? \n\nWith sustainability in mind, what should I give my child to drink?',
+                        predict: '["How much fish should I give to my toddler?", "Do I need to cut sugar for a sustainable diet?", "With sustainability in mind, what should I give my child to drink?"]'
+                    },
+                    {
+                        respMsg: 'As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nHow should I cook fish that are more sustainable?\n\nHow much fish should we eat?\n\nHow much fish should I give to my baby when I am weaning?',
+                        predict: '["How should I cook fish that are more sustainable?", "How much fish should we eat?", "How much fish should I give to my baby when I am weaning?"]'
+                    },
+
+                    {
+                        respMsg: 'As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nWhat about 5-a-day and sustainable eating?\n\nShould I avoid any fruits and vegetables in a more sustainable diet?\n\nWhat about frozen food – is that a more sustainable way of keeping food?',
+                        predict: '["What about 5-a-day and sustainable eating?", "Should I avoid any fruits and vegetables in a more sustainable diet?", "What about frozen food – is that a more sustainable way of keeping food?"]'
+                    },
+                    {
+                        respMsg: 'As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nWhat’s the definition of ‘local food’?\n\nWhat Is organic food, and should I buy this?\n\nHow can I make my home meals more sustainable?\n\nDo I have to become Vegetarian or Vegan to have a sustainable diet?',
+                        predict: '["What’s the definition of ‘local food’?", "What Is organic food, and should I buy this?", "How can I make my home meals more sustainable?", "Do I have to become Vegetarian or Vegan to have a sustainable diet?"]'
+                    }
+
+                ],
+                nextPath: {
+                    master: "randomConvo",
+                    branch: 1
+                }
+            }
+        }
+    },
+    chapter12: {
+        welcome: {
+            1: {
+                text: 'Welcome to Chapter 12! This is all about making food fun 😊 What do you think about that, user name?',
+                predict: '',
+                nextPath: {
+                    master: "randomConvo",
+                    branch: 1
+                }
+            }
+        },
+        randomConvo: {
+            1: {
+                func: randomRespOfChap12,
+                targetMsgArr: [
+                    {
+                        respMsg: 'I see! As children grow older having a fun relationship with food will help them to maintain a healthy balanced diet and enjoy eating the nourishing meals that provide all their nutrition. How does that sound to you?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay, I understand. Sitting down together for a meal whenever you can is a great way to connect with your family.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Thanks for telling me! Eating together as a family can be hard so try to do the best that you can. Try to have a parent or carer sit with the children at meals times, and whenever you can share the same foods. You are the best role model your children have for a healthy balanced diet.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Right, okay  Even if your little one is not talking yet chatting during mealtime is important. Chat to your baby/infant and encourage them to respond with sounds or smiles.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I understand, thank you for telling me, user name! There are lots of things that kids can get involved with in the kitchen. There will be a few spills and kids are great at creating mess, but there will also be lots of laughs and precious memories created together.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay  Have recent mealtimes been fun?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'That’s interesting, thank you for telling me  Kids love to dip their foods. Whip up a quick dip for veggies with yogurt and seasonings such as herbs or garlic. Serve with raw vegetables like broccoli, carrots, or cauliflower. Fruit chunks go great with a yogurt and cinnamon or vanilla dip.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay, I see. Adventurous eaters aren’t born, they become that way with practice.  The trick is to start with healthy eating habits right from the start.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Right, I understand. Remember you are your child’s best role model, so sit together and share family meals, try new foods together and talk about them.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Thank you  Here’s a tip: Talk everything through with your child and talk about all the ingredients you are using, ask where it grows (if using fruits or vegetables).',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'That’s very common  When you cook, you use all your senses! How many fun activities can boast this achievement?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I like how you think, user name! These are 10 benefits for cooking with your kid: \n\n1) Increases language development\n\n2) Enhances fine motor skills\n\n3) Increases math ability\n\n4) Improves reading skills (in older children)\n\n5) Introduces kids to scientific concepts\n\n6) Increases focus and attention\n\n7) Teaches life skills\n\n8) Promotes healthy eating\n\n9) Boosts self-confidence\n\n10) Encourages family bonding.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Can you tell me more?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I love trying to understand you, user name 😊. Could you tell me more?',
+                        predict: ''
+                    },
+
+                    {
+                        respMsg: 'Lettuce or other salad greens don’t need much space and are surprisingly easy to grow indoors – you don’t even need a pot – pierce a plastic bag with a few holes sin the bottom for drainage, fill with compost and sew your seeds. Just remember to sit the bag on a tray or bowl to catch excess water.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Pre-schoolers who play with their food are more likely to try new things and eat a more varied diet.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'It is thought that children who are comfortable getting messy at the table are less likely to develop food neophobia (or fear of tasting new things). Fussy eaters may also be more relaxed about food when they are involved in something messy like food art, where kids make pictures on their plate using their food.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Each mouthful of food sounds very different as we eat it. Ask children to think about what they can hear as they munch their dinner?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Like adults, children will be more interested in food that looks nice, or in their case fun. Even simple things like using cutters to make sandwiches of toast in different shapes can make these more appealing to eat.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Create a face out of the foods in a mealtime, or as they get older, they can do this themselves.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Dry foods such as breakfast cereals, pasta shapes, beans and lentils or even raisins are great to create a collage. Paint a sheet of paper as a background and then use glue to stick the foods on to create a food collage.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'A Healthy Diet is one that nurtures your child, providing all the nutrition they need everyday and giving them the life skills that they need as they grow older to select, prepare and eat their own healthy balanced diet. Making food a core part of everyday life will help your child to set goof habits for life.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'That’s very common 😊 I can also answer questions. Maybe you’re interested in some of these… \n\nHow can I get my child cooking?\n\nHow Can Cooking Help Pre-schoolers?\n\nDoes cooking help children to try new foods?',
+                        predict: '["How can I get my child cooking?", "How Can Cooking Help Pre-schoolers?", "Does cooking help children to try new foods?"]'
+                    },
+                    {
+                        respMsg: 'Most people say something similar! I can also answer questions. Here’s some you can ask: \n\nWhat can Pre-schoolers do in the Kitchen?\n\nHow do I make mealtime fun? \n\nIs eating with your hands OK?',
+                        predict: '["What can Pre-schoolers do in the Kitchen?", "How do I make mealtime fun?", "Is eating with your hands OK?"]'
+                    },
+                    {
+                        respMsg: 'I like how you think, user name! I can also answer questions. Here’s some you can ask: \n\nDo I really need to make food into artworks? \n\nWhat art can we do with a pen and pencils or crayons?\n\nWhat are fun ways to present foods?',
+                        predict: '["Do I really need to make food into artworks?", "What art can we do with a pen and pencils or crayons?", "What are fun ways to present foods?"]'
+                    },
+                    {
+                        respMsg: 'I’m only a robot but I do know the answers to some questions! Here’s some you could ask: \n\nHow can I make meals colourful? \n\nHow do I get my toddler to eat a wider range of foods?\n\nHow do I get my baby/kids to eat vegetables?',
+                        predict: '["How can I make meals colourful?", "How do I get my toddler to eat a wider range of foods?", "How do I get my baby/kids to eat vegetables?"]'
+                    },
+                    {
+                        respMsg: 'You can also ask me questions. Here’s some: \n\nAre there any fun food sessions that we can go to?\n\n Why make food fun – surely it’s just food?',
+                        predict: '["Are there any fun food sessions that we can go to?", "Why make food fun – surely it’s just food?"]'
+                    },
+                    {
+                        respMsg: 'As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nIs it easy to cook with kids? \n\nWhat about growing food with kids?',
+                        predict: '["Is it easy to cook with kids?", "What about growing food with kids?"]'
+                    },
+                ],
+                nextPath: {
+                    master: "randomConvo",
+                    branch: 1
+                }
+            }
+        }
+    }
 }
 
 module.exports = obj;
