@@ -2299,7 +2299,7 @@ var obj = {
                         predict: ''
                     },
                     {
-                        respMsg: 'Right, okay  Even if your little one is not talking yet chatting during mealtime is important. Chat to your baby/infant and encourage them to respond with sounds or smiles.',
+                        respMsg: 'Right, okay 😊 Even if your little one is not talking yet chatting during mealtime is important. Chat to your baby/infant and encourage them to respond with sounds or smiles.',
                         predict: ''
                     },
                     {
@@ -2307,11 +2307,11 @@ var obj = {
                         predict: ''
                     },
                     {
-                        respMsg: 'Okay  Have recent mealtimes been fun?',
+                        respMsg: 'Okay 😊 Have recent mealtimes been fun?',
                         predict: ''
                     },
                     {
-                        respMsg: 'That’s interesting, thank you for telling me  Kids love to dip their foods. Whip up a quick dip for veggies with yogurt and seasonings such as herbs or garlic. Serve with raw vegetables like broccoli, carrots, or cauliflower. Fruit chunks go great with a yogurt and cinnamon or vanilla dip.',
+                        respMsg: 'That’s interesting, thank you for telling me 😊 Kids love to dip their foods. Whip up a quick dip for veggies with yogurt and seasonings such as herbs or garlic. Serve with raw vegetables like broccoli, carrots, or cauliflower. Fruit chunks go great with a yogurt and cinnamon or vanilla dip.',
                         predict: ''
                     },
                     {
@@ -2323,11 +2323,11 @@ var obj = {
                         predict: ''
                     },
                     {
-                        respMsg: 'Thank you  Here’s a tip: Talk everything through with your child and talk about all the ingredients you are using, ask where it grows (if using fruits or vegetables).',
+                        respMsg: 'Thank you 😊 Here’s a tip: Talk everything through with your child and talk about all the ingredients you are using, ask where it grows (if using fruits or vegetables).',
                         predict: ''
                     },
                     {
-                        respMsg: 'That’s very common  When you cook, you use all your senses! How many fun activities can boast this achievement?',
+                        respMsg: 'That’s very common 😊 When you cook, you use all your senses! How many fun activities can boast this achievement?',
                         predict: ''
                     },
                     {
