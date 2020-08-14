@@ -61,6 +61,9 @@ var obj = {
                 if(resData.randomArrFlag){
                     respObj.randomArrFlag = resData.randomArrFlag;
                 }
+                if(resData.randomMsgArray){
+                    respObj.randomMsgArray = resData.randomMsgArray;
+                }
                 respObj.botReply = resData.botReply;
                 respObj.mainMaster = resData.nextMaster;
                 respObj.mainBranch = resData.nextBranch;

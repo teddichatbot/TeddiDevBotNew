@@ -16,7 +16,7 @@ var welcomeMsg = (chapterType) =>{
 }
 
 var playV3video = (currentMaster, currentBranch)=>{
-    let url_list = '[{"English": "https://teddibucketdev.blob.core.windows.net/videoscontainer/V3 Human Milk advert with subtitles.mp4" }, {"Bengali":"https://teddibucketdev.blob.core.windows.net/videoscontainer/HumanMilk_Advert_Subtitles_Bengali_V1.mp4"}, {"Arabic":"https://teddibucketdev.blob.core.windows.net/videoscontainer/HumanMilk_Advert_Subtitles_Arabic_V1.mp4"}]'
+    let url_list = '[{"English": "https://teddibucketdev.blob.core.windows.net/videoscontainer/V3 Human Milk advert with subtitles.mp4" }, {"Bengali":"https://teddibucketdev.blob.core.windows.net/videoscontainer/HumanMilk_Advert_Subtitles_Bengali_V1.mp4"}, {"Arabic":"https://teddibucketdev.blob.core.windows.net/videoscontainer/HumanMilk_Advert_Subtitles_Arabic_V1.mp4"}, {"Hindi":"https://teddibucketdev.blob.core.windows.net/videoscontainer/HumanMilk_Advert_Subtitles_Hindi.mp4"}, {"Punjabi":"https://teddibucketdev.blob.core.windows.net/videoscontainer/HumanMilk_Advert_Subtitles_Punjabi.mp4"}, {"Romanian":"https://teddibucketdev.blob.core.windows.net/videoscontainer/HumanMilk_Advert_Subtitles_Romanian.mp4"}, {"Somali":"https://teddibucketdev.blob.core.windows.net/videoscontainer/HumanMilk_Advert_Subtitles_Somali_V1.mp4"}, {"Urdu":"https://teddibucketdev.blob.core.windows.net/videoscontainer/HumanMilk_Advert_Subtitles_Urdu.mp4"}]'
     botReply = ''
     botReply += '#&@#{"selectVideo" : '+url_list+' }'
  
@@ -100,6 +100,9 @@ var obj = {
                     if(resData.randomArrFlag){
                         // console.log('vnbvn', resData.randomArrFlag)
                         respObj.randomArrFlag = resData.randomArrFlag;
+                    }
+                    if(resData.randomMsgArray){
+                        respObj.randomMsgArray = resData.randomMsgArray;
                     }
                     respObj.botReply = resData.botReply;
                     respObj.mainMaster = resData.nextMaster;

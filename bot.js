@@ -236,6 +236,9 @@ async function UtteranceLog(storage, turnContext, userId, storeItems, channelId,
         // storeItems[userId][chapterType]['chap1FlowingFlag'] = respObj.randomArrFlag;
         storeItems[userId][chapterType]['flowingFlag'] = respObj.randomArrFlag;
     }
+    if(respObj.randomMsgArray){
+        storeItems[userId][chapterType]['randomMsgArray'] = respObj.randomMsgArray;
+    }
     storeItems[userId][chapterType]['mainMaster'] = respObj.mainMaster
     storeItems[userId][chapterType]['mainBranch'] = respObj.mainBranch
     
@@ -285,6 +288,7 @@ async function creatingUtterance(storage, turnContext, userId, storeItems, chann
             feedingType: "",
             flowingFlag: 1,
             randomMsgFlag: 0,
+            randomMsgArray: [],
             mainMaster: "",
             mainBranch: "",
             prevMaster: "",
@@ -293,6 +297,7 @@ async function creatingUtterance(storage, turnContext, userId, storeItems, chann
         givingHealth:{
             flowingFlag: 1,
             randomMsgFlag: 0,
+            randomMsgArray: [],
             mainMaster: "",
             mainBranch: "",
             prevMaster: "",
@@ -301,6 +306,7 @@ async function creatingUtterance(storage, turnContext, userId, storeItems, chann
         chapter3:{
             flowingFlag: 1,
             randomMsgFlag: 0,
+            randomMsgArray: [],
             mainMaster: "",
             mainBranch: "",
             prevMaster: "",
@@ -309,6 +315,7 @@ async function creatingUtterance(storage, turnContext, userId, storeItems, chann
         chapter4:{
             flowingFlag: 1,
             randomMsgFlag: 0,
+            randomMsgArray: [],
             mainMaster: "",
             mainBranch: "",
             prevMaster: "",
@@ -317,6 +324,7 @@ async function creatingUtterance(storage, turnContext, userId, storeItems, chann
         chapter5:{
             flowingFlag: 1,
             randomMsgFlag: 0,
+            randomMsgArray: [],
             mainMaster: "",
             mainBranch: "",
             prevMaster: "",
@@ -325,6 +333,7 @@ async function creatingUtterance(storage, turnContext, userId, storeItems, chann
         chapter6:{
             flowingFlag: 1,
             randomMsgFlag: 0,
+            randomMsgArray: [],
             mainMaster: "",
             mainBranch: "",
             prevMaster: "",
@@ -333,6 +342,7 @@ async function creatingUtterance(storage, turnContext, userId, storeItems, chann
         chapter7:{
             flowingFlag: 1,
             randomMsgFlag: 0,
+            randomMsgArray: [],
             mainMaster: "",
             mainBranch: "",
             prevMaster: "",
@@ -341,6 +351,7 @@ async function creatingUtterance(storage, turnContext, userId, storeItems, chann
         chapter8:{
             flowingFlag: 1,
             randomMsgFlag: 0,
+            randomMsgArray: [],
             mainMaster: "",
             mainBranch: "",
             prevMaster: "",
@@ -349,6 +360,7 @@ async function creatingUtterance(storage, turnContext, userId, storeItems, chann
         chapter9:{
             flowingFlag: 1,
             randomMsgFlag: 0,
+            randomMsgArray: [],
             mainMaster: "",
             mainBranch: "",
             prevMaster: "",
@@ -357,6 +369,7 @@ async function creatingUtterance(storage, turnContext, userId, storeItems, chann
         chapter10:{
             flowingFlag: 1,
             randomMsgFlag: 0,
+            randomMsgArray: [],
             mainMaster: "",
             mainBranch: "",
             prevMaster: "",
@@ -365,6 +378,7 @@ async function creatingUtterance(storage, turnContext, userId, storeItems, chann
         chapter11:{
             flowingFlag: 1,
             randomMsgFlag: 0,
+            randomMsgArray: [],
             mainMaster: "",
             mainBranch: "",
             prevMaster: "",
@@ -373,6 +387,7 @@ async function creatingUtterance(storage, turnContext, userId, storeItems, chann
         chapter12:{
             flowingFlag: 1,
             randomMsgFlag: 0,
+            randomMsgArray: [],
             mainMaster: "",
             mainBranch: "",
             prevMaster: "",
