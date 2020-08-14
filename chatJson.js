@@ -1846,7 +1846,7 @@ var obj = {
                         predict: '["Can I take my child abroad?", "I’ve lost my identity what can I do?"]'
                     },
                     {
-                        respMsg: 'I hear that a lot  Here are some questions you can ask me:\n\nHow can I access childcare? \n\nWhat is bonding?',
+                        respMsg: 'I hear that a lot 😊 Here are some questions you can ask me:\n\nHow can I access childcare? \n\nWhat is bonding?',
                         predict: '["How can I access childcare?", "What is bonding?"]'
                     },
                     {
