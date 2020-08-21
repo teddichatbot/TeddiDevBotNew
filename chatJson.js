@@ -1477,7 +1477,7 @@ var obj = {
                         predict: ''
                     },
                     {
-                        respMsg: 'Children aged 1-5 should have at least 180 minutes every day of active play. This includes a broad range of play activities (see infographic below)   and therefore is higher than the adult recommendation of at least 150 minutes of moderate activity every week which looks at focused physical activity such as walking, swimming or cycling.',
+                        respMsg: 'Children aged 1-5 should have at least 180 minutes every day of active play. This includes a broad range of play activities and therefore is higher than the adult recommendation of at least 150 minutes of moderate activity every week which looks at focused physical activity such as walking, swimming or cycling.',
                         predict: ''
                     },
                     {
