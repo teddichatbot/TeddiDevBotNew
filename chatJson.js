@@ -1408,10 +1408,10 @@ var obj = {
                         respMsg: 'For the first 6 months the safest place for your baby to sleep is in a cot, crib, or Moses basket in your room beside your bed and in the same room as you for all other sleeps during the day. You will also be close by if they need a feed or cuddle. Babies should always be put down to sleep on their backs with feet at the bottom of the cot so that they can’t wriggle down.',
                         predict: ''
                     },
-                    {
-                        respMsg: 'You can also provide feedback by selecting the top right-hand corner!',
-                        predict: ''
-                    },
+                    // {
+                    //     respMsg: 'You can also provide feedback by selecting the top right-hand corner!',
+                    //     predict: ''
+                    // },
                     {
                         respMsg: 'Babies should ALWAYS be put to sleep lying on their backs. This is because sleeping a baby on their front or side greatly increases the chance of SIDS – Sudden Infant Death Syndrome.  Sleeping your baby on their back (known as the supine position) every night is one of the most protective actions you can take to ensure your baby is sleeping as safely as possible.',
                         predict: ''
