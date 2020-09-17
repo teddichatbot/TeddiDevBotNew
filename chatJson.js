@@ -358,7 +358,8 @@ const randomRespOfChap3 = async(chapterType,mainMaster,mainBranch,turnContext, u
     botReply += '#&@#';
 
     if(randomObj.predict != ''){
-        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        // botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += "{'predictiveText' : " +randomObj.predict+ " }" ;
         botReply += '#&@#';
     }
     if(randomMsgFlag == 1){
