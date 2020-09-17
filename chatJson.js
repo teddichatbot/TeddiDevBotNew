@@ -358,8 +358,7 @@ const randomRespOfChap3 = async(chapterType,mainMaster,mainBranch,turnContext, u
     botReply += '#&@#';
 
     if(randomObj.predict != ''){
-        // botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
-        botReply += "{'predictiveText' : " +randomObj.predict+ " }" ;
+        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
         botReply += '#&@#';
     }
     if(randomMsgFlag == 1){
@@ -1274,26 +1273,26 @@ var obj = {
             1: {
                 func: randomRespOfChap3,
                 targetMsgArr: [
-                    {
-                        respMsg: 'Sure, I understand! Thank you, user name 😊.  My friend, Professor Amy Brown had a video on baby sleep. If you would like to watch it, tell me \"Play Amy’s video on baby sleep\"',
-                        predict: '["Play Amy’s video on baby sleep"]'
-                    },
-                    {
-                        respMsg: 'Okay, I see! My friends at the Lullaby Trust have a video on sleep position and co sleeping. You can watch the video on sleep position by telling me “Play the Lullaby Trust sleep position video”. You can also watch the video on co sleeping by telling me “Play the co sleeping video”',
-                        predict: '["Play the Lullaby Trust sleep position video", "Play the co sleeping video"]'
-                    },
-                    {
-                        respMsg: 'Okay 😊 We can keep chatting, or here are some questions you can ask me:\n\n Can I sleep with my baby in bed? \n\n What techniques can I use for getting my baby to sleep alone?',
-                        predict: '["Can I sleep with my baby in bed?", "What techniques can I use for getting my baby to sleep alone?"]'
-                    },
                     // {
-                    //     respMsg: 'I see! I enjoy talking to you, user name 😊. Here are some questions you can ask me:\n\nWhat techniques can I use for getting my baby to settle themselves to sleep? \n\n When should my baby sleep through the night?\n\nWhen can my baby sleep in another room?',
-                    //     predict: '["What techniques can I use for getting my baby to settle themselves to sleep?", "When should my baby sleep through the night?", "When can my baby sleep in another room?"]'
+                    //     respMsg: 'Sure, I understand! Thank you, user name 😊.  My friend, Professor Amy Brown had a video on baby sleep. If you would like to watch it, tell me \"Play Amy’s video on baby sleep\"',
+                    //     predict: '["Play Amy’s video on baby sleep"]'
                     // },
                     // {
-                    //     respMsg: 'I enjoy talking to you, user name. Here are some questions you can ask me:\n\nWhat is a bedtime routine?\n\nAre bedtime routines important?\n\nAt what age will my baby be in a bedtime routine?',
-                    //     predict: '["What is a bedtime routine?", "Are bedtime routines important?", "At what age will my baby be in a bedtime routine?"]'
+                    //     respMsg: 'Okay, I see! My friends at the Lullaby Trust have a video on sleep position and co sleeping. You can watch the video on sleep position by telling me “Play the Lullaby Trust sleep position video”. You can also watch the video on co sleeping by telling me “Play the co sleeping video”',
+                    //     predict: '["Play the Lullaby Trust sleep position video", "Play the co sleeping video"]'
                     // },
+                    // {
+                    //     respMsg: 'Okay 😊 We can keep chatting, or here are some questions you can ask me:\n\n Can I sleep with my baby in bed? \n\n What techniques can I use for getting my baby to sleep alone?',
+                    //     predict: '["Can I sleep with my baby in bed?", "What techniques can I use for getting my baby to sleep alone?"]'
+                    // },
+                    {
+                        respMsg: 'I see! I enjoy talking to you, user name 😊. Here are some questions you can ask me:\n\nWhat techniques can I use for getting my baby to settle themselves to sleep? \n\n When should my baby sleep through the night?\n\nWhen can my baby sleep in another room?',
+                        predict: '["What techniques can I use for getting my baby to settle themselves to sleep?", "When should my baby sleep through the night?", "When can my baby sleep in another room?"]'
+                    },
+                    {
+                        respMsg: 'I enjoy talking to you, user name. Here are some questions you can ask me:\n\nWhat is a bedtime routine?\n\nAre bedtime routines important?\n\nAt what age will my baby be in a bedtime routine?',
+                        predict: '["What is a bedtime routine?", "Are bedtime routines important?", "At what age will my baby be in a bedtime routine?"]'
+                    },
                     // {
                     //     respMsg: 'I can sense you’re great! Here are some questions you can ask me:\n\nHow long should my baby sleep for?\n\nHow much sleep does a 1-year old need? \n\nHow long should my toddler sleep for?',
                     //     predict: '["How long should my baby sleep for?", "How much sleep does a 1-year old need?", "How long should my toddler sleep for?"]'
