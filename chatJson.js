@@ -342,7 +342,6 @@ const randomRespOfChap3 = async(chapterType,mainMaster,mainBranch,turnContext, u
         // randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
         randomMsgArray = await getRandmonMsgList(chapterName);
     }else{
-        
         randomMsgArray = userSession.chapter3.randomMsgArray;
     }
     
@@ -358,7 +357,8 @@ const randomRespOfChap3 = async(chapterType,mainMaster,mainBranch,turnContext, u
     botReply += '#&@#';
 
     if(randomObj.predict != ''){
-        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        // console.log('{"predictiveText" : ' +randomObj.predict+ ' }')
+        botReply += '{"predictiveText" : ' +JSON.stringify(randomObj.predict)+ ' }' ;
         botReply += '#&@#';
     }
     if(randomMsgFlag == 1){
