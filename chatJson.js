@@ -205,7 +205,7 @@ const randomResp4 = async(chapterType,mainMaster,mainBranch,turnContext)=>{
     return {botReply,nextMaster,nextBranch}
 }
 
-const randomResp5 = async(chapterType,mainMaster,mainBranch,turnContext, userSession)=>{
+const randomRespOfChap1 = async(chapterType,mainMaster,mainBranch,turnContext, userSession)=>{
     
     let randomArrFlag = userSession.breastFeeding.flowingFlag;
     let randomMsgFlag = userSession.breastFeeding.randomMsgFlag;
@@ -213,7 +213,9 @@ const randomResp5 = async(chapterType,mainMaster,mainBranch,turnContext, userSes
     // let resp = ''
     let randomMsgArray = []
     if(randomArrFlag == 1 ){
-        randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        // randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        let chapterName = 'breastFeeding';
+        randomMsgArray = await getRandmonMsgList(chapterName);
     }else{
         randomMsgArray = userSession.breastFeeding.randomMsgArray;
     }
@@ -233,7 +235,8 @@ const randomResp5 = async(chapterType,mainMaster,mainBranch,turnContext, userSes
     botReply += '#&@#';
 
     if(randomObj.predict != ''){
-        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        // botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '{"predictiveText" : ' +JSON.stringify(randomObj.predict)+ ' }' ;
         botReply += '#&@#';
     }
     if(randomMsgFlag == 1){
@@ -256,7 +259,9 @@ const randomRespOfChap2 = async(chapterType,mainMaster,mainBranch,turnContext, u
     // let resp = ''
     let randomMsgArray = [];
     if(randomArrFlag == 1 ){
-        randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        // randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        let chapterName = 'givingHealth';
+        randomMsgArray = await getRandmonMsgList(chapterName);
     }else{
         randomMsgArray = userSession.givingHealth.randomMsgArray;
     }
@@ -272,7 +277,8 @@ const randomRespOfChap2 = async(chapterType,mainMaster,mainBranch,turnContext, u
     botReply += '#&@#';
 
     if(randomObj.predict != ''){
-        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        // botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '{"predictiveText" : ' +JSON.stringify(randomObj.predict)+ ' }' ;
         botReply += '#&@#';
     }
     if(randomMsgFlag == 1){
@@ -966,16 +972,9 @@ var obj = {
                 }
             },
             10: {
-                func: randomResp5,
+                func: randomRespOfChap1,
                 targetMsgArr: [
-                    {
-                        respMsg: 'It’s worth remembering that you can breastfeed, and you are producing enough milk – feel confident! Every baby, and every mum is unique, and you and your baby will get to know each other and develop a pattern of feeds that suit you both. Babies may want to suckle very frequently day and night and that is perfectly normal – they have a tiny tummy and so of course they need to eat little and often.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'One of the challenges of babies is that their needs can change from day to day. Responsive feeding does not follow a set routine but allows both you and baby to feed as often as you want to. Try to stay relaxed, watch for your baby’s cues for when they want a feed (such as rooting for the breast) and feed as often and as long as baby needs.',
-                        predict: ''
-                    },
+                    
                     {
                         respMsg: 'Breastfeeding takes 4 – 6 weeks to fully establish and during that time baby will need to feed frequently. Be realistic about what you can achieve each day. Set yourself a few small essential tasks and don’t take on too much so that you feel in control and not overwhelmed.',
                         predict: ''
@@ -1285,14 +1284,14 @@ var obj = {
                     //     respMsg: 'Okay 😊 We can keep chatting, or here are some questions you can ask me:\n\n Can I sleep with my baby in bed? \n\n What techniques can I use for getting my baby to sleep alone?',
                     //     predict: '["Can I sleep with my baby in bed?", "What techniques can I use for getting my baby to sleep alone?"]'
                     // },
-                    {
-                        respMsg: 'I see! I enjoy talking to you, user name 😊. Here are some questions you can ask me:\n\nWhat techniques can I use for getting my baby to settle themselves to sleep? \n\n When should my baby sleep through the night?\n\nWhen can my baby sleep in another room?',
-                        predict: '["What techniques can I use for getting my baby to settle themselves to sleep?", "When should my baby sleep through the night?", "When can my baby sleep in another room?"]'
-                    },
-                    {
-                        respMsg: 'I enjoy talking to you, user name. Here are some questions you can ask me:\n\nWhat is a bedtime routine?\n\nAre bedtime routines important?\n\nAt what age will my baby be in a bedtime routine?',
-                        predict: '["What is a bedtime routine?", "Are bedtime routines important?", "At what age will my baby be in a bedtime routine?"]'
-                    },
+                    // {
+                    //     respMsg: 'I see! I enjoy talking to you, user name 😊. Here are some questions you can ask me:\n\nWhat techniques can I use for getting my baby to settle themselves to sleep? \n\n When should my baby sleep through the night?\n\nWhen can my baby sleep in another room?',
+                    //     predict: '["What techniques can I use for getting my baby to settle themselves to sleep?", "When should my baby sleep through the night?", "When can my baby sleep in another room?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I enjoy talking to you, user name. Here are some questions you can ask me:\n\nWhat is a bedtime routine?\n\nAre bedtime routines important?\n\nAt what age will my baby be in a bedtime routine?',
+                    //     predict: '["What is a bedtime routine?", "Are bedtime routines important?", "At what age will my baby be in a bedtime routine?"]'
+                    // },
                     // {
                     //     respMsg: 'I can sense you’re great! Here are some questions you can ask me:\n\nHow long should my baby sleep for?\n\nHow much sleep does a 1-year old need? \n\nHow long should my toddler sleep for?',
                     //     predict: '["How long should my baby sleep for?", "How much sleep does a 1-year old need?", "How long should my toddler sleep for?"]'
@@ -1373,258 +1372,258 @@ var obj = {
                     //     respMsg: 'I think I understand! As a rough guide, by the time babies are 3 months old, some (but not all) begin to start settling and sleeping at night time for a stretch of up to 5 hours. By the time they are 5 months old, half of them may have started to sleep for an eight-hour stretch on some nights.',
                     //     predict: ''
                     // },
-                    // {
-                    //     respMsg: 'Okay! One study found that almost one third of babies had not regularly slept from 10pm to 6am by the age of 1 year and so it’s hard to predict. Generally, though, babies do not sleep all night-every night until they are close to a year old.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Looking after a baby can be really tiring, especially in the first few months after the birth, when your child is likely to wake several times during the night. Most parents cope with a certain level of tiredness. But if you\'re feeling low, bad tempered and unable to cope or enjoy things, you need to try find a way of getting more sleep, or at least more rest.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Hmm.. I see 😊 If you have a partner, ask them to help. If you\'re formula feeding, they could share the feeds. If you\'re breastfeeding, ask your partner to help with nappies or dressing in the morning so you can go back to sleep.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Try to go to bed early for, say, 1 week. If you can\'t sleep when you go to bed, do something relaxing for half an hour beforehand, such as soaking in a hot bath.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'When you\'re feeling tired, doing more exercise may be the last thing you feel like doing. But regular exercise can help you feel less tired. Walking is one of the easiest forms of exercise. Try to get out for a walk every day with your baby, even if it\'s just to the local shops. If you can walk in a green space or park this may help to lift your mood.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Okay, user name. Waking up in the night can be scary, but a night light helps. Not only will it help your baby to feel secure but will also stop you tripping over toys when you go in to check on them!',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Sure, user name. A good way to make sure your little one is tired enough for bed, is by trying to make sure they’re moving around enough during the day. If they’ve still got bags of energy at bedtime try some ‘tummy time’ for babies or encourage early evening active play such as a disco or obstacle course before calming down with a bath.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'That’s something I hear a lot! Having a bedtime toy or blanket to hold or stroke while falling asleep is comforting for some children. If your child has a favourite, buy a spare and switch them around so that if one is lost then you are not in trouble.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Okay! For the first 6 months the safest place for your baby to sleep is in a cot, crib, or Moses basket in your room beside your bed and in the same room as you for all other sleeps during the day. You will also be close by if they need a feed or cuddle. Babies should always be put down to sleep on their backs with feet at the bottom of the cot so that they can’t wriggle down.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'For the first 6 months the safest place for your baby to sleep is in a cot, crib, or Moses basket in your room beside your bed and in the same room as you for all other sleeps during the day. You will also be close by if they need a feed or cuddle. Babies should always be put down to sleep on their backs with feet at the bottom of the cot so that they can’t wriggle down.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Babies should ALWAYS be put to sleep lying on their backs. This is because sleeping a baby on their front or side greatly increases the chance of SIDS – Sudden Infant Death Syndrome.  Sleeping your baby on their back (known as the supine position) every night is one of the most protective actions you can take to ensure your baby is sleeping as safely as possible.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Enjoy playing with your baby, user name! Take in each joyful moment! 😊',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Encourage your kids to do things in order to earn screen time. Ask them to help you do things around the house – even the youngest can copy you dusting! Encourage them to help you tidy their room. Get a ‘little helper fun pod’ so they can stand and wash up and bake together with you.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Model appropriate screen time behaviour. As a parent you are your child’s first teacher. They will follow what you do, so to ensure your kids use technology appropriately, you need to model good habits.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'It’s best to power down any screen use well before bedtime, at least 30 minutes or more before they settle down to sleep. Read them a book instead and have quiet time together.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Okay! Books are a great way to help your child gather the skills they will need for reading. It’s never too early to start you can do this right from birth. Bedtime is a super time to read to your child and help settle them down before they nod off to sleep.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'You’re amazing! Remember - reading not only gives you an opportunity to bond with your child it opens the door to the written word. Books are great but you can read to them in all sorts of other situations such as in the supermarket where you can look at the letters and signs.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'You seem nice. In the early days, speech delays are more easily picked up on than a child’s ability to read. If you suspect your child has a problem, then go to see your GP or Health Visitor to discuss it.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Have fun with letters, alphabet stamps and stickers. Your child can organise letters and stickers into patterns. Take this outdoors too and write their name in the sand or the snow\n\nConnect letters to everyday words like ‘m’ for mummy, ‘b’ for bed, ‘d’ for dog… ‘t’ for Teddi! ',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Screen time can be positive! Despite the warnings of too much screen time, many classic books and tales can be found online. They can be a useful source of the written word but it’s up to you to work out the balance between how much print copy and how much online copy you use in your child’s life',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Thank you, user name! There are lots of ways that you can help your child learn to talk. Chat while doing things with or around your child and spend time each day talking directly with them repeating words and sentences. Reading books together will also help your child learn to talk and add to the number of words that they know.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'You seem great, user name! What activates do you enjoy? Active children are healthy and happy, with the added benefit that they sleep better too.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'What books do you like?',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Concern is growing that children are increasingly sitting down to play with too much time spent sat in front of TV screens or tablet devices. For under 5’s active play is vital to master their physical environment and develop fundamental movement skills.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'How do you like to get active? It’s great because:\n\n• Builds relationships & social skills\n\n• Maintains overall health and body weight \n\n• Contributes to brain development and learning\n\n• Improves sleep\n\n• Develops muscles and bones\n\n• Encourages movement & co-ordination',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Can you say more, user name?😊',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Children aged 1-5 should have at least 180 minutes every day of active play. This includes a broad range of play activities and therefore is higher than the adult recommendation of at least 150 minutes of moderate activity every week which looks at focused physical activity such as walking, swimming or cycling.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'How have you been today?',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'You might think that infants who are not yet walking cannot be active – but you’d be surprised. Physical activity should be encouraged from birth, particularly through floor-based play and water-based activities in safe environments. Playing, talking and reading with your baby will help to bring you closer together, help them become sociable and make it easier for them to form friendships later on. It can also help with their movement, letting their bones, muscles and heart grow strong.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Infants should be physically active several times every day in a variety of ways, including interactive floor-based activity, e.g. reaching for toys, kicking and crawling. For infants not yet mobile, this includes at least 30 minutes of tummy time spread throughout the day while awake (and other movements such as reaching and grasping, pushing and pulling themselves independently, or rolling over); more is better.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'What’s going on right now for you, user name?😊',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Sure! Active play for babies also encourages reaching for and grasping objects, turning the head toward stimuli such as noises or colours, pulling, pushing and playing with other people, objects and toys.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Okay! Learning to control hands to pick up larger items will develop into being able to pick up small items and grasp a pen. Leaning forwards to grasp a toy develops core and back muscle strength. Moving things further away and closer requires the eyes to focus in different places, developing vision. All of the little aspects of play supports both physical and brain development in many different ways.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Don’t forget when playing and being active with your baby (or child) to keep chatting to them. Making small talk, such as chatting about what things look like, where you are going or what you’re doing is an important part of their learning. If they are babbling or talking to you – then talk – listen to them talk and then respond. It’s never too early to start making Small Talk!',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'There is no other time in life where children will learn as many physical skills as rapidly as they do in the first five years of life. It sounds too simple but many of the games that we play with children all contribute to this development.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Maybe we don’t know what to play, or we feel that we don’t have time to play with our children, but many everyday activities can be turned into opportunities for active play, from the house cleaning, to gardening or when walking the dog. All it takes is a little imagination and motivation to get active and have some fun.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Play is also recognised as key to positive development for children, from encouraging physical skills and establishing healthy enjoyment to developing intellectual, social and emotional maturity!',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Research has shown that being physically active can help with the development of: \n\n• balance, coordination \n\n• maintaining a healthy weight \n\n• strong bones, muscles and heart \n\n• social skills, i.e. how to interact, take turns and getting on and caring about others',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Jump in muddy puddles with your child!',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Make a pasta picture with your child!',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Make a hand print picture with your child!',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Try to catch a falling leaves with your child!',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Pop bubbles with your child!',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Go on a treasure hunt with your child!',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Build a den – inside using blankets and cushions or outside if you can with twigs sticks with your child!',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Ask why often. Inspire curiosity in your child!',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Make wild art – go for a walk and collect leaves, feathers or seed pods and stick these onto paper when you get home!',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Can you tell me more? ',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'It’s not all about the children – parents need to be active too. A fast pace walking for a pre-schooler is likely to be a slow walk for you and so you need to make time for your activity as well.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'When was the last time you did some exercise? It’s great for you!',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'I understand! Exercise snacking is something you do in short stints (5-10 minutes), two or three times a day. The beauty is that you can do this without any special equipment or fitness clothing, it doesn’t cost anything, and you don’t have to do a warmup first.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Stand upright. With your hands at waist height, position your arms in front of you. Raise one leg up to 90 degrees—until the top of your thigh touches your hands— then lower it. Repeat this movement with your opposite leg. Move at any pace you want.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Stand upright and hold onto the back of the chair for balance. Raise one foot by bending your knee to a right angle, and then lower it to the floor. Repeat this movement with your opposite leg and continue for a minute.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Okay, sure! One of the best ways to get active is to walk briskly – either with or without the buggy. Brisk walking will not only help you to get fitter but will also help you to tone up muscle and get your weight in check. ',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'How does that make you feel?',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'You can walk in any flat shoes, however you will find it easier to walk in a pair of lace up shoes or trainers, particularly if you are walking over a non -tarmacked surface in a park or another green space. Investing in a pair of comfortable trainers might help you to walk faster when out with the buggy.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Do some postnatal exercises. They will strengthen your muscles and help get you in shape. You could also join a postnatal exercise class. Lots of postnatal classes let you do the class with your baby at your side. Ask your health visitor about this!',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Push the pram or buggy briskly. Remember to keep your arms bent and your back straight. Make sure the handles are at the right height for you – your elbows should be bent at right angles. Walking is great exercise, so try to get out as much as you can.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Play energetic games with older children. You can exercise by running around with them. Build activity into your day.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Teach your kids to be kind! Make giving compliments normal! ',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Think about some loving thoughts about someone you know with your child.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Try swimming, it is good exercise and also relaxing, but you\'ll need to wait until 7 days after your postnatal bleeding has stopped. If you take your baby with you, try to have someone else there to mind the baby so you have a chance to swim.',
-                    //     predict: ''
-                    // },
-                    // {
-                    //     respMsg: 'Use the stairs instead of the lift or, for short journeys, walk instead of taking the car. Bend your knees when you pick things up off the floor, rather than bending at the waist. If you bend down with bent knees and a straight back, instead of bending over at the waist (straight knees and a bent spine), you\'ll strengthen your thigh muscles and avoid damaging your back. Hold heavy objects close to your body.',
-                    //     predict: ''
-                    // }
+                    {
+                        respMsg: 'Okay! One study found that almost one third of babies had not regularly slept from 10pm to 6am by the age of 1 year and so it’s hard to predict. Generally, though, babies do not sleep all night-every night until they are close to a year old.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Looking after a baby can be really tiring, especially in the first few months after the birth, when your child is likely to wake several times during the night. Most parents cope with a certain level of tiredness. But if you\'re feeling low, bad tempered and unable to cope or enjoy things, you need to try find a way of getting more sleep, or at least more rest.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Hmm.. I see 😊 If you have a partner, ask them to help. If you\'re formula feeding, they could share the feeds. If you\'re breastfeeding, ask your partner to help with nappies or dressing in the morning so you can go back to sleep.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Try to go to bed early for, say, 1 week. If you can\'t sleep when you go to bed, do something relaxing for half an hour beforehand, such as soaking in a hot bath.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'When you\'re feeling tired, doing more exercise may be the last thing you feel like doing. But regular exercise can help you feel less tired. Walking is one of the easiest forms of exercise. Try to get out for a walk every day with your baby, even if it\'s just to the local shops. If you can walk in a green space or park this may help to lift your mood.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay, user name. Waking up in the night can be scary, but a night light helps. Not only will it help your baby to feel secure but will also stop you tripping over toys when you go in to check on them!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Sure, user name. A good way to make sure your little one is tired enough for bed, is by trying to make sure they’re moving around enough during the day. If they’ve still got bags of energy at bedtime try some ‘tummy time’ for babies or encourage early evening active play such as a disco or obstacle course before calming down with a bath.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'That’s something I hear a lot! Having a bedtime toy or blanket to hold or stroke while falling asleep is comforting for some children. If your child has a favourite, buy a spare and switch them around so that if one is lost then you are not in trouble.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay! For the first 6 months the safest place for your baby to sleep is in a cot, crib, or Moses basket in your room beside your bed and in the same room as you for all other sleeps during the day. You will also be close by if they need a feed or cuddle. Babies should always be put down to sleep on their backs with feet at the bottom of the cot so that they can’t wriggle down.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'For the first 6 months the safest place for your baby to sleep is in a cot, crib, or Moses basket in your room beside your bed and in the same room as you for all other sleeps during the day. You will also be close by if they need a feed or cuddle. Babies should always be put down to sleep on their backs with feet at the bottom of the cot so that they can’t wriggle down.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Babies should ALWAYS be put to sleep lying on their backs. This is because sleeping a baby on their front or side greatly increases the chance of SIDS – Sudden Infant Death Syndrome.  Sleeping your baby on their back (known as the supine position) every night is one of the most protective actions you can take to ensure your baby is sleeping as safely as possible.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Enjoy playing with your baby, user name! Take in each joyful moment! 😊',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Encourage your kids to do things in order to earn screen time. Ask them to help you do things around the house – even the youngest can copy you dusting! Encourage them to help you tidy their room. Get a ‘little helper fun pod’ so they can stand and wash up and bake together with you.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Model appropriate screen time behaviour. As a parent you are your child’s first teacher. They will follow what you do, so to ensure your kids use technology appropriately, you need to model good habits.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'It’s best to power down any screen use well before bedtime, at least 30 minutes or more before they settle down to sleep. Read them a book instead and have quiet time together.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay! Books are a great way to help your child gather the skills they will need for reading. It’s never too early to start you can do this right from birth. Bedtime is a super time to read to your child and help settle them down before they nod off to sleep.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'You’re amazing! Remember - reading not only gives you an opportunity to bond with your child it opens the door to the written word. Books are great but you can read to them in all sorts of other situations such as in the supermarket where you can look at the letters and signs.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'You seem nice. In the early days, speech delays are more easily picked up on than a child’s ability to read. If you suspect your child has a problem, then go to see your GP or Health Visitor to discuss it.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Have fun with letters, alphabet stamps and stickers. Your child can organise letters and stickers into patterns. Take this outdoors too and write their name in the sand or the snow\n\nConnect letters to everyday words like ‘m’ for mummy, ‘b’ for bed, ‘d’ for dog… ‘t’ for Teddi! ',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Screen time can be positive! Despite the warnings of too much screen time, many classic books and tales can be found online. They can be a useful source of the written word but it’s up to you to work out the balance between how much print copy and how much online copy you use in your child’s life',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Thank you, user name! There are lots of ways that you can help your child learn to talk. Chat while doing things with or around your child and spend time each day talking directly with them repeating words and sentences. Reading books together will also help your child learn to talk and add to the number of words that they know.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'You seem great, user name! What activates do you enjoy? Active children are healthy and happy, with the added benefit that they sleep better too.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'What books do you like?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Concern is growing that children are increasingly sitting down to play with too much time spent sat in front of TV screens or tablet devices. For under 5’s active play is vital to master their physical environment and develop fundamental movement skills.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'How do you like to get active? It’s great because:\n\n• Builds relationships & social skills\n\n• Maintains overall health and body weight \n\n• Contributes to brain development and learning\n\n• Improves sleep\n\n• Develops muscles and bones\n\n• Encourages movement & co-ordination',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Can you say more, user name?😊',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Children aged 1-5 should have at least 180 minutes every day of active play. This includes a broad range of play activities and therefore is higher than the adult recommendation of at least 150 minutes of moderate activity every week which looks at focused physical activity such as walking, swimming or cycling.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'How have you been today?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'You might think that infants who are not yet walking cannot be active – but you’d be surprised. Physical activity should be encouraged from birth, particularly through floor-based play and water-based activities in safe environments. Playing, talking and reading with your baby will help to bring you closer together, help them become sociable and make it easier for them to form friendships later on. It can also help with their movement, letting their bones, muscles and heart grow strong.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Infants should be physically active several times every day in a variety of ways, including interactive floor-based activity, e.g. reaching for toys, kicking and crawling. For infants not yet mobile, this includes at least 30 minutes of tummy time spread throughout the day while awake (and other movements such as reaching and grasping, pushing and pulling themselves independently, or rolling over); more is better.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'What’s going on right now for you, user name?😊',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Sure! Active play for babies also encourages reaching for and grasping objects, turning the head toward stimuli such as noises or colours, pulling, pushing and playing with other people, objects and toys.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay! Learning to control hands to pick up larger items will develop into being able to pick up small items and grasp a pen. Leaning forwards to grasp a toy develops core and back muscle strength. Moving things further away and closer requires the eyes to focus in different places, developing vision. All of the little aspects of play supports both physical and brain development in many different ways.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Don’t forget when playing and being active with your baby (or child) to keep chatting to them. Making small talk, such as chatting about what things look like, where you are going or what you’re doing is an important part of their learning. If they are babbling or talking to you – then talk – listen to them talk and then respond. It’s never too early to start making Small Talk!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'There is no other time in life where children will learn as many physical skills as rapidly as they do in the first five years of life. It sounds too simple but many of the games that we play with children all contribute to this development.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Maybe we don’t know what to play, or we feel that we don’t have time to play with our children, but many everyday activities can be turned into opportunities for active play, from the house cleaning, to gardening or when walking the dog. All it takes is a little imagination and motivation to get active and have some fun.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Play is also recognised as key to positive development for children, from encouraging physical skills and establishing healthy enjoyment to developing intellectual, social and emotional maturity!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Research has shown that being physically active can help with the development of: \n\n• balance, coordination \n\n• maintaining a healthy weight \n\n• strong bones, muscles and heart \n\n• social skills, i.e. how to interact, take turns and getting on and caring about others',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Jump in muddy puddles with your child!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Make a pasta picture with your child!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Make a hand print picture with your child!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Try to catch a falling leaves with your child!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Pop bubbles with your child!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Go on a treasure hunt with your child!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Build a den – inside using blankets and cushions or outside if you can with twigs sticks with your child!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Ask why often. Inspire curiosity in your child!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Make wild art – go for a walk and collect leaves, feathers or seed pods and stick these onto paper when you get home!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Can you tell me more? ',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'It’s not all about the children – parents need to be active too. A fast pace walking for a pre-schooler is likely to be a slow walk for you and so you need to make time for your activity as well.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'When was the last time you did some exercise? It’s great for you!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'I understand! Exercise snacking is something you do in short stints (5-10 minutes), two or three times a day. The beauty is that you can do this without any special equipment or fitness clothing, it doesn’t cost anything, and you don’t have to do a warmup first.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Stand upright. With your hands at waist height, position your arms in front of you. Raise one leg up to 90 degrees—until the top of your thigh touches your hands— then lower it. Repeat this movement with your opposite leg. Move at any pace you want.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Stand upright and hold onto the back of the chair for balance. Raise one foot by bending your knee to a right angle, and then lower it to the floor. Repeat this movement with your opposite leg and continue for a minute.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Okay, sure! One of the best ways to get active is to walk briskly – either with or without the buggy. Brisk walking will not only help you to get fitter but will also help you to tone up muscle and get your weight in check. ',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'How does that make you feel?',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'You can walk in any flat shoes, however you will find it easier to walk in a pair of lace up shoes or trainers, particularly if you are walking over a non -tarmacked surface in a park or another green space. Investing in a pair of comfortable trainers might help you to walk faster when out with the buggy.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Do some postnatal exercises. They will strengthen your muscles and help get you in shape. You could also join a postnatal exercise class. Lots of postnatal classes let you do the class with your baby at your side. Ask your health visitor about this!',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Push the pram or buggy briskly. Remember to keep your arms bent and your back straight. Make sure the handles are at the right height for you – your elbows should be bent at right angles. Walking is great exercise, so try to get out as much as you can.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Play energetic games with older children. You can exercise by running around with them. Build activity into your day.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Teach your kids to be kind! Make giving compliments normal! ',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Think about some loving thoughts about someone you know with your child.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Try swimming, it is good exercise and also relaxing, but you\'ll need to wait until 7 days after your postnatal bleeding has stopped. If you take your baby with you, try to have someone else there to mind the baby so you have a chance to swim.',
+                        predict: ''
+                    },
+                    {
+                        respMsg: 'Use the stairs instead of the lift or, for short journeys, walk instead of taking the car. Bend your knees when you pick things up off the floor, rather than bending at the waist. If you bend down with bent knees and a straight back, instead of bending over at the waist (straight knees and a bent spine), you\'ll strengthen your thigh muscles and avoid damaging your back. Hold heavy objects close to your body.',
+                        predict: ''
+                    }
                 ],
                 nextPath: {
                     master: "randomConvo",
