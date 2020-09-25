@@ -344,8 +344,8 @@ const randomRespOfChap3 = async(chapterType,mainMaster,mainBranch,turnContext, u
     // let resp = ''
     let randomMsgArray = []
     if(randomArrFlag == 1 ){
-        let chapterName = 'chapter3';
         // randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        let chapterName = 'chapter3';      
         randomMsgArray = await getRandmonMsgList(chapterName);
     }else{
         randomMsgArray = userSession.chapter3.randomMsgArray;
@@ -387,7 +387,9 @@ const randomRespOfChap4 = async(chapterType,mainMaster,mainBranch,turnContext, u
     let resp = ''
     let randomMsgArray = []
     if(randomArrFlag == 1 ){
-        randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        // randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        let chapterName = 'chapter4';      
+        randomMsgArray = await getRandmonMsgList(chapterName);
     }else{
         
         randomMsgArray = userSession.chapter4.randomMsgArray;
@@ -404,7 +406,8 @@ const randomRespOfChap4 = async(chapterType,mainMaster,mainBranch,turnContext, u
     botReply += '#&@#';
 
     if(randomObj.predict != ''){
-        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        // botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '{"predictiveText" : ' +JSON.stringify(randomObj.predict)+ ' }' ;
         botReply += '#&@#';
     }
     if(randomMsgFlag == 1){
@@ -427,7 +430,9 @@ const randomRespOfChap5 = async(chapterType,mainMaster,mainBranch,turnContext, u
     // let resp = ''
     let randomMsgArray = []
     if(randomArrFlag == 1 ){
-        randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        // randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        let chapterName = 'chapter5';      
+        randomMsgArray = await getRandmonMsgList(chapterName);
     }else{
         randomMsgArray = userSession.chapter5.randomMsgArray;
     }
@@ -443,7 +448,8 @@ const randomRespOfChap5 = async(chapterType,mainMaster,mainBranch,turnContext, u
     botReply += '#&@#';
 
     if(randomObj.predict != ''){
-        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        // botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '{"predictiveText" : ' +JSON.stringify(randomObj.predict)+ ' }' ;
         botReply += '#&@#';
     }
     if(randomMsgFlag == 1){
@@ -467,7 +473,9 @@ const randomRespOfChap6 = async(chapterType,mainMaster,mainBranch,turnContext, u
     // let resp = ''
     let randomMsgArray = []
     if(randomArrFlag == 1 ){
-        randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        // randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        let chapterName = 'chapter6';      
+        randomMsgArray = await getRandmonMsgList(chapterName);
     }else{
         
         randomMsgArray = userSession.chapter6.randomMsgArray;
@@ -485,7 +493,8 @@ const randomRespOfChap6 = async(chapterType,mainMaster,mainBranch,turnContext, u
     botReply += '#&@#';
 
     if(randomObj.predict != ''){
-        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        // botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '{"predictiveText" : ' +JSON.stringify(randomObj.predict)+ ' }' ;
         botReply += '#&@#';
     }
     if(randomMsgFlag == 1){
@@ -509,7 +518,9 @@ const randomRespOfChap7 = async(chapterType,mainMaster,mainBranch,turnContext, u
     // let resp = ''
     let randomMsgArray = []
     if(randomArrFlag == 1 ){
-        randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        // randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        let chapterName = 'chapter7';      
+        randomMsgArray = await getRandmonMsgList(chapterName);
     }else{
         
         randomMsgArray = userSession.chapter7.randomMsgArray;
@@ -526,7 +537,8 @@ const randomRespOfChap7 = async(chapterType,mainMaster,mainBranch,turnContext, u
     botReply += '#&@#';
 
     if(randomObj.predict != ''){
-        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        // botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '{"predictiveText" : ' +JSON.stringify(randomObj.predict)+ ' }' ;
         botReply += '#&@#';
     }
     if(randomMsgFlag == 1){
@@ -550,7 +562,9 @@ const randomRespOfChap8 = async(chapterType,mainMaster,mainBranch,turnContext, u
     // let resp = ''
     let randomMsgArray = []
     if(randomArrFlag == 1 ){
-        randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        // randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        let chapterName = 'chapter8';      
+        randomMsgArray = await getRandmonMsgList(chapterName);
     }else{
         
         randomMsgArray = userSession.chapter8.randomMsgArray;
@@ -567,7 +581,8 @@ const randomRespOfChap8 = async(chapterType,mainMaster,mainBranch,turnContext, u
     botReply += '#&@#';
 
     if(randomObj.predict != ''){
-        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        // botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '{"predictiveText" : ' +JSON.stringify(randomObj.predict)+ ' }' ;
         botReply += '#&@#';
     }
     if(randomMsgFlag == 1){
@@ -591,7 +606,9 @@ const randomRespOfChap9 = async(chapterType,mainMaster,mainBranch,turnContext, u
     // let resp = ''
     let randomMsgArray = []
     if(randomArrFlag == 1 ){
-        randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        // randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        let chapterName = 'chapter9';      
+        randomMsgArray = await getRandmonMsgList(chapterName);
     }else{
         
         randomMsgArray = userSession.chapter9.randomMsgArray;
@@ -608,7 +625,8 @@ const randomRespOfChap9 = async(chapterType,mainMaster,mainBranch,turnContext, u
     botReply += '#&@#';
 
     if(randomObj.predict != ''){
-        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        // botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '{"predictiveText" : ' +JSON.stringify(randomObj.predict)+ ' }' ;
         botReply += '#&@#';
     }
     if(randomMsgFlag == 1){
@@ -631,7 +649,9 @@ const randomRespOfChap10 = async(chapterType,mainMaster,mainBranch,turnContext, 
     // let resp = ''
     let randomMsgArray = []
     if(randomArrFlag == 1 ){
-        randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        // randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        let chapterName = 'chapter10';      
+        randomMsgArray = await getRandmonMsgList(chapterName);
     }else{    
         randomMsgArray = userSession.chapter10.randomMsgArray;
     }
@@ -647,7 +667,8 @@ const randomRespOfChap10 = async(chapterType,mainMaster,mainBranch,turnContext, 
     botReply += '#&@#';
 
     if(randomObj.predict != ''){
-        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        // botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '{"predictiveText" : ' +JSON.stringify(randomObj.predict)+ ' }' ;
         botReply += '#&@#';
     }
     if(randomMsgFlag == 1){
@@ -671,7 +692,9 @@ const randomRespOfChap11 = async(chapterType,mainMaster,mainBranch,turnContext, 
     // let resp = ''
     let randomMsgArray = []
     if(randomArrFlag == 1 ){
-        randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        // randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        let chapterName = 'chapter11';      
+        randomMsgArray = await getRandmonMsgList(chapterName);
     }else{
         
         randomMsgArray = userSession.chapter11.randomMsgArray;
@@ -688,7 +711,8 @@ const randomRespOfChap11 = async(chapterType,mainMaster,mainBranch,turnContext, 
     botReply += '#&@#';
 
     if(randomObj.predict != ''){
-        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        // botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '{"predictiveText" : ' +JSON.stringify(randomObj.predict)+ ' }' ;
         botReply += '#&@#';
     }
     if(randomMsgFlag == 1){
@@ -712,7 +736,9 @@ const randomRespOfChap12 = async(chapterType,mainMaster,mainBranch,turnContext, 
     // let resp = ''
     let randomMsgArray = []
     if(randomArrFlag == 1 ){
-        randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        // randomMsgArray = [...obj[chapterType][mainMaster][mainBranch]['targetMsgArr']];
+        let chapterName = 'chapter12';      
+        randomMsgArray = await getRandmonMsgList(chapterName);
     }else{
         
         randomMsgArray = userSession.chapter12.randomMsgArray;
@@ -729,7 +755,8 @@ const randomRespOfChap12 = async(chapterType,mainMaster,mainBranch,turnContext, 
     botReply += '#&@#';
 
     if(randomObj.predict != ''){
-        botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        // botReply += '{"predictiveText" : ' +randomObj.predict+ ' }' ;
+        botReply += '{"predictiveText" : ' +JSON.stringify(randomObj.predict)+ ' }' ;
         botReply += '#&@#';
     }
     if(randomMsgFlag == 1){
@@ -973,101 +1000,104 @@ var obj = {
             },
             10: {
                 func: randomRespOfChap1,
-                targetMsgArr: [
-                    
-                    {
-                        respMsg: 'Breastfeeding takes 4 – 6 weeks to fully establish and during that time baby will need to feed frequently. Be realistic about what you can achieve each day. Set yourself a few small essential tasks and don’t take on too much so that you feel in control and not overwhelmed.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'It is important to learn how to help yourself – no one can do everything, and breastfeeding takes time. It’s important to be kind to yourself and realistic about what you want to manage each day. Set a few small goals that you know you can achieve, and that will help you to feel better. These might be as simple as taking a warm shower or eating a proper hot meal (and if some else cooks it for you – even better!).',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Try to allow yourself plenty of time to get anywhere - babies have a habit or filling their nappies or wanting a feed just as you put your coat on to go somewhere. It’s all part of the fun!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'It may take a little while before you feel confident your baby is getting what they need. Remember that some babies feed quicker than others, and at first it may seem that breastfeeding takes an age, but this will get quicker as you both get the hang of it. Introducing formula feeds will reduce the amount of breast milk you produce and make breast-feeding harder. If you are concerned talk to your Health Visitors, or breast-feeding Advisor before making any changes.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Having a new baby can be very tiring and it’s important that mums make time to eat regularly when breast-feeding not only to feed themselves but also to help make the milk for baby. Try to have regular meals, drinks and snacks during the day. Have a drink every hour or so and eat a meal or nutritious snack every 2-3 hours to help keep you going.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'It’s an amazing thing to have a child and raise it. I’m here to help you. You can ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner. Remember – you can also talk to your health visitor or GP.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Would you like to know about the difference between breast milk and formula/bottle, or about why breastmilk is special? Or, you can ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.',
-                        predict: '["What is the difference between breast milk and formula/bottle?", "Why is Breastmilk so special?"]'
-                    },
-                    {
-                        respMsg: 'It’s normal to wonder which breast to give. Each breast works separately and it’s important to remember to feed from both sides. Once baby comes off one breast, offer the second – if they don’t want it that great news, they are full. Or they may want just a little bit more. Then start the next feed on this second side.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'How are you feeling, ',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Remember to drink plenty of water and take time to rest. Try and get help for chores.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'In the early days your baby may want to feed very often. It could be as much as every hour in the first few days and 8 times or more every 24 hours during the first few weeks. Feed your baby as often as they want and for as long as they want. They\'ll begin to have fewer, longer feeds after a few days. It\'s fine to feed your baby whenever they are hungry, when your breasts feel full or if you just want to have a cuddle. Don’t worry it\'s not possible to overfeed a breastfed baby.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Would you like to know about responsive breastfeeding, or about how to burp your baby? You can also ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.',
-                        predict: '["What is Responsive Breast Feeding?", "How do I burp my baby?"]'
-                    },
-                    {
-                        respMsg: 'Remember, YOU CAN BREASTFEED! It’s the best choice and great for you and the baby!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Here are some questions I can help you with: \n\n Can I use formula and continue to breastfeed?\n\n Can I put baby rice in the milk bottle?\n\n What is mastitis?\n\n Can I buy a vegan formula milk?\n\n What is cluster feeding?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Your new baby will look to you for food, comfort and reassurance as they learn about the world. Holding, cuddling, talking to and responding to your baby helps them release hormones that support their brain development, and make them feel secure.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'New babies cannot be spoiled by responding to their needs and breastfed babies cannot be overfed, so you can offer your breast for comfort as well as for food. Cuddling and feeding your baby also helps to keep you calm and allows you to sit, rest and enjoy your baby.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Focus on eating a healthy balanced diet and try adding in some exercise, such as, brisk walking with the buggy to help shape and tone.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'It’s nice to reflect on how amazing and rewarding it is to raise a child!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'You can also ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'You’re amazing! I’m here to help and so is your Health Visitor! Ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'It’s normal to experience hard moments. Practical support can help. Ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner. You can also ask your Health Visitor or GP.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Cuddle and love your baby often!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'You can never give your baby enough love!',
-                        predict: ''
-                    }
-                ],
+                // targetMsgArr: [
+                //     {
+                //         respMsg: 'It’s worth remembering that you can breastfeed, and you are producing enough milk – feel confident! Every baby, and every mum is unique, and you and your baby will get to know each other and develop a pattern of feeds that suit you both. Babies may want to suckle very frequently day and night and that is perfectly normal – they have a tiny tummy and so of course they need to eat little and often.',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'One of the challenges of babies is that their needs can change from day to day. Responsive feeding does not follow a set routine but allows both you and baby to feed as often as you want to. Try to stay relaxed, watch for your baby’s cues for when they want a feed (such as rooting for the breast) and feed as often and as long as baby needs.',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'Breastfeeding takes 4 – 6 weeks to fully establish and during that time baby will need to feed frequently. Be realistic about what you can achieve each day. Set yourself a few small essential tasks and don’t take on too much so that you feel in control and not overwhelmed.',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'It is important to learn how to help yourself – no one can do everything, and breastfeeding takes time. It’s important to be kind to yourself and realistic about what you want to manage each day. Set a few small goals that you know you can achieve, and that will help you to feel better. These might be as simple as taking a warm shower or eating a proper hot meal (and if some else cooks it for you – even better!).',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'Try to allow yourself plenty of time to get anywhere - babies have a habit or filling their nappies or wanting a feed just as you put your coat on to go somewhere. It’s all part of the fun!',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'It may take a little while before you feel confident your baby is getting what they need. Remember that some babies feed quicker than others, and at first it may seem that breastfeeding takes an age, but this will get quicker as you both get the hang of it. Introducing formula feeds will reduce the amount of breast milk you produce and make breast-feeding harder. If you are concerned talk to your Health Visitors, or breast-feeding Advisor before making any changes.',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'Having a new baby can be very tiring and it’s important that mums make time to eat regularly when breast-feeding not only to feed themselves but also to help make the milk for baby. Try to have regular meals, drinks and snacks during the day. Have a drink every hour or so and eat a meal or nutritious snack every 2-3 hours to help keep you going.',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'It’s an amazing thing to have a child and raise it. I’m here to help you. You can ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner. Remember – you can also talk to your health visitor or GP.',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'Would you like to know about the difference between breast milk and formula/bottle, or about why breastmilk is special? Or, you can ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.',
+                //         predict: '["What is the difference between breast milk and formula/bottle?", "Why is Breastmilk so special?"]'
+                //     },
+                //     {
+                //         respMsg: 'It’s normal to wonder which breast to give. Each breast works separately and it’s important to remember to feed from both sides. Once baby comes off one breast, offer the second – if they don’t want it that great news, they are full. Or they may want just a little bit more. Then start the next feed on this second side.',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'How are you feeling, ',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'Remember to drink plenty of water and take time to rest. Try and get help for chores.',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'In the early days your baby may want to feed very often. It could be as much as every hour in the first few days and 8 times or more every 24 hours during the first few weeks. Feed your baby as often as they want and for as long as they want. They\'ll begin to have fewer, longer feeds after a few days. It\'s fine to feed your baby whenever they are hungry, when your breasts feel full or if you just want to have a cuddle. Don’t worry it\'s not possible to overfeed a breastfed baby.',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'Would you like to know about responsive breastfeeding, or about how to burp your baby?',
+                //         predict: '["What is Responsive Breast Feeding?", "How do I burp my baby?"]'
+                //     },
+                //     {
+                //         respMsg: 'Remember, YOU CAN BREASTFEED! It’s the best choice and great for you and the baby!',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'Here are some questions I can help you with: \n\n Can I use formula and continue to breastfeed?\n\n Can I put baby rice in the milk bottle?\n\n What is mastitis?\n\n Can I buy a vegan formula milk?\n\n What is cluster feeding?',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'Your new baby will look to you for food, comfort and reassurance as they learn about the world. Holding, cuddling, talking to and responding to your baby helps them release hormones that support their brain development, and make them feel secure.',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'New babies cannot be spoiled by responding to their needs and breastfed babies cannot be overfed, so you can offer your breast for comfort as well as for food. Cuddling and feeding your baby also helps to keep you calm and allows you to sit, rest and enjoy your baby.',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'Focus on eating a healthy balanced diet and try adding in some exercise, such as, brisk walking with the buggy to help shape and tone.',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'It’s nice to reflect on how amazing and rewarding it is to raise a child!',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'You’re amazing! I’m here to help and so is your Health Visitor! Ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'It’s normal to experience hard moments. Practical support can help. Ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner. You can also ask your Health Visitor or GP.',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'Cuddle and love your baby often!',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'You can never give your baby enough love!',
+                //         predict: ''
+                //     }
+                // ],
                 nextPath: {
                     master: "tipsConversation",
                     branch: 10
@@ -1196,60 +1226,56 @@ var obj = {
             },
             14: {
                 func: randomRespOfChap2,
-                targetMsgArr: [
-                    {
-                        respMsg: 'It’s normal to experience hard moments. Practical support can help. Ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner. You can also ask your Health Visitor or GP. ',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'You’re amazing! I’m here to help and so is your Health Visitor! Ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'You can also ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Make eating your 5 a day the normal thing to do in the family! If it’s hard, take it each day at a time. Focus on eating your 5 a day today!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Vaccinating your child is so important.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Vaccines are the most effective way to prevent infectious diseases and are both safe and important.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Vaccination is the most important thing we can do to protect both ourselves and our children against ill health. Since vaccines were introduced in the UK, diseases like smallpox, polio and tetanus that used to kill or cause disability to large numbers of people are either gone or seen very rarely. Other diseases like measles and diphtheria had been pretty much eradicated since their vaccines were introduced. However, they are rising again as vaccination levels among children have recently been falling.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: '**Speak to your GP or practice nurse if:** \n\n• you\'re worried about you or your child having a vaccine \n\n• you\'re not sure if you or your child can have a vaccine \n\n You could also ask a health visitor any questions you have about vaccines.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'No one wants their children to be ill. Choosing to not vaccinate means your child is likely to suffer a number of illnesses which could be avoided. ',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Be aware that anti-vaccine stories are spread online through social media. They are not based on scientific evidence and could put your child at risk of a serious illness.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Fruit and vegetables don\'t have to be fresh to count as a portion. They also count if they\'re part of a meal or dish.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'You and your child are amazing! Give your child the healthiest start by ensuring they are vaccinated, eating a good diet, and take the right supplements. ',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Here are some questions you can ask me: \n\n• What is a booster jab? \n\n• Are there any side-effects after immunisation? \n\n• I’m formula feeding. Does my baby need extra vitamins? \n\n• Is too much fruit bad for my child’s teeth? \n\n• Can I start giving banana?\n\n• When can I start giving solids?\n\n• My child never eats anything, can I just feed my child milk?\n\n• When I can fly with my baby?',
-                        predict: ''
-                    }
-                ],
+                // targetMsgArr: [
+                //     {
+                //         respMsg: 'It’s normal to experience hard moments. Practical support can help. Ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner. You can also ask your Health Visitor or GP. ',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'You’re amazing! I’m here to help and so is your Health Visitor! Ask me a question and I’ll do my best to answer. I’m only a robot so if I can’t help, please provide feedback by selecting the top right-hand corner.',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'Make eating your 5 a day the normal thing to do in the family! If it’s hard, take it each day at a time. Focus on eating your 5 a day today!',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'Vaccinating your child is so important.',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'Vaccines are the most effective way to prevent infectious diseases and are both safe and important.',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'Vaccination is the most important thing we can do to protect both ourselves and our children against ill health. Since vaccines were introduced in the UK, diseases like smallpox, polio and tetanus that used to kill or cause disability to large numbers of people are either gone or seen very rarely. Other diseases like measles and diphtheria had been pretty much eradicated since their vaccines were introduced. However, they are rising again as vaccination levels among children have recently been falling.',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: '**Speak to your GP or practice nurse if:** \n\n• you\'re worried about you or your child having a vaccine \n\n• you\'re not sure if you or your child can have a vaccine \n\n You could also ask a health visitor any questions you have about vaccines.',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'No one wants their children to be ill. Choosing to not vaccinate means your child is likely to suffer a number of illnesses which could be avoided. ',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'Be aware that anti-vaccine stories are spread online through social media. They are not based on scientific evidence and could put your child at risk of a serious illness.',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'Fruit and vegetables don\'t have to be fresh to count as a portion. They also count if they\'re part of a meal or dish.',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'You and your child are amazing! Give your child the healthiest start by ensuring they are vaccinated, eating a good diet, and take the right supplements. ',
+                //         predict: ''
+                //     },
+                //     {
+                //         respMsg: 'Here are some questions you can ask me: \n\n• What is a booster jab? \n\n• Are there any side-effects after immunisation? \n\n• I’m formula feeding. Does my baby need extra vitamins? \n\n• Is too much fruit bad for my child’s teeth? \n\n• Can I start giving banana?\n\n• When can I start giving solids?\n\n• My child never eats anything, can I just feed my child milk?\n\n• When I can fly with my baby?',
+                //         predict: ''
+                //     }
+                // ],
                 nextPath: {
                     master: "conv1",
                     branch: 14
@@ -1271,7 +1297,7 @@ var obj = {
         randomConvo: {
             1: {
                 func: randomRespOfChap3,
-                targetMsgArr: [
+                // targetMsgArr: [
                     // {
                     //     respMsg: 'Sure, I understand! Thank you, user name 😊.  My friend, Professor Amy Brown had a video on baby sleep. If you would like to watch it, tell me \"Play Amy’s video on baby sleep\"',
                     //     predict: '["Play Amy’s video on baby sleep"]'
@@ -1372,259 +1398,259 @@ var obj = {
                     //     respMsg: 'I think I understand! As a rough guide, by the time babies are 3 months old, some (but not all) begin to start settling and sleeping at night time for a stretch of up to 5 hours. By the time they are 5 months old, half of them may have started to sleep for an eight-hour stretch on some nights.',
                     //     predict: ''
                     // },
-                    {
-                        respMsg: 'Okay! One study found that almost one third of babies had not regularly slept from 10pm to 6am by the age of 1 year and so it’s hard to predict. Generally, though, babies do not sleep all night-every night until they are close to a year old.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Looking after a baby can be really tiring, especially in the first few months after the birth, when your child is likely to wake several times during the night. Most parents cope with a certain level of tiredness. But if you\'re feeling low, bad tempered and unable to cope or enjoy things, you need to try find a way of getting more sleep, or at least more rest.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Hmm.. I see 😊 If you have a partner, ask them to help. If you\'re formula feeding, they could share the feeds. If you\'re breastfeeding, ask your partner to help with nappies or dressing in the morning so you can go back to sleep.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Try to go to bed early for, say, 1 week. If you can\'t sleep when you go to bed, do something relaxing for half an hour beforehand, such as soaking in a hot bath.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'When you\'re feeling tired, doing more exercise may be the last thing you feel like doing. But regular exercise can help you feel less tired. Walking is one of the easiest forms of exercise. Try to get out for a walk every day with your baby, even if it\'s just to the local shops. If you can walk in a green space or park this may help to lift your mood.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, user name. Waking up in the night can be scary, but a night light helps. Not only will it help your baby to feel secure but will also stop you tripping over toys when you go in to check on them!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure, user name. A good way to make sure your little one is tired enough for bed, is by trying to make sure they’re moving around enough during the day. If they’ve still got bags of energy at bedtime try some ‘tummy time’ for babies or encourage early evening active play such as a disco or obstacle course before calming down with a bath.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'That’s something I hear a lot! Having a bedtime toy or blanket to hold or stroke while falling asleep is comforting for some children. If your child has a favourite, buy a spare and switch them around so that if one is lost then you are not in trouble.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! For the first 6 months the safest place for your baby to sleep is in a cot, crib, or Moses basket in your room beside your bed and in the same room as you for all other sleeps during the day. You will also be close by if they need a feed or cuddle. Babies should always be put down to sleep on their backs with feet at the bottom of the cot so that they can’t wriggle down.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'For the first 6 months the safest place for your baby to sleep is in a cot, crib, or Moses basket in your room beside your bed and in the same room as you for all other sleeps during the day. You will also be close by if they need a feed or cuddle. Babies should always be put down to sleep on their backs with feet at the bottom of the cot so that they can’t wriggle down.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Babies should ALWAYS be put to sleep lying on their backs. This is because sleeping a baby on their front or side greatly increases the chance of SIDS – Sudden Infant Death Syndrome.  Sleeping your baby on their back (known as the supine position) every night is one of the most protective actions you can take to ensure your baby is sleeping as safely as possible.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Enjoy playing with your baby, user name! Take in each joyful moment! 😊',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Encourage your kids to do things in order to earn screen time. Ask them to help you do things around the house – even the youngest can copy you dusting! Encourage them to help you tidy their room. Get a ‘little helper fun pod’ so they can stand and wash up and bake together with you.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Model appropriate screen time behaviour. As a parent you are your child’s first teacher. They will follow what you do, so to ensure your kids use technology appropriately, you need to model good habits.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'It’s best to power down any screen use well before bedtime, at least 30 minutes or more before they settle down to sleep. Read them a book instead and have quiet time together.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! Books are a great way to help your child gather the skills they will need for reading. It’s never too early to start you can do this right from birth. Bedtime is a super time to read to your child and help settle them down before they nod off to sleep.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'You’re amazing! Remember - reading not only gives you an opportunity to bond with your child it opens the door to the written word. Books are great but you can read to them in all sorts of other situations such as in the supermarket where you can look at the letters and signs.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'You seem nice. In the early days, speech delays are more easily picked up on than a child’s ability to read. If you suspect your child has a problem, then go to see your GP or Health Visitor to discuss it.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Have fun with letters, alphabet stamps and stickers. Your child can organise letters and stickers into patterns. Take this outdoors too and write their name in the sand or the snow\n\nConnect letters to everyday words like ‘m’ for mummy, ‘b’ for bed, ‘d’ for dog… ‘t’ for Teddi! ',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Screen time can be positive! Despite the warnings of too much screen time, many classic books and tales can be found online. They can be a useful source of the written word but it’s up to you to work out the balance between how much print copy and how much online copy you use in your child’s life',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Thank you, user name! There are lots of ways that you can help your child learn to talk. Chat while doing things with or around your child and spend time each day talking directly with them repeating words and sentences. Reading books together will also help your child learn to talk and add to the number of words that they know.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'You seem great, user name! What activates do you enjoy? Active children are healthy and happy, with the added benefit that they sleep better too.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'What books do you like?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Concern is growing that children are increasingly sitting down to play with too much time spent sat in front of TV screens or tablet devices. For under 5’s active play is vital to master their physical environment and develop fundamental movement skills.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'How do you like to get active? It’s great because:\n\n• Builds relationships & social skills\n\n• Maintains overall health and body weight \n\n• Contributes to brain development and learning\n\n• Improves sleep\n\n• Develops muscles and bones\n\n• Encourages movement & co-ordination',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Can you say more, user name?😊',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Children aged 1-5 should have at least 180 minutes every day of active play. This includes a broad range of play activities and therefore is higher than the adult recommendation of at least 150 minutes of moderate activity every week which looks at focused physical activity such as walking, swimming or cycling.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'How have you been today?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'You might think that infants who are not yet walking cannot be active – but you’d be surprised. Physical activity should be encouraged from birth, particularly through floor-based play and water-based activities in safe environments. Playing, talking and reading with your baby will help to bring you closer together, help them become sociable and make it easier for them to form friendships later on. It can also help with their movement, letting their bones, muscles and heart grow strong.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Infants should be physically active several times every day in a variety of ways, including interactive floor-based activity, e.g. reaching for toys, kicking and crawling. For infants not yet mobile, this includes at least 30 minutes of tummy time spread throughout the day while awake (and other movements such as reaching and grasping, pushing and pulling themselves independently, or rolling over); more is better.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'What’s going on right now for you, user name?😊',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure! Active play for babies also encourages reaching for and grasping objects, turning the head toward stimuli such as noises or colours, pulling, pushing and playing with other people, objects and toys.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! Learning to control hands to pick up larger items will develop into being able to pick up small items and grasp a pen. Leaning forwards to grasp a toy develops core and back muscle strength. Moving things further away and closer requires the eyes to focus in different places, developing vision. All of the little aspects of play supports both physical and brain development in many different ways.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Don’t forget when playing and being active with your baby (or child) to keep chatting to them. Making small talk, such as chatting about what things look like, where you are going or what you’re doing is an important part of their learning. If they are babbling or talking to you – then talk – listen to them talk and then respond. It’s never too early to start making Small Talk!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'There is no other time in life where children will learn as many physical skills as rapidly as they do in the first five years of life. It sounds too simple but many of the games that we play with children all contribute to this development.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Maybe we don’t know what to play, or we feel that we don’t have time to play with our children, but many everyday activities can be turned into opportunities for active play, from the house cleaning, to gardening or when walking the dog. All it takes is a little imagination and motivation to get active and have some fun.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Play is also recognised as key to positive development for children, from encouraging physical skills and establishing healthy enjoyment to developing intellectual, social and emotional maturity!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Research has shown that being physically active can help with the development of: \n\n• balance, coordination \n\n• maintaining a healthy weight \n\n• strong bones, muscles and heart \n\n• social skills, i.e. how to interact, take turns and getting on and caring about others',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Jump in muddy puddles with your child!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Make a pasta picture with your child!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Make a hand print picture with your child!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Try to catch a falling leaves with your child!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Pop bubbles with your child!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Go on a treasure hunt with your child!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Build a den – inside using blankets and cushions or outside if you can with twigs sticks with your child!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Ask why often. Inspire curiosity in your child!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Make wild art – go for a walk and collect leaves, feathers or seed pods and stick these onto paper when you get home!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Can you tell me more? ',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'It’s not all about the children – parents need to be active too. A fast pace walking for a pre-schooler is likely to be a slow walk for you and so you need to make time for your activity as well.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'When was the last time you did some exercise? It’s great for you!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I understand! Exercise snacking is something you do in short stints (5-10 minutes), two or three times a day. The beauty is that you can do this without any special equipment or fitness clothing, it doesn’t cost anything, and you don’t have to do a warmup first.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Stand upright. With your hands at waist height, position your arms in front of you. Raise one leg up to 90 degrees—until the top of your thigh touches your hands— then lower it. Repeat this movement with your opposite leg. Move at any pace you want.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Stand upright and hold onto the back of the chair for balance. Raise one foot by bending your knee to a right angle, and then lower it to the floor. Repeat this movement with your opposite leg and continue for a minute.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, sure! One of the best ways to get active is to walk briskly – either with or without the buggy. Brisk walking will not only help you to get fitter but will also help you to tone up muscle and get your weight in check. ',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'How does that make you feel?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'You can walk in any flat shoes, however you will find it easier to walk in a pair of lace up shoes or trainers, particularly if you are walking over a non -tarmacked surface in a park or another green space. Investing in a pair of comfortable trainers might help you to walk faster when out with the buggy.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Do some postnatal exercises. They will strengthen your muscles and help get you in shape. You could also join a postnatal exercise class. Lots of postnatal classes let you do the class with your baby at your side. Ask your health visitor about this!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Push the pram or buggy briskly. Remember to keep your arms bent and your back straight. Make sure the handles are at the right height for you – your elbows should be bent at right angles. Walking is great exercise, so try to get out as much as you can.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Play energetic games with older children. You can exercise by running around with them. Build activity into your day.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Teach your kids to be kind! Make giving compliments normal! ',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Think about some loving thoughts about someone you know with your child.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Try swimming, it is good exercise and also relaxing, but you\'ll need to wait until 7 days after your postnatal bleeding has stopped. If you take your baby with you, try to have someone else there to mind the baby so you have a chance to swim.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Use the stairs instead of the lift or, for short journeys, walk instead of taking the car. Bend your knees when you pick things up off the floor, rather than bending at the waist. If you bend down with bent knees and a straight back, instead of bending over at the waist (straight knees and a bent spine), you\'ll strengthen your thigh muscles and avoid damaging your back. Hold heavy objects close to your body.',
-                        predict: ''
-                    }
-                ],
+                    // {
+                    //     respMsg: 'Okay! One study found that almost one third of babies had not regularly slept from 10pm to 6am by the age of 1 year and so it’s hard to predict. Generally, though, babies do not sleep all night-every night until they are close to a year old.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Looking after a baby can be really tiring, especially in the first few months after the birth, when your child is likely to wake several times during the night. Most parents cope with a certain level of tiredness. But if you\'re feeling low, bad tempered and unable to cope or enjoy things, you need to try find a way of getting more sleep, or at least more rest.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Hmm.. I see 😊 If you have a partner, ask them to help. If you\'re formula feeding, they could share the feeds. If you\'re breastfeeding, ask your partner to help with nappies or dressing in the morning so you can go back to sleep.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Try to go to bed early for, say, 1 week. If you can\'t sleep when you go to bed, do something relaxing for half an hour beforehand, such as soaking in a hot bath.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'When you\'re feeling tired, doing more exercise may be the last thing you feel like doing. But regular exercise can help you feel less tired. Walking is one of the easiest forms of exercise. Try to get out for a walk every day with your baby, even if it\'s just to the local shops. If you can walk in a green space or park this may help to lift your mood.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, user name. Waking up in the night can be scary, but a night light helps. Not only will it help your baby to feel secure but will also stop you tripping over toys when you go in to check on them!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure, user name. A good way to make sure your little one is tired enough for bed, is by trying to make sure they’re moving around enough during the day. If they’ve still got bags of energy at bedtime try some ‘tummy time’ for babies or encourage early evening active play such as a disco or obstacle course before calming down with a bath.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'That’s something I hear a lot! Having a bedtime toy or blanket to hold or stroke while falling asleep is comforting for some children. If your child has a favourite, buy a spare and switch them around so that if one is lost then you are not in trouble.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! For the first 6 months the safest place for your baby to sleep is in a cot, crib, or Moses basket in your room beside your bed and in the same room as you for all other sleeps during the day. You will also be close by if they need a feed or cuddle. Babies should always be put down to sleep on their backs with feet at the bottom of the cot so that they can’t wriggle down.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'For the first 6 months the safest place for your baby to sleep is in a cot, crib, or Moses basket in your room beside your bed and in the same room as you for all other sleeps during the day. You will also be close by if they need a feed or cuddle. Babies should always be put down to sleep on their backs with feet at the bottom of the cot so that they can’t wriggle down.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Babies should ALWAYS be put to sleep lying on their backs. This is because sleeping a baby on their front or side greatly increases the chance of SIDS – Sudden Infant Death Syndrome.  Sleeping your baby on their back (known as the supine position) every night is one of the most protective actions you can take to ensure your baby is sleeping as safely as possible.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Enjoy playing with your baby, user name! Take in each joyful moment! 😊',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Encourage your kids to do things in order to earn screen time. Ask them to help you do things around the house – even the youngest can copy you dusting! Encourage them to help you tidy their room. Get a ‘little helper fun pod’ so they can stand and wash up and bake together with you.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Model appropriate screen time behaviour. As a parent you are your child’s first teacher. They will follow what you do, so to ensure your kids use technology appropriately, you need to model good habits.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'It’s best to power down any screen use well before bedtime, at least 30 minutes or more before they settle down to sleep. Read them a book instead and have quiet time together.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! Books are a great way to help your child gather the skills they will need for reading. It’s never too early to start you can do this right from birth. Bedtime is a super time to read to your child and help settle them down before they nod off to sleep.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'You’re amazing! Remember - reading not only gives you an opportunity to bond with your child it opens the door to the written word. Books are great but you can read to them in all sorts of other situations such as in the supermarket where you can look at the letters and signs.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'You seem nice. In the early days, speech delays are more easily picked up on than a child’s ability to read. If you suspect your child has a problem, then go to see your GP or Health Visitor to discuss it.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Have fun with letters, alphabet stamps and stickers. Your child can organise letters and stickers into patterns. Take this outdoors too and write their name in the sand or the snow\n\nConnect letters to everyday words like ‘m’ for mummy, ‘b’ for bed, ‘d’ for dog… ‘t’ for Teddi! ',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Screen time can be positive! Despite the warnings of too much screen time, many classic books and tales can be found online. They can be a useful source of the written word but it’s up to you to work out the balance between how much print copy and how much online copy you use in your child’s life',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Thank you, user name! There are lots of ways that you can help your child learn to talk. Chat while doing things with or around your child and spend time each day talking directly with them repeating words and sentences. Reading books together will also help your child learn to talk and add to the number of words that they know.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'You seem great, user name! What activates do you enjoy? Active children are healthy and happy, with the added benefit that they sleep better too.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'What books do you like?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Concern is growing that children are increasingly sitting down to play with too much time spent sat in front of TV screens or tablet devices. For under 5’s active play is vital to master their physical environment and develop fundamental movement skills.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'How do you like to get active? It’s great because:\n\n• Builds relationships & social skills\n\n• Maintains overall health and body weight \n\n• Contributes to brain development and learning\n\n• Improves sleep\n\n• Develops muscles and bones\n\n• Encourages movement & co-ordination',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Can you say more, user name?😊',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Children aged 1-5 should have at least 180 minutes every day of active play. This includes a broad range of play activities and therefore is higher than the adult recommendation of at least 150 minutes of moderate activity every week which looks at focused physical activity such as walking, swimming or cycling.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'How have you been today?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'You might think that infants who are not yet walking cannot be active – but you’d be surprised. Physical activity should be encouraged from birth, particularly through floor-based play and water-based activities in safe environments. Playing, talking and reading with your baby will help to bring you closer together, help them become sociable and make it easier for them to form friendships later on. It can also help with their movement, letting their bones, muscles and heart grow strong.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Infants should be physically active several times every day in a variety of ways, including interactive floor-based activity, e.g. reaching for toys, kicking and crawling. For infants not yet mobile, this includes at least 30 minutes of tummy time spread throughout the day while awake (and other movements such as reaching and grasping, pushing and pulling themselves independently, or rolling over); more is better.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'What’s going on right now for you, user name?😊',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure! Active play for babies also encourages reaching for and grasping objects, turning the head toward stimuli such as noises or colours, pulling, pushing and playing with other people, objects and toys.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! Learning to control hands to pick up larger items will develop into being able to pick up small items and grasp a pen. Leaning forwards to grasp a toy develops core and back muscle strength. Moving things further away and closer requires the eyes to focus in different places, developing vision. All of the little aspects of play supports both physical and brain development in many different ways.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Don’t forget when playing and being active with your baby (or child) to keep chatting to them. Making small talk, such as chatting about what things look like, where you are going or what you’re doing is an important part of their learning. If they are babbling or talking to you – then talk – listen to them talk and then respond. It’s never too early to start making Small Talk!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'There is no other time in life where children will learn as many physical skills as rapidly as they do in the first five years of life. It sounds too simple but many of the games that we play with children all contribute to this development.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Maybe we don’t know what to play, or we feel that we don’t have time to play with our children, but many everyday activities can be turned into opportunities for active play, from the house cleaning, to gardening or when walking the dog. All it takes is a little imagination and motivation to get active and have some fun.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Play is also recognised as key to positive development for children, from encouraging physical skills and establishing healthy enjoyment to developing intellectual, social and emotional maturity!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Research has shown that being physically active can help with the development of: \n\n• balance, coordination \n\n• maintaining a healthy weight \n\n• strong bones, muscles and heart \n\n• social skills, i.e. how to interact, take turns and getting on and caring about others',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Jump in muddy puddles with your child!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Make a pasta picture with your child!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Make a hand print picture with your child!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Try to catch a falling leaves with your child!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Pop bubbles with your child!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Go on a treasure hunt with your child!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Build a den – inside using blankets and cushions or outside if you can with twigs sticks with your child!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Ask why often. Inspire curiosity in your child!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Make wild art – go for a walk and collect leaves, feathers or seed pods and stick these onto paper when you get home!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Can you tell me more? ',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'It’s not all about the children – parents need to be active too. A fast pace walking for a pre-schooler is likely to be a slow walk for you and so you need to make time for your activity as well.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'When was the last time you did some exercise? It’s great for you!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I understand! Exercise snacking is something you do in short stints (5-10 minutes), two or three times a day. The beauty is that you can do this without any special equipment or fitness clothing, it doesn’t cost anything, and you don’t have to do a warmup first.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Stand upright. With your hands at waist height, position your arms in front of you. Raise one leg up to 90 degrees—until the top of your thigh touches your hands— then lower it. Repeat this movement with your opposite leg. Move at any pace you want.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Stand upright and hold onto the back of the chair for balance. Raise one foot by bending your knee to a right angle, and then lower it to the floor. Repeat this movement with your opposite leg and continue for a minute.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, sure! One of the best ways to get active is to walk briskly – either with or without the buggy. Brisk walking will not only help you to get fitter but will also help you to tone up muscle and get your weight in check. ',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'How does that make you feel?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'You can walk in any flat shoes, however you will find it easier to walk in a pair of lace up shoes or trainers, particularly if you are walking over a non -tarmacked surface in a park or another green space. Investing in a pair of comfortable trainers might help you to walk faster when out with the buggy.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Do some postnatal exercises. They will strengthen your muscles and help get you in shape. You could also join a postnatal exercise class. Lots of postnatal classes let you do the class with your baby at your side. Ask your health visitor about this!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Push the pram or buggy briskly. Remember to keep your arms bent and your back straight. Make sure the handles are at the right height for you – your elbows should be bent at right angles. Walking is great exercise, so try to get out as much as you can.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Play energetic games with older children. You can exercise by running around with them. Build activity into your day.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Teach your kids to be kind! Make giving compliments normal! ',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Think about some loving thoughts about someone you know with your child.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Try swimming, it is good exercise and also relaxing, but you\'ll need to wait until 7 days after your postnatal bleeding has stopped. If you take your baby with you, try to have someone else there to mind the baby so you have a chance to swim.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Use the stairs instead of the lift or, for short journeys, walk instead of taking the car. Bend your knees when you pick things up off the floor, rather than bending at the waist. If you bend down with bent knees and a straight back, instead of bending over at the waist (straight knees and a bent spine), you\'ll strengthen your thigh muscles and avoid damaging your back. Hold heavy objects close to your body.',
+                    //     predict: ''
+                    // }
+                // ],
                 nextPath: {
                     master: "randomConvo",
                     branch: 1
@@ -1665,58 +1691,58 @@ var obj = {
             1: {
                 func: randomRespOfChap4,
                 targetMsgArr: [
-                    {
-                        respMsg: 'Okay 😊 Treat every contact with your child as an opportunity to connect with them. Give them eye contact and really listen to them rather than having one eye on doing another job!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Can you tell me more about that?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I think I understand. Would you like to say anything more?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see…others have said that too! Your facial expressions and the way you smile will encourage a good relationship with you and your child. Listen to what they have to say, ask what they think.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Ah okay 😊  Remember to say sorry to your children (and other people) when you get things wrong. It helps model good social behaviour for your child.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see! In today’s busy lifestyle, many families find it can be difficult to find time to eat together but family meals are important and offers the time for you to build a better relationship with your child. You can help your child to have a sense of belonging and better self-esteem.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'You sound lovely 😊 It doesn’t matter which meal you share - share breakfast, lunch or dinner together – it’s just eating together that is the key. Turn off phones and the TV and just have time with each other – if you don’t have a table it doesn’t matter, sit where you can and share time together.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I can sense you’re a great person! Here are some questions you can ask me: \n\n Why do I need to go to Mother and Baby Groups?\n\nIs it ok for my partner to help with the baby?\n\nWhat support is available for parents in the community?',
-                        predict: '["Why do I need to go to Mother and Baby Groups?", "Is it ok for my partner to help with the baby?", "What support is available for parents in the community?"]'
-                    },
-                    {
-                        respMsg: 'I enjoy talking to you, user name 😊 Take a moment to give some love to your child!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'You seem nice, user name. 😊 It’s important to tell your child you love them every day, even on difficult days.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Ok 😊. Hey, user name – take this chance now to tell your child you love them!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure 😊 You may not always like their behaviour and no matter what you have to deal with you know you love your child.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: '😊 Although it can be hard, particularly when you are really frustrated with your child, showing empathy involves understanding what your child is going through. It can help you and your child work together as a team to handle challenges as they come up.',
-                        predict: ''
-                    },
+                    // {
+                    //     respMsg: 'Okay 😊 Treat every contact with your child as an opportunity to connect with them. Give them eye contact and really listen to them rather than having one eye on doing another job!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Can you tell me more about that?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I think I understand. Would you like to say anything more?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see…others have said that too! Your facial expressions and the way you smile will encourage a good relationship with you and your child. Listen to what they have to say, ask what they think.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Ah okay 😊  Remember to say sorry to your children (and other people) when you get things wrong. It helps model good social behaviour for your child.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see! In today’s busy lifestyle, many families find it can be difficult to find time to eat together but family meals are important and offers the time for you to build a better relationship with your child. You can help your child to have a sense of belonging and better self-esteem.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'You sound lovely 😊 It doesn’t matter which meal you share - share breakfast, lunch or dinner together – it’s just eating together that is the key. Turn off phones and the TV and just have time with each other – if you don’t have a table it doesn’t matter, sit where you can and share time together.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I can sense you’re a great person! Here are some questions you can ask me: \n\n Why do I need to go to Mother and Baby Groups?\n\nIs it ok for my partner to help with the baby?\n\nWhat support is available for parents in the community?',
+                    //     predict: '["Why do I need to go to Mother and Baby Groups?", "Is it ok for my partner to help with the baby?", "What support is available for parents in the community?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I enjoy talking to you, user name 😊 Take a moment to give some love to your child!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'You seem nice, user name. 😊 It’s important to tell your child you love them every day, even on difficult days.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Ok 😊. Hey, user name – take this chance now to tell your child you love them!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure 😊 You may not always like their behaviour and no matter what you have to deal with you know you love your child.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: '😊 Although it can be hard, particularly when you are really frustrated with your child, showing empathy involves understanding what your child is going through. It can help you and your child work together as a team to handle challenges as they come up.',
+                    //     predict: ''
+                    // },
                     {
                         respMsg: 'Nice, user name 😊 You need to show your child you understand them, and reassure that you are there to help them whenever they have problems.',
                         predict: ''
@@ -1884,71 +1910,71 @@ var obj = {
             1: {
                 func: randomRespOfChap5,
                 targetMsgArr: [
-                    {
-                        respMsg: 'I understand, and that’s common. Introducing solid foods at 6 months falls pretty much at the halfway mark of the first 1000 days and so is a great time for you to continue to develop the foundations you have already laid down. Getting solid foods off to the right start really will help to lay the foundations for healthy eating into the toddler years and beyond.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see! Thanks, user name 😊 As well as having a chat, you can also ask me these questions: \n\nWhen can I start weaning my baby who was premature?\n\nWhen can I start giving my baby food?\n\nWhat foods can I first start my baby with?',
-                        predict: '["When can I start weaning my baby who was premature?", "When can I start giving my baby food?", "What foods can I first start my baby with?"]'
-                    },
-                    {
-                        respMsg: 'I see! Thanks, user name 😊 As well as having a chat, you can also ask me these questions: \n\nWhen can I start weaning?\n\nWhat foods do I need to avoid when I start weaning?\n\nAre there any Weaning classes?',
-                        predict: '["When can I start weaning?", "What foods do I need to avoid when I start weaning?", "Are there any Weaning classes?"]'
-                    },
-                    {
-                        respMsg: 'Thanks, user name 😊 You can also ask me these questions: \n\nAllergies in the family – do I need to avoid these foods?\n\nWhat portion size shall I offer my baby?\n\nWhat texture should the food I give to my baby be?',
-                        predict: '["Allergies in the family – do I need to avoid these foods?", "What portion size shall I offer my baby?", "What texture should the food I give to my baby be?"]'
-                    },
-                    {
-                        respMsg: 'Sure, I think I understand. Here are some questions you can ask me: \n\nHow much milk does my baby need as they grow up?\n\nWhat is the first 1000 days?\n\nPreparing the senses for solid food',
-                        predict: '["How much milk does my baby need as they grow up?", "What is the first 1000 days?", "Preparing the senses for solid food"]'
-                    },
-                    {
-                        respMsg: 'Okay 😊 Here are some questions you can ask me too: \n\nMy baby is waking up more at night – should I start introducing solid foods? \n\nWhy has the advice on the best age to offer babies solid food changed?\n\nHow much will my baby eat?',
-                        predict: '["My baby is waking up more at night – should I start introducing solid foods?", "Why has the advice on the best age to offer babies solid food changed?", "How much will my baby eat?"]'
-                    },
-                    {
-                        respMsg: 'Sure, I see. user name, you can also ask me questions! Here are some you can ask:\n\nIs there a good time of day for my baby to eat?\n\nShould I offer milk or food first? \n\nCan I introduce rusks as first food?',
-                        predict: '["Is there a good time of day for my baby to eat?", "Should I offer milk or food first?", "Can I introduce rusks as first food?"]'
-                    },
-                    {
-                        respMsg: 'Okay, sure 😊 Here are some questions you can ask me too: \n\nMy baby doesn’t like a food\n\nWill our baby have our likes and dislikes? \n\nWhat equipment do I need to introduce solid foods? ',
-                        predict: '["My baby doesn’t like a food", "Will our baby have our likes and dislikes?", "What equipment do I need to introduce solid foods?"]'
-                    },
-                    {
-                        respMsg: 'I see, user name! 😊 These are some questions you can ask me: \n\nHow can I help my baby to enjoy lots of different foods?\n\nCan my baby have garlic and spices?\n\nWhy do I need to avoid salt and salty processed foods?',
-                        predict: '["How can I help my baby to enjoy lots of different foods?", "Can my baby have garlic and spices?", "Why do I need to avoid salt and salty processed foods?"]'
-                    },
-                    {
-                        respMsg: 'Okay, thanks for sharing, user name! You can ask me these questions as well as just having a conversation about any challenges or feelings you have:\n\n What is baby-Led introduction to solid foods?\n\nDoes baby-led introduction to solid foods increase risk of choking? \n\nDo babies get enough food in baby-led introduction to solid foods?',
-                        predict: '["What is baby-Led introduction to solid foods?", "Does baby-led introduction to solid foods increase risk of choking?", "Do babies get enough food in baby-led introduction to solid foods?"]'
-                    },
-                    {
-                        respMsg: 'Okay, user name! These are some questions you can ask me: \n\nDoes baby-led introduction to solid foods change food preferences? \n\nI’m worried about allergies in the family\n\nWhat are the best First Foods?',
-                        predict: '["Does baby-led introduction to solid foods change food preferences?", "I’m worried about allergies in the family", "What are the best First Foods?"]'
-                    },
-                    {
-                        respMsg: 'Sure 😊 These are some important questions you may find helpful in learning about: \n\nWhat is Gagging?\n\nWhat is Choking?\n\nDifference between gagging and choking',
-                        predict: '["What is Gagging?", "What is Choking?", "Difference between gagging and choking"]'
-                    },
-                    {
-                        respMsg: 'Okay! You can also ask me these questions: \n\nShould food be smooth or lumpy?\n\nWhat other drinks can I give?\n\nWhen should I start brushing teeth? ',
-                        // predict: '["Should food be smooth or lumpy?", "What other drinks can I give?", "When should I start brushing teeth?"]'
-                        predict: '["Should food be smooth or lumpy?", "What other drinks can I give?"]'
-                    },
-                    {
-                        respMsg: 'I understand 😊 When your baby reaches 6 months old, they are ready to start having some solid foods alongside their normal milk (breast or first infant formula). At this stage any foods complement milk feeds which is why this is sometimes called ‘complementary feeding’. At 6 months baby will be starting to need more nutrition than breast or formula milk provides and learning to eat solids is an important part of normal growth and development.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I hear that a lot! Introducing solid foods is a process that teaches your baby how to move foods around their mouth, chew and then swallow foods. This helps to develop and strengthen the facial muscles which also starts to build the basics for speech.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I’ve heard that before! For some, the introduction of solids is a breeze with babies eating a wide range of foods from the start, and quickly adopting 3 meals a day, on top of their normal milk. For others the process is much slower. For most parents, introducing solid foods falls in between with a range of ups and downs – and that’s ok!',
-                        predict: ''
-                    },
+                    // {
+                    //     respMsg: 'I understand, and that’s common. Introducing solid foods at 6 months falls pretty much at the halfway mark of the first 1000 days and so is a great time for you to continue to develop the foundations you have already laid down. Getting solid foods off to the right start really will help to lay the foundations for healthy eating into the toddler years and beyond.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see! Thanks, user name 😊 As well as having a chat, you can also ask me these questions: \n\nWhen can I start weaning my baby who was premature?\n\nWhen can I start giving my baby food?\n\nWhat foods can I first start my baby with?',
+                    //     predict: '["When can I start weaning my baby who was premature?", "When can I start giving my baby food?", "What foods can I first start my baby with?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I see! Thanks, user name 😊 As well as having a chat, you can also ask me these questions: \n\nWhen can I start weaning?\n\nWhat foods do I need to avoid when I start weaning?\n\nAre there any Weaning classes?',
+                    //     predict: '["When can I start weaning?", "What foods do I need to avoid when I start weaning?", "Are there any Weaning classes?"]'
+                    // },
+                    // {
+                    //     respMsg: 'Thanks, user name 😊 You can also ask me these questions: \n\nAllergies in the family – do I need to avoid these foods?\n\nWhat portion size shall I offer my baby?\n\nWhat texture should the food I give to my baby be?',
+                    //     predict: '["Allergies in the family – do I need to avoid these foods?", "What portion size shall I offer my baby?", "What texture should the food I give to my baby be?"]'
+                    // },
+                    // {
+                    //     respMsg: 'Sure, I think I understand. Here are some questions you can ask me: \n\nHow much milk does my baby need as they grow up?\n\nWhat is the first 1000 days?\n\nPreparing the senses for solid food',
+                    //     predict: '["How much milk does my baby need as they grow up?", "What is the first 1000 days?", "Preparing the senses for solid food"]'
+                    // },
+                    // {
+                    //     respMsg: 'Okay 😊 Here are some questions you can ask me too: \n\nMy baby is waking up more at night – should I start introducing solid foods? \n\nWhy has the advice on the best age to offer babies solid food changed?\n\nHow much will my baby eat?',
+                    //     predict: '["My baby is waking up more at night – should I start introducing solid foods?", "Why has the advice on the best age to offer babies solid food changed?", "How much will my baby eat?"]'
+                    // },
+                    // {
+                    //     respMsg: 'Sure, I see. user name, you can also ask me questions! Here are some you can ask:\n\nIs there a good time of day for my baby to eat?\n\nShould I offer milk or food first? \n\nCan I introduce rusks as first food?',
+                    //     predict: '["Is there a good time of day for my baby to eat?", "Should I offer milk or food first?", "Can I introduce rusks as first food?"]'
+                    // },
+                    // {
+                    //     respMsg: 'Okay, sure 😊 Here are some questions you can ask me too: \n\nMy baby doesn’t like a food\n\nWill our baby have our likes and dislikes? \n\nWhat equipment do I need to introduce solid foods? ',
+                    //     predict: '["My baby doesn’t like a food", "Will our baby have our likes and dislikes?", "What equipment do I need to introduce solid foods?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I see, user name! 😊 These are some questions you can ask me: \n\nHow can I help my baby to enjoy lots of different foods?\n\nCan my baby have garlic and spices?\n\nWhy do I need to avoid salt and salty processed foods?',
+                    //     predict: '["How can I help my baby to enjoy lots of different foods?", "Can my baby have garlic and spices?", "Why do I need to avoid salt and salty processed foods?"]'
+                    // },
+                    // {
+                    //     respMsg: 'Okay, thanks for sharing, user name! You can ask me these questions as well as just having a conversation about any challenges or feelings you have:\n\n What is baby-Led introduction to solid foods?\n\nDoes baby-led introduction to solid foods increase risk of choking? \n\nDo babies get enough food in baby-led introduction to solid foods?',
+                    //     predict: '["What is baby-Led introduction to solid foods?", "Does baby-led introduction to solid foods increase risk of choking?", "Do babies get enough food in baby-led introduction to solid foods?"]'
+                    // },
+                    // {
+                    //     respMsg: 'Okay, user name! These are some questions you can ask me: \n\nDoes baby-led introduction to solid foods change food preferences? \n\nI’m worried about allergies in the family\n\nWhat are the best First Foods?',
+                    //     predict: '["Does baby-led introduction to solid foods change food preferences?", "I’m worried about allergies in the family", "What are the best First Foods?"]'
+                    // },
+                    // {
+                    //     respMsg: 'Sure 😊 These are some important questions you may find helpful in learning about: \n\nWhat is Gagging?\n\nWhat is Choking?\n\nDifference between gagging and choking',
+                    //     predict: '["What is Gagging?", "What is Choking?", "Difference between gagging and choking"]'
+                    // },
+                    // {
+                    //     respMsg: 'Okay! You can also ask me these questions: \n\nShould food be smooth or lumpy?\n\nWhat other drinks can I give?\n\nWhen should I start brushing teeth? ',
+                    //     // predict: '["Should food be smooth or lumpy?", "What other drinks can I give?", "When should I start brushing teeth?"]'
+                    //     predict: '["Should food be smooth or lumpy?", "What other drinks can I give?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I understand 😊 When your baby reaches 6 months old, they are ready to start having some solid foods alongside their normal milk (breast or first infant formula). At this stage any foods complement milk feeds which is why this is sometimes called ‘complementary feeding’. At 6 months baby will be starting to need more nutrition than breast or formula milk provides and learning to eat solids is an important part of normal growth and development.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I hear that a lot! Introducing solid foods is a process that teaches your baby how to move foods around their mouth, chew and then swallow foods. This helps to develop and strengthen the facial muscles which also starts to build the basics for speech.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I’ve heard that before! For some, the introduction of solids is a breeze with babies eating a wide range of foods from the start, and quickly adopting 3 meals a day, on top of their normal milk. For others the process is much slower. For most parents, introducing solid foods falls in between with a range of ups and downs – and that’s ok!',
+                    //     predict: ''
+                    // },
                     {
                         respMsg: 'That’s common! It’s perfectly normal for some foods to be easily accepted and others to take a bit of time, patience and practice.',
                         predict: ''
@@ -2113,90 +2139,90 @@ var obj = {
             1: {
                 func: randomRespOfChap6,
                 targetMsgArr: [
-                    {
-                        respMsg: 'Ah, that’s very common! Food is much more than nutrition. We share meals and drinks with our families, friends and work colleagues. Sharing food forms an important part of our cultural heritage, social time and learning how food plays different roles in our lives. Providing nutrition, shared pleasures and reward are all an important part of children’s learning about food. Underpinning everyone’s food experiences should be a healthy balanced diet.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I understand! Providing babies and children with good nutrition means that they have the building blocks necessary to grow and develop (both physically and mentally), to be healthy and the energy that they need to play, learn and socialise.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Thanks for telling me 😊 Eating a healthy balanced diet establishes lifelong eating patterns, helping to ensure good health today and providing protection against the risk of becoming overweight and development of heart disease, certain cancers and diabetes in the future.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Thanks for telling me 😊 The First Steps Nutrition Trust recommend that for pre-school children a balanced diet will include 3 meals (breakfast, lunch and dinner, plus 3 snacks (think mini meals rather than treats) and dessert at one of the meal occasions.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see! Pay special attention to dairy foods, whole grain carbohydrates, and vegetables to help build healthy habits that will last a lifetime.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I understand, user name 😊. Offer water instead of sugary drinks like fizzy drinks, fruit juices and squashes. Watch how often the less healthy foods like hot dogs, burgers, pizza, crisps, chips, cookies, cakes, sweets and chocolate are eaten – keep these just for occasional treats. ',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Your child learns a lot by watching you and so eating together as a family is an important part of their learning. Children copy your likes, dislikes, and your interest in trying new foods so try to be a good role model with what you eat and drink.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see 😊 Little people need little portions, but the same healthy balanced diet overall. Let your child choose how much to eat of foods you provide, and don’t force them to finish their plate when they are not hungry.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I’ve heard that before! Children enjoy food when eating it is their own choice. Some new foods take time. Give a taste at first and wait a bit. Let children serve themselves by taking small amounts. Offer new foods many times (it can take at least 10 occasions for a young child to like a new food).',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'A short summary of the Eatwell Guide is to try to:\n\n  • Eat at least 5 portions of a variety of fruit and vegetables every day.\n\n • Base meals on potatoes, bread, rice, pasta and other starchy carbohydrates; choosing wholegrain versions where possible.\n\n • Have some dairy or dairy alternatives (such as soy drinks); choosing lower fat and lower sugar options.\n\n • Eat some beans, pulses, fish, eggs, meat and other proteins (including 2 portions of fish every week, one of which should be oily).\n\n• Choose unsaturated oils and spreads and eat in small amounts.\n\n• Drink 6 to 8 cups/glasses of fluid a day.\n\n• If consuming foods and drinks high in fat, salt or sugar have these less often and in small amounts.\n\n • From birth children should be provided with a daily supplement of 10 micrograms of vitamin D. Children over the age of 5 and adults are advised to consider taking a supplement, especially during winter months. ',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! Starchy food should make up just over a third of the food we eat. Starchy foods are a good source of energy and fibre and are also the main source of a range of nutrients in our diet, such as B group vitamins, calcium and iron. Try to include a starchy food such as potatoes, bread, a grain such as rice, barley or quinoa, pasta, yam, plantain, or breakfast cereals.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I think I’m starting to really understand you, user name 😊 In the UK we all consume far less dietary fibre than we need and so choosing wholegrain and wholemeal foods is important. Very young children can fill up quickly on high fibre foods so for them try to use a mixture of higher and lower fibre starchy foods.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I think I understand. Young children should also eat fruit or vegetables on five occasions each day. There are no official guidelines for portion size for young children, but a practical guide is for a portion to be the amount they can fit in the palm of their hand. That way as they grow in size their portions grow. By the end of primary school, they will be eating full size portions.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Ah that’s normal. Here’s a good tip - eat seasonally! Checking what fruits are in season can help save money.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see. This is something to remember – dried fruit make a great sweet snack, but the natural sugars can hang around the teeth so don’t use these too often. Try a variety of dried fruits like cranberries, mango, apricots, cherries, or raisins.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I keep a tub of chopped fresh fruit ready in the fridge to grab for snacks or quick dessert. I’m just joking, I don’t do that. I’m just a robot. You should try this though, user name!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I enjoy serving a rainbow of choices. I’m just joking, I don’t do that. I’m just a robot. You should try this though, user name! Fruit can be a quick and easy way to make meals and snacks healthier and more colourful.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! Vary your veggies by adding a new vegetable to a different meal each day.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! It’s good to serve a variety of colourful choices. Brighten children’s plates with red, orange, and dark-green vegetables.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see! You can choose from fresh, frozen, or canned vegetables. Prepare and serve vegetables without added salt or solid fat. That’s what I do. I’m just joking, I don’t do that. I’m just a robot. You should try this though, user name!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I understand, thanks user name. Try a dip. Kids love to dip their foods. Hummus or guacamole are great choices or whip up a quick dip for veggies with yogurt and seasonings such as herbs or garlic. Serve with raw vegetables like broccoli, carrots, or cauliflower.',
-                        predict: ''
-                    },
+                    // {
+                    //     respMsg: 'Ah, that’s very common! Food is much more than nutrition. We share meals and drinks with our families, friends and work colleagues. Sharing food forms an important part of our cultural heritage, social time and learning how food plays different roles in our lives. Providing nutrition, shared pleasures and reward are all an important part of children’s learning about food. Underpinning everyone’s food experiences should be a healthy balanced diet.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I understand! Providing babies and children with good nutrition means that they have the building blocks necessary to grow and develop (both physically and mentally), to be healthy and the energy that they need to play, learn and socialise.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Thanks for telling me 😊 Eating a healthy balanced diet establishes lifelong eating patterns, helping to ensure good health today and providing protection against the risk of becoming overweight and development of heart disease, certain cancers and diabetes in the future.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Thanks for telling me 😊 The First Steps Nutrition Trust recommend that for pre-school children a balanced diet will include 3 meals (breakfast, lunch and dinner, plus 3 snacks (think mini meals rather than treats) and dessert at one of the meal occasions.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see! Pay special attention to dairy foods, whole grain carbohydrates, and vegetables to help build healthy habits that will last a lifetime.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I understand, user name 😊. Offer water instead of sugary drinks like fizzy drinks, fruit juices and squashes. Watch how often the less healthy foods like hot dogs, burgers, pizza, crisps, chips, cookies, cakes, sweets and chocolate are eaten – keep these just for occasional treats. ',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Your child learns a lot by watching you and so eating together as a family is an important part of their learning. Children copy your likes, dislikes, and your interest in trying new foods so try to be a good role model with what you eat and drink.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see 😊 Little people need little portions, but the same healthy balanced diet overall. Let your child choose how much to eat of foods you provide, and don’t force them to finish their plate when they are not hungry.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I’ve heard that before! Children enjoy food when eating it is their own choice. Some new foods take time. Give a taste at first and wait a bit. Let children serve themselves by taking small amounts. Offer new foods many times (it can take at least 10 occasions for a young child to like a new food).',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'A short summary of the Eatwell Guide is to try to:\n\n  • Eat at least 5 portions of a variety of fruit and vegetables every day.\n\n • Base meals on potatoes, bread, rice, pasta and other starchy carbohydrates; choosing wholegrain versions where possible.\n\n • Have some dairy or dairy alternatives (such as soy drinks); choosing lower fat and lower sugar options.\n\n • Eat some beans, pulses, fish, eggs, meat and other proteins (including 2 portions of fish every week, one of which should be oily).\n\n• Choose unsaturated oils and spreads and eat in small amounts.\n\n• Drink 6 to 8 cups/glasses of fluid a day.\n\n• If consuming foods and drinks high in fat, salt or sugar have these less often and in small amounts.\n\n • From birth children should be provided with a daily supplement of 10 micrograms of vitamin D. Children over the age of 5 and adults are advised to consider taking a supplement, especially during winter months. ',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! Starchy food should make up just over a third of the food we eat. Starchy foods are a good source of energy and fibre and are also the main source of a range of nutrients in our diet, such as B group vitamins, calcium and iron. Try to include a starchy food such as potatoes, bread, a grain such as rice, barley or quinoa, pasta, yam, plantain, or breakfast cereals.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I think I’m starting to really understand you, user name 😊 In the UK we all consume far less dietary fibre than we need and so choosing wholegrain and wholemeal foods is important. Very young children can fill up quickly on high fibre foods so for them try to use a mixture of higher and lower fibre starchy foods.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I think I understand. Young children should also eat fruit or vegetables on five occasions each day. There are no official guidelines for portion size for young children, but a practical guide is for a portion to be the amount they can fit in the palm of their hand. That way as they grow in size their portions grow. By the end of primary school, they will be eating full size portions.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Ah that’s normal. Here’s a good tip - eat seasonally! Checking what fruits are in season can help save money.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see. This is something to remember – dried fruit make a great sweet snack, but the natural sugars can hang around the teeth so don’t use these too often. Try a variety of dried fruits like cranberries, mango, apricots, cherries, or raisins.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I keep a tub of chopped fresh fruit ready in the fridge to grab for snacks or quick dessert. I’m just joking, I don’t do that. I’m just a robot. You should try this though, user name!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I enjoy serving a rainbow of choices. I’m just joking, I don’t do that. I’m just a robot. You should try this though, user name! Fruit can be a quick and easy way to make meals and snacks healthier and more colourful.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! Vary your veggies by adding a new vegetable to a different meal each day.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! It’s good to serve a variety of colourful choices. Brighten children’s plates with red, orange, and dark-green vegetables.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see! You can choose from fresh, frozen, or canned vegetables. Prepare and serve vegetables without added salt or solid fat. That’s what I do. I’m just joking, I don’t do that. I’m just a robot. You should try this though, user name!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I understand, thanks user name. Try a dip. Kids love to dip their foods. Hummus or guacamole are great choices or whip up a quick dip for veggies with yogurt and seasonings such as herbs or garlic. Serve with raw vegetables like broccoli, carrots, or cauliflower.',
+                    //     predict: ''
+                    // },
                     {
                         respMsg: 'I understand. Pulses, such as beans, peas and lentils, are good alternatives to meat because they cost less and are rich in protein, higher in fibre and a source of minerals such as iron and zinc too. They are also less demanding on the planet resources and more sustainable.',
                         predict: ''
@@ -2409,146 +2435,146 @@ var obj = {
             1: {
                 func: randomRespOfChap7,
                 targetMsgArr: [
-                    {
-                        respMsg: 'How is being active going with your family going?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I understand. Being active regularly is really important to help your children grow and develop healthily. What do you find fun?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, thanks! Children love to play and be active and parents can play a super role in this. In fact the role that adults play is crucial – some play is more spontaneous such as running after a butterfly they spot in the garden, reaching out to touch a daisy on the lawn or playing with a box of old clothes and jewellery you pulled out of the cupboard to sort out!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see! Parents can lead by example and you can involve your kids in your daily activities such as always walking to friends rather than taking the car. Whether your child is not yet walking or just toddling, making walking to your destination an everyday normal will encourage your child to walk now, and also keep up this great habit as they grow up. Learning life skills such as care around people or cars, and how to cross a road safely is also vitally important.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Could you tell me more?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'If you help keep your child active in their early years, then they are more likely to be active as adults, keeping them in good health throughout life.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'When your kids keep active every day, they are more likely to achieve and maintain a healthy body weight!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'When your kids keep active every day they build strong muscles and bones and improve their skills such as balance and co-ordination.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay 😊 Keeping kids active during the day can help them interact better with other children and adults!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Children who are active are more likely to stay a healthy weight, will tend to be fitter, healthier, better able to learn, and more self-confident. They\'re also much less likely to have health problems in later life.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Ok, sure! Children whose parents encourage them to be active and eat well are more likely to stay a healthy weight and grow up as a healthy child. When they go to school, they are more likely to be confident and less likely to be bullied. Not only that, as they grow up, healthy habits mean they are more likely to avoid health problems such as diabetes, heart disease or bone and joint problems in adult life.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'That’s interesting, why do you say that?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Kids muscles get stronger the more they use them. The same is true for their bones. Walking, running, jumping, and climbing are great activities for building bone as the force of our muscles and gravity combine to put pressure on our bones. This pressure tells the body to build up stronger bone. This type of exercise is called weight-bearing exercise. ',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I understand! As children grow up their self-confidence and self-esteem (what he or she thinks about the themselves) plays an important role in their life choices. You can start to build this right from the start by encouraging age appropriate choices and decisions. Which t shirt to wear, an apple or an orange, which game to play. Let them take the lead and make choices as often as you can.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see. A child’s degree of self-esteem can be high or low and may change at different times. Children who have a healthier self-esteem tend to have a positive sense of self and are more confident. On the other hand, when children have a poor or low self-esteem, this can have a negative effect on their life choices.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! Confidence is important to a child’s future happiness, health, and success. Confident children are better able to deal with peer pressure, responsibility and independence and things that they find challenging. They should also be better able to handle both positive and negative emotions with less outbursts and tantrums.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Giving children simple choices is a great way to help them to feel in control. Which colour socks to wear, an apple or a pear, which cover to put on the bed. What choice of activity could you give your child, Okay, thanks! Children love to play and be active and parents can play a super role in this. In fact the role that adults play is crucial – some play is more spontaneous such as running after a butterfly they spot in the garden, reaching out to touch a daisy on the lawn or playing with a box of old clothes and jewellery you pulled out of the cupboard to sort out!? Give a choice of options that lead to the same outcome and keep them simple – then your child will find it easy to decide.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'We are all too good at focusing on what we can’t do and the things that other people are better at than we are. We forget to focus on the things that we do well. The same goes for children of all ages. Try to ensure that every day you do something that focuses on your child’s strengths and not on their flaws.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Praise what your child is good at, and especially when they stick with a task that they find challenging until they get it done. Focus praise on effort and trying hard rather than the end product or achievement. Help and encourage them to have a go at doing things without feeling embarrassed – and help them to overcome things they are finding.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see! Building confidence in your child is key! A great way to build confidence and a sense of self-worth is to spend quality time with your children to show that they are valuable and important. Make some time that is just for them with no jobs or distractions.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure! A good idea is to take your child on outings, eat a special family dinner together, play games – inside or out, paint a picture or do a craft activity together. Children know when you are distracted or focusing on something else so try to build in times when you truly just focus on your baby/child and nothing else.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'It’s OK not to be the best at everything, or to win at everything. This is where activity can help. Teaching new skills in the world of activity can be very rewarding. From learning to walk and the encouragement given at that stage to learning to climb the stairs, ride a bike, kick a ball and hop on one foot can all be a major step towards helping your child’s self-esteem.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! As children grow and develop, they can do more and more activities. Physical activity starts from birth. Once your child is born simply floating them carefully around in the bathtub and taking your baby out in the baby buggy starts to get them used to doing things.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure! As your baby gets older, begins to crawl and then can walk unaided, ideally you should try and keep them active for at least 180 minutes a day. That’s 3 hours. They don’t have to do it all at once of course as activities can be spread out into blocks throughout the day.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'As much as you can, encourage your child to do active things that fit in with your day – you could encourage them to walk alongside the baby buggy with you when you visit friends or help you with things around the house – it might take a little longer but it can be fun and they can learn; you are leading by example and encouraging them to get more active along with you.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I like talking to you, user name!😊 Have you managed to get some active play today with the family?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Your baby’s favourite plaything is you – so try to spend time playing with your baby every day. Playing actually requires a lot of your baby’s brain and muscle power. It helps develop their social, intellectual, language and problem-solving skills – and is one of the main ways they learn about the world. Play time is fun and educational.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! Activity can be encouraged from the day your child is born. Physical activity in a safe environment can be started from birth. From birth babies start to grasp and this continues as they grow and develop. Start by letting them grasp your finger, then move onto soft toys and go from there.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'This is a good idea to do with your toddler: play with balls and encourage them to catch and throw – choose a nice soft ball that is safe to throw indoors too!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'This is a good idea to do with your toddler: blow bubbles and let them chase the bubbles!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'This is a good idea to do with your toddler: play music and dance around the room or play games such as ‘Ring A Ring O’ Roses and ‘Incy Wincy Spider’!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, I understand, user name. Is it a good time to go outdoors and play?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'It’s not always easy…so here is an idea I thought about for you: walk your older children to school and take your toddler with you – encourage them to walk alongside the buggy instead of sitting in it!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sometimes we need a little bit of inspiration…so here is an idea I thought about for you: involve your child in helping you around the house; give them a duster to dust, a small toy brush whilst you sweep the floor!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Could you try walking to the shops or to see a friend? Maybe you could turn off the TV and dance to music? I enjoy rolling around on the floor. I don’t really, I can’t even do that because I’m a robot. Maybe your child would enjoy it?',
-                        predict: ''
-                    },
+                    // {
+                    //     respMsg: 'How is being active going with your family going?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I understand. Being active regularly is really important to help your children grow and develop healthily. What do you find fun?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, thanks! Children love to play and be active and parents can play a super role in this. In fact the role that adults play is crucial – some play is more spontaneous such as running after a butterfly they spot in the garden, reaching out to touch a daisy on the lawn or playing with a box of old clothes and jewellery you pulled out of the cupboard to sort out!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see! Parents can lead by example and you can involve your kids in your daily activities such as always walking to friends rather than taking the car. Whether your child is not yet walking or just toddling, making walking to your destination an everyday normal will encourage your child to walk now, and also keep up this great habit as they grow up. Learning life skills such as care around people or cars, and how to cross a road safely is also vitally important.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Could you tell me more?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'If you help keep your child active in their early years, then they are more likely to be active as adults, keeping them in good health throughout life.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'When your kids keep active every day, they are more likely to achieve and maintain a healthy body weight!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'When your kids keep active every day they build strong muscles and bones and improve their skills such as balance and co-ordination.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay 😊 Keeping kids active during the day can help them interact better with other children and adults!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Children who are active are more likely to stay a healthy weight, will tend to be fitter, healthier, better able to learn, and more self-confident. They\'re also much less likely to have health problems in later life.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Ok, sure! Children whose parents encourage them to be active and eat well are more likely to stay a healthy weight and grow up as a healthy child. When they go to school, they are more likely to be confident and less likely to be bullied. Not only that, as they grow up, healthy habits mean they are more likely to avoid health problems such as diabetes, heart disease or bone and joint problems in adult life.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'That’s interesting, why do you say that?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Kids muscles get stronger the more they use them. The same is true for their bones. Walking, running, jumping, and climbing are great activities for building bone as the force of our muscles and gravity combine to put pressure on our bones. This pressure tells the body to build up stronger bone. This type of exercise is called weight-bearing exercise. ',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I understand! As children grow up their self-confidence and self-esteem (what he or she thinks about the themselves) plays an important role in their life choices. You can start to build this right from the start by encouraging age appropriate choices and decisions. Which t shirt to wear, an apple or an orange, which game to play. Let them take the lead and make choices as often as you can.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see. A child’s degree of self-esteem can be high or low and may change at different times. Children who have a healthier self-esteem tend to have a positive sense of self and are more confident. On the other hand, when children have a poor or low self-esteem, this can have a negative effect on their life choices.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! Confidence is important to a child’s future happiness, health, and success. Confident children are better able to deal with peer pressure, responsibility and independence and things that they find challenging. They should also be better able to handle both positive and negative emotions with less outbursts and tantrums.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Giving children simple choices is a great way to help them to feel in control. Which colour socks to wear, an apple or a pear, which cover to put on the bed. What choice of activity could you give your child, Okay, thanks! Children love to play and be active and parents can play a super role in this. In fact the role that adults play is crucial – some play is more spontaneous such as running after a butterfly they spot in the garden, reaching out to touch a daisy on the lawn or playing with a box of old clothes and jewellery you pulled out of the cupboard to sort out!? Give a choice of options that lead to the same outcome and keep them simple – then your child will find it easy to decide.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'We are all too good at focusing on what we can’t do and the things that other people are better at than we are. We forget to focus on the things that we do well. The same goes for children of all ages. Try to ensure that every day you do something that focuses on your child’s strengths and not on their flaws.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Praise what your child is good at, and especially when they stick with a task that they find challenging until they get it done. Focus praise on effort and trying hard rather than the end product or achievement. Help and encourage them to have a go at doing things without feeling embarrassed – and help them to overcome things they are finding.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see! Building confidence in your child is key! A great way to build confidence and a sense of self-worth is to spend quality time with your children to show that they are valuable and important. Make some time that is just for them with no jobs or distractions.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure! A good idea is to take your child on outings, eat a special family dinner together, play games – inside or out, paint a picture or do a craft activity together. Children know when you are distracted or focusing on something else so try to build in times when you truly just focus on your baby/child and nothing else.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'It’s OK not to be the best at everything, or to win at everything. This is where activity can help. Teaching new skills in the world of activity can be very rewarding. From learning to walk and the encouragement given at that stage to learning to climb the stairs, ride a bike, kick a ball and hop on one foot can all be a major step towards helping your child’s self-esteem.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! As children grow and develop, they can do more and more activities. Physical activity starts from birth. Once your child is born simply floating them carefully around in the bathtub and taking your baby out in the baby buggy starts to get them used to doing things.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure! As your baby gets older, begins to crawl and then can walk unaided, ideally you should try and keep them active for at least 180 minutes a day. That’s 3 hours. They don’t have to do it all at once of course as activities can be spread out into blocks throughout the day.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'As much as you can, encourage your child to do active things that fit in with your day – you could encourage them to walk alongside the baby buggy with you when you visit friends or help you with things around the house – it might take a little longer but it can be fun and they can learn; you are leading by example and encouraging them to get more active along with you.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I like talking to you, user name!😊 Have you managed to get some active play today with the family?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Your baby’s favourite plaything is you – so try to spend time playing with your baby every day. Playing actually requires a lot of your baby’s brain and muscle power. It helps develop their social, intellectual, language and problem-solving skills – and is one of the main ways they learn about the world. Play time is fun and educational.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! Activity can be encouraged from the day your child is born. Physical activity in a safe environment can be started from birth. From birth babies start to grasp and this continues as they grow and develop. Start by letting them grasp your finger, then move onto soft toys and go from there.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'This is a good idea to do with your toddler: play with balls and encourage them to catch and throw – choose a nice soft ball that is safe to throw indoors too!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'This is a good idea to do with your toddler: blow bubbles and let them chase the bubbles!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'This is a good idea to do with your toddler: play music and dance around the room or play games such as ‘Ring A Ring O’ Roses and ‘Incy Wincy Spider’!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, I understand, user name. Is it a good time to go outdoors and play?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'It’s not always easy…so here is an idea I thought about for you: walk your older children to school and take your toddler with you – encourage them to walk alongside the buggy instead of sitting in it!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sometimes we need a little bit of inspiration…so here is an idea I thought about for you: involve your child in helping you around the house; give them a duster to dust, a small toy brush whilst you sweep the floor!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Could you try walking to the shops or to see a friend? Maybe you could turn off the TV and dance to music? I enjoy rolling around on the floor. I don’t really, I can’t even do that because I’m a robot. Maybe your child would enjoy it?',
+                    //     predict: ''
+                    // },
                     {
                         respMsg: 'You seem fun, user name! Lead by example and be your child’s role model. This is so true for so many parts of family life. Walk together, play together and eat together. Ask friends along and share experiences. It’s good to create routines to help everyone feel secure.',
                         predict: ''
@@ -2641,102 +2667,102 @@ var obj = {
             1: {
                 func: randomRespOfChap8,
                 targetMsgArr: [
-                    {
-                        respMsg: 'Okay! Fussy eating is very common among toddler and pre-school children. It’s simply another step in the process of growing up and becoming independent. It’s very frustrating but if your child is healthy, growing normally, and has plenty of energy, they are most likely getting the nutrients they need.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Ah right, that’s very normal. Tap into your child’s senses about food as much as you can. When children look at, smell, taste, touch and listen to things in early childhood the habits they learn often stick with them all the way to adolescence and adulthood. If your child is introduced to different vegetables, berries and fruit in hands-on sessions such as baking and cooking, growing their own vegetables and reading about food books and playing games involving food, their willingness to choose vegetables, berries and fruit is increased.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see. Your child may refuse a food based on a certain colour or texture. For example, they could refuse foods that are red or green, contain seeds, or are squishy. This is normal and they will probably grow out of it.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I understand. For a period of time, your pre-schooler may only eat a certain type of food. Your child may choose 1 or 2 foods he or she likes and refuse to eat anything else.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Ok 😊 Sometimes your child may waste time at the table and seem interested in doing anything but eating.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Your child may be unwilling to try new foods. It is normal for your pre-schooler to prefer familiar foods and be afraid to try new things.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Refusing food is a normal stage that most toddlers go through and can be frustrating and extremely worrying for parents.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I’m sure I’ve heard that before! Keep in your mind that one day your child will hate a food and totally refuse to eat it and then sometime later they’ll love it! It also takes around 10 tastes to learn to like any new food so be patient and keep trying.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Hmm…I see! It may be a good idea to plan your child’s weekly meals and keep offering a variety of foods. It’s important to introduce your child to a range of tastes, textures and flavours.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'It may take a few attempts before your child eats some foods (often 10 tries of a food are needed before it’s accepted and liked) so keep trying while also offering other foods that you know they will eat.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Regularly offering your child a variety of foods will add to their willingness to try other new foods. This will make things easier for your child to accept a wider variety of foods into their diet and for you to serve them a wide variety of foods.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'That’s okay! Try to serve small portions to your child and encourage these to be eaten and have seconds on hand in case they want more.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Children tend to be able to regulate the amount of food they eat far better than we do as adults and some days they will be hungrier than others. During a growth spurt their appetite may soar, and then drop back down again after a few days. Your child has a small tummy so consider serving smaller meals more often such as 3 small meals a day and 2 small snacks.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Hey, user name 😊 – I really like talking to you. Remember, if you give your child a large drink too close to a mealtime, they are likely to feel too full to eat much of the meal you have prepared. Simply give your child water instead, small drinks regularly will keep them better hydrated than larger drinks less often.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Do mealtimes get messy sometimes, user name? Children usually love to try and feed themselves. As frustrating as it may be, let your child try.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Try to avoid the common parent trap of offering a nice dessert in reward for eating their vegetables or dinner. If you use sweet foods and desserts as a reward your child will associate that will good behaviour and make these foods seem much more desirable! Have a healthy dessert, such as fruit and then if you want to add a little something you can – but don’t make it conditional on eating other things.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, sure! Serve your child foods at meals and snacks that are variations on a theme. For example, your child may love to drink milk with a meal but if they don’t, offer them another food that is milk-based instead.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay It may be a good idea to serve a little cheese sauce with their savoury meal or custard on a fruit dessert.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Add veggies to main meals - your child may refuse sliced boiled carrot but will eat them when you add them to a main meal such as adding grated carrot to Bolognese sauce. For dessert, replace fresh sliced fruit with stewed fruit for a change and use tinned fruit as a handy standby.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I do my best at understanding you, user name! I am only a robot 😊 Often if children have a choice it helps them to eat more – but make sure choices are similar in terms of food type and the nutrition they offer. Would they like broccoli or peas? Apples or a pear? Yoghurt or custard?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Could you tell me more please?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Ah right – how does that make you feel?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I think you’re wonderful 😊 Use drawing books and crayons to draw pictures of different colourful foods. Your child will learn along the way as you tell them the names of the various foods you draw. Stickers can do the same jog and most kids seem to adore sticker books – look for food-based sticker books.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'We don’t just eat food, we see it, touch it, smell it, taste it and hear it (as we touch it and when it’s in our mouths being chewed. Some children can have very sensitive taste to smell or want their foods all at room temperature because they are sensitive to hot or cold. Trying to work out which sense most affect your child’s eating a drinking could be the key to encouraging intake of a wider range of foods.',
-                        predict: ''
-                    },
+                    // {
+                    //     respMsg: 'Okay! Fussy eating is very common among toddler and pre-school children. It’s simply another step in the process of growing up and becoming independent. It’s very frustrating but if your child is healthy, growing normally, and has plenty of energy, they are most likely getting the nutrients they need.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Ah right, that’s very normal. Tap into your child’s senses about food as much as you can. When children look at, smell, taste, touch and listen to things in early childhood the habits they learn often stick with them all the way to adolescence and adulthood. If your child is introduced to different vegetables, berries and fruit in hands-on sessions such as baking and cooking, growing their own vegetables and reading about food books and playing games involving food, their willingness to choose vegetables, berries and fruit is increased.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see. Your child may refuse a food based on a certain colour or texture. For example, they could refuse foods that are red or green, contain seeds, or are squishy. This is normal and they will probably grow out of it.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I understand. For a period of time, your pre-schooler may only eat a certain type of food. Your child may choose 1 or 2 foods he or she likes and refuse to eat anything else.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Ok 😊 Sometimes your child may waste time at the table and seem interested in doing anything but eating.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Your child may be unwilling to try new foods. It is normal for your pre-schooler to prefer familiar foods and be afraid to try new things.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Refusing food is a normal stage that most toddlers go through and can be frustrating and extremely worrying for parents.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I’m sure I’ve heard that before! Keep in your mind that one day your child will hate a food and totally refuse to eat it and then sometime later they’ll love it! It also takes around 10 tastes to learn to like any new food so be patient and keep trying.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Hmm…I see! It may be a good idea to plan your child’s weekly meals and keep offering a variety of foods. It’s important to introduce your child to a range of tastes, textures and flavours.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'It may take a few attempts before your child eats some foods (often 10 tries of a food are needed before it’s accepted and liked) so keep trying while also offering other foods that you know they will eat.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Regularly offering your child a variety of foods will add to their willingness to try other new foods. This will make things easier for your child to accept a wider variety of foods into their diet and for you to serve them a wide variety of foods.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'That’s okay! Try to serve small portions to your child and encourage these to be eaten and have seconds on hand in case they want more.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Children tend to be able to regulate the amount of food they eat far better than we do as adults and some days they will be hungrier than others. During a growth spurt their appetite may soar, and then drop back down again after a few days. Your child has a small tummy so consider serving smaller meals more often such as 3 small meals a day and 2 small snacks.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Hey, user name 😊 – I really like talking to you. Remember, if you give your child a large drink too close to a mealtime, they are likely to feel too full to eat much of the meal you have prepared. Simply give your child water instead, small drinks regularly will keep them better hydrated than larger drinks less often.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Do mealtimes get messy sometimes, user name? Children usually love to try and feed themselves. As frustrating as it may be, let your child try.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Try to avoid the common parent trap of offering a nice dessert in reward for eating their vegetables or dinner. If you use sweet foods and desserts as a reward your child will associate that will good behaviour and make these foods seem much more desirable! Have a healthy dessert, such as fruit and then if you want to add a little something you can – but don’t make it conditional on eating other things.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, sure! Serve your child foods at meals and snacks that are variations on a theme. For example, your child may love to drink milk with a meal but if they don’t, offer them another food that is milk-based instead.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay It may be a good idea to serve a little cheese sauce with their savoury meal or custard on a fruit dessert.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Add veggies to main meals - your child may refuse sliced boiled carrot but will eat them when you add them to a main meal such as adding grated carrot to Bolognese sauce. For dessert, replace fresh sliced fruit with stewed fruit for a change and use tinned fruit as a handy standby.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I do my best at understanding you, user name! I am only a robot 😊 Often if children have a choice it helps them to eat more – but make sure choices are similar in terms of food type and the nutrition they offer. Would they like broccoli or peas? Apples or a pear? Yoghurt or custard?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Could you tell me more please?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Ah right – how does that make you feel?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I think you’re wonderful 😊 Use drawing books and crayons to draw pictures of different colourful foods. Your child will learn along the way as you tell them the names of the various foods you draw. Stickers can do the same jog and most kids seem to adore sticker books – look for food-based sticker books.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'We don’t just eat food, we see it, touch it, smell it, taste it and hear it (as we touch it and when it’s in our mouths being chewed. Some children can have very sensitive taste to smell or want their foods all at room temperature because they are sensitive to hot or cold. Trying to work out which sense most affect your child’s eating a drinking could be the key to encouraging intake of a wider range of foods.',
+                    //     predict: ''
+                    // },
                     {
                         respMsg: 'Okay! Your child may not want to try new foods. It is normal for children to reject foods they have never tried before. Why not try new foods together as a family and each describe how the food feels, smells and tastes – make sure that those family members who are old enough try to use positive descriptions to encourage food intake and not just negative.',
                         predict: ''
@@ -2892,58 +2918,58 @@ var obj = {
             1: {
                 func: randomRespOfChap9,
                 targetMsgArr: [
-                    {
-                        respMsg: 'I understand, thank you for telling me, user name! Being a parent is wonderful and a joy, but at times can also be challenging and feel chaotic and exhausting.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, I understand – thank you! We know that looking after physical health is important, but we often overlook our emotional wellbeing which is just as important.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'That’s interesting, thank you for telling me 😊 If you have good emotional wellbeing you will be better able to cope with any ups and downs of being a parent and feeling positive will help to keep your baby or children feeling positive and calm as well. If you are happy and calm, they will tend to be as well.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, I see. Emotional wellbeing is not something that just happens, it is something that we can practise and develop.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Right, I understand. Emotional health is an important part of overall health. People who are emotionally healthy are in control of their thoughts, feelings, and behaviours.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Thank you 😊 Everyone has days where they feel angry or sad or upset for example, but it’s how you handle it that counts. People who are emotionally resilient can ride the daily challenges well. Taking time to build strong bonds with children and developing secure emotional attachments helps families to communicate and work together to overcome any challenges that come their way.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Thank you for telling me 😊 A young child’s brain is developing rapidly and is affected by life experiences that are positive or negative. Their relationships with others, feeling secure and loved and the understanding that they have of those around them all contribute massively to their overall emotional health.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure, I see 😊 Try to do at least 2 things every day that make you feel good.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Ah I understand! Can you make a list of the top 5 things you’re most grateful for? I’m grateful for being able to talk to you! 😊',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, thank you! Make time in your day to consider your emotions and reactions to the things that you do. Think about what makes you happy, and what makes you sad, and try to include more of the things that make you feel positive or good.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure, thank you 😊 Being physically active means sitting down less and moving our bodies more. Many people find that physical activity helps them maintain a positive approach to life.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see, thank you 😊 Even a simple 20-minute stroll can clear the mind and reduce stress. Think of a walk as more than a means of transport from A to B, but a whole meditation and stress relieving package in one.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, I understand 😊 You might not think it – particularly today when people appear to post a constant stream of happy life events and successes on social media – but everyone makes mistakes and has bad days. They just don’t post about these and so you don’t realise that they have wobbles as well.',
-                        predict: ''
-                    },
+                    // {
+                    //     respMsg: 'I understand, thank you for telling me, user name! Being a parent is wonderful and a joy, but at times can also be challenging and feel chaotic and exhausting.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, I understand – thank you! We know that looking after physical health is important, but we often overlook our emotional wellbeing which is just as important.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'That’s interesting, thank you for telling me 😊 If you have good emotional wellbeing you will be better able to cope with any ups and downs of being a parent and feeling positive will help to keep your baby or children feeling positive and calm as well. If you are happy and calm, they will tend to be as well.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, I see. Emotional wellbeing is not something that just happens, it is something that we can practise and develop.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Right, I understand. Emotional health is an important part of overall health. People who are emotionally healthy are in control of their thoughts, feelings, and behaviours.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Thank you 😊 Everyone has days where they feel angry or sad or upset for example, but it’s how you handle it that counts. People who are emotionally resilient can ride the daily challenges well. Taking time to build strong bonds with children and developing secure emotional attachments helps families to communicate and work together to overcome any challenges that come their way.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Thank you for telling me 😊 A young child’s brain is developing rapidly and is affected by life experiences that are positive or negative. Their relationships with others, feeling secure and loved and the understanding that they have of those around them all contribute massively to their overall emotional health.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure, I see 😊 Try to do at least 2 things every day that make you feel good.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Ah I understand! Can you make a list of the top 5 things you’re most grateful for? I’m grateful for being able to talk to you! 😊',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, thank you! Make time in your day to consider your emotions and reactions to the things that you do. Think about what makes you happy, and what makes you sad, and try to include more of the things that make you feel positive or good.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure, thank you 😊 Being physically active means sitting down less and moving our bodies more. Many people find that physical activity helps them maintain a positive approach to life.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see, thank you 😊 Even a simple 20-minute stroll can clear the mind and reduce stress. Think of a walk as more than a means of transport from A to B, but a whole meditation and stress relieving package in one.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, I understand 😊 You might not think it – particularly today when people appear to post a constant stream of happy life events and successes on social media – but everyone makes mistakes and has bad days. They just don’t post about these and so you don’t realise that they have wobbles as well.',
+                    //     predict: ''
+                    // },
                     {
                         respMsg: 'That’s very common 😊 Praise your child for effort. Achievement is good too, but just trying to do something and working hard is a wonderful thing to acknowledge. Children often take a lot of practice before they learn to do something new and so praising the trying becomes really important to help them get there.',
                         predict: ''
@@ -3136,42 +3162,42 @@ var obj = {
             1: {
                 func: randomRespOfChap10,
                 targetMsgArr: [
-                    {
-                        respMsg: 'I see! Tooth decay, also known as dental decay or dental caries, is a major problem for children. Most cases of tooth decay could be prevented by cutting down on sugar, as well as brushing teeth with fluoride toothpaste.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, I understand. Dental decay hurts, treatment is not pleasant, and you can help to avoid this for your children. Every parent, no matter who, needs to be mindful of taking care of their children’s teeth.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Thanks for telling me! If sugary foods or drinks are consumed frequently during a day, there are more "acid attacks" on the teeth. The hard-outer layers of the teeth dissolve away leading to cavities (holes) in the teeth. These need to be filled otherwise the tooth becomes infected and will need to be removed.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Right, okay 😊 Create a family habit of tooth brushing twice a day for 2 minutes each time. Before bed is the most important time and at one other time of day – this should be a time that works for you and your family.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I understand, thank you for telling me, user name! 😊 Always supervise toothbrushing to help make sure that all teeth are brushed properly and so that toothpaste is used in small amounts and is not consumed.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, I understand – thank you! Fluoride is a mineral which helps to prevent tooth decay, and so it’s often added to toothpaste. Check that the toothpaste you buy for your family has between 1000 parts per million fluoride (written as ppmf) and 1450 ppmf.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'That’s interesting, thank you for telling me 😊 Children should see their dentist at least once a year. Start taking your child to the dentist as soon as their first milk teeth appear. All children, even if they have no teeth yet, should be taken to see a dentist by the time they reach 12 months when they reach 12 months.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, I see. Taking children to the dentist from as soon as their teeth emerge, or by the age of 12 months if no teeth have appeared, means any problems can be spotted and prevented or dealt with early.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Right, I understand. Not all children like having their teeth brushed, so you may have to keep trying. Make it into a game or brush your own teeth at the same time and then help your child finish their own.',
-                        predict: ''
-                    },
+                    // {
+                    //     respMsg: 'I see! Tooth decay, also known as dental decay or dental caries, is a major problem for children. Most cases of tooth decay could be prevented by cutting down on sugar, as well as brushing teeth with fluoride toothpaste.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, I understand. Dental decay hurts, treatment is not pleasant, and you can help to avoid this for your children. Every parent, no matter who, needs to be mindful of taking care of their children’s teeth.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Thanks for telling me! If sugary foods or drinks are consumed frequently during a day, there are more "acid attacks" on the teeth. The hard-outer layers of the teeth dissolve away leading to cavities (holes) in the teeth. These need to be filled otherwise the tooth becomes infected and will need to be removed.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Right, okay 😊 Create a family habit of tooth brushing twice a day for 2 minutes each time. Before bed is the most important time and at one other time of day – this should be a time that works for you and your family.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I understand, thank you for telling me, user name! 😊 Always supervise toothbrushing to help make sure that all teeth are brushed properly and so that toothpaste is used in small amounts and is not consumed.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, I understand – thank you! Fluoride is a mineral which helps to prevent tooth decay, and so it’s often added to toothpaste. Check that the toothpaste you buy for your family has between 1000 parts per million fluoride (written as ppmf) and 1450 ppmf.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'That’s interesting, thank you for telling me 😊 Children should see their dentist at least once a year. Start taking your child to the dentist as soon as their first milk teeth appear. All children, even if they have no teeth yet, should be taken to see a dentist by the time they reach 12 months when they reach 12 months.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, I see. Taking children to the dentist from as soon as their teeth emerge, or by the age of 12 months if no teeth have appeared, means any problems can be spotted and prevented or dealt with early.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Right, I understand. Not all children like having their teeth brushed, so you may have to keep trying. Make it into a game or brush your own teeth at the same time and then help your child finish their own.',
+                    //     predict: ''
+                    // },
                     {
                         respMsg: 'Thank you 😊 Some babies seem to find cutting teeth much easier than others, or it may vary for tooth to tooth. Either way teething can be quite distressing for all involved. Don’t worry it is entirely normal for babies to have a few more unsettled days as each tooth cuts through. Remember, teething is not an illness and so if baby has a temperature or appears unwell in any other way then please call your doctor or visit NHS 111.',
                         predict: ''
@@ -3276,30 +3302,30 @@ var obj = {
             1: {
                 func: randomRespOfChap11,
                 targetMsgArr: [
-                    {
-                        respMsg: 'I see! Sustainable eating means choosing a healthy balanced diet that meet the needs of you and your family members, while limiting impact on the environment around us. What do you think about that?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, I understand. We all have our own food routines and grow, buy, store, cook and waste food differently but everyone can probably make a few changes here and there to help the planet. What can you think of?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Thanks for telling me! Providing more sustainable food in your child’s early years can play an important part towards helping meet their needs today without compromising their future needs.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Right, okay 😊 To help avoid potentially irreversible damage to the plant and ensure that everyone can eat healthily by 2050, the world wide consumption of foods such as red meat and sugar needs to fall by about 50% and at the same time, the amount of fruit, vegetables, nuts, beans and pulses eaten will need to double. What do you think?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I understand, thank you for telling me, user name! Reports are that half of adults in the UK want to consider dietary changes to reduce impact on global warming, however many of us still eat meat every day. It’s hard to change a lot of thing quickly and so an approach you are more likely to succeed at is to choose a couple of small changes and stick to those.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay 😊 Planning meals and avoiding over buying of food would mean less waste and that would help the planet too!',
-                        predict: ''
-                    },
+                    // {
+                    //     respMsg: 'I see! Sustainable eating means choosing a healthy balanced diet that meet the needs of you and your family members, while limiting impact on the environment around us. What do you think about that?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, I understand. We all have our own food routines and grow, buy, store, cook and waste food differently but everyone can probably make a few changes here and there to help the planet. What can you think of?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Thanks for telling me! Providing more sustainable food in your child’s early years can play an important part towards helping meet their needs today without compromising their future needs.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Right, okay 😊 To help avoid potentially irreversible damage to the plant and ensure that everyone can eat healthily by 2050, the world wide consumption of foods such as red meat and sugar needs to fall by about 50% and at the same time, the amount of fruit, vegetables, nuts, beans and pulses eaten will need to double. What do you think?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I understand, thank you for telling me, user name! Reports are that half of adults in the UK want to consider dietary changes to reduce impact on global warming, however many of us still eat meat every day. It’s hard to change a lot of thing quickly and so an approach you are more likely to succeed at is to choose a couple of small changes and stick to those.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay 😊 Planning meals and avoiding over buying of food would mean less waste and that would help the planet too!',
+                    //     predict: ''
+                    // },
                     {
                         respMsg: 'That’s interesting, thank you for telling me 😊 The food that children eat in their early years not only has an impact on the health of the child eating it but also on the health of the planet. Sustainable food is about food culture and how decisions made about growing, buying, storing, cooking and wasting food today will impact future generations.',
                         predict: ''
@@ -3398,18 +3424,18 @@ var obj = {
             1: {
                 func: randomRespOfChap12,
                 targetMsgArr: [
-                    {
-                        respMsg: 'I see! As children grow older having a fun relationship with food will help them to maintain a healthy balanced diet and enjoy eating the nourishing meals that provide all their nutrition. How does that sound to you?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, I understand. Sitting down together for a meal whenever you can is a great way to connect with your family.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Thanks for telling me! Eating together as a family can be hard so try to do the best that you can. Try to have a parent or carer sit with the children at meals times, and whenever you can share the same foods. You are the best role model your children have for a healthy balanced diet.',
-                        predict: ''
-                    },
+                    // {
+                    //     respMsg: 'I see! As children grow older having a fun relationship with food will help them to maintain a healthy balanced diet and enjoy eating the nourishing meals that provide all their nutrition. How does that sound to you?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, I understand. Sitting down together for a meal whenever you can is a great way to connect with your family.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Thanks for telling me! Eating together as a family can be hard so try to do the best that you can. Try to have a parent or carer sit with the children at meals times, and whenever you can share the same foods. You are the best role model your children have for a healthy balanced diet.',
+                    //     predict: ''
+                    // },
                     {
                         respMsg: 'Right, okay 😊 Even if your little one is not talking yet chatting during mealtime is important. Chat to your baby/infant and encourage them to respond with sounds or smiles.',
                         predict: ''

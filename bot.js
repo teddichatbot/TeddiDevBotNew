@@ -59,7 +59,7 @@ async function logMessageText(storage, turnContext) {
     let chapterType = '';
     if(turnContext.activity.chapterType === undefined){
         chapterType = 'introduction';
-        // chapterType = 'chapter3';
+        // chapterType = 'givingHealth';
     }else{
         chapterType = turnContext.activity.chapterType;
     }
