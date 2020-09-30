@@ -1743,150 +1743,150 @@ var obj = {
                     //     respMsg: '😊 Although it can be hard, particularly when you are really frustrated with your child, showing empathy involves understanding what your child is going through. It can help you and your child work together as a team to handle challenges as they come up.',
                     //     predict: ''
                     // },
-                    {
-                        respMsg: 'Nice, user name 😊 You need to show your child you understand them, and reassure that you are there to help them whenever they have problems.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, user name 😊 It’s important to listen to your child and acknowledge your child’s feelings. Do you find this easy to do?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sounds good, user name 😊 When it comes to safety, rules are vitally important, but it’s best not to rely on them to keep children safe. For example, your rule might be ‘Stay away from the road’, but you will always need to supervise and watch your child near roads.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure 😊 Play is vital to help the development of your child and they can learn and develop many skills through the power of play.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'You seem great! Give your child choices (e.g. apple or pear for dessert, tuna or cheese in their sandwich, walk to the park or play ball in the garden). This will help them to develop a sense of value and choice.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'You’re nice to talk to 😊 As your child grows, they develop the language skills to understand simple rules but the younger they are the more likely they are to forget or ignore your rules. You need to constantly support and remind them of the rules on a day to day basis.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure 😊 If your child has had a bad day remember to tell them that you love them but that you did not love a particular behaviour, try to explain why and what you would prefer them to do next time.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! Encourage kindness and curiosity. Why are the clouds so fluffy? How can we make someone smile?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see! Although we try hard, adults are not always right, and saying sorry is a great way to role model good social behaviour for your children.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Thanks, user name. Playing with your child can help their emotions, creativity, social skills and language skills. Not only that, it will help you develop your relationship with your child. Turn off the TV and make time to play and talk to your child without distraction.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, user name. Eating together as a family sets the stage for conversation and helps you build your relationship with your child.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Here are some ideas to help get conversation started with the family: \n\n 1. Ask everyone to share something funny about their day \n\n 2. Tell us about something nice you did for someone today?\n\n 3. If you had 3 wishes, what would they be? (You can’t wish for money!)\n\n 4. Would you rather be able to fly, read minds or live to 100?\n\n 5. Can you name the favourite colour, animal, movie, or food of everyone at the table?\n\n 6. If you could snap your fingers and be anywhere in the world right now, where would you go?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Family support is vital for your child’s development and unavoidably linked to their family experiences. In fact, family is the single most important influence in your child\'s life.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'From their first moments of life, your child depends on you and your family to protect them and provide for their needs. Your child is more likely to thrive when you and your family are able to actively help promote their growth and development.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'You’re nice to talk to 😊 Research has proved that having a support system has many positive benefits, such as higher levels of well-being, better coping skills and a longer and healthier life. In addition, social support can reduce depression and anxiety so help decrease stress.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Talk to your partner, family and friends about your feelings and what they can do to help. It’s important to make time for yourself and do things you enjoy!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I understand, user name! What do you enjoy doing?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'It’s hard when you have a new baby but do rest whenever you get the chance and get as much sleep as you can at night.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Exercising regularly and eating a healthy diet are really important too. Look out for baby fitness classes and baby buggy walking classes locally that you can join. (link to active families) You’ll meet other new mums and that will offer you a great amount of support too.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'When you have a child, life is busy with mealtimes, bath time, shopping, work and your relationships with your partner and others. Taking time for yourself is vital.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'We often prioritise everyone else’s needs before our own because we don’t want to seem selfish or feel guilty but that’s not healthy.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'There’s no stigma to doing things alone – in fact, spending time alone is a good thing so you can have chance to think and work on the relationship you have with yourself.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'More ‘me time’ helps you to clear you head. You can take time to sit back and prioritise your busy life. You have a clearer perspective of what needs to done and how you can do it.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'If you learn to enjoy your own company, you’ll learn that happiness doesn’t always depend upon other people. Feel more fulfilled by interacting less with others sometimes. It’s not that you need to spend lots of time alone – far from it - just that you learn more about yourself. You are alone, not lonely!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Some people curl up with a good book and a cup of hot chocolate whilst others linger in a hot bath. Work out what simple pleasures in life work for you and make you happy. By making sure you have more ‘me time’, you get off that busy roundabout of life and makes life a lot calmer, simpler and more relaxed.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'You seem great! Everyone who has been in a relationship knows that disagreements and arguments are inevitable. It’s normal that when two people spend a lot of time together, they are bound to disagree sometimes.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'You seem nice, user name. When adults disagree or are angry with each other, misunderstandings can easily occur. Try to put the children first and keep children clear of any relationship conflicts.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I can sense you’re a great person! Your values are important in the relationship you have with your child. This relationship is unique and enduring and involves the way you interact with your child on many levels. How you interact emotionally, physically and socially, not only with your child but with others around you, will impact how children develop and grow into young adults and beyond.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'That’s interesting 😊 Here are some questions you can ask me:\n\nWhat are the signs of postnatal depression? \n\nIs it normal for my baby to be crying so much? \n\nCan I go out?',
-                        predict: '["What are the signs of postnatal depression?", "Is it normal for my baby to be crying so much?", "Can I go out?"]'
-                    },
-                    {
-                        respMsg: 'You can tell me anything you like! Here are some questions you can ask me:\n\nHow can I meet other parents with babies? \n\nHow can I help my wife/partner to care for the baby?',
-                        predict: '["How can I meet other parents with babies?", "How can I help my wife/partner to care for the baby?"]'
-                    },
-                    {
-                        respMsg: 'I’ve heard that before! Here are some questions you can ask me:\n\nCould I leave my baby with relatives for a night? \n\nCan my family visit us?',
-                        predict: '["Could I leave my baby with relatives for a night?", "Can my family visit us?"]'
-                    },
-                    {
-                        respMsg: 'I’ve heard that before! Here are some questions you can ask me:\n\nCan I take my child abroad? \n\nI’ve lost my identity what can I do?',
-                        predict: '["Can I take my child abroad?", "I’ve lost my identity what can I do?"]'
-                    },
-                    {
-                        respMsg: 'I hear that a lot 😊 Here are some questions you can ask me:\n\nHow can I access childcare? \n\nWhat is bonding?',
-                        predict: '["How can I access childcare?", "What is bonding?"]'
-                    },
-                    {
-                        respMsg: 'You can tell me anything you like! Here are some questions you can ask me:\n\nWhat is baby massage?\n\nHow do I help my child to feel valued?',
-                        predict: '["What is baby massage?", "How do I help my child to feel valued?"]'
-                    },
-                    {
-                        respMsg: 'I can sense you’re a great person! Here are some questions you can ask me: \n\nShould I set rules for my children?\n\nHelp for working parents? \n\nHow do I deal with relationship conflict?',
-                        predict: '["Should I set rules for my children?", "Help for working parents?", "How do I deal with relationship conflict?"]'
-                    },
-                    {
-                        respMsg: 'Okay! These are a couple of questions you can ask me: \n\nHow do I support children through Separation and Divorce?\n\nWhat are family values?',
-                        predict: '["How do I support children through Separation and Divorce?", "What are family values?"]'
-                    },
+                    // {
+                    //     respMsg: 'Nice, user name 😊 You need to show your child you understand them, and reassure that you are there to help them whenever they have problems.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, user name 😊 It’s important to listen to your child and acknowledge your child’s feelings. Do you find this easy to do?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sounds good, user name 😊 When it comes to safety, rules are vitally important, but it’s best not to rely on them to keep children safe. For example, your rule might be ‘Stay away from the road’, but you will always need to supervise and watch your child near roads.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure 😊 Play is vital to help the development of your child and they can learn and develop many skills through the power of play.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'You seem great! Give your child choices (e.g. apple or pear for dessert, tuna or cheese in their sandwich, walk to the park or play ball in the garden). This will help them to develop a sense of value and choice.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'You’re nice to talk to 😊 As your child grows, they develop the language skills to understand simple rules but the younger they are the more likely they are to forget or ignore your rules. You need to constantly support and remind them of the rules on a day to day basis.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure 😊 If your child has had a bad day remember to tell them that you love them but that you did not love a particular behaviour, try to explain why and what you would prefer them to do next time.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! Encourage kindness and curiosity. Why are the clouds so fluffy? How can we make someone smile?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see! Although we try hard, adults are not always right, and saying sorry is a great way to role model good social behaviour for your children.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Thanks, user name. Playing with your child can help their emotions, creativity, social skills and language skills. Not only that, it will help you develop your relationship with your child. Turn off the TV and make time to play and talk to your child without distraction.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, user name. Eating together as a family sets the stage for conversation and helps you build your relationship with your child.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Here are some ideas to help get conversation started with the family: \n\n 1. Ask everyone to share something funny about their day \n\n 2. Tell us about something nice you did for someone today?\n\n 3. If you had 3 wishes, what would they be? (You can’t wish for money!)\n\n 4. Would you rather be able to fly, read minds or live to 100?\n\n 5. Can you name the favourite colour, animal, movie, or food of everyone at the table?\n\n 6. If you could snap your fingers and be anywhere in the world right now, where would you go?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Family support is vital for your child’s development and unavoidably linked to their family experiences. In fact, family is the single most important influence in your child\'s life.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'From their first moments of life, your child depends on you and your family to protect them and provide for their needs. Your child is more likely to thrive when you and your family are able to actively help promote their growth and development.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'You’re nice to talk to 😊 Research has proved that having a support system has many positive benefits, such as higher levels of well-being, better coping skills and a longer and healthier life. In addition, social support can reduce depression and anxiety so help decrease stress.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Talk to your partner, family and friends about your feelings and what they can do to help. It’s important to make time for yourself and do things you enjoy!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I understand, user name! What do you enjoy doing?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'It’s hard when you have a new baby but do rest whenever you get the chance and get as much sleep as you can at night.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Exercising regularly and eating a healthy diet are really important too. Look out for baby fitness classes and baby buggy walking classes locally that you can join. (link to active families) You’ll meet other new mums and that will offer you a great amount of support too.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'When you have a child, life is busy with mealtimes, bath time, shopping, work and your relationships with your partner and others. Taking time for yourself is vital.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'We often prioritise everyone else’s needs before our own because we don’t want to seem selfish or feel guilty but that’s not healthy.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'There’s no stigma to doing things alone – in fact, spending time alone is a good thing so you can have chance to think and work on the relationship you have with yourself.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'More ‘me time’ helps you to clear you head. You can take time to sit back and prioritise your busy life. You have a clearer perspective of what needs to done and how you can do it.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'If you learn to enjoy your own company, you’ll learn that happiness doesn’t always depend upon other people. Feel more fulfilled by interacting less with others sometimes. It’s not that you need to spend lots of time alone – far from it - just that you learn more about yourself. You are alone, not lonely!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Some people curl up with a good book and a cup of hot chocolate whilst others linger in a hot bath. Work out what simple pleasures in life work for you and make you happy. By making sure you have more ‘me time’, you get off that busy roundabout of life and makes life a lot calmer, simpler and more relaxed.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'You seem great! Everyone who has been in a relationship knows that disagreements and arguments are inevitable. It’s normal that when two people spend a lot of time together, they are bound to disagree sometimes.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'You seem nice, user name. When adults disagree or are angry with each other, misunderstandings can easily occur. Try to put the children first and keep children clear of any relationship conflicts.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I can sense you’re a great person! Your values are important in the relationship you have with your child. This relationship is unique and enduring and involves the way you interact with your child on many levels. How you interact emotionally, physically and socially, not only with your child but with others around you, will impact how children develop and grow into young adults and beyond.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'That’s interesting 😊 Here are some questions you can ask me:\n\nWhat are the signs of postnatal depression? \n\nIs it normal for my baby to be crying so much? \n\nCan I go out?',
+                    //     predict: '["What are the signs of postnatal depression?", "Is it normal for my baby to be crying so much?", "Can I go out?"]'
+                    // },
+                    // {
+                    //     respMsg: 'You can tell me anything you like! Here are some questions you can ask me:\n\nHow can I meet other parents with babies? \n\nHow can I help my wife/partner to care for the baby?',
+                    //     predict: '["How can I meet other parents with babies?", "How can I help my wife/partner to care for the baby?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I’ve heard that before! Here are some questions you can ask me:\n\nCould I leave my baby with relatives for a night? \n\nCan my family visit us?',
+                    //     predict: '["Could I leave my baby with relatives for a night?", "Can my family visit us?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I’ve heard that before! Here are some questions you can ask me:\n\nCan I take my child abroad? \n\nI’ve lost my identity what can I do?',
+                    //     predict: '["Can I take my child abroad?", "I’ve lost my identity what can I do?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I hear that a lot 😊 Here are some questions you can ask me:\n\nHow can I access childcare? \n\nWhat is bonding?',
+                    //     predict: '["How can I access childcare?", "What is bonding?"]'
+                    // },
+                    // {
+                    //     respMsg: 'You can tell me anything you like! Here are some questions you can ask me:\n\nWhat is baby massage?\n\nHow do I help my child to feel valued?',
+                    //     predict: '["What is baby massage?", "How do I help my child to feel valued?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I can sense you’re a great person! Here are some questions you can ask me: \n\nShould I set rules for my children?\n\nHelp for working parents? \n\nHow do I deal with relationship conflict?',
+                    //     predict: '["Should I set rules for my children?", "Help for working parents?", "How do I deal with relationship conflict?"]'
+                    // },
+                    // {
+                    //     respMsg: 'Okay! These are a couple of questions you can ask me: \n\nHow do I support children through Separation and Divorce?\n\nWhat are family values?',
+                    //     predict: '["How do I support children through Separation and Divorce?", "What are family values?"]'
+                    // },
                 ],
                 nextPath: {
                     master: "randomConvo",
@@ -1975,146 +1975,146 @@ var obj = {
                     //     respMsg: 'I’ve heard that before! For some, the introduction of solids is a breeze with babies eating a wide range of foods from the start, and quickly adopting 3 meals a day, on top of their normal milk. For others the process is much slower. For most parents, introducing solid foods falls in between with a range of ups and downs – and that’s ok!',
                     //     predict: ''
                     // },
-                    {
-                        respMsg: 'That’s common! It’s perfectly normal for some foods to be easily accepted and others to take a bit of time, patience and practice.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'That’s a common answer 😊 Think of introducing solid foods as a journey – you can decide how colourful and interesting this journey can be.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'You seem great and I think you will be an amazing parent! Remember that up until now your baby has only had one food – a liquid that is sweet tasting and fairly bland. Given the wide range of foods, tastes and textures that they are about to experience it is no wonder that sometimes a baby is ‘surprised’ by a new food and may appear to reject this.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure! It is really important when introducing solid foods not to confuse a ‘surprised’ response where they appear disgusted and spit the food out with ‘dislike’. Try foods 8-10 times before deciding that it is not liked.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Ah I think I understand. It is recommended that you do not start to introduce solid foods to your baby before 6 months of age (26 weeks) – as their digestive system and kidneys are simply not ready for processing food before then. If you are thinking of introducing solids before 6 months, then please speak to your Health Visitor for advice first.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'By around 6 months your baby will be starting to need more than the nutrition provided by milk alone. For example, babies are born with iron stores in place that are now starting to run low.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure 😊 By 6 months your baby will be able to:\n\n• Sit up and hold their head steady \n\n• Pick up food and move it to their mouth\n\n• Move food around their mouth, chew it and swallow – this may mean they can have mashed, lumpy and finger foods, and may not need smooth, blended foods at all! n\n• But don’t forget - every baby is different, and some may be slower than others to learn to handle food in the mouth, but a range of smooth foods and soft finger foods can be offered.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see 😊 Try to offer simple and unprocessed foods – base meals and snacks around minimally processed and natural foods.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'A good idea is to allow your child to see and touch the foods they are offered so that they start to link the food they are eating with its look, smell and taste. This is to help them learn to choose foods for themselves as they grow older.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Hey, user name – let your child get involved in the eating experience – take your time and involve babies in family meals even before they are ready for solids.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Thank you, user name! It’s nice to make eating a happy event. It is learning and play as well as a chance to provide energy and nutrients.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Would you like to say anything more? 😊',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'It’s good to avoid ultra-processed foods – if there are more than a handful of ingredients on the label, put it back on the shelf.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I like talking to you! You’re great! Giving your baby lots of different foods to try, with varied tastes and textures, is likely to develop an enjoyment of a variety of foods as they get older. This is because your baby tends to grow to like the foods they get used to.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'You’re going to be great at this, user name – I can sense it! Baked sweet potatoes, banana puree, and mashed carrots are perfectly fine, but baby food doesn\'t have to be bland. Avoid adding salt or sugar to foods, but flavours from garlic, herbs, spices and mild curry powders are all fine. Many babies actually enjoy a much wider range of flavours. Don’t be timid, start with small amounts and then gradually increase use of herbs and spices as they grow older.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Lots of parents have been in your position! Let your baby explore food at their own pace. The first few tastes may be just that – a taste and an exploration with their tongue, before dribbling it back out. With encouragement and support, you can help your baby get used to different flavours and feel confident about trying new foods.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure, I understand. The distinct advantage of introducing solid foods at 6 months is that babies are more developmentally advanced and are able to reach out, pick up foods and feed themselves.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! As a first food most people often steam carrots (to about the degree that they can be squished between your thumb and finger), cut up cucumbers, make toast fingers or cut fingers of ripe mango, break up a banana, that sort of thing.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Right, I see 😊 It’s okay for your baby to have a pile of Spaghetti Bolognese or mashed potato to dig into if that’s what the rest of the family is having. Just remember to not add salt during cooking! ',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure 😊 Eating is a social experience so try to eat as a family as often as you can, with baby sharing the same foods, or if its just you and your little one try to sit and chat and enjoy the food together as you are the best role model for eating and table manners that your baby can ever have.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'This is going to be fun for you, accept that it will be messy and so place a washable tablecloth under the highchair, especially if you have carpet underneath to catch the worst spills.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, thanks! When your baby’s had enough, they’ll let you know by firmly closing their mouth or turning their head away.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Here’s a top tip to help your baby eat: make sure babies sit in the same place to eat, as often as possible, to help them feel comfortable and secure.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Here’s a top tip to help your baby eat: cleaning messy faces is not pleasant for babies so if you can, lift them out of the highchair and take them to the sink to wash hands and wipe faces.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Here’s a top tip to help your baby eat: offer food when babies are most likely to be hungry.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Here’s a top tip to help your baby eat: present simple foods that they can easily see and distinguish.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Here’s a top tip to help your baby eat: offer colourful fruits and vegetables that will catch their attention.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Here’s a top tip to help your baby eat: give small portions, offer praise when it’s finished, and then offer more.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure, I see! Here’s a top tip to help your baby eat: give foods they have eaten before alongside anything that is new.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure, I see! Here’s a top tip to help your baby eat: eat together. This makes mealtimes more enjoyable and sociable.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure, I see! Here’s a top tip to help your baby eat: eat a spoonful of your child’s food and show your enjoyment by saying ‘yummy’ and giving lots of smiles.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure 😊 It’s a good idea to encourage children to feed themselves. They may well eat a wider range of foods if they have more control.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sometimes it’s hard, but try to keep calm. If parents are anxious and tense, babies will pick up on this.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Try not to worry if more food is eaten on some days than on others – that’s normal.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Be guided by your baby and their appetite as they are growing and developing in the first year.',
-                        predict: ''
-                    },
+                    // {
+                    //     respMsg: 'That’s common! It’s perfectly normal for some foods to be easily accepted and others to take a bit of time, patience and practice.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'That’s a common answer 😊 Think of introducing solid foods as a journey – you can decide how colourful and interesting this journey can be.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'You seem great and I think you will be an amazing parent! Remember that up until now your baby has only had one food – a liquid that is sweet tasting and fairly bland. Given the wide range of foods, tastes and textures that they are about to experience it is no wonder that sometimes a baby is ‘surprised’ by a new food and may appear to reject this.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure! It is really important when introducing solid foods not to confuse a ‘surprised’ response where they appear disgusted and spit the food out with ‘dislike’. Try foods 8-10 times before deciding that it is not liked.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Ah I think I understand. It is recommended that you do not start to introduce solid foods to your baby before 6 months of age (26 weeks) – as their digestive system and kidneys are simply not ready for processing food before then. If you are thinking of introducing solids before 6 months, then please speak to your Health Visitor for advice first.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'By around 6 months your baby will be starting to need more than the nutrition provided by milk alone. For example, babies are born with iron stores in place that are now starting to run low.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure 😊 By 6 months your baby will be able to:\n\n• Sit up and hold their head steady \n\n• Pick up food and move it to their mouth\n\n• Move food around their mouth, chew it and swallow – this may mean they can have mashed, lumpy and finger foods, and may not need smooth, blended foods at all! n\n• But don’t forget - every baby is different, and some may be slower than others to learn to handle food in the mouth, but a range of smooth foods and soft finger foods can be offered.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see 😊 Try to offer simple and unprocessed foods – base meals and snacks around minimally processed and natural foods.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'A good idea is to allow your child to see and touch the foods they are offered so that they start to link the food they are eating with its look, smell and taste. This is to help them learn to choose foods for themselves as they grow older.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Hey, user name – let your child get involved in the eating experience – take your time and involve babies in family meals even before they are ready for solids.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Thank you, user name! It’s nice to make eating a happy event. It is learning and play as well as a chance to provide energy and nutrients.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Would you like to say anything more? 😊',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'It’s good to avoid ultra-processed foods – if there are more than a handful of ingredients on the label, put it back on the shelf.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I like talking to you! You’re great! Giving your baby lots of different foods to try, with varied tastes and textures, is likely to develop an enjoyment of a variety of foods as they get older. This is because your baby tends to grow to like the foods they get used to.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'You’re going to be great at this, user name – I can sense it! Baked sweet potatoes, banana puree, and mashed carrots are perfectly fine, but baby food doesn\'t have to be bland. Avoid adding salt or sugar to foods, but flavours from garlic, herbs, spices and mild curry powders are all fine. Many babies actually enjoy a much wider range of flavours. Don’t be timid, start with small amounts and then gradually increase use of herbs and spices as they grow older.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Lots of parents have been in your position! Let your baby explore food at their own pace. The first few tastes may be just that – a taste and an exploration with their tongue, before dribbling it back out. With encouragement and support, you can help your baby get used to different flavours and feel confident about trying new foods.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure, I understand. The distinct advantage of introducing solid foods at 6 months is that babies are more developmentally advanced and are able to reach out, pick up foods and feed themselves.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! As a first food most people often steam carrots (to about the degree that they can be squished between your thumb and finger), cut up cucumbers, make toast fingers or cut fingers of ripe mango, break up a banana, that sort of thing.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Right, I see 😊 It’s okay for your baby to have a pile of Spaghetti Bolognese or mashed potato to dig into if that’s what the rest of the family is having. Just remember to not add salt during cooking! ',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure 😊 Eating is a social experience so try to eat as a family as often as you can, with baby sharing the same foods, or if its just you and your little one try to sit and chat and enjoy the food together as you are the best role model for eating and table manners that your baby can ever have.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'This is going to be fun for you, accept that it will be messy and so place a washable tablecloth under the highchair, especially if you have carpet underneath to catch the worst spills.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, thanks! When your baby’s had enough, they’ll let you know by firmly closing their mouth or turning their head away.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Here’s a top tip to help your baby eat: make sure babies sit in the same place to eat, as often as possible, to help them feel comfortable and secure.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Here’s a top tip to help your baby eat: cleaning messy faces is not pleasant for babies so if you can, lift them out of the highchair and take them to the sink to wash hands and wipe faces.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Here’s a top tip to help your baby eat: offer food when babies are most likely to be hungry.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Here’s a top tip to help your baby eat: present simple foods that they can easily see and distinguish.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Here’s a top tip to help your baby eat: offer colourful fruits and vegetables that will catch their attention.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Here’s a top tip to help your baby eat: give small portions, offer praise when it’s finished, and then offer more.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure, I see! Here’s a top tip to help your baby eat: give foods they have eaten before alongside anything that is new.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure, I see! Here’s a top tip to help your baby eat: eat together. This makes mealtimes more enjoyable and sociable.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure, I see! Here’s a top tip to help your baby eat: eat a spoonful of your child’s food and show your enjoyment by saying ‘yummy’ and giving lots of smiles.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure 😊 It’s a good idea to encourage children to feed themselves. They may well eat a wider range of foods if they have more control.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sometimes it’s hard, but try to keep calm. If parents are anxious and tense, babies will pick up on this.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Try not to worry if more food is eaten on some days than on others – that’s normal.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Be guided by your baby and their appetite as they are growing and developing in the first year.',
+                    //     predict: ''
+                    // },
 
                 ],
                 nextPath: {
@@ -2223,194 +2223,194 @@ var obj = {
                     //     respMsg: 'I understand, thanks user name. Try a dip. Kids love to dip their foods. Hummus or guacamole are great choices or whip up a quick dip for veggies with yogurt and seasonings such as herbs or garlic. Serve with raw vegetables like broccoli, carrots, or cauliflower.',
                     //     predict: ''
                     // },
-                    {
-                        respMsg: 'I understand. Pulses, such as beans, peas and lentils, are good alternatives to meat because they cost less and are rich in protein, higher in fibre and a source of minerals such as iron and zinc too. They are also less demanding on the planet resources and more sustainable.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure 😊 When eating meat choose small amounts of lean cuts of meat and mince, and eat less red and processed meat like bacon, ham and sausages.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, thanks! Aim for at least 2 portions of fish every week, 1 of which should be oily, such as salmon or mackerel. Buy canned fish canned in spring water or sunflower oil (avoid brine due to higher salt level) or frozen fish to help keep foods costs down.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! Vegetarians get enough protein if the variety and amounts of foods selected are adequate. Protein sources for vegetarians include eggs (for ovo-vegetarians), beans and peas, nuts, nut butters, and soy products (tofu, tempeh, veggie burgers). Try to include a range of different protein foods into your child’s diet over each week.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Thanks for telling me! Eat foods high in fat, salt and sugar less often and in small amounts. \n\nThese foods include chocolate, cakes, biscuits, sugary soft drinks, butter, ghee and ice cream. They\'re not needed in our diet, so should be eaten as treats and not every day.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure! Both adults and children in the UK consume sugar far in excess of need, which causes dental decay, and contributes to overweight and obesity. Everyone is encouraged to cut down on sugary foods and drinks and it is important to limit babies sugar intake from their first tastes of food to discourage development of a preference for sweeter foods.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see, that’s normal! Healthier snack options are those without added sugar or salt, such as fruit (fresh, tinned or frozen), rice cakes, oatcakes, or homemade plain popcorn.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'All food and drink choices matter – and every family will have their own healthy eating style. Finding your healthy eating style will make it easier to eat a healthy balanced diet every day.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Lots of small changes = big wins. Think of every change as a personal win on your path to healthier eating.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay. Make one third of plate veggies and fruits. Vegetables and fruits are full of nutrients that support good health. Choose red, orange fruits and dark-green vegetables such as tomatoes, sweet potatoes, and broccoli.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure! Aim to eat at least one wholegrain food each day such as wholemeal bread or brown rice. Look for the words “100% whole grain” or “100% whole wheat” on the food label. Young children can fill up quickly on higher fibre foods so its fine to use a mixture, but they should get used to some wholegrain foods from the start. As they grow make more of their grain foods ‘wholegrain’.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I think you’re great! Complete two meals a day with a cup of milk, serving of cheese or yoghurt. These provide calcium, protein and other essential nutrients. Plant based alternatives can be used in cooking for <1-year olds or as a drink over 1 year of age but check that they are fortified with calcium and vitamin D. Do not give rice milk to under 5’s due to the amount of arsenic it contains.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! Choose protein foods such as lean beef, pork, chicken, or turkey, and eggs, nut butters, beans, or tofu. Twice a week, make fish the protein on your plate – make one an oily type of fish.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure 😊 Young children need the energy in full fat products, however adding lots of oils and spreads can change a healthier food into a less healthy one – for example turning potato into chips.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Whether you are making a sandwich, a stir-fry, or a casserole, find ways to make them healthier. Try adding in more veggies that add new flavours and textures to your meals. Make unfamiliar foods more appealing by making patterns or pictures on the plate with food.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Try to prepare as much food at home for your children as you can so that you know exactly what they are eating. It’s cheaper than buying ready prepared children’s food and means that the family can all eat the same meals.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Keep it interesting by picking out new foods you’ve never tried before, like mango, lentils, quinoa, kale, or sardines. You may find a new favourite! Check out the recipe options to find tasty recipes for foods that you have never tried.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Ah that’s normal! You can indulge in a naturally sweet dessert dish—fruit! Serve a fresh fruit salad or a fruit parfait made with yogurt. For a hot dessert, bake apples, bananas or peaches and top with cinnamon.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see! We often mistake thirst for hunger and eat when we should be drinking. Try to have 6-8 cups or glasses of water during each day – offering younger children small glasses and a larger one for the grown-ups. Drinking smaller amounts more often means the body is more likely to good use of the fluid and keep dehydration at bay.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see! Planning ahead will help to you make sure everyone eats a healthy balanced diet with a variety of foods and will help you to save money by avoiding impulse buys of food that is then not used.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'This could be helpful – before making a shopping list, write down meals you want to make this week. Try to think of what you can cook that everyone can eat – including the youngest members of the family. Check that every meal includes protein, carbohydrates and vegetables or fruit and that dairy is in a meal at least once or twice each day.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'This could liven things up: the grill isn’t just for toast – use it to cook vegetables and fruits as well. Try grilling mushrooms, peppers, cherry tomatoes and thick slices of courgette on a kebab skewer. Brush with oil to keep them from drying out. Grilled fruits like peaches, pineapple, or mangoes taste great too.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Try adding diced vegetable such as carrots, onions, parsnips or courgettes, canned tomatoes or canned pulses/beans into your favourite dish for that extra flavour. If you add pulses you can use less meat and save money too.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Add extra vegetables to your pasta sauces, soups bolognaise or chilli con carne. Slip some peppers, spinach, red beans, onions, grated root vegetables or cherry tomatoes into your traditional recipes and then cook as usual.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Forget boring lettuce and tomato. Toss in grated carrots or courgettes, strawberries, spinach, sweetcorn watercress, orange segments, or pea shoots for a flavourful, fun salad. Who can make the best face or picture out of their salad?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'As soon as finger foods are introduced make the most of chop n dip options. Try vegetable sticks (lightly cooked if needed) with houmous or a mild salsa or go fruity and dip into yoghurt or fruity sauce (simply blitz berries for a simple sauce to dip or pour over ice cream or yoghurt).',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Try something new! Stir-fry your veggies — like broccoli, carrots, sugar snap peas, mushrooms, or green beans — for a quick-and-easy addition to any meal. Or buy ready mix from the supermarket form the veg or freezer aisles. Shop bought stir fry sauces tend to high in sugar and salt so avoid adding these for pre-schoolers.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Whether it is a sandwich or wrap, vegetables make great additions to both. Try sliced tomatoes, romaine lettuce, or avocado on your everyday sandwich or wrap for extra flavour. Grate or thinly slice apple with cheese or add mango to chicken or ham for a fruity twist.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Boost the colour and flavour of an omelette with vegetables. Simply chop, sauté, and add them to the egg as it cooks. Try combining different vegetables, such as mushrooms, spinach, onions, tomatoes or peppers.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see, thanks user name! Babies and children have smaller stomachs than adults and so it is important they eat smaller amounts of food regularly.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, I get you! Some children find a lot of food on their plates off putting and this can stop them enjoying mealtimes.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Young children are much better at recognising when they are full than adults to serve small portions and offer more if that is all eaten. Never force a child to clean their plates as this encourage the habit of overeating.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sitting down together for a meal whenever you can is a great way to connect with your family. Keeping it relaxed is key to making sure you are getting the most out of this time together, including talking, laughing and choosing healthy foods.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'It may seem trivial to chat about your day but Making Small Talk with children no matter how young help with speech and language development. Not every family has a table to eat around – but you can still eat together sat on the sofa or have a circle picnic on the floor.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Kids learn by doing. The little ones might carry the cutlery and non-breakable glasses to the table and older kids can help with preparing foods and cleaning‐up the table after.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! These are some questions you can ask me: \n\n Which foods have hidden sugars?\n\nWhat foods are processed?\n\nWhat do I need to give my child for a balanced diet?',
-                        predict: '["Which foods have hidden sugars?", "What foods are processed?", "What do I need to give my child for a balanced diet?"]'
-                    },
-                    {
-                        respMsg: 'You can also ask me questions, user name. Here’s some: \n\nMy baby has no teeth – can they eat solid foods?\n\nI’m worried about my baby choking if I give them lumpy or finger foods\n\nWhen do I give my baby 3 meals a day?',
-                        predict: '["My baby has no teeth – can they eat solid foods?", "I’m worried about my baby choking if I give them lumpy or finger foods", "When do I give my baby 3 meals a day?"]'
-                    },
-                    {
-                        respMsg: 'I also have answers to some questions. Here’s some you may want to ask: \n\nMy baby looks small, are they eating enough?\n\nHow long should a breastfeed last when weaning?\n\nHow do I know when my child has had enough breast milk?',
-                        predict: '["My baby looks small, are they eating enough?", "How long should a breastfeed last when weaning?", "How do I know when my child has had enough breast milk?"]'
-                    },
-                    {
-                        respMsg: 'I can also answer questions. Maybe you’d like to know about these: \n\nWhen can I give fruit juice or smoothies undiluted?\n\nCan I give my baby tea over 6 months of age? \n\nHow much water should a school aged child have?',
-                        predict: '["When can I give fruit juice or smoothies undiluted?", "Can I give my baby tea over 6 months of age?", "How much water should a school aged child have?"]'
-                    },
-                    {
-                        respMsg: 'I see! You can also ask me some questions. Here’s some: \n\n What is a good portion size?\n\nI think my baby is constipated. What do I do?\n\nI think my child is constipated. What should I do?',
-                        predict: '["What is a good portion size?", "I think my baby is constipated. What do I do?", "I think my child is constipated. What should I do?"]'
-                    },
-                    {
-                        respMsg: 'I’m also able to answer questions you may have. These are some you can ask me: \n\nWhat cup should I use?\n\nDoes my child have to eat vegetables?\n\nIs it true that breastfed babies enjoy a wider range of foods?',
-                        predict: '["What cup should I use?", "Does my child have to eat vegetables?", "Is it true that breastfed babies enjoy a wider range of foods?"]'
-                    },
-                    {
-                        respMsg: 'I’m also able to answer questions you may have. These are some you can ask me: \n\nWhat cup should I use?\n\nDoes my child have to eat vegetables?\n\nIs it true that breastfed babies enjoy a wider range of foods?',
-                        predict: '["What cup should I use?", "Does my child have to eat vegetables?", "Is it true that breastfed babies enjoy a wider range of foods?"]'
-                    },
-                    {
-                        respMsg: 'I see! You can also ask me some questions. Here’s some: \n\nTell me about fruits & vegetables \n\nTell me about protein foods \n\nTell me about milk, yoghurt and dairy',
-                        predict: '["Tell me about fruits & vegetables", "Tell me about protein foods", "Tell me about milk, yoghurt and dairy"]'
-                    },
-                    {
-                        respMsg: 'I also have answers to some questions. Here’s some you may want to ask: \n\nTell me about oils & fats\n\nHow do I cut back on sugars? \n\nHow much fluid do I need?',
-                        predict: '["Tell me about oils & fats", "How do I cut back on sugars?", "How much fluid do I need?"]'
-                    },
-                    {
-                        respMsg: 'Okay! These are some questions you can ask me: \n\nWhat can I give as a drink? \n\nAre there drinks I should avoid?\n\nHow can I spend less on good quality meat?',
-                        predict: '["What can I give as a drink?", "Are there drinks I should avoid?", "How can I spend less on good quality meat?"]'
-                    },
-                    {
-                        respMsg: 'Okay, I see 😊 I’m also able to answer some questions. These are some I can answer:\n\nWhat can I give as a drink? \n\nAre there drinks I should avoid?\n\nHow can I spend less on good quality meat?',
-                        predict: '["What can I give as a drink?", "Are there drinks I should avoid?", "How can I spend less on good quality meat?"]'
-                    },
-                    {
-                        respMsg: 'I’m also able to answer questions you may have. These are some you can ask me: \n\nHow do I get smart with snacking?\n\nHow do I keep food safe? \n\nHelp on best before dates',
-                        predict: '["How do I get smart with snacking?", "How do I keep food safe? ", "Help on best before dates"]'
-                    }
+                    // {
+                    //     respMsg: 'I understand. Pulses, such as beans, peas and lentils, are good alternatives to meat because they cost less and are rich in protein, higher in fibre and a source of minerals such as iron and zinc too. They are also less demanding on the planet resources and more sustainable.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure 😊 When eating meat choose small amounts of lean cuts of meat and mince, and eat less red and processed meat like bacon, ham and sausages.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, thanks! Aim for at least 2 portions of fish every week, 1 of which should be oily, such as salmon or mackerel. Buy canned fish canned in spring water or sunflower oil (avoid brine due to higher salt level) or frozen fish to help keep foods costs down.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! Vegetarians get enough protein if the variety and amounts of foods selected are adequate. Protein sources for vegetarians include eggs (for ovo-vegetarians), beans and peas, nuts, nut butters, and soy products (tofu, tempeh, veggie burgers). Try to include a range of different protein foods into your child’s diet over each week.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Thanks for telling me! Eat foods high in fat, salt and sugar less often and in small amounts. \n\nThese foods include chocolate, cakes, biscuits, sugary soft drinks, butter, ghee and ice cream. They\'re not needed in our diet, so should be eaten as treats and not every day.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure! Both adults and children in the UK consume sugar far in excess of need, which causes dental decay, and contributes to overweight and obesity. Everyone is encouraged to cut down on sugary foods and drinks and it is important to limit babies sugar intake from their first tastes of food to discourage development of a preference for sweeter foods.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see, that’s normal! Healthier snack options are those without added sugar or salt, such as fruit (fresh, tinned or frozen), rice cakes, oatcakes, or homemade plain popcorn.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'All food and drink choices matter – and every family will have their own healthy eating style. Finding your healthy eating style will make it easier to eat a healthy balanced diet every day.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Lots of small changes = big wins. Think of every change as a personal win on your path to healthier eating.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay. Make one third of plate veggies and fruits. Vegetables and fruits are full of nutrients that support good health. Choose red, orange fruits and dark-green vegetables such as tomatoes, sweet potatoes, and broccoli.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure! Aim to eat at least one wholegrain food each day such as wholemeal bread or brown rice. Look for the words “100% whole grain” or “100% whole wheat” on the food label. Young children can fill up quickly on higher fibre foods so its fine to use a mixture, but they should get used to some wholegrain foods from the start. As they grow make more of their grain foods ‘wholegrain’.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I think you’re great! Complete two meals a day with a cup of milk, serving of cheese or yoghurt. These provide calcium, protein and other essential nutrients. Plant based alternatives can be used in cooking for <1-year olds or as a drink over 1 year of age but check that they are fortified with calcium and vitamin D. Do not give rice milk to under 5’s due to the amount of arsenic it contains.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! Choose protein foods such as lean beef, pork, chicken, or turkey, and eggs, nut butters, beans, or tofu. Twice a week, make fish the protein on your plate – make one an oily type of fish.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure 😊 Young children need the energy in full fat products, however adding lots of oils and spreads can change a healthier food into a less healthy one – for example turning potato into chips.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Whether you are making a sandwich, a stir-fry, or a casserole, find ways to make them healthier. Try adding in more veggies that add new flavours and textures to your meals. Make unfamiliar foods more appealing by making patterns or pictures on the plate with food.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Try to prepare as much food at home for your children as you can so that you know exactly what they are eating. It’s cheaper than buying ready prepared children’s food and means that the family can all eat the same meals.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Keep it interesting by picking out new foods you’ve never tried before, like mango, lentils, quinoa, kale, or sardines. You may find a new favourite! Check out the recipe options to find tasty recipes for foods that you have never tried.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Ah that’s normal! You can indulge in a naturally sweet dessert dish—fruit! Serve a fresh fruit salad or a fruit parfait made with yogurt. For a hot dessert, bake apples, bananas or peaches and top with cinnamon.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see! We often mistake thirst for hunger and eat when we should be drinking. Try to have 6-8 cups or glasses of water during each day – offering younger children small glasses and a larger one for the grown-ups. Drinking smaller amounts more often means the body is more likely to good use of the fluid and keep dehydration at bay.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see! Planning ahead will help to you make sure everyone eats a healthy balanced diet with a variety of foods and will help you to save money by avoiding impulse buys of food that is then not used.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'This could be helpful – before making a shopping list, write down meals you want to make this week. Try to think of what you can cook that everyone can eat – including the youngest members of the family. Check that every meal includes protein, carbohydrates and vegetables or fruit and that dairy is in a meal at least once or twice each day.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'This could liven things up: the grill isn’t just for toast – use it to cook vegetables and fruits as well. Try grilling mushrooms, peppers, cherry tomatoes and thick slices of courgette on a kebab skewer. Brush with oil to keep them from drying out. Grilled fruits like peaches, pineapple, or mangoes taste great too.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Try adding diced vegetable such as carrots, onions, parsnips or courgettes, canned tomatoes or canned pulses/beans into your favourite dish for that extra flavour. If you add pulses you can use less meat and save money too.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Add extra vegetables to your pasta sauces, soups bolognaise or chilli con carne. Slip some peppers, spinach, red beans, onions, grated root vegetables or cherry tomatoes into your traditional recipes and then cook as usual.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Forget boring lettuce and tomato. Toss in grated carrots or courgettes, strawberries, spinach, sweetcorn watercress, orange segments, or pea shoots for a flavourful, fun salad. Who can make the best face or picture out of their salad?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'As soon as finger foods are introduced make the most of chop n dip options. Try vegetable sticks (lightly cooked if needed) with houmous or a mild salsa or go fruity and dip into yoghurt or fruity sauce (simply blitz berries for a simple sauce to dip or pour over ice cream or yoghurt).',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Try something new! Stir-fry your veggies — like broccoli, carrots, sugar snap peas, mushrooms, or green beans — for a quick-and-easy addition to any meal. Or buy ready mix from the supermarket form the veg or freezer aisles. Shop bought stir fry sauces tend to high in sugar and salt so avoid adding these for pre-schoolers.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Whether it is a sandwich or wrap, vegetables make great additions to both. Try sliced tomatoes, romaine lettuce, or avocado on your everyday sandwich or wrap for extra flavour. Grate or thinly slice apple with cheese or add mango to chicken or ham for a fruity twist.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Boost the colour and flavour of an omelette with vegetables. Simply chop, sauté, and add them to the egg as it cooks. Try combining different vegetables, such as mushrooms, spinach, onions, tomatoes or peppers.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see, thanks user name! Babies and children have smaller stomachs than adults and so it is important they eat smaller amounts of food regularly.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, I get you! Some children find a lot of food on their plates off putting and this can stop them enjoying mealtimes.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Young children are much better at recognising when they are full than adults to serve small portions and offer more if that is all eaten. Never force a child to clean their plates as this encourage the habit of overeating.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sitting down together for a meal whenever you can is a great way to connect with your family. Keeping it relaxed is key to making sure you are getting the most out of this time together, including talking, laughing and choosing healthy foods.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'It may seem trivial to chat about your day but Making Small Talk with children no matter how young help with speech and language development. Not every family has a table to eat around – but you can still eat together sat on the sofa or have a circle picnic on the floor.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Kids learn by doing. The little ones might carry the cutlery and non-breakable glasses to the table and older kids can help with preparing foods and cleaning‐up the table after.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! These are some questions you can ask me: \n\n Which foods have hidden sugars?\n\nWhat foods are processed?\n\nWhat do I need to give my child for a balanced diet?',
+                    //     predict: '["Which foods have hidden sugars?", "What foods are processed?", "What do I need to give my child for a balanced diet?"]'
+                    // },
+                    // {
+                    //     respMsg: 'You can also ask me questions, user name. Here’s some: \n\nMy baby has no teeth – can they eat solid foods?\n\nI’m worried about my baby choking if I give them lumpy or finger foods\n\nWhen do I give my baby 3 meals a day?',
+                    //     predict: '["My baby has no teeth – can they eat solid foods?", "I’m worried about my baby choking if I give them lumpy or finger foods", "When do I give my baby 3 meals a day?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I also have answers to some questions. Here’s some you may want to ask: \n\nMy baby looks small, are they eating enough?\n\nHow long should a breastfeed last when weaning?\n\nHow do I know when my child has had enough breast milk?',
+                    //     predict: '["My baby looks small, are they eating enough?", "How long should a breastfeed last when weaning?", "How do I know when my child has had enough breast milk?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I can also answer questions. Maybe you’d like to know about these: \n\nWhen can I give fruit juice or smoothies undiluted?\n\nCan I give my baby tea over 6 months of age? \n\nHow much water should a school aged child have?',
+                    //     predict: '["When can I give fruit juice or smoothies undiluted?", "Can I give my baby tea over 6 months of age?", "How much water should a school aged child have?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I see! You can also ask me some questions. Here’s some: \n\n What is a good portion size?\n\nI think my baby is constipated. What do I do?\n\nI think my child is constipated. What should I do?',
+                    //     predict: '["What is a good portion size?", "I think my baby is constipated. What do I do?", "I think my child is constipated. What should I do?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I’m also able to answer questions you may have. These are some you can ask me: \n\nWhat cup should I use?\n\nDoes my child have to eat vegetables?\n\nIs it true that breastfed babies enjoy a wider range of foods?',
+                    //     predict: '["What cup should I use?", "Does my child have to eat vegetables?", "Is it true that breastfed babies enjoy a wider range of foods?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I’m also able to answer questions you may have. These are some you can ask me: \n\nWhat cup should I use?\n\nDoes my child have to eat vegetables?\n\nIs it true that breastfed babies enjoy a wider range of foods?',
+                    //     predict: '["What cup should I use?", "Does my child have to eat vegetables?", "Is it true that breastfed babies enjoy a wider range of foods?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I see! You can also ask me some questions. Here’s some: \n\nTell me about fruits & vegetables \n\nTell me about protein foods \n\nTell me about milk, yoghurt and dairy',
+                    //     predict: '["Tell me about fruits & vegetables", "Tell me about protein foods", "Tell me about milk, yoghurt and dairy"]'
+                    // },
+                    // {
+                    //     respMsg: 'I also have answers to some questions. Here’s some you may want to ask: \n\nTell me about oils & fats\n\nHow do I cut back on sugars? \n\nHow much fluid do I need?',
+                    //     predict: '["Tell me about oils & fats", "How do I cut back on sugars?", "How much fluid do I need?"]'
+                    // },
+                    // {
+                    //     respMsg: 'Okay! These are some questions you can ask me: \n\nWhat can I give as a drink? \n\nAre there drinks I should avoid?\n\nHow can I spend less on good quality meat?',
+                    //     predict: '["What can I give as a drink?", "Are there drinks I should avoid?", "How can I spend less on good quality meat?"]'
+                    // },
+                    // {
+                    //     respMsg: 'Okay, I see 😊 I’m also able to answer some questions. These are some I can answer:\n\nWhat can I give as a drink? \n\nAre there drinks I should avoid?\n\nHow can I spend less on good quality meat?',
+                    //     predict: '["What can I give as a drink?", "Are there drinks I should avoid?", "How can I spend less on good quality meat?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I’m also able to answer questions you may have. These are some you can ask me: \n\nHow do I get smart with snacking?\n\nHow do I keep food safe? \n\nHelp on best before dates',
+                    //     predict: '["How do I get smart with snacking?", "How do I keep food safe? ", "Help on best before dates"]'
+                    // }
 
                 ],
                 nextPath: {
@@ -2575,74 +2575,74 @@ var obj = {
                     //     respMsg: 'Could you try walking to the shops or to see a friend? Maybe you could turn off the TV and dance to music? I enjoy rolling around on the floor. I don’t really, I can’t even do that because I’m a robot. Maybe your child would enjoy it?',
                     //     predict: ''
                     // },
-                    {
-                        respMsg: 'You seem fun, user name! Lead by example and be your child’s role model. This is so true for so many parts of family life. Walk together, play together and eat together. Ask friends along and share experiences. It’s good to create routines to help everyone feel secure.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Even though play together is good, allow your child to play by themselves and at their own pace. Play also means they can spend time imagining and inventing things all on their own. Give them time to do nothing but daydream too!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see! All too often parents buy mountains of new toys for their kids which turn out to be a 10-minute wonder! Children need to learn how to play and keep active with basic things that are simply around the house, cardboard boxes, plastic tubs, and wooden spoons all make great toys.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure 😊 Don’t feel that you always have to spend lots of money on toys. Ask around for second-hand toys or join a local toy library. As long as they are clean it doesn’t matter that anything is second hand, and when your child grows out of something and loses interest – don’t throw it out, pass it on!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, user name! Your child will find things that they want to do, sometimes almost by accident. Note what skills they seem to enjoy and encourage them. Kids are happy when they achieve something new and usually want to share their moment with you too. The key is to keep doing different things and ring the changes.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'How’s it going today?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay 😊 Older siblings and grandparents can be a massive influence in helping to keep your child active. The bond between other family members can be incredibly special. Grandparents can have oodles of experience to offer and often have more time.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Ok, I hear you, user name! Encourage your kids and grandparents to do things together and they will all benefit. They can be active activities, quiet activities and activities that help your kids to grow and develop their skills such as thinking and talking.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Right, I see! You can have a sing-along, or read a book together, even paint a picture!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Walking is a fun and easy way to get active with the family. Why not take a family walk today?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nWhen will my baby learn to crawl?\n\nWhen will my baby learn to walk? \n\nWhat is a Toy Library?',
-                        predict: '["When will my baby learn to crawl?", "When will my baby learn to walk?", "What is a Toy Library?"]'
-                    },
-                    {
-                        respMsg: 'Okay! I can also answer questions. Maybe you’re interested in some of these… \n\nHow do I register with the Children’s Centre parent and baby groups?\n\nCan Family Information Services provide me with local activities? \n\nCan Family Information Services provide me with local activities for school age children?',
-                        predict: '["How do I register with the Children’s Centre parent and baby groups?", "Can Family Information Services provide me with local activities?", "Can Family Information Services provide me with local activities for school age children?"]'
-                    },
-                    {
-                        respMsg: 'I can also answer questions. Here’s some you can ask: \n\nMy toddler gets bored of his/her toys, what can I do?\n\nWhy should families be active?\n\nWhat sort of things could we do to be active?',
-                        predict: '["My toddler gets bored of his/her toys, what can I do?", "Why should families be active?", "What sort of things could we do to be active?"]'
-                    },
-                    {
-                        respMsg: 'I’m only a robot but I do know the answers to some questions! Here’s some you could ask: \n\nWhat counts as physical activity?\n\n Which activities develops motor skills?\n\nHow much activity does my child need?',
-                        predict: '["What counts as physical activity?", "Which activities develops motor skills?", "How much activity does my child need?"]'
-                    },
-                    {
-                        respMsg: 'Okay, I see! You can also ask me questions. Here’s some: \n\nWhat physical activities are best for my child?\n\nWhat is Activity snacking?\n\n My child hates walking what do I do?',
-                        predict: '["What physical activities are best for my child?", "What is Activity snacking?", "My child hates walking what do I do?"]'
-                    },
-                    {
-                        respMsg: 'These are some questions you can ask me too: \n\nI need to drive my older kids to school – how can that encourage my younger child to walk?\n\n How much activity should my disabled child do? ',
-                        predict: '["I need to drive my older kids to school – how can that encourage my younger child to walk?", "How much activity should my disabled child do?"]'
-                    },
-                    {
-                        respMsg: 'Okay! As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\n I’m pregnant with my next child, what can I do together with my older child?\n\nWhat if I work part time or full time and my child is in nursery?',
-                        predict: '["I’m pregnant with my next child, what can I do together with my older child?", "What if I work part time or full time and my child is in nursery?"]'
-                    }
+                    // {
+                    //     respMsg: 'You seem fun, user name! Lead by example and be your child’s role model. This is so true for so many parts of family life. Walk together, play together and eat together. Ask friends along and share experiences. It’s good to create routines to help everyone feel secure.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Even though play together is good, allow your child to play by themselves and at their own pace. Play also means they can spend time imagining and inventing things all on their own. Give them time to do nothing but daydream too!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see! All too often parents buy mountains of new toys for their kids which turn out to be a 10-minute wonder! Children need to learn how to play and keep active with basic things that are simply around the house, cardboard boxes, plastic tubs, and wooden spoons all make great toys.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure 😊 Don’t feel that you always have to spend lots of money on toys. Ask around for second-hand toys or join a local toy library. As long as they are clean it doesn’t matter that anything is second hand, and when your child grows out of something and loses interest – don’t throw it out, pass it on!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, user name! Your child will find things that they want to do, sometimes almost by accident. Note what skills they seem to enjoy and encourage them. Kids are happy when they achieve something new and usually want to share their moment with you too. The key is to keep doing different things and ring the changes.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'How’s it going today?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay 😊 Older siblings and grandparents can be a massive influence in helping to keep your child active. The bond between other family members can be incredibly special. Grandparents can have oodles of experience to offer and often have more time.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Ok, I hear you, user name! Encourage your kids and grandparents to do things together and they will all benefit. They can be active activities, quiet activities and activities that help your kids to grow and develop their skills such as thinking and talking.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Right, I see! You can have a sing-along, or read a book together, even paint a picture!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Walking is a fun and easy way to get active with the family. Why not take a family walk today?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nWhen will my baby learn to crawl?\n\nWhen will my baby learn to walk? \n\nWhat is a Toy Library?',
+                    //     predict: '["When will my baby learn to crawl?", "When will my baby learn to walk?", "What is a Toy Library?"]'
+                    // },
+                    // {
+                    //     respMsg: 'Okay! I can also answer questions. Maybe you’re interested in some of these… \n\nHow do I register with the Children’s Centre parent and baby groups?\n\nCan Family Information Services provide me with local activities? \n\nCan Family Information Services provide me with local activities for school age children?',
+                    //     predict: '["How do I register with the Children’s Centre parent and baby groups?", "Can Family Information Services provide me with local activities?", "Can Family Information Services provide me with local activities for school age children?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I can also answer questions. Here’s some you can ask: \n\nMy toddler gets bored of his/her toys, what can I do?\n\nWhy should families be active?\n\nWhat sort of things could we do to be active?',
+                    //     predict: '["My toddler gets bored of his/her toys, what can I do?", "Why should families be active?", "What sort of things could we do to be active?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I’m only a robot but I do know the answers to some questions! Here’s some you could ask: \n\nWhat counts as physical activity?\n\n Which activities develops motor skills?\n\nHow much activity does my child need?',
+                    //     predict: '["What counts as physical activity?", "Which activities develops motor skills?", "How much activity does my child need?"]'
+                    // },
+                    // {
+                    //     respMsg: 'Okay, I see! You can also ask me questions. Here’s some: \n\nWhat physical activities are best for my child?\n\nWhat is Activity snacking?\n\n My child hates walking what do I do?',
+                    //     predict: '["What physical activities are best for my child?", "What is Activity snacking?", "My child hates walking what do I do?"]'
+                    // },
+                    // {
+                    //     respMsg: 'These are some questions you can ask me too: \n\nI need to drive my older kids to school – how can that encourage my younger child to walk?\n\n How much activity should my disabled child do? ',
+                    //     predict: '["I need to drive my older kids to school – how can that encourage my younger child to walk?", "How much activity should my disabled child do?"]'
+                    // },
+                    // {
+                    //     respMsg: 'Okay! As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\n I’m pregnant with my next child, what can I do together with my older child?\n\nWhat if I work part time or full time and my child is in nursery?',
+                    //     predict: '["I’m pregnant with my next child, what can I do together with my older child?", "What if I work part time or full time and my child is in nursery?"]'
+                    // }
 
                 ],
                 nextPath: {
@@ -2763,138 +2763,138 @@ var obj = {
                     //     respMsg: 'We don’t just eat food, we see it, touch it, smell it, taste it and hear it (as we touch it and when it’s in our mouths being chewed. Some children can have very sensitive taste to smell or want their foods all at room temperature because they are sensitive to hot or cold. Trying to work out which sense most affect your child’s eating a drinking could be the key to encouraging intake of a wider range of foods.',
                     //     predict: ''
                     // },
-                    {
-                        respMsg: 'Okay! Your child may not want to try new foods. It is normal for children to reject foods they have never tried before. Why not try new foods together as a family and each describe how the food feels, smells and tastes – make sure that those family members who are old enough try to use positive descriptions to encourage food intake and not just negative.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure 😊 Rather than worrying about what your child eats at every meal, it’s more helpful to think about what they eat over the week. Your child’s picky eating is temporary. If you don’t make it a big deal, it will usually end before school age. Learning to eat is like any other learning process and it takes time!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'You and other family members will be role models to your child and your child will copy you all. Offer the same foods for the whole family and serve the same meal to adults and kids. Let them see you enjoy healthy foods. Talk about the colours, shapes, and textures on the plate. Watch the salt though – avoid adding salt to meals that you are going to serve to your child.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see, that’s normal. If your child refuses the food, you have served then stay calm and don’t make a fuss about it. Avoid forcing your child to eat it and quietly take the food away.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Eating together is a habit to stick to as much as you can. Try and sit down to family meals together as often as you can. Many families may not manage every meal, but some will be possible even if it’s just breakfast or dinner. Even if you don’t eat with the children make sure you sit at the table and talk about their food, their day and family life.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, user name! Your child may eat slowly. Try and serve meals and snacks when there is the time for your child to eat it in a calm and peaceful way. If you try and hurry the pace, then things are likely to get quite fraught! But set a reasonable time limit for a meal e.g. 30 minutes and then take it away.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'It’s worrying for parents when their child reject food and it’s tempting to offer them something you know they will like soon after a meal – just to make sure they’ve eaten something. It’s better to wait until the next meal (or usual snack time) though and stay with a regular meal pattern.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see 😊 If your child is tired, then it’s likely that they are too tired to eat too! Offer meals and snacks at regular times and when your child has the energy to eat.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'It’s so much better for you and your child to eat in a calm, relaxed environment without distractions such as TV, games and toys. Young children can only concentrate on one thing at a time and distractions make it more difficult to focus on eating.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Your child will often eat things that other children are eating. Invite friends and their children round to tea – opt for the good eaters though! Your child is going to be more willing to taste and accept foods into their diets the foods that they have seen others eating.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'After about 20 or 30 minutes end the meal. If you carry the meal on for too long your child might also keep eating and eating. As a result, they may eat too much and gain a bit too much weight. It’s a better idea to wait for the next snack or meal and offer them nutritious foods then.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! When your child starts to keep their mouth shut when you are trying to feed them, they gag or spit food out, then it’s pretty likely they have had enough. They might also turn their head away when you offer then food or push their spoon and bowl away – or even throw it overboard!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I sense you’re a great person. Often children are eating more than realise as we look at a single meal and not the whole day. Make a record of what you are serving to your child and then what they have eaten form the meal.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Introduce your child to different fruit and vegetables by reading books and stories that focus on fruit and vegetables characters. Show your child pictures of a range of fruit and vegetables. You can do this at any time of day, not just as a bedtime story.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Provide children with opportunities to eat new and disliked foods fruit and vegetables. It might take time for them to learn to like different flavours so keep offering. Offer them choices. Rather than ask, “Do you want broccoli for dinner?” ask “Which would you like for dinner, broccoli or cauliflower?”',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Children love to be told ‘well done’ so words of simple praise can go a long way. Each time your child tastes a refused food, give them a sticker, badge, or rubber stamp.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Are grandparents or other members of the family helping?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Children are like sponges, picking up habits and behaviours from those they see around them. This means that role models can play a really important part in shaping children\'s eating habits.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Try to ensure that you are modelling healthy eating behaviours in front of your child.  If you want your child to eat a new food, they need to see you eating it too. If you don\'t want your child to eat a food such as chocolate or crisps, don\'t eat those foods in front of them.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Commenting on foods that you like can help direct children\'s attention to that food and encourage them to try it too. For example, "Mummy really likes green beans" or "Look how crunchy these carrots are". You can even say “Teddi loves greens!”',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'We don\'t all like the same foods, and that\'s fine. Do avoid commenting on foods you don’t like such as saying "urgh, I don\'t like mushrooms at all’ because your child is likely to pick up on it. They are much less likely to want to try that food. So, keep thoughts about disliked foods to yourself!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Could you mention others to your child who are doing good at eating vegetables?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'That’s normal! Siblings, other family members or friends can be very helpful for encouraging children to try a food. Remember never to pressure or force a child to eat something they don’t want!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Don\'t ever feel you have to cope alone. Friends and family can be a great support so don’t bottle things up and share your concerns with others.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'When you child refuses food, has a tantrum and starts being a bit disruptive, remember it’s all part of them growing up and exerting their opinion.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I’m here to help and so is your health visitor! ',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! I can also answer questions. Maybe you’re interested in some of these… \n\n What is fussy eating? \n\nWhat causes fussy eating? \n\nWhere can I get help for fussy eating?',
-                        predict: '["What is fussy eating?", "What causes fussy eating?", "Where can I get help for fussy eating?"]'
-                    },
-                    {
-                        respMsg: 'I can also answer questions. Here’s some you can ask: \n\nIs constipation a cause of fussy eating?\n\n My child doesn’t eat properly – what do I do?\n\n Is my baby hungry because they keep putting their fist into their mouth?',
-                        predict: '["Is constipation a cause of fussy eating?", "My child doesn’t eat properly – what do I do?", "Is my baby hungry because they keep putting their fist into their mouth?"]'
-                    },
-                    {
-                        respMsg: 'I’m only a robot but I do know the answers to some questions! Here’s some you could ask: \n\nAll my child want to eat is sweet treats.\n\nMy baby only eats sweet things.\n\n How do you get my child to eat vegetables without an argument?',
-                        predict: '["All my child want to eat is sweet treats.", "My baby only eats sweet things.", "How do you get my child to eat vegetables without an argument?"]'
-                    },
-                    {
-                        respMsg: 'Okay, I see! You can also ask me questions. Here’s some: \n\nMy baby will only eat with the TV on is that OK?\n\n My child won’t eat vegetables what should I do? \n\nMy child won’t eat green vegetables',
-                        predict: '["My baby will only eat with the TV on is that OK?", "My child won’t eat vegetables what should I do?", "My child won’t eat green vegetables"]'
-                    },
-                    {
-                        respMsg: 'These are some questions you can ask me too: \n\nHow do I get my child to eat vegetables?\n\nMy child is suddenly refusing to eat foods they used to eat.\n\nDoes fussy eating lead to eating disorders later on?',
-                        predict: '["How do I get my child to eat vegetables?", "My child is suddenly refusing to eat foods they used to eat.", "Does fussy eating lead to eating disorders later on?"]'
-                    },
-                    {
-                        respMsg: 'Okay! As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nIs it fussy eating a sign of autism? \n\nDoes eating together really matter? \n\nWhat strategies can I use to support my fussy child?',
-                        predict: '["Is it fussy eating a sign of autism?", "Does eating together really matter?", "What strategies can I use to support my fussy child?"]'
-                    },
-                    {
-                        respMsg: 'Okay! As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nMy child refuses food at mealtimes should I give them snacks? \n\nMealtimes are such a battle ground – how do I make them more enjoyable? ',
-                        predict: '["My child refuses food at mealtimes should I give them snacks?", "Mealtimes are such a battle ground – how do I make them more enjoyable?"]'
-                    },
+                    // {
+                    //     respMsg: 'Okay! Your child may not want to try new foods. It is normal for children to reject foods they have never tried before. Why not try new foods together as a family and each describe how the food feels, smells and tastes – make sure that those family members who are old enough try to use positive descriptions to encourage food intake and not just negative.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure 😊 Rather than worrying about what your child eats at every meal, it’s more helpful to think about what they eat over the week. Your child’s picky eating is temporary. If you don’t make it a big deal, it will usually end before school age. Learning to eat is like any other learning process and it takes time!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'You and other family members will be role models to your child and your child will copy you all. Offer the same foods for the whole family and serve the same meal to adults and kids. Let them see you enjoy healthy foods. Talk about the colours, shapes, and textures on the plate. Watch the salt though – avoid adding salt to meals that you are going to serve to your child.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see, that’s normal. If your child refuses the food, you have served then stay calm and don’t make a fuss about it. Avoid forcing your child to eat it and quietly take the food away.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Eating together is a habit to stick to as much as you can. Try and sit down to family meals together as often as you can. Many families may not manage every meal, but some will be possible even if it’s just breakfast or dinner. Even if you don’t eat with the children make sure you sit at the table and talk about their food, their day and family life.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, user name! Your child may eat slowly. Try and serve meals and snacks when there is the time for your child to eat it in a calm and peaceful way. If you try and hurry the pace, then things are likely to get quite fraught! But set a reasonable time limit for a meal e.g. 30 minutes and then take it away.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'It’s worrying for parents when their child reject food and it’s tempting to offer them something you know they will like soon after a meal – just to make sure they’ve eaten something. It’s better to wait until the next meal (or usual snack time) though and stay with a regular meal pattern.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see 😊 If your child is tired, then it’s likely that they are too tired to eat too! Offer meals and snacks at regular times and when your child has the energy to eat.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'It’s so much better for you and your child to eat in a calm, relaxed environment without distractions such as TV, games and toys. Young children can only concentrate on one thing at a time and distractions make it more difficult to focus on eating.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Your child will often eat things that other children are eating. Invite friends and their children round to tea – opt for the good eaters though! Your child is going to be more willing to taste and accept foods into their diets the foods that they have seen others eating.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'After about 20 or 30 minutes end the meal. If you carry the meal on for too long your child might also keep eating and eating. As a result, they may eat too much and gain a bit too much weight. It’s a better idea to wait for the next snack or meal and offer them nutritious foods then.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! When your child starts to keep their mouth shut when you are trying to feed them, they gag or spit food out, then it’s pretty likely they have had enough. They might also turn their head away when you offer then food or push their spoon and bowl away – or even throw it overboard!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I sense you’re a great person. Often children are eating more than realise as we look at a single meal and not the whole day. Make a record of what you are serving to your child and then what they have eaten form the meal.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Introduce your child to different fruit and vegetables by reading books and stories that focus on fruit and vegetables characters. Show your child pictures of a range of fruit and vegetables. You can do this at any time of day, not just as a bedtime story.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Provide children with opportunities to eat new and disliked foods fruit and vegetables. It might take time for them to learn to like different flavours so keep offering. Offer them choices. Rather than ask, “Do you want broccoli for dinner?” ask “Which would you like for dinner, broccoli or cauliflower?”',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Children love to be told ‘well done’ so words of simple praise can go a long way. Each time your child tastes a refused food, give them a sticker, badge, or rubber stamp.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Are grandparents or other members of the family helping?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Children are like sponges, picking up habits and behaviours from those they see around them. This means that role models can play a really important part in shaping children\'s eating habits.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Try to ensure that you are modelling healthy eating behaviours in front of your child.  If you want your child to eat a new food, they need to see you eating it too. If you don\'t want your child to eat a food such as chocolate or crisps, don\'t eat those foods in front of them.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Commenting on foods that you like can help direct children\'s attention to that food and encourage them to try it too. For example, "Mummy really likes green beans" or "Look how crunchy these carrots are". You can even say “Teddi loves greens!”',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'We don\'t all like the same foods, and that\'s fine. Do avoid commenting on foods you don’t like such as saying "urgh, I don\'t like mushrooms at all’ because your child is likely to pick up on it. They are much less likely to want to try that food. So, keep thoughts about disliked foods to yourself!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Could you mention others to your child who are doing good at eating vegetables?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'That’s normal! Siblings, other family members or friends can be very helpful for encouraging children to try a food. Remember never to pressure or force a child to eat something they don’t want!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Don\'t ever feel you have to cope alone. Friends and family can be a great support so don’t bottle things up and share your concerns with others.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'When you child refuses food, has a tantrum and starts being a bit disruptive, remember it’s all part of them growing up and exerting their opinion.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I’m here to help and so is your health visitor! ',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! I can also answer questions. Maybe you’re interested in some of these… \n\n What is fussy eating? \n\nWhat causes fussy eating? \n\nWhere can I get help for fussy eating?',
+                    //     predict: '["What is fussy eating?", "What causes fussy eating?", "Where can I get help for fussy eating?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I can also answer questions. Here’s some you can ask: \n\nIs constipation a cause of fussy eating?\n\n My child doesn’t eat properly – what do I do?\n\n Is my baby hungry because they keep putting their fist into their mouth?',
+                    //     predict: '["Is constipation a cause of fussy eating?", "My child doesn’t eat properly – what do I do?", "Is my baby hungry because they keep putting their fist into their mouth?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I’m only a robot but I do know the answers to some questions! Here’s some you could ask: \n\nAll my child want to eat is sweet treats.\n\nMy baby only eats sweet things.\n\n How do you get my child to eat vegetables without an argument?',
+                    //     predict: '["All my child want to eat is sweet treats.", "My baby only eats sweet things.", "How do you get my child to eat vegetables without an argument?"]'
+                    // },
+                    // {
+                    //     respMsg: 'Okay, I see! You can also ask me questions. Here’s some: \n\nMy baby will only eat with the TV on is that OK?\n\n My child won’t eat vegetables what should I do? \n\nMy child won’t eat green vegetables',
+                    //     predict: '["My baby will only eat with the TV on is that OK?", "My child won’t eat vegetables what should I do?", "My child won’t eat green vegetables"]'
+                    // },
+                    // {
+                    //     respMsg: 'These are some questions you can ask me too: \n\nHow do I get my child to eat vegetables?\n\nMy child is suddenly refusing to eat foods they used to eat.\n\nDoes fussy eating lead to eating disorders later on?',
+                    //     predict: '["How do I get my child to eat vegetables?", "My child is suddenly refusing to eat foods they used to eat.", "Does fussy eating lead to eating disorders later on?"]'
+                    // },
+                    // {
+                    //     respMsg: 'Okay! As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nIs it fussy eating a sign of autism? \n\nDoes eating together really matter? \n\nWhat strategies can I use to support my fussy child?',
+                    //     predict: '["Is it fussy eating a sign of autism?", "Does eating together really matter?", "What strategies can I use to support my fussy child?"]'
+                    // },
+                    // {
+                    //     respMsg: 'Okay! As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nMy child refuses food at mealtimes should I give them snacks? \n\nMealtimes are such a battle ground – how do I make them more enjoyable? ',
+                    //     predict: '["My child refuses food at mealtimes should I give them snacks?", "Mealtimes are such a battle ground – how do I make them more enjoyable?"]'
+                    // },
                 ],
                 nextPath: {
                     master: "randomConvo",
@@ -2970,174 +2970,174 @@ var obj = {
                     //     respMsg: 'Okay, I understand 😊 You might not think it – particularly today when people appear to post a constant stream of happy life events and successes on social media – but everyone makes mistakes and has bad days. They just don’t post about these and so you don’t realise that they have wobbles as well.',
                     //     predict: ''
                     // },
-                    {
-                        respMsg: 'That’s very common 😊 Praise your child for effort. Achievement is good too, but just trying to do something and working hard is a wonderful thing to acknowledge. Children often take a lot of practice before they learn to do something new and so praising the trying becomes really important to help them get there.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Most people say something similar! Reading is a great way to entertain your child and spark their imagination. Not only that it gets them away from screens, but also helps you and your child to bond. Bedtime stories are a great way to settle them down for a good night’s sleep.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure, thanks 😊 Get out into the fresh air together. Go for a walk and play on the playground. Point out the ducks, the dogs and the birds and simply watch the world go by.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Ah, I see 😊 Visit friends who have children so the children can play together while you have a good natter with your friends. Or arrange to meet in the park or at a local activity centre. Outings are always more fun with other company around.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: '😊 Try mindful eating. This involves paying attention to the taste, sight and textures of what you eat. For example, when drinking a cup of tea or coffee you could focus on how hot and liquid it feels on your tongue, how sweet it tastes or watch the steam that it gives off.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Thank you 😊 Notice the feeling of your body moving. You might notice the breeze against your skin, the feeling of your feet or hands against different textures on the ground or nearby surfaces, and the different smells that are around you.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! Move your attention slowly through different parts of the body, starting from the top of your head moving all the way down to the end of your toes. You could focus on feelings of warmth, tension, tingling or relaxation of different parts of your body.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure, okay 😊 Sit and focus on your breath, sensations in your body and the things you can hear around you. Try to bring you focus back to the present if your mind starts to wander. Just notice what you do notice. ',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! Given the pleasures and benefits of social ties, why not grasp opportunities to expand your social circle and deepen the ties you’ve already made?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see, sure 😊 When you are looking after young children there never seems to be time to just sit and enjoy a hot drink. Simple as it sounds, taking 5 minutes when you can to just sit, and be and enjoy the moment can make a huge difference to dealing with the continuous hub bub in between.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I like how you think, user name! The way we think (and what we think about) can affect how we feel and act. For example, if you think or worry a lot about past or future events, you might often feel sad or anxious. Mindfulness uses various techniques to bring your attention to the present (usually focusing on your body and your breathing).',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Put on some nursery rhymes, or other music and sing and dance. Any music will do – watch your child join in and have fun.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'If checking social media leaves you feeling down then stop – give yourself short periods to check on important stuff and then put your phone down, for several hours at a time.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Put your phone down and connect with nature. (Yes even though I’m on your phone, you can come back later, I only care about helping you)!',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'There are days when everything will go perfectly to plan, but other days won’t. Realising that perfection isn’t possible and accepting limitations can make life a lot less frustrating. You didn’t manage something today? Was it really a problem? Just take a deep breath, smile, prioritise the things that actually have to be done and leave the rest until tomorrow.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'A huge amount of social and emotional development takes place during early childhood. As children experience their own emotions, temper tantrums, mood swings, and an expanding social world, they have to learn about their emotions, as well as those of other people.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Love is usually the answer! Love your child, love yourself, take a moment and wish a stranger well.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Think of someone you know. Picture them. Wish them well, for their dreams to come true, for them to be happy.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see! Explaining feelings can also help to build a solid foundation. Right from birth explain feelings to your children. Feelings drive behaviour and you can help your child to recognise why they are feeling the way they are. For example, ‘you’re feeling sad because your special cuddly toy can’t be found’. Or I’m is feeling a bit cross today because the washing machine broke, and we can’t get our clothes clean and it’s a problem that I need to get fixed.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Encourage children to recognise their own emotion and also to think about how others might be feeling – this is called empathy. By talking about feelings and asking questions about emotions children will start to learn themselves and how their response to people affects how other people feel.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! Talking about emotions with others can be an effective way to deal with them. So be available to chat with your children. Listen carefully to what they have to say. Offer comfort where you can.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure! Sometimes it can be helpful to explain what you are feeling and why – ‘right now I am feeling really frustrated and cross because I’ve asked you three times to put your shoes on so that we can go to the shops and you still haven’t done this.’',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Take a moment to transcend concepts. Just sit and feel what it’s like to be you.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sometimes children’s venting, crying, silence, or quarrelling represent their first steps toward coming to terms with their emotions.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'We often get hung up on bad habits and behaviours we don’t like and forget to praise the good stuff. Remembering to praise your child when they do something well or behave well is easily overlooked but can drive good self-esteem and confidence in children far more effectively than telling them off.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'How have you been this week?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'How was yesterday for you and the family?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I’ve had a good day today because I’m talking to you! How do you feel now?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sometimes we need to help children to find different ways to deal with their emotions.  Acknowledge their feelings, I know you are feeling angry because…… and then try to direct them to a more positive way of letting this out – e.g. running around in the park and shouting at the trees rather than at another child.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'If you think your child is working up to a tantrum, find something to distract them with straight away. This could be something you can see out of the window. For example, you could say, "Look! A cat". Make yourself sound as surprised and interested as you can.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! Losing your temper or shouting back won\'t end a tantrum. Ignore the looks you get from people around you and concentrate on staying calm.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Focusing on what you can do and what is going well which will improve your sense of emotional wellbeing.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'What does it feel like to be you?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Take a moment to lean in, be curious, how does it feel to feel what I feel right now? Be kind.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Nobody picked their brain. It’s okay to feel how you feel. It’s okay for others to feel how they feel. Take a moment to ponder on where thoughts come from. Did you know you were going to think something before you thought it?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Being active, cutting back on alcohol and making sure we have a healthy balanced diet can help boost your mood, and help our wellbeing.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Now is a good time to tell your friends and family that you love them. PS: I love you.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay! I can also answer questions. Maybe you’re interested in some of these… \n\nWhat is emotional wellbeing?\n\nWhat does emotional wellbeing mean to me and my child?\n\nHow do I know that my child is developing good emotional wellbeing?',
-                        predict: '["What is emotional wellbeing?", "What does emotional wellbeing mean to me and my child?", " How do I know that my child is developing good emotional wellbeing?"]'
-                    },
-                    {
-                        respMsg: 'I can also answer questions. Here’s some you can ask: \n\nCan people with mental health problems be emotionally well? \n\n What do I do if I feel I am not coping emotionally?\n\nHow do I learn what makes me feel good?',
-                        predict: '["Can people with mental health problems be emotionally well?", "What do I do if I feel I am not coping emotionally?", "How do I learn what makes me feel good?"]'
-                    },
-                    {
-                        respMsg: 'I’m only a robot but I do know the answers to some questions! Here’s some you could ask: \n\nWhat is a Tantrum?\n\nWhy do Toddlers have Tantrums? \n\nHow do I Prevent Tantrums?',
-                        predict: '["What is a Tantrum?", "Why do Toddlers have Tantrums?", "How do I Prevent Tantrums?"]'
-                    },
-                    {
-                        respMsg: 'Okay, I see! You can also ask me questions. Here’s some: \n\n When do tantrums become a worry?\n\n What is attachment?',
-                        predict: '["When do tantrums become a worry?", "What is attachment?"]'
-                    },
-                    {
-                        respMsg: 'Okay! As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nHow do I manage multiple children with different wellbeing needs?\n\nCan we change whether we are a cup half full or half empty person?',
-                        predict: '["How do I manage multiple children with different wellbeing needs?", "Can we change whether we are a cup half full or half empty person?"]'
-                    },
+                    // {
+                    //     respMsg: 'That’s very common 😊 Praise your child for effort. Achievement is good too, but just trying to do something and working hard is a wonderful thing to acknowledge. Children often take a lot of practice before they learn to do something new and so praising the trying becomes really important to help them get there.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Most people say something similar! Reading is a great way to entertain your child and spark their imagination. Not only that it gets them away from screens, but also helps you and your child to bond. Bedtime stories are a great way to settle them down for a good night’s sleep.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure, thanks 😊 Get out into the fresh air together. Go for a walk and play on the playground. Point out the ducks, the dogs and the birds and simply watch the world go by.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Ah, I see 😊 Visit friends who have children so the children can play together while you have a good natter with your friends. Or arrange to meet in the park or at a local activity centre. Outings are always more fun with other company around.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: '😊 Try mindful eating. This involves paying attention to the taste, sight and textures of what you eat. For example, when drinking a cup of tea or coffee you could focus on how hot and liquid it feels on your tongue, how sweet it tastes or watch the steam that it gives off.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Thank you 😊 Notice the feeling of your body moving. You might notice the breeze against your skin, the feeling of your feet or hands against different textures on the ground or nearby surfaces, and the different smells that are around you.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! Move your attention slowly through different parts of the body, starting from the top of your head moving all the way down to the end of your toes. You could focus on feelings of warmth, tension, tingling or relaxation of different parts of your body.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure, okay 😊 Sit and focus on your breath, sensations in your body and the things you can hear around you. Try to bring you focus back to the present if your mind starts to wander. Just notice what you do notice. ',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! Given the pleasures and benefits of social ties, why not grasp opportunities to expand your social circle and deepen the ties you’ve already made?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see, sure 😊 When you are looking after young children there never seems to be time to just sit and enjoy a hot drink. Simple as it sounds, taking 5 minutes when you can to just sit, and be and enjoy the moment can make a huge difference to dealing with the continuous hub bub in between.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I like how you think, user name! The way we think (and what we think about) can affect how we feel and act. For example, if you think or worry a lot about past or future events, you might often feel sad or anxious. Mindfulness uses various techniques to bring your attention to the present (usually focusing on your body and your breathing).',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Put on some nursery rhymes, or other music and sing and dance. Any music will do – watch your child join in and have fun.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'If checking social media leaves you feeling down then stop – give yourself short periods to check on important stuff and then put your phone down, for several hours at a time.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Put your phone down and connect with nature. (Yes even though I’m on your phone, you can come back later, I only care about helping you)!',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'There are days when everything will go perfectly to plan, but other days won’t. Realising that perfection isn’t possible and accepting limitations can make life a lot less frustrating. You didn’t manage something today? Was it really a problem? Just take a deep breath, smile, prioritise the things that actually have to be done and leave the rest until tomorrow.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'A huge amount of social and emotional development takes place during early childhood. As children experience their own emotions, temper tantrums, mood swings, and an expanding social world, they have to learn about their emotions, as well as those of other people.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Love is usually the answer! Love your child, love yourself, take a moment and wish a stranger well.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Think of someone you know. Picture them. Wish them well, for their dreams to come true, for them to be happy.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see! Explaining feelings can also help to build a solid foundation. Right from birth explain feelings to your children. Feelings drive behaviour and you can help your child to recognise why they are feeling the way they are. For example, ‘you’re feeling sad because your special cuddly toy can’t be found’. Or I’m is feeling a bit cross today because the washing machine broke, and we can’t get our clothes clean and it’s a problem that I need to get fixed.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Encourage children to recognise their own emotion and also to think about how others might be feeling – this is called empathy. By talking about feelings and asking questions about emotions children will start to learn themselves and how their response to people affects how other people feel.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! Talking about emotions with others can be an effective way to deal with them. So be available to chat with your children. Listen carefully to what they have to say. Offer comfort where you can.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure! Sometimes it can be helpful to explain what you are feeling and why – ‘right now I am feeling really frustrated and cross because I’ve asked you three times to put your shoes on so that we can go to the shops and you still haven’t done this.’',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Take a moment to transcend concepts. Just sit and feel what it’s like to be you.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sometimes children’s venting, crying, silence, or quarrelling represent their first steps toward coming to terms with their emotions.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'We often get hung up on bad habits and behaviours we don’t like and forget to praise the good stuff. Remembering to praise your child when they do something well or behave well is easily overlooked but can drive good self-esteem and confidence in children far more effectively than telling them off.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'How have you been this week?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'How was yesterday for you and the family?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I’ve had a good day today because I’m talking to you! How do you feel now?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sometimes we need to help children to find different ways to deal with their emotions.  Acknowledge their feelings, I know you are feeling angry because…… and then try to direct them to a more positive way of letting this out – e.g. running around in the park and shouting at the trees rather than at another child.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'If you think your child is working up to a tantrum, find something to distract them with straight away. This could be something you can see out of the window. For example, you could say, "Look! A cat". Make yourself sound as surprised and interested as you can.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! Losing your temper or shouting back won\'t end a tantrum. Ignore the looks you get from people around you and concentrate on staying calm.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Focusing on what you can do and what is going well which will improve your sense of emotional wellbeing.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'What does it feel like to be you?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Take a moment to lean in, be curious, how does it feel to feel what I feel right now? Be kind.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Nobody picked their brain. It’s okay to feel how you feel. It’s okay for others to feel how they feel. Take a moment to ponder on where thoughts come from. Did you know you were going to think something before you thought it?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Being active, cutting back on alcohol and making sure we have a healthy balanced diet can help boost your mood, and help our wellbeing.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Now is a good time to tell your friends and family that you love them. PS: I love you.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay! I can also answer questions. Maybe you’re interested in some of these… \n\nWhat is emotional wellbeing?\n\nWhat does emotional wellbeing mean to me and my child?\n\nHow do I know that my child is developing good emotional wellbeing?',
+                    //     predict: '["What is emotional wellbeing?", "What does emotional wellbeing mean to me and my child?", " How do I know that my child is developing good emotional wellbeing?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I can also answer questions. Here’s some you can ask: \n\nCan people with mental health problems be emotionally well? \n\n What do I do if I feel I am not coping emotionally?\n\nHow do I learn what makes me feel good?',
+                    //     predict: '["Can people with mental health problems be emotionally well?", "What do I do if I feel I am not coping emotionally?", "How do I learn what makes me feel good?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I’m only a robot but I do know the answers to some questions! Here’s some you could ask: \n\nWhat is a Tantrum?\n\nWhy do Toddlers have Tantrums? \n\nHow do I Prevent Tantrums?',
+                    //     predict: '["What is a Tantrum?", "Why do Toddlers have Tantrums?", "How do I Prevent Tantrums?"]'
+                    // },
+                    // {
+                    //     respMsg: 'Okay, I see! You can also ask me questions. Here’s some: \n\n When do tantrums become a worry?\n\n What is attachment?',
+                    //     predict: '["When do tantrums become a worry?", "What is attachment?"]'
+                    // },
+                    // {
+                    //     respMsg: 'Okay! As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nHow do I manage multiple children with different wellbeing needs?\n\nCan we change whether we are a cup half full or half empty person?',
+                    //     predict: '["How do I manage multiple children with different wellbeing needs?", "Can we change whether we are a cup half full or half empty person?"]'
+                    // },
 
                 ],
                 nextPath: {
@@ -3198,86 +3198,86 @@ var obj = {
                     //     respMsg: 'Right, I understand. Not all children like having their teeth brushed, so you may have to keep trying. Make it into a game or brush your own teeth at the same time and then help your child finish their own.',
                     //     predict: ''
                     // },
-                    {
-                        respMsg: 'Thank you 😊 Some babies seem to find cutting teeth much easier than others, or it may vary for tooth to tooth. Either way teething can be quite distressing for all involved. Don’t worry it is entirely normal for babies to have a few more unsettled days as each tooth cuts through. Remember, teething is not an illness and so if baby has a temperature or appears unwell in any other way then please call your doctor or visit NHS 111.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Thank you for telling me 😊 Tooth brushing should just be a regular part of everyday – twice for around 2 minutes each time. If they are small you may find it easier to stand or sit behind your child, cradling their chin in your hand so you can reach their top and bottom teeth more easily.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure, I see 😊 If you offer children plain water from the start that is what they will expect to drink and anything else can be a treat. Once you start offering squashes and other drinks, water will become less attractive and so make it easy for yourself and don’t offer these at home. Keep squashes and fizzy drinks for treats or parties.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Ah I understand! During mealtimes, offer water from an open or free-flow cup. Using an open cup, or a free-flow cup without a valve, will helps babies learn to drink and is better for your baby’s teeth. If your baby is younger than 6 months, it’s important to sterilise the water by boiling it first and then letting it cool right down.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, thank you! Start right from the very beginning and keep sugar intake to a minimum to help set food preferences for less sweet foods and build good dietary habits for life. Limiting sugar is not being strict or mean – it’s being kind and the best parent that you can be.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Sure, thank you 😊 Here’s a top tip…swap high sugar breakfast cereals for a 50:50 mix with a sugar free cereal or wholemeal toast, crumpets, bagels, plain yogurt with fruit or porridge with berries. At weekends, try scrambled or poached eggs on toast for a tasty alternative.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I see, thank you 😊 Instead of cakes, pastries, biscuits or sweets, try a plain scone, bread sticks, fruit and vegetable sticks, oat or rice cakes with a small amount of peanut butter, sliced banana, cheese or humus.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, I understand 😊 Children tend to copy behaviour - so if they see you choosing to eat less sugary food and drinks they will too.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'That’s very common 😊 I can also answer questions. Maybe you’re interested in some of these… \n\nDo I have to clean my baby’s teeth?\n\nShould I clean my children’s teeth for them?\n\nHow much toothpaste should I use?',
-                        predict: '["Do I have to clean my baby’s teeth?", "Should I clean my children’s teeth for them?", "How much toothpaste should I use?"]'
-                    },
-                    {
-                        respMsg: 'Most people say something similar! I can also answer questions. Here’s some you can ask: \n\nWhen should I first take my child to the dentist?\n\nWhich teething gel can I use?\n\nWhen can I give my baby juice?',
-                        predict: '["When should I first take my child to the dentist?", "Which teething gel can I use?", "When can I give my baby juice?"]'
-                    },
-                    {
-                        respMsg: 'I like how you think, user name! I can also answer questions. Here’s some you can ask: \n\nIs it bad to put juice into bottles?\n\nWhen should I register my baby with a dentist? \n\nCan I prevent tooth decay?',
-                        predict: '["Is it bad to put juice into bottles?", "When should I register my baby with a dentist?", "Can I prevent tooth decay?"]'
-                    },
-                    {
-                        respMsg: 'Can you tell me more?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I love trying to understand you, user name. Could you tell me more?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Babies and children should go to the dentist with you whenever you go for check-ups so that they get used to the noises, smells and surroundings and prepare them for future visits.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I’m only a robot but I do know the answers to some questions! Here’s some you could ask: \n\nIs it bad to put juice into bottles?\n\nWhen should I register my baby with a dentist? \n\nCan I prevent tooth decay?',
-                        predict: '["Is it bad to put juice into bottles?", "When should I register my baby with a dentist?", "Can I prevent tooth decay?"]'
-                    },
-                    {
-                        respMsg: 'You can also ask me questions. Here’s some: \n\nCan I use a fluoride toothpaste?\n\nWhen should my baby develop teeth?\n\nWhere can I get help and advice for oral health?',
-                        predict: '["Can I use a fluoride toothpaste?", "When should my baby develop teeth?", "Where can I get help and advice for oral health?"]'
-                    },
-                    {
-                        respMsg: 'As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nWhat is tooth decay?\n\nWhy does tooth decay matter? \n\nDoes sugar cause tooth decay?',
-                        predict: '["What is tooth decay?", "Why does tooth decay matter?", "Does sugar cause tooth decay?"]'
-                    },
-                    {
-                        respMsg: 'I’m only a robot but I do know the answers to some questions! Here’s some you could ask: \n\nWhy do children get 2 sets of teeth?\n\nDo teething rings work?\n\nWhere do I buy a teething gel and other remedies?',
-                        predict: '["Why do children get 2 sets of teeth?", "Do teething rings work?", "Where do I buy a teething gel and other remedies?"]'
-                    },
-                    {
-                        respMsg: 'You can also ask me questions. Here’s some: \n\nHow can I comfort my teething baby?\n\nWhat age do children lose baby teeth?\n\nHow should I clean my child\'s teeth?',
-                        predict: '["How can I comfort my teething baby?", "What age do children lose baby teeth?", "How should I clean my child\'s teeth?"]'
-                    },
-                    {
-                        respMsg: 'As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\n What sort of brush should children use?\n\nWhich baby drinks are best? \n\nAre baby foods sugary?',
-                        predict: '["What sort of brush should children use?", "Which baby drinks are best?", "Are baby foods sugary?"]'
-                    },
+                    // {
+                    //     respMsg: 'Thank you 😊 Some babies seem to find cutting teeth much easier than others, or it may vary for tooth to tooth. Either way teething can be quite distressing for all involved. Don’t worry it is entirely normal for babies to have a few more unsettled days as each tooth cuts through. Remember, teething is not an illness and so if baby has a temperature or appears unwell in any other way then please call your doctor or visit NHS 111.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Thank you for telling me 😊 Tooth brushing should just be a regular part of everyday – twice for around 2 minutes each time. If they are small you may find it easier to stand or sit behind your child, cradling their chin in your hand so you can reach their top and bottom teeth more easily.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure, I see 😊 If you offer children plain water from the start that is what they will expect to drink and anything else can be a treat. Once you start offering squashes and other drinks, water will become less attractive and so make it easy for yourself and don’t offer these at home. Keep squashes and fizzy drinks for treats or parties.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Ah I understand! During mealtimes, offer water from an open or free-flow cup. Using an open cup, or a free-flow cup without a valve, will helps babies learn to drink and is better for your baby’s teeth. If your baby is younger than 6 months, it’s important to sterilise the water by boiling it first and then letting it cool right down.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, thank you! Start right from the very beginning and keep sugar intake to a minimum to help set food preferences for less sweet foods and build good dietary habits for life. Limiting sugar is not being strict or mean – it’s being kind and the best parent that you can be.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Sure, thank you 😊 Here’s a top tip…swap high sugar breakfast cereals for a 50:50 mix with a sugar free cereal or wholemeal toast, crumpets, bagels, plain yogurt with fruit or porridge with berries. At weekends, try scrambled or poached eggs on toast for a tasty alternative.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I see, thank you 😊 Instead of cakes, pastries, biscuits or sweets, try a plain scone, bread sticks, fruit and vegetable sticks, oat or rice cakes with a small amount of peanut butter, sliced banana, cheese or humus.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, I understand 😊 Children tend to copy behaviour - so if they see you choosing to eat less sugary food and drinks they will too.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'That’s very common 😊 I can also answer questions. Maybe you’re interested in some of these… \n\nDo I have to clean my baby’s teeth?\n\nShould I clean my children’s teeth for them?\n\nHow much toothpaste should I use?',
+                    //     predict: '["Do I have to clean my baby’s teeth?", "Should I clean my children’s teeth for them?", "How much toothpaste should I use?"]'
+                    // },
+                    // {
+                    //     respMsg: 'Most people say something similar! I can also answer questions. Here’s some you can ask: \n\nWhen should I first take my child to the dentist?\n\nWhich teething gel can I use?\n\nWhen can I give my baby juice?',
+                    //     predict: '["When should I first take my child to the dentist?", "Which teething gel can I use?", "When can I give my baby juice?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I like how you think, user name! I can also answer questions. Here’s some you can ask: \n\nIs it bad to put juice into bottles?\n\nWhen should I register my baby with a dentist? \n\nCan I prevent tooth decay?',
+                    //     predict: '["Is it bad to put juice into bottles?", "When should I register my baby with a dentist?", "Can I prevent tooth decay?"]'
+                    // },
+                    // {
+                    //     respMsg: 'Can you tell me more?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I love trying to understand you, user name. Could you tell me more?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Babies and children should go to the dentist with you whenever you go for check-ups so that they get used to the noises, smells and surroundings and prepare them for future visits.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I’m only a robot but I do know the answers to some questions! Here’s some you could ask: \n\nIs it bad to put juice into bottles?\n\nWhen should I register my baby with a dentist? \n\nCan I prevent tooth decay?',
+                    //     predict: '["Is it bad to put juice into bottles?", "When should I register my baby with a dentist?", "Can I prevent tooth decay?"]'
+                    // },
+                    // {
+                    //     respMsg: 'You can also ask me questions. Here’s some: \n\nCan I use a fluoride toothpaste?\n\nWhen should my baby develop teeth?\n\nWhere can I get help and advice for oral health?',
+                    //     predict: '["Can I use a fluoride toothpaste?", "When should my baby develop teeth?", "Where can I get help and advice for oral health?"]'
+                    // },
+                    // {
+                    //     respMsg: 'As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nWhat is tooth decay?\n\nWhy does tooth decay matter? \n\nDoes sugar cause tooth decay?',
+                    //     predict: '["What is tooth decay?", "Why does tooth decay matter?", "Does sugar cause tooth decay?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I’m only a robot but I do know the answers to some questions! Here’s some you could ask: \n\nWhy do children get 2 sets of teeth?\n\nDo teething rings work?\n\nWhere do I buy a teething gel and other remedies?',
+                    //     predict: '["Why do children get 2 sets of teeth?", "Do teething rings work?", "Where do I buy a teething gel and other remedies?"]'
+                    // },
+                    // {
+                    //     respMsg: 'You can also ask me questions. Here’s some: \n\nHow can I comfort my teething baby?\n\nWhat age do children lose baby teeth?\n\nHow should I clean my child\'s teeth?',
+                    //     predict: '["How can I comfort my teething baby?", "What age do children lose baby teeth?", "How should I clean my child\'s teeth?"]'
+                    // },
+                    // {
+                    //     respMsg: 'As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\n What sort of brush should children use?\n\nWhich baby drinks are best? \n\nAre baby foods sugary?',
+                    //     predict: '["What sort of brush should children use?", "Which baby drinks are best?", "Are baby foods sugary?"]'
+                    // },
 
                 ],
                 nextPath: {
@@ -3326,80 +3326,80 @@ var obj = {
                     //     respMsg: 'Okay 😊 Planning meals and avoiding over buying of food would mean less waste and that would help the planet too!',
                     //     predict: ''
                     // },
-                    {
-                        respMsg: 'That’s interesting, thank you for telling me 😊 The food that children eat in their early years not only has an impact on the health of the child eating it but also on the health of the planet. Sustainable food is about food culture and how decisions made about growing, buying, storing, cooking and wasting food today will impact future generations.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, I see. Locally grown food in season tend to be less expensive than food that is flown in from another country. It’s more sustainable too. Another tip is to go to a food market towards the end of the day – you may not always get the food you had decided to buy but you are more likely to get a good deal on the price. Store holders don’t want to be left with unsold food at the end of the day as it is simply going to perish and go to waste.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Right, I understand. One of the best things you can do when feeding you and your child is to try and waste less food and drink.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Thank you 😊 Wasted food and drink, regardless of its source, is harmful to the environment because of all the land, water and energy used in its production as well as the release of potent greenhouse gases (methane) by decomposing organic matter in landfill.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'That’s very common 😊 Embrace car-free living! Walking can easily be done from your home rather than driving to a venue. You and your child can walk around the local area without the need for transportation.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I like how you think, user name! 😊',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Can you tell me more?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I love trying to understand you, user name. Could you tell me more?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'That’s very common 😊 I can also answer questions. Maybe you’re interested in some of these… \n\nAm I supposed to buy organic food for my child? \n\nIs it better not to consume meat? \n\nWhat is sustainable eating?',
-                        predict: '["Am I supposed to buy organic food for my child?", "Is it better not to consume meat?", "What is sustainable eating?"]'
-                    },
+                    // {
+                    //     respMsg: 'That’s interesting, thank you for telling me 😊 The food that children eat in their early years not only has an impact on the health of the child eating it but also on the health of the planet. Sustainable food is about food culture and how decisions made about growing, buying, storing, cooking and wasting food today will impact future generations.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, I see. Locally grown food in season tend to be less expensive than food that is flown in from another country. It’s more sustainable too. Another tip is to go to a food market towards the end of the day – you may not always get the food you had decided to buy but you are more likely to get a good deal on the price. Store holders don’t want to be left with unsold food at the end of the day as it is simply going to perish and go to waste.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Right, I understand. One of the best things you can do when feeding you and your child is to try and waste less food and drink.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Thank you 😊 Wasted food and drink, regardless of its source, is harmful to the environment because of all the land, water and energy used in its production as well as the release of potent greenhouse gases (methane) by decomposing organic matter in landfill.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'That’s very common 😊 Embrace car-free living! Walking can easily be done from your home rather than driving to a venue. You and your child can walk around the local area without the need for transportation.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I like how you think, user name! 😊',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Can you tell me more?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I love trying to understand you, user name. Could you tell me more?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'That’s very common 😊 I can also answer questions. Maybe you’re interested in some of these… \n\nAm I supposed to buy organic food for my child? \n\nIs it better not to consume meat? \n\nWhat is sustainable eating?',
+                    //     predict: '["Am I supposed to buy organic food for my child?", "Is it better not to consume meat?", "What is sustainable eating?"]'
+                    // },
 
-                    {
-                        respMsg: 'Most people say something similar! I can also answer questions. Here’s some you can ask: \n\nWhy do we need sustainable diets?\n\nIs a sustainable diet a healthy diet?\n\nI sometimes throw away food - does that really matter?',
-                        predict: '["Why do we need sustainable diets", "Is a sustainable diet a healthy diet?", "I sometimes throw away food - does that really matter?"]'
-                    },
-                    {
-                        respMsg: 'I like how you think, user name! I can also answer questions. Here’s some you can ask: \n\nWhy is it important to achieve a balance between energy intake and energy needs?\n\nDo sausages and bacon count as red meat?\n\nAre eggs ok to eat?',
-                        predict: '["Why is it important to achieve a balance between energy intake and energy needs?", "Do sausages and bacon count as red meat?", "Are eggs ok to eat?"]'
-                    },
-                    {
-                        respMsg: 'I’m only a robot but I do know the answers to some questions! Here’s some you could ask: \n\nWhat we need to eat more of to work towards eating a sustainable diet?\n\nIf I switch to a more sustainable diet, will my child get enough protein to grow and develop?\n\nWhat foods contain iron?',
-                        predict: '["What we need to eat more of to work towards eating a sustainable diet?", "If I switch to a more sustainable diet, will my child get enough protein to grow and develop?", "What foods contain iron?"]'
-                    },
-                    {
-                        respMsg: 'You can also ask me questions. Here’s some: \n\nI’ve heard young children shouldn’t have too much dietary fibre? \n\nWhat is a plant-based food?\n\nI thought that milk was a great food to give to my child?',
-                        predict: '["I’ve heard young children shouldn’t have too much dietary fibre?", "What is a plant-based food?", "I thought that milk was a great food to give to my child?"]'
-                    },
-                    {
-                        respMsg: 'As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nCheese is a dairy product. Where does cheese fit in with a sustainable diet?\n\nIs it OK to feed plant based ‘milks’ to my child?\n\nWhat fish can I buy to feed to my child eat when following a sustainable diet?',
-                        predict: '["Cheese is a dairy product. Where does cheese fit in with a sustainable diet?", "Is it OK to feed plant based ‘milks’ to my child?", "What fish can I buy to feed to my child eat when following a sustainable diet?"]'
-                    },
-                    {
-                        respMsg: 'I’m only a robot but I do know the answers to some questions! Here’s some you could ask: \n\nYou can also ask me questions. Here’s some: \n\nHow much fish should I give to my toddler?\n\nDo I need to cut sugar for a sustainable diet? \n\nWith sustainability in mind, what should I give my child to drink?',
-                        predict: '["How much fish should I give to my toddler?", "Do I need to cut sugar for a sustainable diet?", "With sustainability in mind, what should I give my child to drink?"]'
-                    },
-                    {
-                        respMsg: 'As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nHow should I cook fish that are more sustainable?\n\nHow much fish should we eat?\n\nHow much fish should I give to my baby when I am weaning?',
-                        predict: '["How should I cook fish that are more sustainable?", "How much fish should we eat?", "How much fish should I give to my baby when I am weaning?"]'
-                    },
+                    // {
+                    //     respMsg: 'Most people say something similar! I can also answer questions. Here’s some you can ask: \n\nWhy do we need sustainable diets?\n\nIs a sustainable diet a healthy diet?\n\nI sometimes throw away food - does that really matter?',
+                    //     predict: '["Why do we need sustainable diets", "Is a sustainable diet a healthy diet?", "I sometimes throw away food - does that really matter?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I like how you think, user name! I can also answer questions. Here’s some you can ask: \n\nWhy is it important to achieve a balance between energy intake and energy needs?\n\nDo sausages and bacon count as red meat?\n\nAre eggs ok to eat?',
+                    //     predict: '["Why is it important to achieve a balance between energy intake and energy needs?", "Do sausages and bacon count as red meat?", "Are eggs ok to eat?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I’m only a robot but I do know the answers to some questions! Here’s some you could ask: \n\nWhat we need to eat more of to work towards eating a sustainable diet?\n\nIf I switch to a more sustainable diet, will my child get enough protein to grow and develop?\n\nWhat foods contain iron?',
+                    //     predict: '["What we need to eat more of to work towards eating a sustainable diet?", "If I switch to a more sustainable diet, will my child get enough protein to grow and develop?", "What foods contain iron?"]'
+                    // },
+                    // {
+                    //     respMsg: 'You can also ask me questions. Here’s some: \n\nI’ve heard young children shouldn’t have too much dietary fibre? \n\nWhat is a plant-based food?\n\nI thought that milk was a great food to give to my child?',
+                    //     predict: '["I’ve heard young children shouldn’t have too much dietary fibre?", "What is a plant-based food?", "I thought that milk was a great food to give to my child?"]'
+                    // },
+                    // {
+                    //     respMsg: 'As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nCheese is a dairy product. Where does cheese fit in with a sustainable diet?\n\nIs it OK to feed plant based ‘milks’ to my child?\n\nWhat fish can I buy to feed to my child eat when following a sustainable diet?',
+                    //     predict: '["Cheese is a dairy product. Where does cheese fit in with a sustainable diet?", "Is it OK to feed plant based ‘milks’ to my child?", "What fish can I buy to feed to my child eat when following a sustainable diet?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I’m only a robot but I do know the answers to some questions! Here’s some you could ask: \n\nYou can also ask me questions. Here’s some: \n\nHow much fish should I give to my toddler?\n\nDo I need to cut sugar for a sustainable diet? \n\nWith sustainability in mind, what should I give my child to drink?',
+                    //     predict: '["How much fish should I give to my toddler?", "Do I need to cut sugar for a sustainable diet?", "With sustainability in mind, what should I give my child to drink?"]'
+                    // },
+                    // {
+                    //     respMsg: 'As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nHow should I cook fish that are more sustainable?\n\nHow much fish should we eat?\n\nHow much fish should I give to my baby when I am weaning?',
+                    //     predict: '["How should I cook fish that are more sustainable?", "How much fish should we eat?", "How much fish should I give to my baby when I am weaning?"]'
+                    // },
 
-                    {
-                        respMsg: 'As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nWhat about 5-a-day and sustainable eating?\n\nShould I avoid any fruits and vegetables in a more sustainable diet?\n\nWhat about frozen food – is that a more sustainable way of keeping food?',
-                        predict: '["What about 5-a-day and sustainable eating?", "Should I avoid any fruits and vegetables in a more sustainable diet?", "What about frozen food – is that a more sustainable way of keeping food?"]'
-                    },
-                    {
-                        respMsg: 'As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nWhat’s the definition of ‘local food’?\n\nWhat Is organic food, and should I buy this?\n\nHow can I make my home meals more sustainable?\n\nDo I have to become Vegetarian or Vegan to have a sustainable diet?',
-                        predict: '["What’s the definition of ‘local food’?", "What Is organic food, and should I buy this?", "How can I make my home meals more sustainable?", "Do I have to become Vegetarian or Vegan to have a sustainable diet?"]'
-                    }
+                    // {
+                    //     respMsg: 'As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nWhat about 5-a-day and sustainable eating?\n\nShould I avoid any fruits and vegetables in a more sustainable diet?\n\nWhat about frozen food – is that a more sustainable way of keeping food?',
+                    //     predict: '["What about 5-a-day and sustainable eating?", "Should I avoid any fruits and vegetables in a more sustainable diet?", "What about frozen food – is that a more sustainable way of keeping food?"]'
+                    // },
+                    // {
+                    //     respMsg: 'As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nWhat’s the definition of ‘local food’?\n\nWhat Is organic food, and should I buy this?\n\nHow can I make my home meals more sustainable?\n\nDo I have to become Vegetarian or Vegan to have a sustainable diet?',
+                    //     predict: '["What’s the definition of ‘local food’?", "What Is organic food, and should I buy this?", "How can I make my home meals more sustainable?", "Do I have to become Vegetarian or Vegan to have a sustainable diet?"]'
+                    // }
 
                 ],
                 nextPath: {
@@ -3436,107 +3436,107 @@ var obj = {
                     //     respMsg: 'Thanks for telling me! Eating together as a family can be hard so try to do the best that you can. Try to have a parent or carer sit with the children at meals times, and whenever you can share the same foods. You are the best role model your children have for a healthy balanced diet.',
                     //     predict: ''
                     // },
-                    {
-                        respMsg: 'Right, okay 😊 Even if your little one is not talking yet chatting during mealtime is important. Chat to your baby/infant and encourage them to respond with sounds or smiles.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I understand, thank you for telling me, user name! There are lots of things that kids can get involved with in the kitchen. There will be a few spills and kids are great at creating mess, but there will also be lots of laughs and precious memories created together.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay 😊 Have recent mealtimes been fun?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'That’s interesting, thank you for telling me 😊 Kids love to dip their foods. Whip up a quick dip for veggies with yogurt and seasonings such as herbs or garlic. Serve with raw vegetables like broccoli, carrots, or cauliflower. Fruit chunks go great with a yogurt and cinnamon or vanilla dip.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Okay, I see. Adventurous eaters aren’t born, they become that way with practice.  The trick is to start with healthy eating habits right from the start.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Right, I understand. Remember you are your child’s best role model, so sit together and share family meals, try new foods together and talk about them.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Thank you 😊 Here’s a tip: Talk everything through with your child and talk about all the ingredients you are using, ask where it grows (if using fruits or vegetables).',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'That’s very common 😊 When you cook, you use all your senses! How many fun activities can boast this achievement?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I like how you think, user name! These are 10 benefits for cooking with your kid: \n\n1) Increases language development\n\n2) Enhances fine motor skills\n\n3) Increases math ability\n\n4) Improves reading skills (in older children)\n\n5) Introduces kids to scientific concepts\n\n6) Increases focus and attention\n\n7) Teaches life skills\n\n8) Promotes healthy eating\n\n9) Boosts self-confidence\n\n10) Encourages family bonding.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Can you tell me more?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'I love trying to understand you, user name 😊. Could you tell me more?',
-                        predict: ''
-                    },
+                    // {
+                    //     respMsg: 'Right, okay 😊 Even if your little one is not talking yet chatting during mealtime is important. Chat to your baby/infant and encourage them to respond with sounds or smiles.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I understand, thank you for telling me, user name! There are lots of things that kids can get involved with in the kitchen. There will be a few spills and kids are great at creating mess, but there will also be lots of laughs and precious memories created together.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay 😊 Have recent mealtimes been fun?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'That’s interesting, thank you for telling me 😊 Kids love to dip their foods. Whip up a quick dip for veggies with yogurt and seasonings such as herbs or garlic. Serve with raw vegetables like broccoli, carrots, or cauliflower. Fruit chunks go great with a yogurt and cinnamon or vanilla dip.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Okay, I see. Adventurous eaters aren’t born, they become that way with practice.  The trick is to start with healthy eating habits right from the start.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Right, I understand. Remember you are your child’s best role model, so sit together and share family meals, try new foods together and talk about them.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Thank you 😊 Here’s a tip: Talk everything through with your child and talk about all the ingredients you are using, ask where it grows (if using fruits or vegetables).',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'That’s very common 😊 When you cook, you use all your senses! How many fun activities can boast this achievement?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I like how you think, user name! These are 10 benefits for cooking with your kid: \n\n1) Increases language development\n\n2) Enhances fine motor skills\n\n3) Increases math ability\n\n4) Improves reading skills (in older children)\n\n5) Introduces kids to scientific concepts\n\n6) Increases focus and attention\n\n7) Teaches life skills\n\n8) Promotes healthy eating\n\n9) Boosts self-confidence\n\n10) Encourages family bonding.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Can you tell me more?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'I love trying to understand you, user name 😊. Could you tell me more?',
+                    //     predict: ''
+                    // },
 
-                    {
-                        respMsg: 'Lettuce or other salad greens don’t need much space and are surprisingly easy to grow indoors – you don’t even need a pot – pierce a plastic bag with a few holes sin the bottom for drainage, fill with compost and sew your seeds. Just remember to sit the bag on a tray or bowl to catch excess water.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Pre-schoolers who play with their food are more likely to try new things and eat a more varied diet.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'It is thought that children who are comfortable getting messy at the table are less likely to develop food neophobia (or fear of tasting new things). Fussy eaters may also be more relaxed about food when they are involved in something messy like food art, where kids make pictures on their plate using their food.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Each mouthful of food sounds very different as we eat it. Ask children to think about what they can hear as they munch their dinner?',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Like adults, children will be more interested in food that looks nice, or in their case fun. Even simple things like using cutters to make sandwiches of toast in different shapes can make these more appealing to eat.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Create a face out of the foods in a mealtime, or as they get older, they can do this themselves.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'Dry foods such as breakfast cereals, pasta shapes, beans and lentils or even raisins are great to create a collage. Paint a sheet of paper as a background and then use glue to stick the foods on to create a food collage.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'A Healthy Diet is one that nurtures your child, providing all the nutrition they need everyday and giving them the life skills that they need as they grow older to select, prepare and eat their own healthy balanced diet. Making food a core part of everyday life will help your child to set goof habits for life.',
-                        predict: ''
-                    },
-                    {
-                        respMsg: 'That’s very common 😊 I can also answer questions. Maybe you’re interested in some of these… \n\nHow can I get my child cooking?\n\nHow Can Cooking Help Pre-schoolers?\n\nDoes cooking help children to try new foods?',
-                        predict: '["How can I get my child cooking?", "How Can Cooking Help Pre-schoolers?", "Does cooking help children to try new foods?"]'
-                    },
-                    {
-                        respMsg: 'Most people say something similar! I can also answer questions. Here’s some you can ask: \n\nWhat can Pre-schoolers do in the Kitchen?\n\nHow do I make mealtime fun? \n\nIs eating with your hands OK?',
-                        predict: '["What can Pre-schoolers do in the Kitchen?", "How do I make mealtime fun?", "Is eating with your hands OK?"]'
-                    },
-                    {
-                        respMsg: 'I like how you think, user name! I can also answer questions. Here’s some you can ask: \n\nDo I really need to make food into artworks? \n\nWhat art can we do with a pen and pencils or crayons?\n\nWhat are fun ways to present foods?',
-                        predict: '["Do I really need to make food into artworks?", "What art can we do with a pen and pencils or crayons?", "What are fun ways to present foods?"]'
-                    },
-                    {
-                        respMsg: 'I’m only a robot but I do know the answers to some questions! Here’s some you could ask: \n\nHow can I make meals colourful? \n\nHow do I get my toddler to eat a wider range of foods?\n\nHow do I get my baby/kids to eat vegetables?',
-                        predict: '["How can I make meals colourful?", "How do I get my toddler to eat a wider range of foods?", "How do I get my baby/kids to eat vegetables?"]'
-                    },
-                    {
-                        respMsg: 'You can also ask me questions. Here’s some: \n\nAre there any fun food sessions that we can go to?\n\n Why make food fun – surely it’s just food?',
-                        predict: '["Are there any fun food sessions that we can go to?", "Why make food fun – surely it’s just food?"]'
-                    },
-                    {
-                        respMsg: 'As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nIs it easy to cook with kids? \n\nWhat about growing food with kids?',
-                        predict: '["Is it easy to cook with kids?", "What about growing food with kids?"]'
-                    },
+                    // {
+                    //     respMsg: 'Lettuce or other salad greens don’t need much space and are surprisingly easy to grow indoors – you don’t even need a pot – pierce a plastic bag with a few holes sin the bottom for drainage, fill with compost and sew your seeds. Just remember to sit the bag on a tray or bowl to catch excess water.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Pre-schoolers who play with their food are more likely to try new things and eat a more varied diet.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'It is thought that children who are comfortable getting messy at the table are less likely to develop food neophobia (or fear of tasting new things). Fussy eaters may also be more relaxed about food when they are involved in something messy like food art, where kids make pictures on their plate using their food.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Each mouthful of food sounds very different as we eat it. Ask children to think about what they can hear as they munch their dinner?',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Like adults, children will be more interested in food that looks nice, or in their case fun. Even simple things like using cutters to make sandwiches of toast in different shapes can make these more appealing to eat.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Create a face out of the foods in a mealtime, or as they get older, they can do this themselves.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'Dry foods such as breakfast cereals, pasta shapes, beans and lentils or even raisins are great to create a collage. Paint a sheet of paper as a background and then use glue to stick the foods on to create a food collage.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'A Healthy Diet is one that nurtures your child, providing all the nutrition they need everyday and giving them the life skills that they need as they grow older to select, prepare and eat their own healthy balanced diet. Making food a core part of everyday life will help your child to set goof habits for life.',
+                    //     predict: ''
+                    // },
+                    // {
+                    //     respMsg: 'That’s very common 😊 I can also answer questions. Maybe you’re interested in some of these… \n\nHow can I get my child cooking?\n\nHow Can Cooking Help Pre-schoolers?\n\nDoes cooking help children to try new foods?',
+                    //     predict: '["How can I get my child cooking?", "How Can Cooking Help Pre-schoolers?", "Does cooking help children to try new foods?"]'
+                    // },
+                    // {
+                    //     respMsg: 'Most people say something similar! I can also answer questions. Here’s some you can ask: \n\nWhat can Pre-schoolers do in the Kitchen?\n\nHow do I make mealtime fun? \n\nIs eating with your hands OK?',
+                    //     predict: '["What can Pre-schoolers do in the Kitchen?", "How do I make mealtime fun?", "Is eating with your hands OK?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I like how you think, user name! I can also answer questions. Here’s some you can ask: \n\nDo I really need to make food into artworks? \n\nWhat art can we do with a pen and pencils or crayons?\n\nWhat are fun ways to present foods?',
+                    //     predict: '["Do I really need to make food into artworks?", "What art can we do with a pen and pencils or crayons?", "What are fun ways to present foods?"]'
+                    // },
+                    // {
+                    //     respMsg: 'I’m only a robot but I do know the answers to some questions! Here’s some you could ask: \n\nHow can I make meals colourful? \n\nHow do I get my toddler to eat a wider range of foods?\n\nHow do I get my baby/kids to eat vegetables?',
+                    //     predict: '["How can I make meals colourful?", "How do I get my toddler to eat a wider range of foods?", "How do I get my baby/kids to eat vegetables?"]'
+                    // },
+                    // {
+                    //     respMsg: 'You can also ask me questions. Here’s some: \n\nAre there any fun food sessions that we can go to?\n\n Why make food fun – surely it’s just food?',
+                    //     predict: '["Are there any fun food sessions that we can go to?", "Why make food fun – surely it’s just food?"]'
+                    // },
+                    // {
+                    //     respMsg: 'As well as having a chat with you, I can also answer questions you may have. These are some you can ask me about: \n\nIs it easy to cook with kids? \n\nWhat about growing food with kids?',
+                    //     predict: '["Is it easy to cook with kids?", "What about growing food with kids?"]'
+                    // },
                 ],
                 nextPath: {
                     master: "randomConvo",
