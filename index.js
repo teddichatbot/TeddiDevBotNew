@@ -24,7 +24,7 @@ server.listen(process.env.port || process.env.PORT || 3978, () => {
     console.log('\nTo talk to your bot, open the emulator select "Open Bot"');
 });
 
-console.log('MicrosoftAppId',process.env.MicrosoftAppId)
+// console.log('MicrosoftAppId',process.env.MicrosoftAppId)
 
 // Create adapter.
 // See https://aka.ms/about-bot-adapter to learn more about how bots work.

@@ -7,6 +7,10 @@ var unirest = require('unirest');
 const dbConfig = require('./dbConfig');
 var API_URL = dbConfig.API_URL
 var chatJson = require('./chatJson')
+const dotenv = require('dotenv');
+const path = require('path');
+const ENV_FILE = path.join(__dirname, '.env');
+dotenv.config({ path: ENV_FILE });
 
 // chapters patha
 var introductionPath = require('./chapters/introduction')
@@ -227,13 +231,9 @@ async function UtteranceLog(storage, turnContext, userId, storeItems, channelId,
         storeItems[userId][chapterType]['feedingType'] = respObj.feedingType;
     }
     if(respObj.randomMsgFlag){
-        // console.log('randomMsgFlag',respObj.randomMsgFlag)
-        // storeItems[userId][chapterType]['chap1RandomMsgFlag'] = respObj.randomMsgFlag;
         storeItems[userId][chapterType]['randomMsgFlag'] = respObj.randomMsgFlag;
     }
     if(respObj.randomArrFlag){
-        // console.log('randomArrFlag',respObj.randomArrFlag)
-        // storeItems[userId][chapterType]['chap1FlowingFlag'] = respObj.randomArrFlag;
         storeItems[userId][chapterType]['flowingFlag'] = respObj.randomArrFlag;
     }
     if(respObj.randomMsgArray){
@@ -253,6 +253,7 @@ async function UtteranceLog(storage, turnContext, userId, storeItems, channelId,
 async function creatingUtterance(storage, turnContext, userId, storeItems, channelId, conversationId, userChatId, chapterType){
     let dateNow = new Date();
     let botReply = ''; 
+    console.log('MicrosoftAppId',process.env.MicrosoftAppId)
     botReply = chatJson['introduction']['intro'][1]['text']
 
     let botResp = await turnContext.sendActivities([
