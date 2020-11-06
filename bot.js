@@ -223,7 +223,7 @@ async function UtteranceLog(storage, turnContext, userId, storeItems, channelId,
     var convLastDate = dateNow.getDate() +"-"+ (dateNow.getMonth() + 1) +"-"+ dateNow.getFullYear();
     storeItems[userId].userInfo.convLastDate = convLastDate;
     storeItems[userId].userInfo.convLastTime = Date.now();
-    storeItems[userId].userInfo.lastConvType = Date.now();
+    storeItems[userId].userInfo.lastConvType = chapterType;
     if(respObj.feelMsg){
         storeItems[userId][chapterType]['feelMessage'] = respObj.feelMsg;
     }
