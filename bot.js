@@ -32,7 +32,8 @@ var storage = new CosmosDbPartitionedStorage({
     cosmosDbEndpoint: dbConfig.DB_SERVICE_ENDPOINT, 
     authKey: dbConfig.AUTH_KEY, 
     databaseId: dbConfig.DATABASE_ID,
-    containerId: dbConfig.CONTAINER
+    containerId: dbConfig.CONTAINER,
+    compatibilityMode: false
 })
 
 
@@ -251,6 +252,7 @@ async function UtteranceLog(storage, turnContext, userId, storeItems, channelId,
 }
 
 async function creatingUtterance(storage, turnContext, userId, storeItems, channelId, conversationId, userChatId, chapterType){
+    console.log('storage',storage)
     let dateNow = new Date();
     let botReply = ''; 
     // console.log('MicrosoftAppId', process.env.MicrosoftAppId)
