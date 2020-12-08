@@ -252,7 +252,7 @@ async function UtteranceLog(storage, turnContext, userId, storeItems, channelId,
 }
 
 async function creatingUtterance(storage, turnContext, userId, storeItems, channelId, conversationId, userChatId, chapterType){
-    console.log('storage',storage)
+    
     let dateNow = new Date();
     let botReply = ''; 
     // console.log('MicrosoftAppId', process.env.MicrosoftAppId)
