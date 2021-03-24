@@ -42,8 +42,6 @@ class EchoBot extends ActivityHandler {
         super();
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         this.onMessage(async (context, next) => {
-            // await saveUserMsg(context.activity)
-
             await logMessageText(storage, context);
         });
 
@@ -63,8 +61,8 @@ async function logMessageText(storage, turnContext) {
     let conversationId= turnContext.activity.conversation.id;
     let chapterType = '';
     if(turnContext.activity.chapterType === undefined){
-        chapterType = 'introduction';
-        // chapterType = 'chapter12';
+        // chapterType = 'introduction';
+        chapterType = 'chapter3';
     }else{
         chapterType = turnContext.activity.chapterType;
     }
@@ -188,15 +186,20 @@ async function UtteranceLog(storage, turnContext, userId, storeItems, channelId,
     
     
     let botResp = ''
+    console.log(chapterType)
+    let chapterName = {chapterName : chapterType};
     if(respObj.checkTypeing){
         botResp = await turnContext.sendActivities([
             { type: ActivityTypes.Typing },
             { type: 'delay', value: 500 },
-            { type: ActivityTypes.Message, text: respObj.botReply }
+            { type: ActivityTypes.Message, text: respObj.botReply, value: JSON.stringify(chapterName) }
         ]);
         await saveBotReply(respObj.botReply, botResp[2].id, channelId, conversationId, userChatId, chapterType)
     }else{
-        botResp = await turnContext.sendActivity(respObj.botReply);
+        // botResp = await turnContext.sendActivity(respObj.botReply, chapterType);
+        botResp = await turnContext.sendActivities([
+            { type: ActivityTypes.Message, text: respObj.botReply, value: JSON.stringify(chapterName) }
+        ]);
         await saveBotReply(respObj.botReply, botResp.id, channelId, conversationId, userChatId, chapterType)
     }
     
