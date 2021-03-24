@@ -186,7 +186,6 @@ async function UtteranceLog(storage, turnContext, userId, storeItems, channelId,
     
     
     let botResp = ''
-    console.log(chapterType)
     let chapterName = {chapterName : chapterType};
     if(respObj.checkTypeing){
         botResp = await turnContext.sendActivities([
@@ -260,11 +259,11 @@ async function creatingUtterance(storage, turnContext, userId, storeItems, chann
     let botReply = ''; 
     // console.log('MicrosoftAppId', process.env.MicrosoftAppId)
     botReply = chatJson['introduction']['intro'][1]['text']
-
+    let chapterName = {chapterName : 'introduction'};
     let botResp = await turnContext.sendActivities([
         { type: ActivityTypes.Typing },
         { type: 'delay', value: 3000 },
-        { type: ActivityTypes.Message, text: botReply }
+        { type: ActivityTypes.Message, text: botReply, value: JSON.stringify(chapterName) }
     ]);
 
 
